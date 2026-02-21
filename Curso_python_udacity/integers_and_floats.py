@@ -1,7 +1,7 @@
 print(int(49.7)) 
 print(float(49.8))
 
-#print(5/0)
+#print(5/0) 
 # what happens when we try to divide by zero?  Let's find out!  Uncomment the line above and run the code to see what happens.  You should see an error message that looks something like this:
 #Traceback (most recent call last):
 # "/tmp/vmuser_tnryxwdmhw/quiz.py", line 1, in <module>
