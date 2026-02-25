@@ -13,3 +13,5 @@ b.add(5)
 b.pop()
 #Puede que no, ya que el método pop() elimina un elemento aleatorio del conjunto. Si el número 5 es el elemento que se elimina, entonces no formará parte del conjunto b después de la ejecución del código. Sin embargo, si se elimina otro elemento, entonces el número 5 seguirá siendo parte del conjunto b.
 
+#a un set añades con el método add(), y puedes eliminar un elemento con el método pop(). El método pop() elimina un elemento aleatorio del conjunto, por lo que no se puede predecir qué elemento se eliminará. Si deseas eliminar un elemento específico, puedes usar el método remove() en su lugar.
+#¡OJO! a un list puedes añadir con el método append(), pero no puedes eliminar un elemento aleatorio con pop() sin especificar un índice, ya que pop() en una lista elimina el último elemento por defecto. Si deseas eliminar un elemento específico de una lista, puedes usar el método remove() o pop() con un índice específico.
