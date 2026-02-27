@@ -1,0 +1,135 @@
+\chapter{Capítulo} \label{ch:chapter_01}
+
+En este capítulo se muestran varios ejemplos.
+
+\textbf{Negrita} \textit{cursiva}
+
+Hacer una referencia, en este caso al \autoref{ch:chapter_01}.
+
+% ---   ---   --- %
+
+
+\section{Sección}
+
+\subsection{Citar referencias y acrónimos}
+
+\cite{im78552}, \acrshort{mc}, \acrfull{mc}.
+
+\subsection{Enumeraciones}
+
+Enumeración.
+
+\begin{enumerate}
+	\item La impresora debe contar con un sistema de nivelación de la base de impresión.
+	\item El sistema de extrusión de filamento debe asegurar que no se producirán inconsistencias durante los periodos largos de trabajo.
+\end{enumerate}
+
+Enumeración cambiando los items.
+
+\begin{enumerate}[label= \textbf{R-\arabic*}]
+	\item La impresora debe contar con un sistema de nivelación de la base de impresión.
+	\item El sistema de extrusión de filamento debe asegurar que no se producirán inconsistencias durante los periodos largos de trabajo. \label{req:extrusion}
+\end{enumerate}
+
+Referenciar un item: \ref{req:extrusion}, \autoref{req:extrusion}.
+
+
+Ejemplo de bulletpoints.
+
+
+\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
+
+	\item Perfilería de aluminio.
+
+\end{itemize}
+
+
+
+%   ---   ---   %
+
+\subsection{Figuras}
+
+Las figuras se pueden fijar en el texto con H, posicionarlas lo mejor posible con h!, arriba con t, etc.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=100mm]{duet3}
+	\caption{Motherboard Duet 3 6HC.}
+	\label{fig:000_00}
+\end{figure}
+
+Subfiguras en paralelo.
+
+\begin{figure}[H]
+	\centering
+	\subfloat[Vista frontal del montaje.\label{fig:mont1}]
+	{
+		\includegraphics[width=50mm,angle=0]{Mont_01}
+	}
+	\hspace*{10mm}
+	\subfloat[Vista trasera del montaje.\label{fig:mont2}]
+	{\includegraphics[width=50mm,angle=0]{Mont_02}
+	}
+	\caption{Montaje del sistema de transmisión del eje X}
+	\label{fig:mont_nema}
+\end{figure}
+
+
+Ejemplo dos figuras en paralelo centradas verticalemtne.
+
+\begin{figure}[H]
+	\begin{minipage}{\textwidth}
+		\centering
+		\raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{Perfil_Aluminio}}
+	\hspace*{.2in}
+		\raisebox{-0.5\height}{\includegraphics[width=0.25\textwidth]{Perfil_Aluminio_Union}
+		}
+	\end{minipage}
+	\caption{Ejemplos de perfilería de aluminio.}
+	\label{fig:perfileria_alumnio}
+\end{figure}
+
+Barrera que no pueden atravesar las figuras.
+\FloatBarrier
+
+
+%   ---   ---   %
+
+\subsection{Ecuaciones}
+
+Ejemplo de ecuación, \autoref{eq:velocidad}
+
+\begin{equation}\label{eq:velocidad}
+	l = \frac{\pi\cdot1.8}{180\cdot P}\cdot r = \frac{\pi\cdot1.8}{180\cdot16}\cdot 6 = 0.0117 \qquad [\mathrm{mm}].
+\end{equation}
+
+
+
+% ---   ---   --- %
+
+\subsection{Tablas}
+
+Ejemplo de tabla de grandes dimensiones e introducir una página apaisada. También se muestra como poner en negrita letras griegas, que a veces dan problemas.
+
+\begin{landscape}
+    \vspace*{\fill}
+    \input{Tables/table_example}
+    \vspace*{\fill}
+    \clearpage
+\end{landscape}
+
+
+% ---   ---   --- %
+
+\subsection{Código}
+
+
+\begin{lstlisting}
+M303 H0 S60 ; auto tune heater 0, default PWM (100%), 60C target
+M303        ; report the auto-tune status or last resulM303 ; report the auto-tune status or last result
+M500        ; save parameters
+\end{lstlisting}
+
+\lstinputlisting{Code/function.m}
+
+

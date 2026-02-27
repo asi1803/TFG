@@ -1,0 +1,111 @@
+% Esta plantilla ha sido diseñada por Daniel del Río Velilla, profesor en la Escuela de Aeronáutica y del Espacio, UPM.
+% LA PLANTILLA ES DE USO LIBRE PERO ESTÁ SUJETA A DERECHOS DE PROPIEDAD INTELECTUAL, POR LO QUE SU COMERCIALIZACIÓN ES ILEGAL.
+
+\documentclass[11pt,a4paper,titlepage,twoside]{report}
+
+%   ---   DEFINICION DEL TRABAJO   ---   %
+
+\newcommand{\Project}{Plantillas de \LaTeX}
+\newcommand{\ProjectTitle}{Plantilla de \LaTeX\, para tesis}
+\newcommand{\ProjectSubject}{Grado de Ingeniería Aeroespacial}
+\newcommand{\ProjectAutor}{ Alumno 1 \\
+                            & Alumno 2}
+\newcommand{\ProjectTutor}{ Tutor 1 \\
+                            & Tutor 2}
+\newcommand{\ProjectLocation}{Madrid}
+\newcommand{\ProjectDate}{19 de septiembre de 2022}
+% Descomentar si se tiene un repositorio del trabajo
+% \newcommand{\ProjectGitHub}{url}
+
+
+
+%   ---   INCLUIR ARCHIVOS DE CONFIGURACION   ---   %
+
+\input{./Tex_Files/packages.tex}
+\input{./Tex_Files/acronyms.tex}
+\input{./Tex_Files/header_footer.tex}
+\input{./Tex_Files/functions.tex}
+
+
+
+%   ---   COMIENZO DEL DOCUMENTO   ---   %
+
+\begin{document}
+
+
+%   ---   INCLUIR PORTADA   ---   %
+
+\input{./Tex_Files/portada.tex}
+
+
+
+%   ---   INDICE Y LISTAS   ---   %
+
+% Indice
+\pagenumbering{gobble}
+\tableofcontents
+\newpage
+
+% Numeracion en romano
+\pagenumbering{roman}
+\raggedbottom
+
+% Figuras    
+\addcontentsline{toc}{section}{\listfigurename}
+\listoffigures
+\cleardoublepage
+
+% Tablas
+\renewcommand{\listtablename}{Índice de tablas}
+\addcontentsline{toc}{section}{\listtablename}
+\listoftables
+\cleardoublepage
+
+% Acronyms  
+\renewcommand{\acronymname}{Acrónimos}
+\addcontentsline{toc}{section}{\acronymname}
+\printglossary[type=\acronymtype]   % \printglossary[type=\acronymtype,style=long]
+\cleardoublepage
+
+% Numeracion en arabico
+\setcounter{page}{0}
+\pagenumbering{arabic}
+
+
+
+%   ---   ARCHIVOS DEL DOCUMENTO   ---   %
+% Es recomendable escribir el trabajo en documentos separados y luego importarlos al main.
+
+\input{./Tex_Files/01.tex}
+\cleardoublepage
+
+
+%   ---   BIBLIOGRAFÍA/REFERENCIAS   ---   %
+
+\phantomsection
+\addcontentsline{toc}{section}{Referencias}
+\renewcommand{\refname}{Referencias}
+\bibliographystyle{elsarticle-num}
+\bibliography{references.bib}
+\cleardoublepage
+
+
+
+%   ---   ANEXOS   ---   %
+
+\appendix
+\renewcommand{\appendixname}{Anexos}
+\addcontentsline{toc}{section}{\appendixname}
+\clearpage % or \cleardoublepage
+\appendixpage
+\addappheadtotoc
+\renewcommand{\appendixname}{Anexo}
+
+\input{./Tex_Files/A_01.tex}
+\cleardoublepage
+
+
+
+
+
+\end{document}
