@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  2 MAR 2026 20:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  2 MAR 2026 21:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1792,8 +1792,13 @@ Package caption Info: End \AtBeginDocument code.
 <./Figures/Portada_HF/upm_logo.png, id=69, 398.4486pt x 185.0112pt>
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 6.
-(pdftex.def)             Requested size: 281.68518pt x 130.79707pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 5.
+(pdftex.def)             Requested size: 140.84259pt x 65.39853pt.
+<./Figures/Portada_HF/descarga.png, id=71, 256.96pt x 148.555pt>
+File: ./Figures/Portada_HF/descarga.png Graphic file (type png)
+<use ./Figures/Portada_HF/descarga.png>
+Package pdftex.def Info: ./Figures/Portada_HF/descarga.png  used on input line 7.
+(pdftex.def)             Requested size: 140.84259pt x 81.42441pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1810,7 +1815,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \openout4 = `main.ist'.
 
 
- <./Figures/Portada_HF/upm_logo.png>]
+ <./Figures/Portada_HF/upm_logo.png> <./Figures/Portada_HF/descarga.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1879,27 +1884,27 @@ l.44 \end{itemize}
                    [1
 
 ]
-<./Figures/01/duet3.png, id=161, 722.7pt x 470.50781pt>
+<./Figures/01/duet3.png, id=162, 722.7pt x 470.50781pt>
 File: ./Figures/01/duet3.png Graphic file (type png)
 <use ./Figures/01/duet3.png>
 Package pdftex.def Info: ./Figures/01/duet3.png  used on input line 56.
 (pdftex.def)             Requested size: 284.52756pt x 185.24188pt.
-<./Figures/01/Mont_01.jpg, id=162, 2178.1375pt x 2588.67125pt>
+<./Figures/01/Mont_01.jpg, id=163, 2178.1375pt x 2588.67125pt>
 File: ./Figures/01/Mont_01.jpg Graphic file (type jpg)
 <use ./Figures/01/Mont_01.jpg>
 Package pdftex.def Info: ./Figures/01/Mont_01.jpg  used on input line 68.
 (pdftex.def)             Requested size: 142.26378pt x 169.05954pt.
-<./Figures/01/Mont_02.jpg, id=163, 2135.98pt x 2522.42375pt>
+<./Figures/01/Mont_02.jpg, id=164, 2135.98pt x 2522.42375pt>
 File: ./Figures/01/Mont_02.jpg Graphic file (type jpg)
 <use ./Figures/01/Mont_02.jpg>
 Package pdftex.def Info: ./Figures/01/Mont_02.jpg  used on input line 72.
 (pdftex.def)             Requested size: 142.26378pt x 167.96616pt.
-<./Figures/01/Perfil_Aluminio.png, id=164, 501.875pt x 260.975pt>
+<./Figures/01/Perfil_Aluminio.png, id=165, 501.875pt x 260.975pt>
 File: ./Figures/01/Perfil_Aluminio.png Graphic file (type png)
 <use ./Figures/01/Perfil_Aluminio.png>
 Package pdftex.def Info: ./Figures/01/Perfil_Aluminio.png  used on input line 83.
 (pdftex.def)             Requested size: 187.78535pt x 97.65034pt.
-<./Figures/01/Perfil_Aluminio_Union.jpg, id=165, 353.82187pt x 419.31656pt>
+<./Figures/01/Perfil_Aluminio_Union.jpg, id=166, 353.82187pt x 419.31656pt>
 File: ./Figures/01/Perfil_Aluminio_Union.jpg Graphic file (type jpg)
 <use ./Figures/01/Perfil_Aluminio_Union.jpg>
 Package pdftex.def Info: ./Figures/01/Perfil_Aluminio_Union.jpg  used on input line 86.
@@ -1973,13 +1978,13 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8966A7F2ADBA74C06FADF4D2CD212586;1687.
+(rerunfilecheck)             Checksum: FB22A8B34D84586884765C48BE3CBCE8;1686.
  ) 
 Here is how much of TeX's memory you used:
- 48350 strings out of 467867
- 961224 string characters out of 5418335
+ 48356 strings out of 467867
+ 961485 string characters out of 5418335
  1585805 words of memory out of 5000000
- 76315 multiletter control sequences out of 15000+600000
+ 76322 multiletter control sequences out of 15000+600000
  660090 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,15n,120p,2601b,2345s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1987,9 +1992,9 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{glo:mc} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on main.pdf (19 pages, 3512363 bytes).
+Output written on main.pdf (19 pages, 3515575 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 175 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 662 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 
