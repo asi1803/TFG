@@ -3,6 +3,8 @@
 \newlength{\myoddoffset}
 \setlength{\myoddoffset}{\marginparwidth + \marginparsep + 0.5cm}
 \usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{60pt}
 \fancyheadoffset[rh]{\myoddoffset}
 \fancyfootoffset[rh]{\myoddoffset}
 
@@ -13,7 +15,7 @@
     \includegraphics[width = 4.2cm]{upm_logo.png}
 }
 \rhead{
-    \begin{Large}{\Project}\end{Large}
+    {\Large \Project}
 }
 % \lfoot{} \cfoot{} \rfoot{\thepage}
 \fancyfoot[RO]{\thepage}
@@ -24,8 +26,9 @@
     top=1.7in, 
     bottom=1.1in, 
     left = 2.5cm, 
-    right = 2cm, 
-    headsep = 2.5cm, 
+    right = 2cm,
+    headheight = 65pt, 
+    headsep = 1cm, 
     ignoremp
 }
 \fancyheadoffset[rh]{0pt}
