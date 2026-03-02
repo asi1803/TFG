@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.2)  2 MAR 2026 17:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.2)  2 MAR 2026 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/asi18/Documents/Asier/ESTUDIOS/UPM ETSIAE/TFG/TFG/Prueba.tex"
-(c:/Users/asi18/Documents/Asier/ESTUDIOS/UPM ETSIAE/TFG/TFG/Prueba.tex
+**"c:/Users/asi18/Documents/Asier/ESTUDIOS/UPM ETSIAE/TFG/TFG/Prueba_latex/Prueba.tex"
+(c:/Users/asi18/Documents/Asier/ESTUDIOS/UPM ETSIAE/TFG/TFG/Prueba_latex/Prueba.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -115,12 +115,12 @@ L3 programming layer <2025-12-24>
  ) 
 Here is how much of TeX's memory you used:
  1989 strings out of 467871
- 35224 string characters out of 5418377
+ 35315 string characters out of 5418377
  448843 words of memory out of 5000000
  30913 multiletter control sequences out of 15000+600000
  632751 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,6n,45p,220b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 38i,6n,45p,233b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
 Output written on Prueba.pdf (1 page, 68368 bytes).
 PDF statistics:
