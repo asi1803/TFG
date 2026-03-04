@@ -80,17 +80,12 @@
 %   ---   ARCHIVOS DEL DOCUMENTO   ---   %
 % Es recomendable escribir el trabajo en documentos separados y luego importarlos al main.
 
-\input{./Chapters/Abstract.tex}
-\cleardoublepage
-\input{./Chapters/Introduction.tex}
-\cleardoublepage
-\input{./Chapters/State_of_art.tex}
-\cleardoublepage
-\input{./Chapters/Theoretical_background.tex}
+\input{./Tex_Files/01.tex}
 \cleardoublepage
 
+
 %   ---   BIBLIOGRAFÍA/REFERENCIAS   ---   %
-\input{./Chapters/Bibliography.tex}
+
 \phantomsection
 \addcontentsline{toc}{section}{Referencias}
 \renewcommand{\refname}{Referencias}
@@ -102,13 +97,13 @@
 
 %   ---   ANEXOS   ---   %
 
-%\appendix
-%\renewcommand{\appendixname}{Anexos}
-%\addcontentsline{toc}{section}{\appendixname}
-%\clearpage % or \cleardoublepage
-%\appendixpage
-%\addappheadtotoc
-%\renewcommand{\appendixname}{Anexo}
+\appendix
+\renewcommand{\appendixname}{Anexos}
+\addcontentsline{toc}{section}{\appendixname}
+\clearpage % or \cleardoublepage
+\appendixpage
+\addappheadtotoc
+\renewcommand{\appendixname}{Anexo}
 
 \input{./Tex_Files/A_01.tex}
 \cleardoublepage
