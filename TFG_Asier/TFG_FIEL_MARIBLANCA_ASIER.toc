@@ -1,0 +1,56 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Abstract}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sección}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Citar referencias y acrónimos}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Enumeraciones}{1}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Figuras}{2}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Ecuaciones}{3}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Tablas}{3}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Código}{5}{subsection.1.1.6}%
+\contentsline {chapter}{\numberline {2}Introduction}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Objectives}{7}{section.2.1}%
+\contentsline {chapter}{\numberline {3}State of Art}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Thermal Tools in the Aerospace Industry}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Post-Processing Capabilities in ESATAN-TMS}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Custom Interfaces: JPL Example}{9}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Practical Application: FalconSat-2}{9}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Motivation for the Present Work}{9}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Theoretical Background}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Thermal Control in Engineering}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Space Thermal Environment}{11}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Heat Transfer Mechanisms}{11}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Conduction Heat Transfer}{11}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Radiation Heat Transfer}{11}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Mathematical Modeling of Thermal Systems}{11}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Disadvantages of the Finite Element Method (FEM)}{11}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Lumped Parameter Method (LPM)}{11}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Software and Advanced Methods for Thermal Simulation}{11}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Analytical Capabilities of ESATAN-TMS}{11}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Development of the Thermal Model in ESATAN-TMS and Data Export/Analysis}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Subsystem Classification}{13}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Materials and Properties}{13}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Thermo-optical properties}{13}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Steady-state radiative case}{13}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Boundary Conditions and Loads Definition}{13}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Model Verification: Group-Level Energy Balances}{13}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Data provided by the TMD}{13}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Use in the Python post-processing}{13}{subsection.5.6.1}%
+\contentsline {chapter}{\numberline {6}Design and Implementation of the Post-Processing Code}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Code Structure and Architecture}{15}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Motivation for a Modular Architecture}{15}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Files overview}{15}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Software Stack and Dependencies}{15}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Filtering and Grouping Methods}{15}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Figure Conventions and Representation Criteria}{15}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Scope of Examples and Cryogenic-Flow Validation}{15}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Results and Visualisations from the Post-Processing Workflow}{17}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Filtering Results}{17}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Sankey Diagram}{17}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Network Graph Views (NX)}{17}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Stacked-Bar Balances}{17}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Cryogenic-Flow Views (ARIEL)}{17}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{19}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusions}{19}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{19}{section.8.2}%
+\contentsline {chapter}{References}{21}{chapter*.9}%
+\contentsline {chapter}{Anexos}{23}{chapter*.11}%

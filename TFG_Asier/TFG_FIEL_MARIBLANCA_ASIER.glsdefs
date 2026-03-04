@@ -1,0 +1,532 @@
+\glsdefs@newdocentry{mc}%
+{%
+name={\acronymfont {\glsentryshort {mc}}},%
+sort={MC},%
+type={acronym},%
+first={MC},%
+firstplural={MCs},%
+text={MC},%
+plural={MCs},%
+description={Materiales Compuestos},%
+descriptionplural={Materiales Compuestos},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Materiales Compuestos},%
+longplural={Materiales Compuestoss},%
+short={MC},%
+shortplural={MCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cfrp}%
+{%
+name={\acronymfont {\glsentryshort {cfrp}}},%
+sort={CFRP},%
+type={acronym},%
+first={CFRP},%
+firstplural={CFRPs},%
+text={CFRP},%
+plural={CFRPs},%
+description={Carbon Fiber Reinforced Polymer},%
+descriptionplural={Carbon Fiber Reinforced Polymer},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Carbon Fiber Reinforced Polymer},%
+longplural={Carbon Fiber Reinforced Polymers},%
+short={CFRP},%
+shortplural={CFRPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{udpp}%
+{%
+name={\acronymfont {\glsentryshort {udpp}}},%
+sort={UDPP},%
+type={acronym},%
+first={UDPP},%
+firstplural={UDPPs},%
+text={UDPP},%
+plural={UDPPs},%
+description={Unidirectional Prepeg},%
+descriptionplural={Unidirectional Prepeg},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Unidirectional Prepeg},%
+longplural={Unidirectional Prepegs},%
+short={UDPP},%
+shortplural={UDPPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{fr}%
+{%
+name={\acronymfont {\glsentryshort {fr}}},%
+sort={FR},%
+type={acronym},%
+first={FR},%
+firstplural={FRs},%
+text={FR},%
+plural={FRs},%
+description={Filament Ripper},%
+descriptionplural={Filament Ripper},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Filament Ripper},%
+longplural={Filament Rippers},%
+short={FR},%
+shortplural={FRs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{rrf}%
+{%
+name={\acronymfont {\glsentryshort {rrf}}},%
+sort={RRF},%
+type={acronym},%
+first={RRF},%
+firstplural={RRFs},%
+text={RRF},%
+plural={RRFs},%
+description={RepRap Firmware},%
+descriptionplural={RepRap Firmware},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={RepRap Firmware},%
+longplural={RepRap Firmwares},%
+short={RRF},%
+shortplural={RRFs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{dwc}%
+{%
+name={\acronymfont {\glsentryshort {dwc}}},%
+sort={DWC},%
+type={acronym},%
+first={DWC},%
+firstplural={DWCs},%
+text={DWC},%
+plural={DWCs},%
+description={Duet Web Control},%
+descriptionplural={Duet Web Control},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Duet Web Control},%
+longplural={Duet Web Controls},%
+short={DWC},%
+shortplural={DWCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{sbc}%
+{%
+name={\acronymfont {\glsentryshort {sbc}}},%
+sort={SBC},%
+type={acronym},%
+first={SBC},%
+firstplural={SBCs},%
+text={SBC},%
+plural={SBCs},%
+description={Single Board Computer},%
+descriptionplural={Single Board Computer},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Single Board Computer},%
+longplural={Single Board Computers},%
+short={SBC},%
+shortplural={SBCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{rsp}%
+{%
+name={\acronymfont {\glsentryshort {rsp}}},%
+sort={RSP4},%
+type={acronym},%
+first={RSP4},%
+firstplural={RSP4s},%
+text={RSP4},%
+plural={RSP4s},%
+description={Raspberry Pi 4},%
+descriptionplural={Raspberry Pi 4},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Raspberry Pi 4},%
+longplural={Raspberry Pi 4s},%
+short={RSP4},%
+shortplural={RSP4s},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cad}%
+{%
+name={\acronymfont {\glsentryshort {cad}}},%
+sort={CAD},%
+type={acronym},%
+first={CAD},%
+firstplural={CADs},%
+text={CAD},%
+plural={CADs},%
+description={Computer Aided Desing},%
+descriptionplural={Computer Aided Desing},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Computer Aided Desing},%
+longplural={Computer Aided Desings},%
+short={CAD},%
+shortplural={CADs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{rpas}%
+{%
+name={\acronymfont {\glsentryshort {rpas}}},%
+sort={RPAS},%
+type={acronym},%
+first={RPAS},%
+firstplural={RPASs},%
+text={RPAS},%
+plural={RPASs},%
+description={Remotely Piloted Aircraft System},%
+descriptionplural={Remotely Piloted Aircraft System},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Remotely Piloted Aircraft System},%
+longplural={Remotely Piloted Aircraft Systems},%
+short={RPAS},%
+shortplural={RPASs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ba}%
+{%
+name={\acronymfont {\glsentryshort {ba}}},%
+sort={BA},%
+type={acronym},%
+first={BA},%
+firstplural={BAs},%
+text={BA},%
+plural={BAs},%
+description={Borde de ataque},%
+descriptionplural={Borde de ataque},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Borde de ataque},%
+longplural={Borde de ataques},%
+short={BA},%
+shortplural={BAs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{bs}%
+{%
+name={\acronymfont {\glsentryshort {bs}}},%
+sort={BS},%
+type={acronym},%
+first={BS},%
+firstplural={BSs},%
+text={BS},%
+plural={BSs},%
+description={Borde de salida},%
+descriptionplural={Borde de salida},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Borde de salida},%
+longplural={Borde de salidas},%
+short={BS},%
+shortplural={BSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{eop}%
+{%
+name={\acronymfont {\glsentryshort {eop}}},%
+sort={EoP},%
+type={acronym},%
+first={EoP},%
+firstplural={EoPs},%
+text={EoP},%
+plural={EoPs},%
+description={Edge of Part},%
+descriptionplural={Edge of Part},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Edge of Part},%
+longplural={Edge of Parts},%
+short={EoP},%
+shortplural={EoPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{eeop}%
+{%
+name={\acronymfont {\glsentryshort {eeop}}},%
+sort={EEoP},%
+type={acronym},%
+first={EEoP},%
+firstplural={EEoPs},%
+text={EEoP},%
+plural={EEoPs},%
+description={Engineering Edge of Part},%
+descriptionplural={Engineering Edge of Part},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Engineering Edge of Part},%
+longplural={Engineering Edge of Parts},%
+short={EEoP},%
+shortplural={EEoPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{meop}%
+{%
+name={\acronymfont {\glsentryshort {meop}}},%
+sort={MEoP},%
+type={acronym},%
+first={MEoP},%
+firstplural={MEoPs},%
+text={MEoP},%
+plural={MEoPs},%
+description={Manufacturing Edge of Part},%
+descriptionplural={Manufacturing Edge of Part},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Manufacturing Edge of Part},%
+longplural={Manufacturing Edge of Parts},%
+short={MEoP},%
+shortplural={MEoPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{eom}%
+{%
+name={\acronymfont {\glsentryshort {eom}}},%
+sort={EoM},%
+type={acronym},%
+first={EoM},%
+firstplural={EoMs},%
+text={EoM},%
+plural={EoMs},%
+description={Excess of Material},%
+descriptionplural={Excess of Material},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Excess of Material},%
+longplural={Excess of Materials},%
+short={EoM},%
+shortplural={EoMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{tcs}%
+{%
+name={\acronymfont {\glsentryshort {tcs}}},%
+sort={TCS},%
+type={acronym},%
+first={TCS},%
+firstplural={TCSs},%
+text={TCS},%
+plural={TCSs},%
+description={Thermal Control System},%
+descriptionplural={Thermal Control System},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Thermal Control System},%
+longplural={Thermal Control Systems},%
+short={TCS},%
+shortplural={TCSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{etsiae}%
+{%
+name={\acronymfont {\glsentryshort {etsiae}}},%
+sort={ETSIAE},%
+type={acronym},%
+first={ETSIAE},%
+firstplural={ETSIAEs},%
+text={ETSIAE},%
+plural={ETSIAEs},%
+description={Escuela Técnica Superior de Ingeniería Aeronáutica y del Espacio},%
+descriptionplural={Escuela Técnica Superior de Ingeniería Aeronáutica y del Espacio},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Escuela Técnica Superior de Ingeniería Aeronáutica y del Espacio},%
+longplural={Escuela Técnica Superior de Ingeniería Aeronáutica y del Espacios},%
+short={ETSIAE},%
+shortplural={ETSIAEs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{idr}%
+{%
+name={\acronymfont {\glsentryshort {idr}}},%
+sort={IDR},%
+type={acronym},%
+first={IDR},%
+firstplural={IDRs},%
+text={IDR},%
+plural={IDRs},%
+description={Instituto Universitario de Microgravedad "Ignacio Da Riva"},%
+descriptionplural={Instituto Universitario de Microgravedad "Ignacio Da Riva"},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Instituto Universitario de Microgravedad "Ignacio Da Riva"},%
+longplural={Instituto Universitario de Microgravedad "Ignacio Da Riva"s},%
+short={IDR},%
+shortplural={IDRs},%
+counter={page},%
+parent={},%
+%
+}%
+

@@ -11,23 +11,22 @@
 \newcommand{\ProjectAutor}{ Asier Fiel Mariblanca}
 \newcommand{\ProjectTutor}{ David González Bárcena}
 \newcommand{\ProjectLocation}{Madrid}
-\newcommand{\ProjectDate}{x de junio de 2026}
+\newcommand{\ProjectDate}{junio 2026}
+
 % Descomentar si se tiene un repositorio del trabajo
-% \newcommand{\ProjectGitHub}{url}
+\newcommand{\ProjectGitHub}{https://github.com/asi1803/TFG/tree/main/TFG_Asier}
 
 
 
 %   ---   INCLUIR ARCHIVOS DE CONFIGURACION   ---   %
 
 \input{./Tex_Files/packages.tex}
-\input{./Tex_Files/acronyms.tex}
 \input{./Tex_Files/header_footer.tex}
 \input{./Tex_Files/functions.tex}
 
 
 
 %   ---   COMIENZO DEL DOCUMENTO   ---   %
-\glsaddall
 \begin{document}
 
 
@@ -48,27 +47,28 @@
 \pagenumbering{roman}
 \raggedbottom
 
-% Figuras    
-\addcontentsline{toc}{section}{\listfigurename}
+% Figuras   
+\renewcommand{\listfigurename}{List of Figures} 
+%\addcontentsline{toc}{section}{\listfigurename}
 \listoffigures
 \cleardoublepage
 
 % Tablas
-\renewcommand{\listtablename}{Índice de tablas}
-\addcontentsline{toc}{section}{\listtablename}
+\renewcommand{\listtablename}{List of Tables}
+%\addcontentsline{toc}{section}{\listtablename}
 \listoftables
 \cleardoublepage
 
-% Acronyms  
-\phantomsection 
-% Configuramos el nombre antes de imprimir
-\renewcommand{\acronymname}{Acrónimos}
-
+% Acronyms 
+\input{./Tex_Files/acronyms.tex}
+%\phantomsection  % Configuramos el nombre antes de imprimir
+%\renewcommand{\acronymname}{Acronyms}
+%\addcontentsline{toc}{chapter}{Acronyms}
 % Imprimimos el glosario. 
 % El título aparecerá automáticamente porque NO usamos la opción 'nonumberlist' aquí.
-\printglossary[type=\acronymtype, style=long, title={Acrónimos}]
+\printglossary[type=\acronymtype, style=long, title={Acronyms}]
 % Forzamos los encabezados de página para que digan ACRÓNIMOS
-\markboth{ACRÓNIMOS}{ACRÓNIMOS}
+%\markboth{ACRÓNIMOS}{ACRÓNIMOS}
 \cleardoublepage
 
 % Numeracion en arabico
@@ -88,21 +88,30 @@
 \cleardoublepage
 \input{./Chapters/Theoretical_background.tex}
 \cleardoublepage
-
-%   ---   BIBLIOGRAFÍA/REFERENCIAS   ---   %
-\input{./Chapters/Bibliography.tex}
-\phantomsection
-\addcontentsline{toc}{section}{Referencias}
-\renewcommand{\refname}{Referencias}
-\bibliographystyle{elsarticle-num}
-\bibliography{references.bib}
+\input{./Chapters/Development_thermal.tex}
+\cleardoublepage
+\input{./Chapters/Post_process.tex}
+\cleardoublepage
+\input{./Chapters/Results.tex}
+\cleardoublepage
+\input{./Chapters/Conclusions.tex}
 \cleardoublepage
 
+%   ---   BIBLIOGRAFÍA/REFERENCIAS   ---   %
+\input{./Chapters/References.tex}
+\cleardoublepage
+%\chapter{References}
+%\phantomsection % Para que el capítulo aparezca en el índice
+% comando para eliminar el número de sección del capítulo de referencias
+%\addcontentsline{toc}{section}{Referencias}
+%\renewcommand{\refname}{Referencias}
+%\bibliographystyle{elsarticle-num}
+%\bibliography{references.bib}
+%\cleardoublepage
 
 
 %   ---   ANEXOS   ---   %
 
-%\appendix
 %\renewcommand{\appendixname}{Anexos}
 %\addcontentsline{toc}{section}{\appendixname}
 %\clearpage % or \cleardoublepage

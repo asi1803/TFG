@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99e
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: main.aux
+The top-level auxiliary file: TFG_FIEL_MARIBLANCA_ASIER.aux
 Reallocating 'name_of_file' (item size: 1) to 15 items.
 The style file: elsarticle-num.bst
 Reallocating 'name_of_file' (item size: 1) to 15 items.
@@ -8,7 +8,7 @@ Database file #1: references.bib
 Warning--empty journal in im78552
 You've used 1 entry,
             2937 wiz_defined-function locations,
-            672 strings with 5247 characters,
+            672 strings with 5289 characters,
 and the built_in function-call counts, 229 in all, are:
 = -- 12
 > -- 10
