@@ -785,6 +785,9 @@ INPUT Chapters\References.tex
 INPUT .\TFG_FIEL_MARIBLANCA_ASIER.bbl
 INPUT .\TFG_FIEL_MARIBLANCA_ASIER.bbl
 INPUT TFG_FIEL_MARIBLANCA_ASIER.bbl
+INPUT .\Figures\Portada_HF\upm_logo.png
+INPUT .\Figures\Portada_HF\upm_logo.png
+INPUT .\Figures\Portada_HF\upm_logo.png
 INPUT .\Tex_Files\A_01.tex
 INPUT .\Tex_Files\A_01.tex
 INPUT Tex_Files\A_01.tex

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  5 MAR 2026 00:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  5 MAR 2026 01:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1695,26 +1695,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `TFG_FIEL_MARIBLANCA_ASIER.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1769,33 +1769,33 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 34.
  (TFG_FIEL_MARIBLANCA_ASIER.out) (TFG_FIEL_MARIBLANCA_ASIER.out)
 \@outlinefile=\write9
 \openout9 = `TFG_FIEL_MARIBLANCA_ASIER.out'.
 
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 30.
-Package gensymb Info: Math companion symbols declared on input line 30.
-LaTeX Info: Redefining \degree on input line 30.
-LaTeX Info: Redefining \celsius on input line 30.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 30.
-LaTeX Info: Redefining \ohm on input line 30.
-Package gensymb Info: Using \textohm for \ohm on input line 30.
-Package gensymb Info: Using \textmu for \micro on input line 30.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 34.
+Package gensymb Info: Math companion symbols declared on input line 34.
+LaTeX Info: Redefining \degree on input line 34.
+LaTeX Info: Redefining \celsius on input line 34.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 34.
+LaTeX Info: Redefining \ohm on input line 34.
+Package gensymb Info: Using \textohm for \ohm on input line 34.
+Package gensymb Info: Using \textmu for \micro on input line 34.
 \c@lstlisting=\count475
  (TFG_FIEL_MARIBLANCA_ASIER.glsdefs)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (Tex_Files/portada.tex
-<./Figures/Portada_HF/upm_logo.png, id=229, 398.4486pt x 185.0112pt>
+<./Figures/Portada_HF/upm_logo.png, id=228, 398.4486pt x 185.0112pt>
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
 Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 5.
 (pdftex.def)             Requested size: 140.84259pt x 65.39853pt.
-<./Figures/Portada_HF/descarga.png, id=231, 256.96pt x 148.555pt>
+<./Figures/Portada_HF/descarga.png, id=230, 256.96pt x 148.555pt>
 File: ./Figures/Portada_HF/descarga.png Graphic file (type png)
 <use ./Figures/Portada_HF/descarga.png>
 Package pdftex.def Info: ./Figures/Portada_HF/descarga.png  used on input line 7.
@@ -1846,13 +1846,13 @@ l.52 ...onclusions and Future Work}{19}{chapter.8}
 
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 44.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 48.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.44 \newpage
+l.48 \newpage
               [3] (TFG_FIEL_MARIBLANCA_ASIER.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1865,7 +1865,7 @@ LaTeX Info: Redefining \% on input line 1.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 54.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 58.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [2
 
@@ -1881,7 +1881,7 @@ LaTeX Info: Redefining \% on input line 1.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 60.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 64.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [4
 
@@ -1895,7 +1895,7 @@ No file TFG_FIEL_MARIBLANCA_ASIER.acr.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 64.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 68.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [6
 
@@ -1909,27 +1909,27 @@ l.46 \end{itemize}
                    [1
 
 ]
-<./Figures/01/duet3.png, id=374, 722.7pt x 470.50781pt>
+<./Figures/01/duet3.png, id=373, 722.7pt x 470.50781pt>
 File: ./Figures/01/duet3.png Graphic file (type png)
 <use ./Figures/01/duet3.png>
 Package pdftex.def Info: ./Figures/01/duet3.png  used on input line 58.
 (pdftex.def)             Requested size: 284.52756pt x 185.24188pt.
-<./Figures/01/Mont_01.jpg, id=375, 2178.1375pt x 2588.67125pt>
+<./Figures/01/Mont_01.jpg, id=374, 2178.1375pt x 2588.67125pt>
 File: ./Figures/01/Mont_01.jpg Graphic file (type jpg)
 <use ./Figures/01/Mont_01.jpg>
 Package pdftex.def Info: ./Figures/01/Mont_01.jpg  used on input line 70.
 (pdftex.def)             Requested size: 142.26378pt x 169.05954pt.
-<./Figures/01/Mont_02.jpg, id=376, 2135.98pt x 2522.42375pt>
+<./Figures/01/Mont_02.jpg, id=375, 2135.98pt x 2522.42375pt>
 File: ./Figures/01/Mont_02.jpg Graphic file (type jpg)
 <use ./Figures/01/Mont_02.jpg>
 Package pdftex.def Info: ./Figures/01/Mont_02.jpg  used on input line 74.
 (pdftex.def)             Requested size: 142.26378pt x 167.96616pt.
-<./Figures/01/Perfil_Aluminio.png, id=377, 501.875pt x 260.975pt>
+<./Figures/01/Perfil_Aluminio.png, id=376, 501.875pt x 260.975pt>
 File: ./Figures/01/Perfil_Aluminio.png Graphic file (type png)
 <use ./Figures/01/Perfil_Aluminio.png>
 Package pdftex.def Info: ./Figures/01/Perfil_Aluminio.png  used on input line 85.
 (pdftex.def)             Requested size: 187.78535pt x 97.65034pt.
-<./Figures/01/Perfil_Aluminio_Union.jpg, id=378, 353.82187pt x 419.31656pt>
+<./Figures/01/Perfil_Aluminio_Union.jpg, id=377, 353.82187pt x 419.31656pt>
 File: ./Figures/01/Perfil_Aluminio_Union.jpg Graphic file (type jpg)
 <use ./Figures/01/Perfil_Aluminio_Union.jpg>
 Package pdftex.def Info: ./Figures/01/Perfil_Aluminio_Union.jpg  used on input line 88.
@@ -1959,7 +1959,7 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
  (Code/function.m))
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 85.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 89.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [5
 
@@ -1967,7 +1967,7 @@ Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 8
 {C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 85.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 89.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [6
 
@@ -1978,7 +1978,7 @@ Cap\'{\i }tulo 2.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 87.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 91.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [8
 
@@ -1989,7 +1989,7 @@ Cap\'{\i }tulo 3.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 89.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 93.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [10
 
@@ -2000,7 +2000,7 @@ Cap\'{\i }tulo 4.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 91.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 95.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [12
 
@@ -2011,7 +2011,7 @@ Cap\'{\i }tulo 5.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 93.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 97.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [14
 
@@ -2022,7 +2022,7 @@ Cap\'{\i }tulo 6.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 95.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 99.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [16
 
@@ -2033,7 +2033,7 @@ Cap\'{\i }tulo 7.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 97.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 101.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [18
 
@@ -2044,21 +2044,25 @@ Cap\'{\i }tulo 8.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 99.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 103.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [20
 
-] (Chapters/References.tex (TFG_FIEL_MARIBLANCA_ASIER.bbl [21
-
-])) [22
-
-] (Tex_Files/A_01.tex) [23
-
+] (Chapters/References.tex (TFG_FIEL_MARIBLANCA_ASIER.bbl)) [21
 
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 124.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 107.
+(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+ [22
+
+] (Tex_Files/A_01.tex) [23
+
+]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 128.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [24
 
@@ -2073,23 +2077,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `TFG_FIEL_MARIBLANCA_ASIER.out' has not changed.
-(rerunfilecheck)             Checksum: FC2528C3D66B68D2B16C46921B765366;10852.
+(rerunfilecheck)             Checksum: 252A884B2BD61439AC643860C7F4A265;10853.
  ) 
 Here is how much of TeX's memory you used:
- 48606 strings out of 467867
- 967581 string characters out of 5418335
- 1582447 words of memory out of 5000000
- 76484 multiletter control sequences out of 15000+600000
+ 48604 strings out of 467867
+ 967558 string characters out of 5418335
+ 1582463 words of memory out of 5000000
+ 76483 multiletter control sequences out of 15000+600000
  660090 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,15n,120p,2622b,2481s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,15n,120p,2622b,2483s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:mc} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on TFG_FIEL_MARIBLANCA_ASIER.pdf (35 pages, 3602705 bytes).
+Output written on TFG_FIEL_MARIBLANCA_ASIER.pdf (35 pages, 3602789 bytes).
 PDF statistics:
- 1052 PDF objects out of 1200 (max. 8388607)
- 129 named destinations out of 1000 (max. 500000)
+ 1051 PDF objects out of 1200 (max. 8388607)
+ 128 named destinations out of 1000 (max. 500000)
  500 words of extra memory for PDF output out of 10000 (max. 10000000)
 

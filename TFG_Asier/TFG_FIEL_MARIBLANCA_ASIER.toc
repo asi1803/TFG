@@ -52,5 +52,5 @@
 \contentsline {chapter}{\numberline {8}Conclusions and Future Work}{19}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Conclusions}{19}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Future Work}{19}{section.8.2}%
-\contentsline {chapter}{References}{21}{chapter*.9}%
-\contentsline {chapter}{Anexos}{23}{chapter*.11}%
+\contentsline {chapter}{References}{21}{section.8.2}%
+\contentsline {chapter}{Anexos}{23}{chapter*.10}%
