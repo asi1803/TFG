@@ -25,10 +25,12 @@
 \input{./Tex_Files/functions.tex}
 
 
-
 %   ---   COMIENZO DEL DOCUMENTO   ---   %
 \addto\captionsspanish{%
   \renewcommand{\bibname}{References}%
+}
+\addto\captionsspanish{%
+  \renewcommand{\contentsname}{Contents} % O el nombre que prefieras
 }
 
 \begin{document}
@@ -65,14 +67,16 @@
 
 % Acronyms 
 \input{./Tex_Files/acronyms.tex}
-\cleardoublepage 
+\cleardoublepage
+
 %OTRA FORMA, LA QUE VENÍA Y NO FUNCIONABA BIEN
 %\phantomsection  % Configuramos el nombre antes de imprimir
 %\renewcommand{\acronymname}{Acronyms}
 %\addcontentsline{toc}{chapter}{Acronyms}
 % Imprimimos el glosario. 
 % El título aparecerá automáticamente porque NO usamos la opción 'nonumberlist' aquí.
-%\printglossary[type=\acronymtype, style=long, title={Acronyms}]
+%\printglossary[type=\acronymtype, style=long, title=Acronyms]
+%\cleardoublepage 
 % Forzamos los encabezados de página para que digan ACRÓNIMOS
 %\markboth{ACRÓNIMOS}{ACRÓNIMOS}
 
@@ -84,7 +88,6 @@
 
 %   ---   ARCHIVOS DEL DOCUMENTO   ---   %
 % Es recomendable escribir el trabajo en documentos separados y luego importarlos al main.
-
 \input{./Chapters/01_Abstract.tex}
 \cleardoublepage
 \input{./Chapters/02_Introduction.tex}

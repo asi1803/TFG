@@ -1,25 +1,20 @@
-\chapter*{Acronyms}
-\printglossary[type=\acronymtype, style=long, title={Acronyms}]
-
 %FORMA DE QUE APAREZCAN LOS ACRÓNIMOS
-\newacronym{mc}{MC}{Materiales Compuestos}
-\acrshort{mc}, 
-\acrfull{mc}
-\newacronym{cfrp}{CFRP}{Carbon Fiber Reinforced Polymer}
-\newacronym{udpp}{UDPP}{Unidirectional Prepeg}
-\newacronym{fr}{FR}{Filament Ripper}
-\newacronym{rrf}{RRF}{RepRap Firmware}
-\newacronym{dwc}{DWC}{Duet Web Control}
-\newacronym{sbc}{SBC}{Single Board Computer}
-\newacronym{rsp}{RSP4}{Raspberry Pi 4}
-\newacronym{cad}{CAD}{Computer Aided Desing}
-\newacronym{rpas}{RPAS}{Remotely Piloted Aircraft System}
-\newacronym{ba}{BA}{Borde de ataque}
-\newacronym{bs}{BS}{Borde de salida}
-\newacronym{eop}{EoP}{Edge of Part}
-\newacronym{eeop}{EEoP}{Engineering Edge of Part}
-\newacronym{meop}{MEoP}{Manufacturing Edge of Part}
-\newacronym{eom}{EoM}{Excess of Material}
+
+\chapter*{Acronyms}
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Acronyms}
+
+% ACRONIMOS A INCLUIR
+\newacronym{esa}{ESA}{European Space Agency}
+\acrshort{esa},\acrlong{esa}
+\newacronym{esatan-tms}{ESATAN-TMS}{European Space Agency Thermal Analysis Tool}
 \newacronym{tcs}{TCS}{Thermal Control System}
+\newacronym{lpm}{LPM}{Lumped Parameter Method}
 \newacronym{etsiae}{ETSIAE}{Escuela Técnica Superior de Ingeniería Aeronáutica y del Espacio}
 \newacronym{idr}{IDR}{Instituto Universitario de Microgravedad "Ignacio Da Riva"}
+
+%Imprime los acrónimos sin titulo adicional
+\label{ch:acronyms}
+\printglossary[type=\acronymtype, style=long, title{}]
+\printglossaries
+\printacronyms

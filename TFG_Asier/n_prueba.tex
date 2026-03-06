@@ -1,0 +1,132 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\geometry{margin=2.5cm}
+
+\begin{document}
+
+\chapter{Theoretical Foundations of Spacecraft Thermal Engineering}
+
+\section{Thermal Control in Engineering: An Overview}
+In the field of engineering, temperature control is essential to keep systems and components within safe thermal limits. This is especially critical in aerospace systems where extreme variations can negatively impact structural safety and operational reliability. 
+
+As detailed in \cite{th_background}, while terrestrial applications rely heavily on convection, the lack of an atmosphere in space limits heat transfer to \textbf{conduction} through solids and \textbf{thermal radiation} into the vacuum.
+
+\section{Space Mission Architecture and Thermal Requirements}
+As outlined in \cite{Cap_Libro}, a spacecraft is traditionally divided into the \textbf{Payload} (the mission's primary instruments) and the \textbf{Bus or Platform} (supporting subsystems like power, propulsion, and TCS).
+
+\subsection{Temperature Range Classification}
+Thermal engineering defines strict temperature envelopes to ensure mission success. These are typically categorized as:
+\begin{itemize}
+    \item \textbf{Operational Range:} The temperature band where a component meets all its functional specifications.
+    \item \textbf{Acceptance Range:} The range used for testing flight hardware, usually defined as Operational $\pm 5^\circ$C.
+    \item \textbf{Qualification Range:} Used for testing design robustness on engineering models, typically Acceptance $\pm 5^\circ$C.
+    \item \textbf{Survival Range:} The extreme limits a unit can withstand without power before permanent damage occurs.
+\end{itemize}
+
+
+
+\section{The Space Thermal Environment}
+Spacecraft in orbit interact with complex radiative fluxes. According to \cite{th_background} and \cite{Radiacion_1}, the three primary external sources are:
+\begin{enumerate}
+    \item \textbf{Direct Solar Flux ($q_{sol}$):} Short-wave radiation from the sun, approximately $1361~W/m^2$ at 1 AU.
+    \item \textbf{Albedo ($q_{alb}$):} Solar radiation reflected by the Earth's atmosphere and surface (average coefficient $\approx 0.3$).
+    \item \textbf{Earth Infrared ($q_{IR}$):} Long-wave radiation emitted by the Earth as a blackbody at $\approx 255~K$ ($230-260~W/m^2$).
+\end{enumerate}
+
+\section{Physics of Conduction in Space Systems}
+Conduction is the primary internal heat transport mechanism. It is governed by the transfer of energy via lattice vibrations and free electrons.
+
+\subsection{The General Heat Conduction Equation}
+Based on the derivations in \cite{Conduc_1} and \cite{Conduc_2}, the three-dimensional transient heat equation is:
+\begin{equation}
+    \rho c_p \frac{\partial T}{\partial t} = \frac{\partial}{\partial x}\left(k_x \frac{\partial T}{\partial x}\right) + \frac{\partial}{\partial y}\left(k_y \frac{\partial T}{\partial y}\right) + \frac{\partial}{\partial z}\left(k_z \frac{\partial T}{\partial z}\right) + \dot{g}
+\end{equation}
+Where $\rho$ is density, $c_p$ is specific heat, and $\dot{g}$ is internal heat generation.
+
+\subsection{Thermal Contact Resistance (TCR)}
+In a vacuum, mechanical interfaces (bolted joints) present a significant barrier to heat flow. As described in \cite{Conduc_3}:
+\begin{itemize}
+    \item \textbf{Constriction:} Heat lines must squeeze through microscopic contact points (asperities).
+    \item \textbf{Thermal Fillers:} To mitigate TCR, engineers use Thermal Interface Materials (TIMs) such as Graphite (Sigraflex), Indium foils, or Chotherm gaskets to fill microscopic voids.
+\end{itemize}
+
+
+
+\section{Radiative Heat Transfer}
+Radiation is the only mechanism for heat rejection in space. It is characterized by its $T^4$ dependence and surface-specific properties.
+
+\subsection{Selective Surfaces}
+Spacecraft designers use selective coatings to control the equilibrium temperature. Key properties include:
+\begin{itemize}
+    \item \textbf{Solar Absorptivity ($\alpha_s$):} Fraction of solar energy absorbed.
+    \item \textbf{Infrared Emissivity ($\epsilon_{ir}$):} Efficiency of thermal energy emission.
+\end{itemize}
+For example, \textbf{Optical Solar Reflectors (OSRs)} are designed with low $\alpha_s$ and high $\epsilon_{ir}$ to serve as efficient heat radiators even in direct sunlight.
+
+\subsection{Radiosity Method and View Factors}
+The radiative exchange between two surfaces $i$ and $j$ is calculated using View Factors ($F_{ij}$), representing the geometric relationship between them. The net heat flux is expressed through the electrical analogy as:
+\begin{equation}
+    \dot{Q}_{net} = \frac{\sigma(T_i^4 - T_j^4)}{\frac{1-\epsilon_i}{\epsilon_i A_i} + \frac{1}{A_i F_{ij}} + \frac{1-\epsilon_j}{\epsilon_j A_j}}
+\end{equation}
+
+\section{Convection in Aerospace Applications}
+While absent in the vacuum of space, convection is critical during the launch phase and inside pressurized modules like the ISS \cite{Convection_PDF}.
+
+\subsection{Dimensionless Numbers}
+To characterize convective flow, the following numbers are used:
+\begin{itemize}
+    \item \textbf{Reynolds (Re):} Ratio of inertial to viscous forces.
+    \item \textbf{Grashof (Gr):} Ratio of buoyancy to viscous forces.
+    \item \textbf{Nusselt (Nu):} Ratio of convective to conductive heat transfer at a boundary.
+\end{itemize}
+
+\section{Numerical Simulation: Lumped Parameter Method}
+Modern thermal analysis (using tools like ESATAN-TMS) relies on nodal discretization. As stated in \cite{th_background}, the system is divided into:
+\begin{itemize}
+    \item \textbf{Diffusion Nodes:} Possess thermal mass ($C_i = m_i c_{pi}$).
+    \item \textbf{Arithmetic Nodes:} Zero mass nodes that react instantaneously to changes.
+    \item \textbf{Boundary Nodes:} Fixed temperature sinks or sources.
+\end{itemize}
+The governing equation for node $i$ is:
+\begin{equation}
+    C_i \frac{dT_i}{dt} = Q_{int,i} + Q_{ext,i} - \sum GL_{ij}(T_i - T_j) - \sum GR_{ij}\sigma(T_i^4 - T_j^4)
+\end{equation}
+
+\section{Thermal Control Technologies}
+Thermal control can be classified into passive and active methods \cite{TCS_Intro}:
+
+\subsection{Passive Control}
+\begin{itemize}
+    \item \textbf{Multi-Layer Insulation (MLI):} Multiple layers of aluminized Mylar to block radiative heat transfer.
+    \item \textbf{Radiators:} High-emissivity surfaces designed to reject heat into deep space.
+    \item \textbf{Thermal Straps:} Flexible copper or graphite links used to move heat without mechanical stress.
+\end{itemize}
+
+
+
+\subsection{Active Control}
+\begin{itemize}
+    \item \textbf{Heaters:} Used to maintain survival temperatures during eclipse cycles.
+    \item \textbf{Louvers:} Mechanically variable shutters that change a radiator's effective emissivity.
+    \item \textbf{Heat Pipes:} Highly efficient devices using phase change (evaporation/condensation) to transport heat.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{th_background} "Theoretical Background", Project Document.
+\bibitem{Cap_Libro} "Essential Chapters of Spacecraft Thermal Control", Textbook Reference.
+\bibitem{Radiacion_1} "Radiación Térmica", IDR/UPM Thermal Control Team.
+\bibitem{Conduc_1} "Conducción I: Thermal Conductivity", IDR/UPM.
+\bibitem{Conduc_2} "Conducción II: Heat Equation", IDR/UPM.
+\bibitem{Conduc_3} "Conducción III: Thermal Contact Resistance", IDR/UPM.
+\bibitem{Convection_PDF} "Convection in Aerospace", IDR/UPM.
+\bibitem{TCS_Intro} "Descripción y Objetivos del TCS", IDR/UPM.
+\end{thebibliography}
+
+\end{document}

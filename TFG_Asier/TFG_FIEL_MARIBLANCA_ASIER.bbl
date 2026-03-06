@@ -5,9 +5,18 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{im78552}
-Y.~Ng, J.~Tomblin, E.~Hooper, Hexcel 8552 as4 unidirectional prepreg
-  qualification material property data report faa special project number
-  sp4614wi-q, FAA Technical Report.
+\bibitem{lpm_elec}
+\href{https://shoncloud.com/blog/lumped-parameter-thermal-network-1/}{Understanding
+  the lumped-parameter thermal network method} [online].
+
+\bibitem{tfgcarol}
+C.~A. Carballo, Desarrollo de una herramienta en python para el postprocesado
+  de modelos térmicos procedentes de esatan-tms, Tech. rep., Universidad
+  Politécnica de Madrid, Escuela Técnica Superior de Ingeniería Aeronáutica
+  y del Espacio (2025).
+
+\bibitem{thermal_eng_man}
+ESATAN-TMS Thermal Engineering Manual, ITP Engines UK Ltd, Whetstone,
+  Leicester, UK, August 2015.
 
 \end{thebibliography}
