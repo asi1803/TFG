@@ -1,25 +1,48 @@
 \chapter{Theoretical Background} \label{ch:chapter_04}
 \section{Thermal Control in Engineering}
-In the field of engineering, temperature control is essential to keep systems and 
-components within safe thermal limits. This is especially critical in aerospace systems where extreme variations 
-can negatively impact structural safety and operational reliability.\newline % \par se utiliza para cambiar de párrafo
-Therefore, extending systems' durability and improving  their performance are crucial key factors \cite{tfgcarol}. 
+The primary objective of a Spacecraft \acrfull{tcs} is to ensure that all onboard components operate 
+within their specified temperature limits across all mission phases, while minimizing resource consumption (mass and power). 
+This is critical because the space environment is characterized by extreme conditions, 
+including a vacuum, a background temperature of 3K, and rapid, intense thermal cycling due to 
+exposure to sunlight and Earth's shadow. \cite{tcs_slides1}
 
-
+Failure to maintain these thermal limits can lead to equipment malfunctions, reduced reliability,
+structural damage from thermal cycling, 
+or the freezing of propellants. Key requirements for the TCS include:\cite{tcs_slides1}
+\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
+	\item Temperature Ranges: Maintaining specific operational and survival temperature ranges 
+	for components (e.g., electronics, batteries, or infrared detectors)
+	\item Thermal Gradients and Stability: Controlling temperature gradients and stability is essential for high-precision systems such as cameras, 
+	optical benches, and CCD sensors to avoid structural distortions and measurement errors
+\end{itemize}
+Therefore, the application of a thermal control system ensures operational 
+reliability and also enhances the overall energy efficiency of the system \cite{hmt_f&a} %realmente esta citado del tfg de carolina, habra q darle una vuelta a todo
 \section{Space Thermal Environment}
 
 \section{Heat Transfer Mechanisms}
+
+CON LO VISTO EN CLASE, DIAPOSITIVAS, LIBROS DE REFERENCIA...
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=100mm]{imag_01.png}
+%	\caption{ Spectral distribution of the emissive power of a blackbody at different temperatures.
+%The peak shifts to shorter wavelengths as temperature increases, according to Planck’s Law, \cite{heattransfer}} % Pie de imagen
+%	\label{fig:001_01}
+%\end{figure}
 \subsection{Conduction Heat Transfer}
+\subsection{Convection Heat Transfer}
 \subsection{Radiation Heat Transfer}
 
 \section{Mathematical Modeling of Thermal Systems}
 \subsection{Disadvantages of the Finite Element Method (FEM)}
 
 \subsection{Lumped Parameter Method (LPM)}
-The \acrfull{lpm} is the standard mathematical approach for spacecraft thermal analysis.\newline
-This method is a discretization technique that simplifies a continuous physical system into a finite number of discrete elements called nodes. The fundamental assumption is that each node is isothermal, 
-meaning its temperature is uniform throughout its entire volume. This allows the system to be solved as a network of interconnected thermal resistances and capacitances, analogous to an electrical circuit, where temperature equates to voltage and heat flow to current flow. \cite{thermal_eng_man
-}
+The \acrfull{lpm} is a discretization technique that simplifies a continuous physical system 
+into a finite number of discrete elements called nodes. 
+The fundamental assumption is that each node is isothermal, meaning its temperature is uniform throughout its entire volume. 
+This allows the system to be solved as a network of interconnected thermal resistances and 
+capacitances, analogous to an electrical circuit, 
+where temperature equates to voltage and heat flow to current flow. %\cite{thermal_eng_man}
 
 \begin{figure}[H]
 	\centering
@@ -37,49 +60,32 @@ where:
 
 \begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
 	\item $C_i$ [J/K]: thermal capacitance of node $i$ ($m_i\ c_p,_i$); stores/releases heat as $T_i$ changes.  %El dolar se usa para ponerlo en formato formula
-\end{itemize}
 
-\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
 	\item $T_i$ [K]: temperature of node $i$.
-\end{itemize}
 
-\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
 	\item $t$ [s]: time.
-\end{itemize}
 
-\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
 	\item $GL_{ij}$ [W/K]: conductive conductance between nodes $i$ and $j$. The value is zero if there is not a conductive path.
-\end{itemize}
 
-\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
 	\item $GR_{ij}$ [$W/K^4$]: radiative coupling factor between $i$ and $j$ in the non-linear $T^4$ form; it embeds
 $\sigma$, view factors and emissivities for diffuse–gray surfaces.
-\end{itemize}
 
-\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
 	\item $Q_i$ [W]: net heat source applied to node $i$ (internal dissipation, heaters, and absorbed external fluxes as modelled in the network).
-\end{itemize}
 
-\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
 	\item $\sum_{j=1}^n$: sum over all nodes $j$, which are thermally connected to $i$. The terms $GL_{ij}(T_i-T_j)$ and $GR_{ij}(T_i^4-T_j^4)$ contribute as inflow when the expression in parentheses is negative.
 \end{itemize}
+% quiero que me ayudes a redactar el párrafo de abajo de mejor manera
 
 The discrete approximation has advantages in numerical as well as experimental work, and lends itself to 
 simple hand calculations as well as to computerised solution. A continuous system obeys a differential 
 equation, whereas a networked model obeys a system of algebraic equations, when studying a steady-state case, in a finite number of 
-variables which can be solved by standard techniques. \cite{thermal_eng_man} \newline
-Therefore, it is especially useful in aerospace applications, such as the thermal modeling of satellites, 
-where a balance between accuracy and efficiency is required . \cite{tfgcarol}
+variables which can be solved by standard techniques.\newline %\cite{thermal_eng_man} 
+Therefore, this method has a wide range of applications in the aeroespace industry, such as the thermal modeling of satellites, 
+where a balance between accuracy and efficiency is required . %\cite{tfgcarol}
 
 \section{Software and Advanced Methods for Thermal Simulation}
 
 \section{Analytical Capabilities of ESATAN-TMS}
 
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=100mm]{imag_01.png}
-%	\caption{ Spectral distribution of the emissive power of a blackbody at different temperatures.
-%The peak shifts to shorter wavelengths as temperature increases, according to Planck’s Law, \cite{heattransfer}} % Pie de imagen
-%	\label{fig:001_01}
-%\end{figure}
-%\cite{spacethctrl}
+
+

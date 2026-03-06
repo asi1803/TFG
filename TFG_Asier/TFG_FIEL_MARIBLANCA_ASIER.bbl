@@ -9,14 +9,14 @@
 \href{https://shoncloud.com/blog/lumped-parameter-thermal-network-1/}{Understanding
   the lumped-parameter thermal network method} [online].
 
-\bibitem{tfgcarol}
-C.~A. Carballo, Desarrollo de una herramienta en python para el postprocesado
-  de modelos térmicos procedentes de esatan-tms, Tech. rep., Universidad
-  Politécnica de Madrid, Escuela Técnica Superior de Ingeniería Aeronáutica
-  y del Espacio (2025).
+\bibitem{tcs_slides1}
+I.~G. de~Control Térmico~Espacial, Descripción y objetivos del {TCS}: Control
+  térmico espacial, diapositivas de la asignatura Transferencia de calor y
+  control térmico, material docente de la Universidad Politécnica de
+  Madrid[consultado el 6 de marzo de 2026] (2026).
 
-\bibitem{thermal_eng_man}
-ESATAN-TMS Thermal Engineering Manual, ITP Engines UK Ltd, Whetstone,
-  Leicester, UK, August 2015.
+\bibitem{hmt_f&a}
+Y.~A. Çengel, A.~J. Ghajar, Heat and Mass Transfer: Fundamentals and
+  Applications, 6th Edition, McGraw-Hill, New York, NY, 2020.
 
 \end{thebibliography}

@@ -666,6 +666,7 @@ INPUT .\Figures\Portada_HF\upm_logo.png
 INPUT .\Chapters\04_Theoretical_background.tex
 INPUT .\Chapters\04_Theoretical_background.tex
 INPUT Chapters\04_Theoretical_background.tex
+INPUT C:\Users\asi18\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\asi18\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
 INPUT .\Figures\01\imag_04.png
 INPUT .\Figures\01\imag_04.png
@@ -673,7 +674,6 @@ INPUT .\Figures\01\imag_04.png
 INPUT .\Figures\01\imag_04.png
 INPUT .\Figures\01\imag_04.png
 INPUT .\Figures\01\imag_04.png
-INPUT C:\Users\asi18\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT .\Figures\Portada_HF\upm_logo.png
 INPUT .\Figures\Portada_HF\upm_logo.png
 INPUT .\Figures\Portada_HF\upm_logo.png
@@ -725,10 +725,10 @@ INPUT .\Figures\Portada_HF\upm_logo.png
 INPUT TFG_FIEL_MARIBLANCA_ASIER.aux
 INPUT .\TFG_FIEL_MARIBLANCA_ASIER.out
 INPUT .\TFG_FIEL_MARIBLANCA_ASIER.out
-INPUT C:\Users\asi18\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
-INPUT C:\Users\asi18\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
 INPUT C:\Users\asi18\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
 INPUT C:\Users\asi18\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\asi18\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
+INPUT C:\Users\asi18\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0800.pk
 INPUT C:\Users\asi18\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
 INPUT C:\Users\asi18\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
 INPUT C:\Users\asi18\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk

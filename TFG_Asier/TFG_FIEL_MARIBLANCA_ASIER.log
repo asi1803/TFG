@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  6 MAR 2026 01:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  6 MAR 2026 13:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1790,12 +1790,12 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (Tex_Files/portada.tex
-<./Figures/Portada_HF/upm_logo.png, id=200, 398.4486pt x 185.0112pt>
+<./Figures/Portada_HF/upm_logo.png, id=204, 398.4486pt x 185.0112pt>
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
 Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 5.
 (pdftex.def)             Requested size: 140.84259pt x 65.39853pt.
-<./Figures/Portada_HF/descarga.png, id=202, 256.96pt x 148.555pt>
+<./Figures/Portada_HF/descarga.png, id=206, 256.96pt x 148.555pt>
 File: ./Figures/Portada_HF/descarga.png Graphic file (type png)
 <use ./Figures/Portada_HF/descarga.png>
 Package pdftex.def Info: ./Figures/Portada_HF/descarga.png  used on input line 7.
@@ -1825,14 +1825,11 @@ l.52 \end{titlepage}
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
-Overfull \hbox (1.17812pt too wide) in paragraph at lines 22--22
+Overfull \hbox (1.17812pt too wide) in paragraph at lines 23--23
  [] [][]\T1/cmr/bx/n/10.95 Development of the Ther-mal Mo-del in ESATAN-TMS and Da-ta Ex-port/Analysis[] []  
  []
 
-
-Underfull \vbox (badness 7777) has occurred while \output is active []
-
- [1
+[1
 
 ])
 \tf@toc=\write10
@@ -1941,14 +1938,14 @@ Cap\'{\i }tulo 4.
 [7
 
 ]
-<./Figures/01/imag_04.png, id=349, 904.88063pt x 292.84406pt>
+<./Figures/01/imag_04.png, id=354, 904.88063pt x 292.84406pt>
 File: ./Figures/01/imag_04.png Graphic file (type png)
 <use ./Figures/01/imag_04.png>
-Package pdftex.def Info: ./Figures/01/imag_04.png  used on input line 26.
+Package pdftex.def Info: ./Figures/01/imag_04.png  used on input line 49.
 (pdftex.def)             Requested size: 369.88582pt x 119.7049pt.
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 73.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 69.
 (pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
  [8 <./Figures/01/imag_04.png>])
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
@@ -2035,13 +2032,13 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `TFG_FIEL_MARIBLANCA_ASIER.out' has not changed.
-(rerunfilecheck)             Checksum: 0E620712C1BE2881C29F95984A830E8D;10017.
+(rerunfilecheck)             Checksum: A6D7DC036A489AA52583D3469FF29786;10205.
  ) 
 Here is how much of TeX's memory you used:
- 47658 strings out of 467867
- 955100 string characters out of 5418335
- 1516501 words of memory out of 5000000
- 75611 multiletter control sequences out of 15000+600000
+ 47664 strings out of 467867
+ 955184 string characters out of 5418335
+ 1516502 words of memory out of 5000000
+ 75616 multiletter control sequences out of 15000+600000
  651483 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,15n,120p,2622b,2483s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2049,12 +2046,12 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{glo:lpm} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{glo:esa} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{glo:tcs} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on TFG_FIEL_MARIBLANCA_ASIER.pdf (32 pages, 563352 bytes).
+ <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on TFG_FIEL_MARIBLANCA_ASIER.pdf (32 pages, 565162 bytes).
 PDF statistics:
- 913 PDF objects out of 1000 (max. 8388607)
- 89 named destinations out of 1000 (max. 500000)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 917 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 432 words of extra memory for PDF output out of 10000 (max. 10000000)
 
