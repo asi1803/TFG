@@ -319,6 +319,9 @@ INPUT C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\g
 INPUT C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex\latex\supertabular\supertabular.sty
 INPUT C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-tree.sty
 INPUT C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-tree.sty
+INPUT .\Tex_Files\acronyms.tex
+INPUT .\Tex_Files\acronyms.tex
+INPUT Tex_Files\acronyms.tex
 OUTPUT TFG_FIEL_MARIBLANCA_ASIER.glo
 OUTPUT TFG_FIEL_MARIBLANCA_ASIER.acn
 INPUT C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex\latex\datatool\datatool.sty
@@ -637,10 +640,6 @@ OUTPUT TFG_FIEL_MARIBLANCA_ASIER.lot
 INPUT .\Figures\Portada_HF\upm_logo.png
 INPUT .\Figures\Portada_HF\upm_logo.png
 INPUT .\Figures\Portada_HF\upm_logo.png
-INPUT .\Tex_Files\acronyms.tex
-INPUT .\Tex_Files\acronyms.tex
-INPUT Tex_Files\acronyms.tex
-OUTPUT TFG_FIEL_MARIBLANCA_ASIER.glsdefs
 INPUT .\Figures\Portada_HF\upm_logo.png
 INPUT .\Figures\Portada_HF\upm_logo.png
 INPUT .\Figures\Portada_HF\upm_logo.png
