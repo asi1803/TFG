@@ -1,0 +1,151 @@
+\chapter{Theoretical Background}
+\label{ch:theoretical_background}
+
+\section{Thermal Control in Space Engineering}
+In aerospace engineering, the Thermal Control System (TCS) is a mission-critical subsystem responsible 
+for maintaining all spacecraft components within their allowable temperature ranges during all mission phases \cite{tcs_slides0, tfg_carol}. 
+Unlike terrestrial applications, spacecraft operate in a harsh and highly variable thermal environment. 
+Electronic components, batteries, structural joints, and sensitive optical payloads must be protected 
+against severe thermal gradients and extreme temperature fluctuations \cite{spacethctrl, tfg_carol}. Failure 
+to manage these temperatures can lead to accelerated material degradation, mechanical distortion, or 
+catastrophic failure of the payload. % \cite{tfg_carol}. 
+
+The primary objectives of the \acrshort{tcs} are: to ensure optimal performance during operational modes
+and to guarantee survival during non-operational or safe modes \cite{tcs_slides0}. This is achieved through
+a careful balance of internal heat dissipation and external environmental fluxes, utilizing 
+both passive and active thermal control technologies \cite{tcs_slides0,th_handbook}.
+
+\section{The Space Thermal Environment}
+The thermal environment in space is radically different from that on Earth. The vacuum 
+of space precludes any convective heat transfer to the ambient environment, leaving thermal radiation 
+as the sole mechanism for rejecting heat to deep space, which acts as a blackbody sink at 
+approximately $3\text{ K}$ \cite{tfg_carol,tcs_slides0}.
+
+Spacecraft, particularly those in Low Earth Orbit (LEO), are subjected to
+ three primary sources of external environmental heating \cite{tfg_carol}:
+\begin{itemize}
+    \item \textbf{Direct Solar Radiation:} The most significant heat source, characterized by the solar constant (roughly $1361 \text{ W/m}^2$ at $1\text{ AU}$).
+    \item \textbf{Earth Albedo:} The fraction of solar radiation reflected by the Earth's surface and atmosphere. It is highly dependent on orbit altitude, attitude, and local weather conditions.
+    \item \textbf{Planetary Infrared Radiation:} The thermal energy emitted by the Earth itself, typically ranging between $200$ and $300 \text{ W/m}^2$ for LEO altitudes.
+\end{itemize}
+
+During a typical orbit, a spacecraft transitions between periods of direct sunlight (eclipse out) and 
+Earth's shadow (eclipse in), generating severe thermal cycling \cite{tfg_carol}. In contrast, Deep Space 
+or Geostationary Earth Orbit (GEO) missions face different challenges, such as prolonged unilateral solar 
+exposure or deep cold soaking %\cite{tfg_carol}.
+
+\section{Heat Transfer Mechanisms}
+Although convection is generally negligible in the vacuum of space (except within pressurized crewed 
+modules or actively pumped fluid loops) \cite{tcs_slides4}, conduction and radiation are the foundational 
+mechanisms governing spacecraft thermal dynamics %\cite{a_pdf}.
+
+\subsection{Conduction Heat Transfer}
+Conduction dominates the internal heat distribution through the spacecraft's solid structures. 
+It is governed by Fourier's Law of Heat Conduction, which in its one-dimensional macroscopic form is 
+expressed as \cite{tcs_slides1, hmt_f&a}:
+\begin{equation}
+    \dot{Q} = -k A \frac{dT}{dx}
+\end{equation}
+where $\dot{Q}$ is the heat transfer rate ($\text{W}$), $k$ is the thermal conductivity of the material
+($\text{W/m}\cdot\text{K}$), $A$ is the cross-sectional area ($\text{m}^2$), and $dT/dx$ is the temperature
+gradient.
+
+\subsubsection{Thermal Contact Resistance and Thermal Straps}
+An added complexity in space structures is the Thermal Contact Resistance (TCR). When two solid 
+surfaces are bolted or pressed together, microscopic roughness limits the actual contact area, creating 
+resistance to heat flow \cite{tcs_slides3}. In the vacuum of space, the absence of interstitial air drastically
+increases this resistance. To mitigate this or to intentionally decouple components, thermal engineers use 
+interstitial fillers (e.g., Cho-Therm, Sigraflex). Alternatively, highly conductive flexible 
+links known as \textit{Thermal Straps} (typically made of copper or pyrolytic graphite) are used to transport 
+heat from sensitive electronics to radiators while mechanically decoupling them to prevent vibration 
+transmission \cite{tcs_slides3, tcs_slides0}.
+
+\subsection{Radiation Heat Transfer}
+Thermal radiation is the emission of electromagnetic waves from all matter at temperatures above absolute zero. 
+It is the only way a spacecraft can reject waste heat \cite{heattransfer}. 
+
+\subsubsection{Blackbody Radiation}
+An ideal blackbody is a theoretical entity that absorbs all incident radiation and emits the maximum 
+possible thermal energy. The total emissive power is given by the Stefan-Boltzmann Law \cite{heattransfer}:
+\begin{equation}
+    E_b = \sigma T^4
+\end{equation}
+where $\sigma \approx 5.67 \times 10^{-8} \text{ W/m}^2\cdot\text{K}^4$ is the Stefan-Boltzmann constant. 
+The spectral distribution of this energy is described by Planck's Law, and the peak emission wavelength shifts 
+inversely with temperature according to Wien's Displacement Law ($\lambda_{\text{max}} T \approx 2897 \times 10^{-3} \text{ m}\cdot\text{K}$) %\cite{a_pdf}.
+
+\subsubsection{Thermo-Optical Properties of Real Surfaces}
+Real surfaces deviate from blackbody behavior. Their thermal interaction is governed by:
+\begin{itemize}
+    \item \textbf{Absorptivity ($\alpha$):} The fraction of incident radiation absorbed. In spacecraft design, solar absorptivity ($\alpha_s$) is a critical parameter.
+    \item \textbf{Emissivity ($\epsilon$):} The ratio of energy radiated by a material to that radiated by a blackbody at the same temperature. Infrared emissivity ($\epsilon_{IR}$) dictates the heat rejection capability.
+\end{itemize}
+The $\alpha_s / \epsilon_{IR}$ ratio is the fundamental driver of a surface's equilibrium temperature in space. For example, Optical Solar Reflectors (OSRs) feature a very low $\alpha_s$ and high $\epsilon_{IR}$, making them ideal for radiators \cite{tcs_obj}.
+
+\subsubsection{Radiative Exchange and View Factors}
+The net radiative heat transfer between two diffuse, gray surfaces depends heavily on their 
+geometric orientation, quantified by the View Factor (or configuration factor) $F_{ij}$ \cite{heattransfer}.
+This factor represents the fraction of radiation leaving surface $i$ that directly intercepts surface $j$. 
+The reciprocity theorem states that $A_i F_{ij} = A_j F_{ji}$, which is extensively used to simplify complex 
+thermal network calculations.
+
+\begin{figure}[htpb]
+    \centering
+    % \includegraphics[width=0.6\textwidth]{figures/view_factor_diagram.png}
+    \caption{Geometric representation of the view factor $F_{ij}$ between two differential surfaces.}
+    \label{fig:view_factor}
+\end{figure}
+
+\section{Mathematical Modeling of Thermal Systems}
+To accurately predict spacecraft temperatures, Thermal Mathematical Models (TMM) must be constructed 
+and solved %\cite{tcs_obj, a_pdf}.
+
+\subsection{Limitations of the Finite Element Method (FEM)}
+While the Finite Element Method (FEM) is the industry standard for structural analysis, 
+it is often computationally prohibitive for system-level space thermal analysis. FEM relies heavily on 
+dense continuous meshes which are excellent for conduction but struggle with the highly non-linear, 
+non-local nature of radiative heat exchange and the calculation of thousands of view factors %\cite{a_pdf}.
+
+\subsection{Lumped Parameter Method (LPM)}
+The aerospace industry overwhelmingly relies on the Lumped Parameter Method (LPM), which discretizes
+ the spacecraft into a network of isothermal thermal nodes %\cite{a_pdf, tcs_obj}. 
+ The transient energy balance for a generic node $i$ is formulated as an ordinary differential equation:
+\begin{equation}
+    C_i \frac{dT_i}{dt} = \sum_{j \neq i} L_{ij} (T_j - T_i) + \sum_{j \neq i} R_{ij} (T_j^4 - T_i^4) + Q_{i}
+\end{equation}
+where:
+\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
+  \item$C_i$ [J/K]: thermal capacitance of node $i$ ($m_i\ c_p,_i$)
+  \item$T_i$ [K]: temperature of node $i$
+  \item$t$ [s]: time
+  \item$L_{ij}$ [W/K]: conductive coupling (linear conductance)
+  \item$R_{ij}$ [$W/K^4$]: radiative coupling factor (incorporating view factors and emissivities)
+  \item$Q_i$ [W]: net heat source applied to node $i$ (internal dissipation and absorbed external fluxes)
+\end{itemize} 
+
+This approach provides a perfect balance between computational efficiency and the precision required for 
+complex radiative environments %\cite{a_pdf}.
+
+\section{Advanced Thermal Control Technologies}
+Translating the mathematical model into reality requires specific hardware. A robust TCS relies on \cite{tcs_slides0,th_handbook}:
+\begin{itemize}
+    \item \textbf{Multi-Layer Insulation (MLI):} Blankets made of multiple layers of reflective films (e.g., Kapton, Mylar) separated by low-conductance netting. They drastically reduce radiative heat transfer, effectively isolating the spacecraft from the environment.
+    \item \textbf{Heat Pipes:} Two-phase heat transfer devices that use the latent heat of vaporization of a working fluid (usually ammonia in space) to transport large amounts of heat across the spacecraft with a near-zero temperature gradient.
+    \item \textbf{Survival Heaters:} Resistive electrical patch heaters, often governed by mechanical thermostats or thermistors, ensuring that sensitive components (like batteries and propellant tanks) do not drop below their survival limits during eclipse phases.
+\end{itemize}
+
+\section{Software and Advanced Simulation Methods}
+System-level thermal analysis is performed using specialized computational tools. In the European space sector,
+\textbf{ESATAN-TMS} is the standard software suite. It solves the nodal networks defined by the LPM and 
+calculates radiative view factors and both steady-state and transient thermal models %\cite{a_pdf}. 
+Similarly, \textbf{Thermal Desktop} is widely used in NASA ecosystems %\cite{a_pdf}.
+
+\subsection{Post-Processing and Python Integration}
+While ESATAN-TMS is a powerful solver, its native visualization capabilities can be rigid. %\cite{a_pdf}. 
+Modern thermal engineering workflows increasingly integrate programming languages like \textbf{Python} to 
+automate model execution, extract raw nodal data, and generate advanced analytics %\cite{a_pdf}. 
+Using libraries such as \texttt{NumPy} and \texttt{Panda}, engineers can process massive datasets, 
+visualize transient temperature curves across hundreds of nodes, plot heat flow networks, and execute rapid 
+parametric optimization to refine the thermal design %\cite{a_pdf}.
+
+

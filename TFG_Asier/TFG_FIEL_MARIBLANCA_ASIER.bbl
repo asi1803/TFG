@@ -9,14 +9,31 @@
 \href{https://shoncloud.com/blog/lumped-parameter-thermal-network-1/}{Understanding
   the lumped-parameter thermal network method} [online].
 
+\bibitem{th_handbook}
+D.~Gilmore (Ed.), Spacecraft Thermal Control Handbook, Volume I: Fundamental
+  Technologies, 2nd Edition, The Aeroespace Press, El Segundo, CA, 2002.
+
+\bibitem{spacethctrl}
+J.~Meseguer, I.~Pérez-Grande, A.Sanz-Andrés, Spacecraft Thermal Control, 1st
+  Edition, Woodhead Publishing Limited, Cambridge, UK, 2012.
+
+\bibitem{tcs_slides0}
+I.~G. de~Control Térmico~Espacial, Descripción y objetivos del {TCS}: Control
+  térmico espacial, diapositivas de la asignatura Transferencia de calor y
+  control térmico, material docente de la Universidad Politécnica de
+  Madrid[consultado el 6 de marzo de 2026] (2026).
+
+\bibitem{hmt_f&a}
+Y.~A. Çengel, A.~J. Ghajar, Heat and Mass Transfer: Fundamentals and
+  Applications, 6th Edition, McGraw-Hill, New York, NY, 2020.
+
 \bibitem{tcs_slides1}
 I.~G. de~Control Térmico~Espacial, Conducción $i$: Thermal conductivity and
   heat equation unidimensional, diapositivas de la asignatura Transferencia de
   calor y control térmico, material docente de la Universidad Politécnica de
   Madrid[consultado el 6 de marzo de 2026] (2026).
 
-\bibitem{hmt_f&a}
-Y.~A. Çengel, A.~J. Ghajar, Heat and Mass Transfer: Fundamentals and
-  Applications, 6th Edition, McGraw-Hill, New York, NY, 2020.
+\bibitem{thermal_eng_man}
+I.~E.~U. Ltd, ESATAN-TMS Thermal Engineering Manual.
 
 \end{thebibliography}

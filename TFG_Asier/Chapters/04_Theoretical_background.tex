@@ -1,27 +1,56 @@
 \chapter{Theoretical Background} \label{ch:chapter_04}
 \section{Thermal Control in Engineering}
-The primary objective of a Spacecraft \acrfull{tcs} is to ensure that all onboard components operate 
-within their specified temperature limits across all mission phases, while minimizing resource consumption (mass and power). 
-This is critical because the space environment is characterized by extreme conditions, 
-including a vacuum, a background temperature of 3K, and rapid, intense thermal cycling due to 
-exposure to sunlight and Earth's shadow. \cite{tcs_slides1}
+In engineering applications, thermal control is decisive to optimize the 
+performance of the system and its components, while keeping them within temperature limits. In some systems 
+and elements, such as engines, electric components or aeroespace systems, the implementation of a \acrfull{tcs} 
+is critical because thermal variations can produce a negative 
+impact on their performance and structural safety \cite{th_handbook}.
 
-Failure to maintain these thermal limits can lead to equipment malfunctions, reduced reliability,
-structural damage from thermal cycling, 
-or the freezing of propellants. Key requirements for the TCS include:\cite{tcs_slides1}
+Methods such as convection, conduction and radiation can be implemented on Earth's surface to study heat 
+transfer phenomena. However, the lack of an atmosphere in space, limits heat transfer mechanisms to conduction 
+in solids and thermal radiation into space \cite{spacethctrl}. 
+
+The primary objective of a Spacecraft \acrshort{tcs} is to ensure that all onboard components operate within 
+their specified temperature ranges during all mission 
+phases, while minimizing resource consumption (mass and power)\cite{tcs_slides0}. 
+This is achieved through a careful balance of internal heat dissipation and external environmental fluxes, utilizing 
+both passive and active thermal control technologies \cite{th_handbook}.
+
+
+Those aspects are critical because, unlike terrestrial applications, the space environment is characterized by extreme conditions, 
+such as vacuum, a background temperature of 3K, and rapid, intense thermal cycling due to 
+exposure to sunlight and Earth's shadow \cite{tcs_slides0,spacethctrl}.
+
+
+Failure to comply with these thermal limits can lead to equipment malfunctions, accelerated material 
+degradation, reduced reliability, structural damage from thermal cycling, or even catastrophic failure.
+
+The objective of thermal control is to prevent those situations, ensuring operational reliability and 
+enhancing the efficiency of the system \cite{hmt_f&a}. Some key requirements for 
+the \acrshort{tcs} include \cite{tcs_slides1}:
 \begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
-	\item Temperature Ranges: Maintaining specific operational and survival temperature ranges 
-	for components (e.g., electronics, batteries, or infrared detectors)
-	\item Thermal Gradients and Stability: Controlling temperature gradients and stability is essential for high-precision systems such as cameras, 
-	optical benches, and CCD sensors to avoid structural distortions and measurement errors
+	\item Temperature Ranges: maintaining specific operational and survival temperature ranges 
+	for components: electronics, batteries or infrared detectors
+	\item Thermal Gradients and Stability: controlling temperature gradients and stability is essential 
+	for high-precision systems such as cameras, optical benches, and CCD sensors to 
+	avoid structural distortions and measurement errors
 \end{itemize}
-Therefore, the application of a thermal control system ensures operational 
-reliability and also enhances the overall energy efficiency of the system \cite{hmt_f&a} %realmente esta citado del tfg de carolina, habra q darle una vuelta a todo
+ 
 \section{Space Thermal Environment}
+
+Spacecraft thermal control is a process of energy management in which environmental heating plays a major role 
+and therefore, has a major impact in the spacecraft design. There is no convection in space due to the absence of an atmosphere,
+being radiation the only possible method to dissipate heat in space. \newline
+Nevertheless, heat conduction between the structure and the components of the spacecraft still occurs. \cite{th_handbook}
 
 \section{Heat Transfer Mechanisms}
 
-CON LO VISTO EN CLASE, DIAPOSITIVAS, LIBROS DE REFERENCIA...
+Heat can be defined as the form of energy that can be transferred from one system to another 
+as a result of temperature difference. The science that deals with the determination of the rates of such 
+energy transfers is heat transfer \cite{hmt_f&a}.
+Conduction, convection and radiation are the fundamental mechanisms of heat transfer. However, as it is mentioned earlier,
+there is no convection in space systems, leaving conduction and radiation as the predominant mechanisms. \cite{th_handbook}
+
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=100mm]{imag_01.png}
@@ -30,12 +59,13 @@ CON LO VISTO EN CLASE, DIAPOSITIVAS, LIBROS DE REFERENCIA...
 %	\label{fig:001_01}
 %\end{figure}
 \subsection{Conduction Heat Transfer}
-\subsection{Convection Heat Transfer}
+d
+%\subsection{Convection Heat Transfer}
 \subsection{Radiation Heat Transfer}
 
 \section{Mathematical Modeling of Thermal Systems}
 
-Mathematical modeling is essential to predict the thermal behavior of space systems and to design
+Mathematical modeling is essential to predict the thermal behavior of space systems and design
 effective thermal control strategies. 
 
 \subsection{Disadvantages of the Finite Element Method (FEM)}
@@ -48,7 +78,7 @@ into a finite number of discrete elements called nodes.
 The fundamental assumption is that each node is isothermal, meaning its temperature is uniform throughout its entire volume. 
 This allows the system to be solved as a network of interconnected thermal resistances and 
 capacitances, analogous to an electrical circuit, 
-where temperature equates to voltage and heat flow to current flow. %\cite{thermal_eng_man}
+where temperature equates to voltage and heat flow to current flow. \cite{thermal_eng_man}
 
 \begin{figure}[H]
 	\centering
@@ -81,11 +111,10 @@ $\sigma$, view factors and emissivities for diffuse–gray surfaces.
 	\item $\sum_{j=1}^n$: sum over all nodes $j$, which are thermally connected to $i$. The terms $GL_{ij}(T_i-T_j)$ and $GR_{ij}(T_i^4-T_j^4)$ contribute as inflow when the expression in parentheses is negative.
 \end{itemize}
 % quiero que me ayudes a redactar el párrafo de abajo de mejor manera
-
 The discrete approximation has advantages in numerical as well as experimental work, and lends itself to 
 simple hand calculations as well as to computerised solution. A continuous system obeys a differential 
 equation, whereas a networked model obeys a system of algebraic equations, when studying a steady-state case, in a finite number of 
-variables which can be solved by standard techniques.\newline %\cite{thermal_eng_man} 
+variables which can be solved by standard techniques.\cite{thermal_eng_man} 
 Therefore, this method has a wide range of applications in the aeroespace industry, such as the thermal modeling of satellites, 
 where a balance between accuracy and efficiency is required . %\cite{tfgcarol}
 

@@ -10,16 +10,15 @@
 \contentsline {section}{\numberline {3.5}Motivation for the Present Work}{5}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Theoretical Background}{7}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Thermal Control in Engineering}{7}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Space Thermal Environment}{7}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Heat Transfer Mechanisms}{7}{section.4.3}%
+\contentsline {section}{\numberline {4.2}Space Thermal Environment}{8}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Heat Transfer Mechanisms}{8}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Conduction Heat Transfer}{8}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Convection Heat Transfer}{8}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Radiation Heat Transfer}{8}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.2}Radiation Heat Transfer}{8}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}Mathematical Modeling of Thermal Systems}{8}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Disadvantages of the Finite Element Method (FEM)}{8}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Lumped Parameter Method (LPM)}{8}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Software and Advanced Methods for Thermal Simulation}{9}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Analytical Capabilities of ESATAN-TMS}{9}{section.4.6}%
+\contentsline {section}{\numberline {4.5}Software and Advanced Methods for Thermal Simulation}{10}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Analytical Capabilities of ESATAN-TMS}{10}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Development of the Thermal Model in ESATAN-TMS and Data Export/Analysis}{11}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Subsystem Classification}{11}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Materials and Properties}{11}{section.5.2}%
