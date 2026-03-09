@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {3.5}Motivation for the Present Work}{5}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Theoretical Background}{7}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Thermal Control in Engineering}{7}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Space Thermal Environment}{8}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Space Thermal Environment}{7}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Heat Transfer Mechanisms}{8}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Conduction Heat Transfer}{8}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Radiation Heat Transfer}{8}{subsection.4.3.2}%
@@ -46,4 +46,4 @@
 \contentsline {section}{\numberline {8.1}Conclusions}{17}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Future Work}{17}{section.8.2}%
 \contentsline {chapter}{References}{19}{section.8.2}%
-\contentsline {chapter}{Anexos}{21}{chapter*.7}%
+\contentsline {chapter}{Anexos}{21}{chapter*.8}%

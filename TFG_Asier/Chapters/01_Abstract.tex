@@ -1,9 +1,18 @@
 \chapter{Abstract} \label{ch:chapter_01}
-		
-
+	
 This Bachelor’s Thesis focuses on implementing post-processing tools for the thermal analysis 
-of space systems, using results obtained from the \acrshort{esatan-tms} software. The main objective is to obtain
-accurate data and representation of heat flows performing a transient analysis, based on a previous similar study in a steady-state case.
+of space systems, leveraging results obtained from the \acrshort{esatan-tms} software. 
+
+Building upon a previous study limited to a steady-state radiative case, the main objective is to evaluate the dynamic 
+thermal behavior of the system by applying a fully transient model. 
+
+Since \acrshort{esatan-tms} 
+presents limitations regarding integrated data visualization, this project develops custom post-processing 
+routines in Python, leveraging libraries such as NumPy, Pandas, and Matplotlib. These tools automate 
+the extraction of nodal data to generate advanced graphical representations, including temperature evolution 
+curves and transient heat fluxes over time. Ultimately, this methodology optimizes the interpretation of 
+complex thermal results, facilitating the comparison of different scenarios and ensuring the system's 
+performance under realistic orbital thermal cycles.
 
 %Nevertheless, the developed tool is flexible and can be easily adapted to process results from other
 %thermal analysis software such as Thermal Desktop (Thermal Desktop), THERMICA (THERMICA), 

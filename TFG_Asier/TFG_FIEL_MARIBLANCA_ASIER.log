@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  9 MAR 2026 00:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  9 MAR 2026 03:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -28,6 +28,42 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
+) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 ) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
 \babel@savecnt=\count284
@@ -64,8 +100,8 @@ Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 5.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 5.
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 9.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 9.
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count287
@@ -102,6 +138,10 @@ Package typearea Info: You've used standard option `a4paper'.
 \ta@vblk=\skip53
 \ta@temp=\skip54
 \footheight=\skip55
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 1810.
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 10
 (typearea)             BCOR = 0.0pt
@@ -937,25 +977,43 @@ Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box60
 ) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesome.sty
 Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
- (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-generic.tex) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-pdftex.tex)) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count336
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-generic.tex) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome\fontawesomesymbols-pdftex.tex)) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen188
+\captionmargin=\dimen189
+\caption@leftmargin=\dimen190
+\caption@rightmargin=\dimen191
+\caption@width=\dimen192
+\caption@indent=\dimen193
+\caption@parindent=\dimen194
+\caption@hangindent=\dimen195
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count336
+\c@continuedfloat=\count337
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count338
 \lst@gtempboxa=\box61
 \lst@token=\toks34
-\lst@length=\count337
-\lst@currlwidth=\dimen188
-\lst@column=\count338
-\lst@pos=\count339
-\lst@lostspace=\dimen189
-\lst@width=\dimen190
-\lst@newlines=\count340
-\lst@lineno=\count341
-\lst@maxwidth=\dimen191
+\lst@length=\count339
+\lst@currlwidth=\dimen196
+\lst@column=\count340
+\lst@pos=\count341
+\lst@lostspace=\dimen197
+\lst@width=\dimen198
+\lst@newlines=\count342
+\lst@lineno=\count343
+\lst@maxwidth=\dimen199
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 ) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count342
-\lst@skipnumbers=\count343
+\c@lstnumber=\count344
+\lst@skipnumbers=\count345
 \lst@framebox=\box62
 ) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
@@ -988,7 +1046,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks35
 \XKV@tempa@toks=\toks36
 )
-\XKV@depth=\count344
+\XKV@depth=\count346
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/mfirstuc\mfirstuc.sty
 Package: mfirstuc 2025/04/03 v2.09 (NLCT)
@@ -1007,52 +1065,52 @@ Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
 File: glossaries-spanish.ldf 2014/11/23 v1.0
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/glossaries-spanish\glossaries-spanish-utf8.ldf)) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-base.sty
 Package: datatool-base 2025/12/04 v3.4.3 (NLCT)
-\l__datatool_tmpa_int=\count345
-\l__datatool_tmpb_int=\count346
-\l__datatool_tmpc_int=\count347
-\l__datatool_tmpd_int=\count348
-\l__datatool_count_int=\count349
-\l__datatool_tmp_datatype_int=\count350
-\l__datatool_tmpa_dim=\dimen192
-\l__datatool_tmpb_dim=\dimen193
+\l__datatool_tmpa_int=\count347
+\l__datatool_tmpb_int=\count348
+\l__datatool_tmpc_int=\count349
+\l__datatool_tmpd_int=\count350
+\l__datatool_count_int=\count351
+\l__datatool_tmp_datatype_int=\count352
+\l__datatool_tmpa_dim=\dimen256
+\l__datatool_tmpb_dim=\dimen257
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-l3fp.def
 File: datatool-l3fp.def 2025/12/04 v3.4.3 (NLCT)
 )
 \@dtl@toks=\toks39
-\@dtl@tmpcount=\count351
+\@dtl@tmpcount=\count353
 \dtl@tmplength=\skip64
 \l__datatool_measure_box=\box64
-\dtl@sortresult=\count352
+\dtl@sortresult=\count354
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-utf8.ldf
 File: datatool-utf8.ldf 2025/12/04 v3.4.3 (NLCT)
 )
-\@dtl@datatype=\count353
-\c_datatool_unknown_int=\count354
-\l__datatool_year_int=\count355
-\l__datatool_month_int=\count356
-\l__datatool_day_int=\count357
-\l__datatool_hour_int=\count358
-\l__datatool_minute_int=\count359
-\l__datatool_second_int=\count360
-\l__datatool_tzhour_int=\count361
-\l__datatool_tzminute_int=\count362
-\l__datatool_julian_int=\count363
-\l__datatool_local_julian_int=\count364
-\l__datatool_prefix_int=\count365
-\l__datatool_suffix_int=\count366
-\@dtl@foreach@level=\count367
+\@dtl@datatype=\count355
+\c_datatool_unknown_int=\count356
+\l__datatool_year_int=\count357
+\l__datatool_month_int=\count358
+\l__datatool_day_int=\count359
+\l__datatool_hour_int=\count360
+\l__datatool_minute_int=\count361
+\l__datatool_second_int=\count362
+\l__datatool_tzhour_int=\count363
+\l__datatool_tzminute_int=\count364
+\l__datatool_julian_int=\count365
+\l__datatool_local_julian_int=\count366
+\l__datatool_prefix_int=\count367
+\l__datatool_suffix_int=\count368
+\@dtl@foreach@level=\count369
 
 
 Package tracklang Warning: No `datatool' support for dialect `spanish'  on input line 9924.
 
-\dtl@codeA=\count368
-\dtl@codeB=\count369
+\dtl@codeA=\count370
+\dtl@codeB=\count371
 )
-\gls@level=\count370
+\gls@level=\count372
 \@gls@tmpb=\toks40
 \gls@tmplen=\skip65
-\l__glossaries_tmpa_dim=\dimen194
-\l__glossaries_tmpb_dim=\dimen195
+\l__glossaries_tmpa_dim=\dimen258
+\l__glossaries_tmpb_dim=\dimen259
 \glskeylisttok=\toks41
 \glslabeltok=\toks42
 \glsshorttok=\toks43
@@ -1070,17 +1128,17 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTright=\skip68
 \LTpre=\skip69
 \LTpost=\skip70
-\LTchunksize=\count371
-\LTcapwidth=\dimen196
+\LTchunksize=\count373
+\LTcapwidth=\dimen260
 \LT@head=\box65
 \LT@firsthead=\box66
 \LT@foot=\box67
 \LT@lastfoot=\box68
 \LT@gbox=\box69
-\LT@cols=\count372
-\LT@rows=\count373
-\c@LT@tables=\count374
-\c@LT@chunks=\count375
+\LT@cols=\count374
+\LT@rows=\count375
+\c@LT@tables=\count376
+\c@LT@chunks=\count377
 \LT@p@ftn=\toks45
 )
 \glsdescwidth=\skip71
@@ -1089,78 +1147,78 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 Package: glossary-super 2025/11/09 v4.9 (NLCT)
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/supertabular\supertabular.sty
 Package: supertabular 2025/06/26 v4.2d the supertabular environment
-\c@tracingst=\count376
-\ST@wd=\dimen197
+\c@tracingst=\count378
+\ST@wd=\dimen261
 \ST@rightskip=\skip73
 \ST@leftskip=\skip74
 \ST@parfillskip=\skip75
-\ST@pageleft=\dimen198
-\ST@headht=\dimen199
-\ST@tailht=\dimen256
-\ST@pagesofar=\dimen257
-\ST@pboxht=\dimen258
-\ST@rowht=\dimen259
-\ST@prevht=\dimen260
-\ST@toadd=\dimen261
-\ST@dimen=\dimen262
+\ST@pageleft=\dimen262
+\ST@headht=\dimen263
+\ST@tailht=\dimen264
+\ST@pagesofar=\dimen265
+\ST@pboxht=\dimen266
+\ST@rowht=\dimen267
+\ST@prevht=\dimen268
+\ST@toadd=\dimen269
+\ST@dimen=\dimen270
 \ST@pbox=\box70
 )) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-tree.sty
 Package: glossary-tree 2025/11/09 v4.9 (NLCT)
-\l__glossaries_tree_max_known_level_int=\count377
-\l__glossaries_tree_offset_dim=\dimen263
-\l__glossaries_tree_namewidth_dim=\dimen264
-\l__glossaries_tree_symbolwidth_dim=\dimen265
-\l__glossaries_tree_prenamesym_width_dim=\dimen266
-\l__glossaries_tree_presubnamesym_width_dim=\dimen267
-\l__glossaries_tree_namewidth_padding_dim=\dimen268
-\l__glossaries_tree_symbolwidth_padding_dim=\dimen269
-\l__glossaries_tree_namesymbolwidth_dim=\dimen270
-\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen271
-\l__glossaries_tree_level_int=\count378
+\l__glossaries_tree_max_known_level_int=\count379
+\l__glossaries_tree_offset_dim=\dimen271
+\l__glossaries_tree_namewidth_dim=\dimen272
+\l__glossaries_tree_symbolwidth_dim=\dimen273
+\l__glossaries_tree_prenamesym_width_dim=\dimen274
+\l__glossaries_tree_presubnamesym_width_dim=\dimen275
+\l__glossaries_tree_namewidth_padding_dim=\dimen276
+\l__glossaries_tree_symbolwidth_padding_dim=\dimen277
+\l__glossaries_tree_namesymbolwidth_dim=\dimen278
+\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen279
+\l__glossaries_tree_level_int=\count380
 \glstreeindent=\skip76
-)) (Tex_Files/acronyms.tex)
+))
 \glswrite=\write4
 \glo@main@file=\write5
 \openout5 = `TFG_FIEL_MARIBLANCA_ASIER.glo'.
 
-Package glossaries Info: Writing glossary file TFG_FIEL_MARIBLANCA_ASIER.glo on input line 104.
+Package glossaries Info: Writing glossary file TFG_FIEL_MARIBLANCA_ASIER.glo on input line 108.
 \glo@acronym@file=\write6
 \openout6 = `TFG_FIEL_MARIBLANCA_ASIER.acn'.
 
-Package glossaries Info: Writing glossary file TFG_FIEL_MARIBLANCA_ASIER.acn on input line 104.
+Package glossaries Info: Writing glossary file TFG_FIEL_MARIBLANCA_ASIER.acn on input line 108.
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool.sty
 Package: datatool 2025/12/04 v3.4.3 (NLCT)
-\l__datatool_max_cols_int=\count379
-\l__datatool_col_idx_int=\count380
-\l__datatool_row_idx_int=\count381
-\l__datatool_item_type_int=\count382
-\l__datatool_action_column_int=\count383
-\l__datatool_action_column_ii_int=\count384
-\l__datatool_action_row_int=\count385
-\l__datatool_action_row_ii_int=\count386
-\l__datatool_action_type_int=\count387
-\l__datatool_action_datum_round_int=\count388
-\dtlcolumnnum=\count389
-\dtlrownum=\count390
+\l__datatool_max_cols_int=\count381
+\l__datatool_col_idx_int=\count382
+\l__datatool_row_idx_int=\count383
+\l__datatool_item_type_int=\count384
+\l__datatool_action_column_int=\count385
+\l__datatool_action_column_ii_int=\count386
+\l__datatool_action_row_int=\count387
+\l__datatool_action_row_ii_int=\count388
+\l__datatool_action_type_int=\count389
+\l__datatool_action_datum_round_int=\count390
+\dtlcolumnnum=\count391
+\dtlrownum=\count392
 \@dtl@before=\toks46
 \@dtl@after=\toks47
 \@dtl@colhead=\toks48
 \dtlcurrentrow=\toks49
 \dtlbeforerow=\toks50
 \dtlafterrow=\toks51
-\l__datatool_map_data_max_cols_int=\count391
-\l__datatool_map_data_edit_column_int=\count392
-\dtlforeachlevel=\count393
-\c@DTLrow=\count394
-\c@DTLrowi=\count395
-\c@DTLrowii=\count396
-\c@DTLrowiii=\count397
-\dtl@rowi=\count398
-\dtl@rowii=\count399
-\dtl@rowiii=\count400
-\g__filtered_row_i_int=\count401
-\g__filtered_row_ii_int=\count402
-\g__filtered_row_iii_int=\count403
+\l__datatool_map_data_max_cols_int=\count393
+\l__datatool_map_data_edit_column_int=\count394
+\dtlforeachlevel=\count395
+\c@DTLrow=\count396
+\c@DTLrowi=\count397
+\c@DTLrowii=\count398
+\c@DTLrowiii=\count399
+\dtl@rowi=\count400
+\dtl@rowii=\count401
+\dtl@rowiii=\count402
+\g__filtered_row_i_int=\count403
+\g__filtered_row_ii_int=\count404
+\g__filtered_row_iii_int=\count405
 \@dtl@curi=\toks52
 \@dtl@previ=\toks53
 \@dtl@nexti=\toks54
@@ -1170,39 +1228,15 @@ Package: datatool 2025/12/04 v3.4.3 (NLCT)
 \@dtl@curiii=\toks58
 \@dtl@previii=\toks59
 \@dtl@nextiii=\toks60
-\l_datatool_display_per_row_int=\count404
-\l_datatool_display_tab_rows_int=\count405
+\l_datatool_display_per_row_int=\count406
+\l_datatool_display_tab_rows_int=\count407
 \@dtl@toksA=\toks61
 \@dtl@toksB=\toks62
-\@dtl@elements=\count406
-\__datatool_sort_data_sortcol_int=\count407
-\__datatool_sort_data_grpcol_int=\count408
-\dtl@omitlines=\count409
-\l__datatool_line_int=\count410
-) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
-Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen272
-\captionmargin=\dimen273
-\caption@leftmargin=\dimen274
-\caption@rightmargin=\dimen275
-\caption@width=\dimen276
-\caption@indent=\dimen277
-\caption@parindent=\dimen278
-\caption@hangindent=\dimen279
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count411
-\c@continuedfloat=\count412
-Package caption Info: float package is loaded.
-Package caption Info: hyperref package is loaded.
-Package caption Info: listings package is loaded.
-Package caption Info: longtable package is loaded.
- (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)
-Package caption Info: supertabular package is loaded.
+\@dtl@elements=\count408
+\__datatool_sort_data_sortcol_int=\count409
+\__datatool_sort_data_grpcol_int=\count410
+\dtl@omitlines=\count411
+\l__datatool_line_int=\count412
 ) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
@@ -1557,25 +1591,7 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/everypage\everypage.sty
-Package: everypage 2020/10/17 R2.0b Hooks to run on every page
-
-
-Package everypage Warning: Functionality similar to this package has recently
-(everypage)                been implemented in LaTeX. This package is now in
-(everypage)                legacy status.
-(everypage)                Please, don't use it in new documents and packages.
-
-
-Package everypage Warning: You appear to be running a version of LaTeX
-(everypage)                providing the new functionality.
-(everypage)                Doing the best to deliver the original `everypage`
-(everypage)                interface on top of it. Strict equivalence is
-(everypage)                not possible, breakage may occur.
-(everypage)                If truly needed, Use `everypage-1x` to force the
-(everypage)                loading of an older code base.
-
-) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+)) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count459
 \l__lipsum_a_int=\count460
@@ -1617,38 +1633,76 @@ Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
 \symboldletters=\mathgroup8
 \symboldsymbols=\mathgroup9
-Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \OMX/lmex/m/n, using \pmb.
 Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 Package bm Info: No bold for \U/rsfs/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 ) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/printlen\printlen.sty
 Package: printlen 2009/09/03 v1.1a print lengths with units
-)) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/tools\afterpage.sty
+) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/tools\afterpage.sty
 Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
 \AP@output=\toks81
 \AP@partial=\box133
 \AP@footins=\box134
+) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box135
+\beforetitleunit=\skip85
+\aftertitleunit=\skip86
+\ttl@plus=\dimen361
+\ttl@minus=\dimen362
+\ttl@toksa=\toks82
+\titlewidth=\dimen363
+\titlewidthlast=\dimen364
+\titlewidthfirst=\dimen365
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 214.
+) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
+\MT@toks=\toks83
+\MT@tempbox=\box136
+\MT@count=\count469
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks84
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen366
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count470
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdftex.def
+File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip87
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
 ) (Tex_Files/header_footer.tex
 Package Listings Info: Made " a short reference for \lstinline on input line 2.
-\myoddoffset=\skip85
+\myoddoffset=\skip88
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip86
-\f@nch@offset@elh=\skip87
-\f@nch@offset@erh=\skip88
-\f@nch@offset@olh=\skip89
-\f@nch@offset@orh=\skip90
-\f@nch@offset@elf=\skip91
-\f@nch@offset@erf=\skip92
-\f@nch@offset@olf=\skip93
-\f@nch@offset@orf=\skip94
-\f@nch@height=\skip95
-\f@nch@footalignment=\skip96
-\f@nch@widthL=\skip97
-\f@nch@widthC=\skip98
-\f@nch@widthR=\skip99
-\@temptokenb=\toks82
+\f@nch@headwidth=\skip89
+\f@nch@offset@elh=\skip90
+\f@nch@offset@erh=\skip91
+\f@nch@offset@olh=\skip92
+\f@nch@offset@orh=\skip93
+\f@nch@offset@elf=\skip94
+\f@nch@offset@erf=\skip95
+\f@nch@offset@olf=\skip96
+\f@nch@offset@orf=\skip97
+\f@nch@height=\skip98
+\f@nch@footalignment=\skip99
+\f@nch@widthL=\skip100
+\f@nch@widthC=\skip101
+\f@nch@widthR=\skip102
+\@temptokenb=\toks85
 )
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: 
@@ -1682,7 +1736,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-) (Tex_Files/functions.tex)
+) (Tex_Files/functions.tex) (Tex_Files/acronyms.tex)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -1695,26 +1749,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `TFG_FIEL_MARIBLANCA_ASIER.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Info: Redefining \. on input line 36.
-LaTeX Info: Redefining \% on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1752,44 +1806,84 @@ LaTeX Info: Redefining \% on input line 36.
 
 (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count469
-\scratchdimen=\dimen361
-\scratchbox=\box135
-\nofMPsegments=\count470
-\nofMParguments=\count471
-\everyMPshowfont=\toks83
-\MPscratchCnt=\count472
-\MPscratchDim=\dimen362
-\MPnumerator=\count473
-\makeMPintoPDFobject=\count474
-\everyMPtoPDFconversion=\toks84
+\scratchcounter=\count471
+\scratchdimen=\dimen367
+\scratchbox=\box137
+\nofMPsegments=\count472
+\nofMParguments=\count473
+\everyMPshowfont=\toks86
+\MPscratchCnt=\count474
+\MPscratchDim=\dimen368
+\MPnumerator=\count475
+\makeMPintoPDFobject=\count476
+\everyMPtoPDFconversion=\toks87
 ) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 36.
+Package hyperref Info: Link coloring ON on input line 58.
  (TFG_FIEL_MARIBLANCA_ASIER.out) (TFG_FIEL_MARIBLANCA_ASIER.out)
 \@outlinefile=\write9
 \openout9 = `TFG_FIEL_MARIBLANCA_ASIER.out'.
 
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 36.
-Package gensymb Info: Math companion symbols declared on input line 36.
-LaTeX Info: Redefining \degree on input line 36.
-LaTeX Info: Redefining \celsius on input line 36.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 36.
-LaTeX Info: Redefining \ohm on input line 36.
-Package gensymb Info: Using \textohm for \ohm on input line 36.
-Package gensymb Info: Using \textmu for \micro on input line 36.
-\c@lstlisting=\count475
- (TFG_FIEL_MARIBLANCA_ASIER.glsdefs)
+(Font)                  TS1/lmr/m/n --> TS1/lmr/b/n on input line 58.
+Package gensymb Info: Math companion symbols declared on input line 58.
+LaTeX Info: Redefining \degree on input line 58.
+LaTeX Info: Redefining \celsius on input line 58.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 58.
+LaTeX Info: Redefining \ohm on input line 58.
+Package gensymb Info: Using \textohm for \ohm on input line 58.
+Package gensymb Info: Using \textmu for \micro on input line 58.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: supertabular package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
- (Tex_Files/portada.tex
+\c@lstlisting=\count477
+ (TFG_FIEL_MARIBLANCA_ASIER.glsdefs
+
+Package glossaries Warning: entry `esa' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 27.
+
+
+Package glossaries Warning: entry `esatan-tms' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 55.
+
+
+Package glossaries Warning: entry `tcs' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 83.
+
+
+Package glossaries Warning: entry `lpm' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 111.
+
+
+Package glossaries Warning: entry `etsiae' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 139.
+
+
+Package glossaries Warning: entry `idr' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 167.
+
+)
+LaTeX Info: Redefining \microtypecontext on input line 58.
+Package microtype Info: Applying patch `item' on input line 58.
+Package microtype Info: Applying patch `toc' on input line 58.
+Package microtype Info: Applying patch `eqnum' on input line 58.
+Package microtype Info: Applying patch `verbatim' on input line 58.
+LaTeX Info: Redefining \microtypesetup on input line 58.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No font expansion.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+) (Tex_Files/portada.tex
 <./Figures/Portada_HF/upm_logo.png, id=200, 398.4486pt x 185.0112pt>
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
@@ -1800,23 +1894,65 @@ File: ./Figures/Portada_HF/descarga.png Graphic file (type png)
 <use ./Figures/Portada_HF/descarga.png>
 Package pdftex.def Info: ./Figures/Portada_HF/descarga.png  used on input line 7.
 (pdftex.def)             Requested size: 140.84259pt x 81.42441pt.
+
+
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 13.
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 26.
+(C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 26.
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 26.
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 26.
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 26.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 26.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 26.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 26.
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 26.
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+ [1
 
 \openout4 = `TFG_FIEL_MARIBLANCA_ASIER.ist'.
 
 
- <./Figures/Portada_HF/upm_logo.png> <./Figures/Portada_HF/descarga.png>]
+{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./Figures/Portada_HF/upm_logo.png> <./Figures/Portada_HF/descarga.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1824,15 +1960,14 @@ l.52 \end{titlepage}
                      [1]) (TFG_FIEL_MARIBLANCA_ASIER.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 4.
 
-Overfull \hbox (1.17812pt too wide) in paragraph at lines 22--22
- [] [][]\T1/cmr/bx/n/10.95 Development of the Ther-mal Mo-del in ESATAN-TMS and Da-ta Ex-port/Analysis[] []  
+Overfull \hbox (4.54016pt too wide) in paragraph at lines 22--22
+ [] [][][]\T1/lmr/bx/n/10.95 Development of the Ther-mal Mo-del in ESATAN-TMS and Da-ta Ex-port/Analysis[][] []  
  []
 
-
-Underfull \vbox (badness 7777) has occurred while \output is active []
-
- [1
+[1
 
 ])
 \tf@toc=\write10
@@ -1840,13 +1975,17 @@ Underfull \vbox (badness 7777) has occurred while \output is active []
 
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 50.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 72.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 72.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.50 \newpage
+l.72 \newpage
               [2] (TFG_FIEL_MARIBLANCA_ASIER.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1859,8 +1998,10 @@ LaTeX Info: Redefining \% on input line 1.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 60.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 82.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
  [2
 
 ] (TFG_FIEL_MARIBLANCA_ASIER.lot
@@ -1875,19 +2016,22 @@ LaTeX Info: Redefining \% on input line 1.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 66.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 88.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
  [4
 
-]
-No file TFG_FIEL_MARIBLANCA_ASIER.acr.
-[5
+] (TFG_FIEL_MARIBLANCA_ASIER.acr) [5
+
 
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 71.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 95.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
  [6
 
 ] (Chapters/01_Abstract.tex
@@ -1896,14 +2040,16 @@ Cap\'{\i }tulo 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 \cleardoublepage
-                      [1
+l.106 \cleardoublepage
+                       [1
 
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 82.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 106.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
  [2
 
 ] (Chapters/02_Introduction.tex
@@ -1913,8 +2059,10 @@ Cap\'{\i }tulo 2.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 84.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 108.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
  [4
 
 ] (Chapters/03_State_of_art.tex
@@ -1924,44 +2072,59 @@ Cap\'{\i }tulo 3.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 86.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 110.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
  [6
 
 ] (Chapters/04_Theoretical_background.tex
 Cap\'{\i }tulo 4.
 [7
 
-]
-File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
-<use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 82.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
- [8]
-<./Figures/01/imag_04.png, id=372, 904.88063pt x 292.84406pt>
+{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+<./Figures/01/imag_04.png, id=369, 904.88063pt x 292.84406pt>
 File: ./Figures/01/imag_04.png Graphic file (type png)
 <use ./Figures/01/imag_04.png>
 Package pdftex.def Info: ./Figures/01/imag_04.png  used on input line 85.
 (pdftex.def)             Requested size: 369.88582pt x 119.7049pt.
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 120.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
- [9 <./Figures/01/imag_04.png>])
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 89.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 89.
+LaTeX Info: Redefining \% on input line 89.
+ [8])
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 88.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 112.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+ [9{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./Figures/01/imag_04.png>]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 112.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
  [10] (Chapters/05_Development_thermal.tex
 Cap\'{\i }tulo 5.
+
+Overfull \hbox (56.62004pt too wide) in paragraph at lines 1--1
+|[]\T1/lmr/bx/n/20.74 Development of the Ther-mal Mo-del in ESATAN-
+ []
+
 ) [11
 
 
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 90.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 114.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
  [12
 
 ] (Chapters/06_Post_process.tex
@@ -1971,8 +2134,10 @@ Cap\'{\i }tulo 6.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 92.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 116.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 116.
+LaTeX Info: Redefining \% on input line 116.
  [14
 
 ] (Chapters/07_Results.tex
@@ -1982,8 +2147,10 @@ Cap\'{\i }tulo 7.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 94.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 118.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 118.
+LaTeX Info: Redefining \% on input line 118.
  [16
 
 ] (Chapters/Conclusions.tex
@@ -1993,8 +2160,10 @@ Cap\'{\i }tulo 8.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 96.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 120.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
  [18
 
 ] (Chapters/References.tex (TFG_FIEL_MARIBLANCA_ASIER.bbl)) [19
@@ -2002,8 +2171,10 @@ Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 9
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 100.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 124.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 124.
+LaTeX Info: Redefining \% on input line 124.
  [20
 
 ] (Tex_Files/A_01.tex) [21
@@ -2011,8 +2182,10 @@ Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 1
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 121.
-(pdftex.def)             Requested size: 119.50148pt x 55.48685pt.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 145.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 145.
+LaTeX Info: Redefining \% on input line 145.
  [22
 
 ] 
@@ -2025,30 +2198,25 @@ LaTeX Info: Redefining \% on input line 19.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `TFG_FIEL_MARIBLANCA_ASIER.out' has not changed.
-(rerunfilecheck)             Checksum: 0E620712C1BE2881C29F95984A830E8D;10017.
+(rerunfilecheck)             Checksum: B2126042A48E5696F10DD599007D65F8;10017.
  ) 
 Here is how much of TeX's memory you used:
- 47671 strings out of 467867
- 955250 string characters out of 5418335
- 1518430 words of memory out of 5000000
- 75619 multiletter control sequences out of 15000+600000
- 651483 words of font info for 101 fonts, out of 8000000 for 9000
+ 50035 strings out of 467867
+ 998561 string characters out of 5418335
+ 1589404 words of memory out of 5000000
+ 77935 multiletter control sequences out of 15000+600000
+ 709338 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,15n,120p,2662b,2483s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{glo:lpm} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:tcs} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{glo:esatan-tms} has been referenced but does not exist, replaced by a fixed one
-
- <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\asi18\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc2074.pk><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on TFG_FIEL_MARIBLANCA_ASIER.pdf (32 pages, 569841 bytes).
+ 113i,15n,111p,2622b,2467s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on TFG_FIEL_MARIBLANCA_ASIER.pdf (32 pages, 601950 bytes).
 PDF statistics:
- 932 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 528 PDF objects out of 1000 (max. 8388607)
+ 95 named destinations out of 1000 (max. 500000)
+ 14248 words of extra memory for PDF output out of 14400 (max. 10000000)
 

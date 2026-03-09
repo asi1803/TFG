@@ -10,13 +10,11 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{ \hspace{2pt} \rightmark}
-\lhead{
-    \includegraphics[width = 4.2cm]{upm_logo.png}
-}
-\rhead{
-    {\Large \Project}
-}
+\fancyhead[L]{\includegraphics[width = 3.5cm]{upm_logo.png}} % Un pelín más pequeño para que respire
+\fancyhead[R]{\textit{\nouppercase{\leftmark}}} % Imprime el nombre del capítulo actual en cursiva
+%\fancyhead[R]{ \hspace{2pt} \rightmark}
+%\lhead{\includegraphics[width = 4.2cm]{upm_logo.png}}
+%\rhead{{\Large \Project}}
 % \lfoot{} \cfoot{} \rfoot{\thepage}
 \fancyfoot[RO]{\thepage}
 \fancyfoot[LE]{\thepage}

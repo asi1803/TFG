@@ -1,5 +1,9 @@
 \usepackage[utf8]{inputenc}         % Permite escribir códigos especiales
 
+% --- AÑADE ESTAS DOS LÍNEAS AQUÍ ---
+\usepackage[T1]{fontenc}            % Codificación moderna de fuentes
+\usepackage{lmodern}                % Fuente vectorial (soluciona el error de microtype)
+
 % AJUSTES DEL IDIOMA
 \usepackage[spanish]{babel}
 \decimalpoint
@@ -16,7 +20,7 @@
 
 
 % GEOMETRIA
-\usepackage[paper=A4]{typearea}
+\usepackage[paper=A4]{typearea} %--> choca con el geometry
 \usepackage[includemp,
             top=2 cm,
             left = 1.2 cm, 
@@ -78,7 +82,7 @@
 \usepackage{gensymb}    % Para hacer los circulitos de grados
 \usepackage{eurosym}
 \usepackage{fontawesome}
-
+\usepackage[font=small, labelfont=bf]{caption}
 
 % INCLUIR CÓDIGO EN EL DOCUMENTO
 \usepackage{listings}
@@ -99,8 +103,8 @@
 % ACRONIMOS
 % https://tex.stackexchange.com/questions/25520/how-can-i-use-the-latex-acronym-package-and-optionally-create-an-acronym-list-i
 % https://sourceforge.net/p/texstudio/discussion/907839/thread/7ced058c/  -> SI NO APARECEN LOS ACRONIMOS
-\usepackage[acronym, toc, hyperfirst]{glossaries}		% ,nonumberlist
-\loadglsentries[\acronymtype]{./Tex_Files/acronyms.tex}
+\usepackage[acronym]{glossaries}		% ,nonumberlist
+%\loadglsentries[\acronymtype]{./Tex_Files/acronyms.tex}
 \makeglossaries
 %\usepackage{nomencl}
 %\makenomenclature
@@ -170,7 +174,7 @@
 
 % LANDSCAPE
 \usepackage{pdflscape}
-\usepackage{everypage}
+%\usepackage{everypage} --> Desactualizado
 \usepackage{lipsum}
 % Landscape configuration
 \newcommand{\Lpagenumber}{\ifdim\textwidth=\linewidth\else\bgroup
@@ -181,8 +185,7 @@
   \raisebox{\dimexpr -\topmargin-\headheight-\headsep-0.5\linewidth}[0pt][0pt]{%
     \rlap{\hspace{\dimexpr \margin+\textheight+\footskip}}}%
 \egroup\fi}
-\AddEverypageHook{\Lpagenumber}%
-% Code
+\AddToHook{shipout/page}{\Lpagenumber}% Code
 %\begin{landscape}
 % Text
 %\end{landscape}
@@ -197,3 +200,17 @@
 \usepackage{bm} % Para poner negrita math tablas
 \usepackage{printlen} 
 \usepackage{afterpage}	% añadir algo despues de una pagina
+\usepackage{titlesec}
+%\usepackage[printonlyused]{acronym}
+
+% Para enlaces visibles
+\definecolor{UPMblue}{RGB}{0, 89, 153} % Color azul de la UPM
+\definecolor{black}{RGB}{0, 0, 0}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black, % Color de los enlaces internos (índice, figuras)
+    citecolor=UPMblue, % Color de las citas bibliográficas
+    urlcolor=UPMblue   % Color de los enlaces web
+}
+
+\usepackage[protrusion=true, expansion=false, nopatch=footnote]{microtype}

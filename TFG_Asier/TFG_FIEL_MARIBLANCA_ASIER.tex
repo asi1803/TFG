@@ -23,15 +23,37 @@
 \input{./Tex_Files/packages.tex}
 \input{./Tex_Files/header_footer.tex}
 \input{./Tex_Files/functions.tex}
-%\input{Tex_Files/acronyms.tex}
+\input{Tex_Files/acronyms.tex}
 
-%   ---   COMIENZO DEL DOCUMENTO   ---   %
+% --- CREAR ESTILO PERSONALIZADO PARA ACRÓNIMOS ---
+\newglossarystyle{estiloTFG}{
+  \setglossarystyle{list} % Nos basamos en la lista base
+  \renewcommand*{\glossentry}[2]{
+    % ##1 es el acrónimo, ##2 es el número de página
+    \item[] \noindent \glstarget{##1}{\glossentrydesc{##1} (\glossentryname{##1})} \dotfill ##2
+  }
+}
+
+%   ---   AJUSTES PREVIOS  ---   %
+
 \addto\captionsspanish{%
   \renewcommand{\bibname}{References}%
 }
 \addto\captionsspanish{%
   \renewcommand{\contentsname}{Contents} % O el nombre que prefieras
 }
+
+% Formato de los capítulos: Número y título en la misma línea
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries} % Estilo de la fuente
+  {\thechapter.} % El número del capítulo seguido de un punto
+  {1em} % Espacio horizontal entre el número y el título
+  {} % Código antes del título
+
+% Quitar el espacio gigante encima del título del capítulo
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+%   ---   COMIENZO DEL DOCUMENTO   ---   %
 
 \begin{document}
 
@@ -66,8 +88,10 @@
 \cleardoublepage
 
 % Acronyms 
-\chapter*{Acronyms}
-\printglossary[type=\acronymtype, style=long, title=Acronyms]
+%\chapter*{Acronyms}
+%\addcontentsline{toc}{chapter}{Acronyms}
+\setglossarystyle{estiloTFG}
+\printglossary[type=\acronymtype, title=Acronyms]
 \cleardoublepage
 
 % Numeracion en arabico

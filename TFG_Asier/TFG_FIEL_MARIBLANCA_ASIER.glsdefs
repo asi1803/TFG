@@ -1,0 +1,168 @@
+\glsdefs@newdocentry{esa}%
+{%
+name={\acronymfont {\glsentryshort {esa}}},%
+sort={ESA},%
+type={acronym},%
+first={ESA},%
+firstplural={ESAs},%
+text={ESA},%
+plural={ESAs},%
+description={European Space Agency},%
+descriptionplural={European Space Agency},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={European Space Agency},%
+longplural={European Space Agencys},%
+short={ESA},%
+shortplural={ESAs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{esatan-tms}%
+{%
+name={\acronymfont {\glsentryshort {esatan-tms}}},%
+sort={ESATAN-TMS},%
+type={acronym},%
+first={ESATAN-TMS},%
+firstplural={ESATAN-TMSs},%
+text={ESATAN-TMS},%
+plural={ESATAN-TMSs},%
+description={European Space Agency Thermal Analysis Tool},%
+descriptionplural={European Space Agency Thermal Analysis Tool},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={European Space Agency Thermal Analysis Tool},%
+longplural={European Space Agency Thermal Analysis Tools},%
+short={ESATAN-TMS},%
+shortplural={ESATAN-TMSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{tcs}%
+{%
+name={\acronymfont {\glsentryshort {tcs}}},%
+sort={TCS},%
+type={acronym},%
+first={TCS},%
+firstplural={TCSs},%
+text={TCS},%
+plural={TCSs},%
+description={Thermal Control System},%
+descriptionplural={Thermal Control System},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Thermal Control System},%
+longplural={Thermal Control Systems},%
+short={TCS},%
+shortplural={TCSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{lpm}%
+{%
+name={\acronymfont {\glsentryshort {lpm}}},%
+sort={LPM},%
+type={acronym},%
+first={LPM},%
+firstplural={LPMs},%
+text={LPM},%
+plural={LPMs},%
+description={Lumped Parameter Method},%
+descriptionplural={Lumped Parameter Method},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Lumped Parameter Method},%
+longplural={Lumped Parameter Methods},%
+short={LPM},%
+shortplural={LPMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{etsiae}%
+{%
+name={\acronymfont {\glsentryshort {etsiae}}},%
+sort={ETSIAE},%
+type={acronym},%
+first={ETSIAE},%
+firstplural={ETSIAEs},%
+text={ETSIAE},%
+plural={ETSIAEs},%
+description={Escuela Técnica Superior de Ingeniería Aeronáutica y del Espacio},%
+descriptionplural={Escuela Técnica Superior de Ingeniería Aeronáutica y del Espacio},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Escuela Técnica Superior de Ingeniería Aeronáutica y del Espacio},%
+longplural={Escuela Técnica Superior de Ingeniería Aeronáutica y del Espacios},%
+short={ETSIAE},%
+shortplural={ETSIAEs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{idr}%
+{%
+name={\acronymfont {\glsentryshort {idr}}},%
+sort={IDR},%
+type={acronym},%
+first={IDR},%
+firstplural={IDRs},%
+text={IDR},%
+plural={IDRs},%
+description={Instituto Universitario de Microgravedad "Ignacio Da Riva"},%
+descriptionplural={Instituto Universitario de Microgravedad "Ignacio Da Riva"},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Instituto Universitario de Microgravedad "Ignacio Da Riva"},%
+longplural={Instituto Universitario de Microgravedad "Ignacio Da Riva"s},%
+short={IDR},%
+shortplural={IDRs},%
+counter={page},%
+parent={},%
+%
+}%
+
