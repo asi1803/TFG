@@ -1,0 +1,358 @@
+\subsection{Space Thermal Environment}
+
+% Apoyo conceptual y de estructura tomado del TFG de Carolina, apartado 4.2.
+Spacecraft thermal control can be understood as an energy-management problem in which the
+external environment has a major influence on the thermal design. Unlike terrestrial systems,
+space systems operate in vacuum, so external convection is practically nonexistent. Therefore,
+radiation becomes the only mechanism by which the spacecraft can reject heat to its surroundings,
+while internal heat transfer still occurs mainly by conduction through the structure and the
+mechanical interfaces between components [2,3,4].
+
+The thermal environment in space is especially demanding because it is highly variable and depends
+on orbital altitude, inclination, beta angle, spacecraft attitude, and the thermo-optical properties
+of the exposed surfaces. In Earth orbit, the main external heat sources are direct solar radiation,
+planetary albedo, and terrestrial infrared radiation, while deep space acts as a cold sink with an
+effective temperature close to $3\,\mathrm{K}$ [2,3,4].
+
+For an external surface $i$, the absorbed direct solar heat load can be written as
+\begin{equation}
+    \dot{Q}_{\mathrm{sol},i} = \alpha_{s,i}\, G_s\, A_i \cos\theta_i
+    \label{eq:qsol}
+\end{equation}
+where $\alpha_{s,i}$ is the solar absorptivity of the surface, $G_s$ is the solar irradiance,
+$A_i$ is the exposed area, and $\theta_i$ is the angle between the solar vector and the outward
+normal of the surface [3,4].
+
+In a simplified form, the absorbed albedo contribution may be expressed as
+\begin{equation}
+    \dot{Q}_{\mathrm{alb},i} = \alpha_{s,i}\, G_{\mathrm{alb}}\, A_i\, F_{i\rightarrow E}
+    \label{eq:qalb}
+\end{equation}
+where $G_{\mathrm{alb}}$ is an effective reflected solar irradiance from the Earth and
+$F_{i\rightarrow E}$ is the view factor from the surface to the Earth.
+
+Similarly, the absorbed planetary infrared load can be approximated as
+\begin{equation}
+    \dot{Q}_{\mathrm{IR},i} = \varepsilon_i\, G_{\mathrm{IR}}\, A_i\, F_{i\rightarrow E}
+    \label{eq:qir}
+\end{equation}
+where $\varepsilon_i$ is the infrared emissivity of the surface and $G_{\mathrm{IR}}$ is the
+effective Earth infrared flux [2,3].
+
+If a surface radiates mainly toward deep space, the net radiative heat loss can be approximated by
+\begin{equation}
+    \dot{Q}_{\mathrm{rad},i} =
+    \varepsilon_i \sigma A_i \left(T_i^4 - T_{\mathrm{ds}}^4\right)
+    \label{eq:qrad_ds}
+\end{equation}
+where $\sigma$ is the Stefan--Boltzmann constant and $T_{\mathrm{ds}}$ is the effective deep-space
+temperature [3,5].
+
+At system level, the thermal state of the spacecraft can be interpreted as the result of the balance
+between absorbed environmental fluxes, internally dissipated power, conductive redistribution, and
+radiative emission. In a compact form, the global energy balance may be expressed as
+\begin{equation}
+    \dot{Q}_{\mathrm{int}} + \dot{Q}_{\mathrm{sol}} + \dot{Q}_{\mathrm{alb}} + \dot{Q}_{\mathrm{IR}}
+    = \dot{Q}_{\mathrm{emit}}
+    \label{eq:global_balance}
+\end{equation}
+where $\dot{Q}_{\mathrm{int}}$ represents the internally dissipated heat and
+$\dot{Q}_{\mathrm{emit}}$ the heat radiated away by the spacecraft.
+
+In practice, this environment produces strong thermal oscillations, especially in Low Earth Orbit
+(LEO), where the spacecraft repeatedly alternates between sunlight and eclipse. These cyclic
+variations may cause significant temperature excursions, thermal gradients, and structural
+stresses if they are not properly managed by the thermal control system [2,3,4]. For that
+reason, spacecraft thermal design requires a careful combination of geometry, materials,
+surface coatings, thermal interfaces, insulation, and radiative surfaces in order to keep all
+components within their operational and survival temperature limits.
+
+\subsection{Heat Transfer Mechanisms}
+
+% Apoyo conceptual y de estructura tomado del TFG de Carolina, apartado 4.3.
+Heat transfer is the process by which thermal energy is exchanged between systems or between
+different regions of the same system as a consequence of a temperature difference. In classical
+heat-transfer theory, the three fundamental mechanisms are conduction, convection, and radiation
+[5]. However, in spacecraft applications convection with the external environment is absent because
+of the vacuum conditions of space. As a result, conduction and radiation become the dominant heat
+transfer mechanisms [2,3,4].
+
+In a spacecraft, conduction governs the redistribution of heat through structural panels, brackets,
+interfaces, shelves, and thermal straps, while radiation controls both the exchange with the
+external environment and the thermal interaction between exposed surfaces. Consequently, an
+accurate thermal model must represent both mechanisms in a coupled way.
+
+\subsubsection{Conduction Heat Transfer}
+
+Heat transfer by conduction occurs within a material or between bodies in contact when a temperature
+gradient exists. Microscopically, this phenomenon is associated with molecular interactions and,
+in metallic materials, also with the transport of energy by free electrons [5,6]. The constitutive
+equation governing conduction is Fourier's law:
+\begin{equation}
+    \vec{q} = -k \nabla T
+    \label{eq:fourier_vec}
+\end{equation}
+where $\vec{q}$ is the heat flux vector and $k$ is the thermal conductivity of the medium.
+
+For one-dimensional steady conduction through a plane wall of thickness $L$ and area $A$,
+Eq.~(\ref{eq:fourier_vec}) reduces to
+\begin{equation}
+    \dot{Q} = -kA\frac{dT}{dx}
+    \label{eq:fourier_1d_bis}
+\end{equation}
+and, if the thermal conductivity is constant, it can be integrated to give
+\begin{equation}
+    \dot{Q} = \frac{kA}{L}\left(T_1-T_2\right).
+    \label{eq:flat_wall}
+\end{equation}
+
+This expression motivates the definition of conductive thermal resistance:
+\begin{equation}
+    R_{\mathrm{cond}}=\frac{L}{kA},
+    \qquad
+    \dot{Q}=\frac{T_1-T_2}{R_{\mathrm{cond}}}.
+    \label{eq:rcond_bis}
+\end{equation}
+
+The thermal resistance concept is especially useful in nodal thermal models, since conductive
+paths can be treated in direct analogy with electrical resistors. This representation is commonly
+used in spacecraft thermal analysis to describe heat transfer through structural members, equipment
+mountings, and thermal links [3,7].
+
+For transient heat conduction, the temperature field is governed by the heat equation:
+\begin{equation}
+    \rho c_p \frac{\partial T}{\partial t}
+    =
+    \nabla \cdot (k \nabla T) + \dot{q}
+    \label{eq:heat_equation_bis}
+\end{equation}
+where $\rho$ is the density, $c_p$ the specific heat capacity, and $\dot{q}$ the volumetric heat
+generation term [5,6]. This equation constitutes the basis for more advanced discretization methods
+used in thermal simulation.
+
+In real spacecraft systems, conduction also takes place across mechanical interfaces. Because real
+surfaces are rough and only contact at discrete micro-asperities, the thermal path between two
+connected components is not ideal. This effect is represented through the thermal contact resistance,
+which can be expressed as
+\begin{equation}
+    R_c = \frac{1}{h_c A}
+    \label{eq:rcontact_bis}
+\end{equation}
+where $h_c$ is the contact conductance and $A$ is the apparent contact area [2,7]. This contribution
+may be important in bolted joints, support brackets, electronic box mountings, or optical payload
+interfaces, and should be taken into account when the thermal coupling between components is critical.
+
+Another common conductive element in spacecraft thermal control is the thermal strap. Thermal straps
+are flexible links, often made of copper, aluminium, or graphite-based materials, used to transport
+heat efficiently between a hot component and a colder sink, such as a radiator or a structural panel
+[2]. Their main advantage is that they provide high thermal conductance while accommodating geometric
+constraints and differential expansion. For this reason, they are frequently employed in thermal
+control systems involving sensitive payloads or components with localized dissipations.
+
+\subsubsection{Radiation Heat Transfer}
+
+Thermal radiation is the transfer of energy by electromagnetic waves emitted by matter at temperatures
+above absolute zero. Unlike conduction and convection, radiation does not require a material medium
+and can propagate through vacuum. This makes it the dominant mechanism by which spacecraft exchange
+heat with their external environment [2,5].
+
+The energy associated with radiation may be described through Planck's relation,
+\begin{equation}
+    E = h\nu
+    \label{eq:planck}
+\end{equation}
+where $h$ is Planck's constant and $\nu$ is the frequency of the emitted radiation. Since frequency
+and wavelength are related by
+\begin{equation}
+    \lambda = \frac{c}{\nu},
+    \label{eq:lambda_relation}
+\end{equation}
+thermal radiation has both spectral and directional dependence.
+
+The ideal radiating body is the blackbody, which absorbs all incident radiation and emits the maximum
+possible energy at a given temperature. Its total emissive power is given by the Stefan--Boltzmann
+law:
+\begin{equation}
+    E_b = \sigma T^4
+    \label{eq:stefan_boltzmann_bis}
+\end{equation}
+where $\sigma$ is the Stefan--Boltzmann constant.
+
+For a real surface, the emitted power is reduced by the emissivity:
+\begin{equation}
+    E = \varepsilon \sigma T^4
+    \label{eq:real_surface_emission}
+\end{equation}
+where $\varepsilon$ is the emissivity of the material. If the surface exchanges radiation with a large
+isothermal environment, the net radiative heat exchange may be approximated as
+\begin{equation}
+    \dot{Q}_{\mathrm{rad}} =
+    \varepsilon \sigma A \left(T_s^4 - T_{\mathrm{sur}}^4\right)
+    \label{eq:qrad_net}
+\end{equation}
+where $A$ is the emitting area, $T_s$ is the surface temperature and $T_{\mathrm{sur}}$ is the
+surrounding temperature [3,5].
+
+In practical spacecraft analysis, surfaces are usually treated as diffuse-gray, so their radiative
+behaviour can be described using radiosity and irradiation. For an opaque diffuse-gray surface, the
+radiosity is
+\begin{equation}
+    J = \varepsilon \sigma T^4 + (1-\varepsilon)G
+    \label{eq:radiosity}
+\end{equation}
+where $G$ is the irradiation incident on the surface.
+
+The geometric coupling between surfaces is represented by the view factor $F_{ij}$, defined as the
+fraction of radiation leaving surface $i$ that directly reaches surface $j$. These factors satisfy
+the reciprocity relation
+\begin{equation}
+    A_i F_{ij} = A_j F_{ji}
+    \label{eq:reciprocity_bis}
+\end{equation}
+and the enclosure relation
+\begin{equation}
+    \sum_{j=1}^{N} F_{ij}=1.
+    \label{eq:closure_bis}
+\end{equation}
+
+For two diffuse-gray surfaces, the net radiative exchange can be written in resistance-network form as
+\begin{equation}
+    \dot{Q}_{12} =
+    \frac{\sigma \left(T_1^4-T_2^4\right)}
+    {
+        \dfrac{1-\varepsilon_1}{A_1\varepsilon_1}
+        +
+        \dfrac{1}{A_1F_{12}}
+        +
+        \dfrac{1-\varepsilon_2}{A_2\varepsilon_2}
+    }.
+    \label{eq:q12_gray_bis}
+\end{equation}
+
+This expression is particularly relevant in spacecraft thermal design because radiative behaviour
+depends strongly on thermo-optical properties. Surface finishes and coatings therefore become one
+of the main design variables of the thermal control system. In general, black paints tend to provide
+high solar absorptivity and high emissivity, white paints reduce solar absorptivity while maintaining
+high emissivity, polished metals usually exhibit low absorptivity and low emissivity, and second
+surface mirrors are typically used when low absorptivity and high infrared emissivity are desired
+[2,3,4]. These properties determine whether a surface is better suited to absorb heat, reject heat,
+or minimize environmental heating.
+
+\subsection{Mathematical Modeling of Thermal Systems}
+
+% Apoyo conceptual y de estructura tomado del TFG de Carolina, apartado 4.4.
+Mathematical modeling is essential to predict the thermal behaviour of space systems and to design
+effective thermal control strategies before hardware is manufactured or tested. Since a real
+spacecraft is a distributed physical system with complex geometry, multiple heat paths, variable
+external loads and internal dissipations, analytical solutions are only feasible for very simplified
+cases. For realistic applications, numerical methods are required [2,3,7].
+
+In general terms, the thermal model is obtained by applying energy conservation to a discretized
+representation of the system. Each discrete element stores thermal energy, exchanges heat with
+neighbouring elements by conduction and radiation, receives external environmental loads, and may
+also include internal power dissipation. Depending on the desired fidelity and computational cost,
+this discretization can be approached through high-resolution spatial methods, such as the Finite
+Element Method (FEM), or through reduced-order nodal methods, such as the Lumped Parameter Method
+(LPM), which is the basis of many spacecraft thermal network solvers [7].
+
+\subsubsection{Disadvantages of the Finite Element Method (FEM)}
+
+The Finite Element Method is a powerful tool for solving thermal problems in complex geometries with
+high spatial detail. Nevertheless, for spacecraft thermal design at system level it presents several
+limitations.
+
+First, FEM models usually require a detailed geometric description and a fine mesh in order to
+capture local gradients accurately. This increases the number of degrees of freedom, the model
+preparation effort, and the computational cost. In spacecraft thermal analysis, where many
+steady-state and transient cases must be evaluated under different boundary conditions, orbital
+configurations, attitudes and dissipation maps, this can become inefficient [5,7].
+
+Second, spacecraft thermal analysis is not only a conduction problem. It also involves radiative
+exchange, orbital heating, thermo-optical properties, contact resistances, MLI behaviour, boundary
+conditions, and subsystem-level dissipations. Although FEM can represent many of these phenomena,
+dedicated thermal network tools often provide more direct and flexible ways to include them in
+engineering models [2,3,7].
+
+Third, in system-level thermal design the analyst is often more interested in component temperatures,
+heat-flow paths, and subsystem balances than in very local temperature fields. Therefore, the level
+of spatial detail offered by FEM does not always translate into a practical advantage during
+preliminary or iterative thermal design phases.
+
+Finally, FEM output can be more cumbersome to interpret when the objective is to understand and
+visualize thermal interactions between subsystems. Since the focus of this work is precisely the
+post-processing and graphical analysis of nodal heat flows exported from ESATAN-TMS, a network-based
+approach is more naturally aligned with the purpose of the thesis.
+
+This does not mean that FEM is not useful for thermal analysis. On the contrary, it is especially
+valuable when local gradients, detailed structural coupling, or component-level verification are of
+interest. However, for spacecraft thermal analysis at engineering level, a reduced-order nodal method
+is often preferable.
+
+\subsubsection{Lumped Parameter Method (LPM)}
+
+The Lumped Parameter Method is a discretization technique in which a continuous thermal system is
+represented by a finite set of isothermal nodes connected through conductive and radiative couplings.
+Each node represents a component, a portion of structure, a surface patch, or any region for which
+the assumption of uniform temperature is acceptable [7].
+
+The key assumption of the method is that the temperature gradients inside each node are negligible
+compared with the gradients between nodes. Under this hypothesis, each node can be described by a
+single temperature $T_i(t)$ and a thermal capacitance
+\begin{equation}
+    C_i = m_i c_{p,i}
+    \label{eq:capacitance_bis}
+\end{equation}
+where $m_i$ is the nodal mass and $c_{p,i}$ is the specific heat capacity.
+
+Applying energy conservation to node $i$, the transient nodal energy balance can be written as
+\begin{equation}
+    C_i \frac{dT_i}{dt}
+    =
+    Q_i
+    -
+    \sum_{j=1}^{n} G^{L}_{ij}(T_i-T_j)
+    -
+    \sum_{j=1}^{n} G^{R}_{ij}(T_i^4-T_j^4)
+    \label{eq:lpm_balance_bis}
+\end{equation}
+where:
+\begin{itemize}
+    \item $C_i$ is the thermal capacitance of node $i$,
+    \item $Q_i$ includes internal dissipation and external thermal loads,
+    \item $G^{L}_{ij}$ is the linear conductive conductance between nodes $i$ and $j$,
+    \item $G^{R}_{ij}$ is the radiative conductance factor between nodes $i$ and $j$.
+\end{itemize}
+
+The conductive exchange between two nodes may be expressed as
+\begin{equation}
+    \dot{Q}^{\mathrm{cond}}_{ij} = G^{L}_{ij}(T_j-T_i),
+    \qquad
+    G^{L}_{ij} = \frac{1}{R_{ij}}
+    \label{eq:gl_bis}
+\end{equation}
+while the radiative exchange is naturally nonlinear because of the fourth-power temperature
+dependence. In some applications it can be linearized around a mean temperature $T_m$, leading to
+an equivalent radiative conductance proportional to $4\sigma T_m^3$.
+
+The LPM is particularly suitable for spacecraft thermal analysis because it offers an excellent
+balance between physical fidelity, interpretability, and computational efficiency. It allows the
+analyst to represent spacecraft subsystems directly as engineering nodes, to combine conductive and
+radiative couplings in a single framework, and to perform long transient simulations with moderate
+computational cost [3,7].
+
+Furthermore, the nodal nature of the method makes it especially convenient for post-processing.
+Since the outputs are already organised as node temperatures, conductors, and exchanged heat flows,
+they can be grouped and visualized directly at subsystem level. This is particularly useful in the
+context of the present work, where the main objective is to develop a Python-based tool for the
+graphical post-processing of ESATAN-TMS thermal results.
+
+In practice, the accuracy of an LPM model depends strongly on the chosen discretization. If too
+few nodes are used, relevant gradients or couplings may be lost; if too many are introduced, the
+model becomes unnecessarily complex and harder to maintain. Therefore, the nodal representation must
+always be selected as a compromise between physical realism, computational efficiency, and the
+engineering objectives of the analysis [7].
+
+% Comentario por posible figura:
+% La Figura 4.1 podría colocarse aquí si quieres introducir el esquema
+% de sistema térmico simplificado y red nodal equivalente, en la misma
+% línea conceptual que el TFG de Carolina, pero sin citarlo en el texto.
