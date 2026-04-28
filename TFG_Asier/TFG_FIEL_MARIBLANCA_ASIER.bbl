@@ -1,13 +1,9 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
-
-\bibitem{lpm_elec}
-\href{https://shoncloud.com/blog/lumped-parameter-thermal-network-1/}{Understanding
-  the lumped-parameter thermal network method} [online].
 
 \bibitem{th_handbook}
 D.~Gilmore (Ed.), Spacecraft Thermal Control Handbook, Volume I: Fundamental
@@ -35,5 +31,38 @@ I.~G. de~Control Térmico~Espacial, Conducción $i$: Thermal conductivity and
 
 \bibitem{thermal_eng_man}
 I.~E.~U. Ltd, ESATAN-TMS Thermal Engineering Manual.
+
+\bibitem{ecss_man}
+E.~S.~A. (ESA), ECSS-E-HB-31-03A: Thermal Analysis Handbook (2016).
+
+\bibitem{lpm_elec}
+\href{https://shoncloud.com/blog/lumped-parameter-thermal-network-1/}{Understanding
+  the lumped-parameter thermal network method} [online].
+
+\bibitem{heattransfer}
+A.~B. Gil, D.~González-Bárcena, Principios de Transferencia de Calor, primera
+  edición Edition, Editorial Garceta, Universidad Politécnica de Madrid,
+  Escuela Técnica Superior de Ingeniería Aeronaútica y del Espacio, 2026.
+
+\bibitem{tcs_slides2}
+I.~G. de~Control Térmico~Espacial, Conducción $ii$: heat equation and thermal
+  resistance, diapositivas de la asignatura Transferencia de calor y control
+  térmico, material docente de la Universidad Politécnica de
+  Madrid[consultado el 6 de marzo de 2026] (2026).
+
+\bibitem{tcs_slides3}
+I.~G. de~Control Térmico~Espacial, Conducción $iii$:thermal contact
+  resistance and thermal straps, diapositivas de la asignatura Transferencia de
+  calor y control térmico, material docente de la Universidad Politécnica de
+  Madrid[consultado el 6 de marzo de 2026] (2026).
+
+\bibitem{tcs_slides4}
+I.~G. de~Control Térmico~Espacial, Convección, diapositivas de la asignatura
+  Transferencia de calor y control térmico, material docente de la Universidad
+  Politécnica de Madrid[consultado el 6 de marzo de 2026] (2026).
+
+\bibitem{aerospace_tech}
+\href{https://aerospacetech.org/es/vehiculos-espaciales/control-termico-espacial/}{Aerospacetech,
+  control térmico espacial en vehículos espaciales} [online].
 
 \end{thebibliography}

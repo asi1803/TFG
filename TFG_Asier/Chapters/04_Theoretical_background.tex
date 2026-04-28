@@ -51,18 +51,97 @@ energy transfers is heat transfer \cite{hmt_f&a}.
 Conduction, convection and radiation are the fundamental mechanisms of heat transfer. However, as it is mentioned earlier,
 there is no convection in space systems, leaving conduction and radiation as the predominant mechanisms. \cite{th_handbook}
 
+% EJEMPLO DE COMO PONER UNA IMAGEN
 %\begin{figure}[H]
 %	\centering
-%	\includegraphics[width=100mm]{imag_01.png}
+%	\includegraphics[width=100mm]{imag_07.png}
 %	\caption{ Spectral distribution of the emissive power of a blackbody at different temperatures.
 %The peak shifts to shorter wavelengths as temperature increases, according to Planck’s Law, \cite{heattransfer}} % Pie de imagen
 %	\label{fig:001_01}
 %\end{figure}
+
 \subsection{Conduction Heat Transfer}
 
-%\subsection{Convection Heat Transfer}
-\subsection{Radiation Heat Transfer}
+Heat transfer conduction is the mechanism by which thermal energy is transmitted 
+through solids or between solids in contact due to the presence of a temperature gradient, without any 
+macroscopic motion of the substance. This process is governed by microscopic interactions between 
+particles and, in metallic materials, the transport of free electrons \cite{hmt_f&a}.
 
+From a macroscopic perspective, heat conduction is described by Fourier’s law:
+\begin{equation}
+q = -k A \frac{dT}{dx}
+\label{eq:Fourier}
+\end{equation}
+
+where: 
+\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
+	\item $q$ is the heat transfer rate (W) 
+	\item $k$ is the thermal conductivity (W/mK) 
+	\item $A$ is the cross-sectional area (m$^2$) 
+	\item $\frac{dT}{dx}$ is the temperature gradient (K/m). 
+\end{itemize}
+
+The negative sign in the temperature gradient indicates that heat flows from regions of higher 
+temperature to lower temperature \cite{hmt_f&a, spacethctrl}.
+
+Under steady-state conditions and simple geometries, 
+Fourier’s law can be integrated to obtain analytical expressions for heat transfer. 
+For instance, in a plane wall with constant thermal conductivity, the heat flux is directly proportional to the temperature
+difference between the boundaries and inversely proportional to the wall thickness \cite{hmt_f&a}. \newline
+\autoref{fig:001_07} illustrates one-dimensional heat conduction through a flat wall, consistent with the
+formulation of Fourier's law in \autoref{eq:Fourier}. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=100mm]{imag_07.png}
+	\caption{One-dimensional heat conduction accross the wall, with thickness $\Delta x$ ,whose surfaces are at 
+temperatures  T1  and  T2  (T1  >  T2), respectively \cite{spacethctrl}} % Pie de imagen
+	\label{fig:001_07}
+\end{figure}
+
+For more general cases involving spatial and temporal variations, the heat conduction process is 
+governed by the heat diffusion equation, expressed in cartesian coordinates as:
+
+\begin{equation}
+\rho c_p \frac{\partial T}{\partial t} = \nabla \cdot (k \nabla T) + \dot{q}
+\end{equation}
+
+where $\rho$ is the density (kg/m$^3$), $c_p$ is the specific heat (J/kgK), 
+and $\dot{q}$ represents internal heat generation per unit volume (W/m$^3$). 
+This equation forms the basis for thermal modelling in both analytical and numerical approaches, 
+including finite difference and nodal methods \cite{hmt_f&a, thermal_eng_man, ecss_man}.
+
+An additional useful concept in conduction analysis is thermal resistance, which simplifies 
+the study of heat transfer in complex systems. 
+For a homogeneous layer, the conductive thermal resistance is defined as:
+
+\begin{equation}
+R_{cond} = \frac{L}{kA}
+\end{equation}
+
+where $L$ is the thickness of the material. \newline
+In multilayer structures, individual resistances can be combined in series or parallel, allowing the overall 
+heat transfer to be evaluated using an approach analogous to electrical circuits \cite{hmt_f&a}.
+
+In the context of spacecraft thermal control, conduction plays a fundamental role in the 
+internal redistribution of heat. Conductive paths are essential to transport heat generated 
+by onboard components towards external radiative surfaces. Therefore, the design of conductive 
+interfaces, material selection, and contact conductance are critical factors in ensuring proper 
+thermal management \cite{spacethctrl, th_handbook, ecss_man}.
+
+Furthermore, in thermal modelling tools such as ESATAN, conduction is 
+typically represented through thermal conductances connecting discrete nodes within a network.
+These conductances depend on material properties and geometry and are used to solve the energy balance 
+equations governing the thermal behaviour of the system \cite{thermal_eng_man}.
+
+\subsection{Radiation Heat Transfer}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=100mm]{imag_07.png}
+%	\caption{ Spectral distribution of the emissive power of a blackbody at different temperatures.
+%The peak shifts to shorter wavelengths as temperature increases, according to Planck’s Law, \cite{heattransfer}} % Pie de imagen
+%	\label{fig:001_01}
+%\end{figure}
 \section{Mathematical Modeling of Thermal Systems}
 
 Mathematical modeling is essential to predict the thermal behavior of space systems and design
@@ -73,12 +152,15 @@ effective thermal control strategies.
 
 
 \subsection{Lumped Parameter Method (LPM)}
+
 The \acrfull{lpm} is a discretization technique that simplifies a continuous physical system 
 into a finite number of discrete elements called nodes. 
 The fundamental assumption is that each node is isothermal, meaning its temperature is uniform throughout its entire volume. 
 This allows the system to be solved as a network of interconnected thermal resistances and 
 capacitances, analogous to an electrical circuit, 
 where temperature equates to voltage and heat flow to current flow. \cite{thermal_eng_man}
+
+\autoref{fig:001_04} shows a simplified thermal system and its equivalent nodal network representation:
 
 \begin{figure}[H]
 	\centering
@@ -110,20 +192,37 @@ $\sigma$, view factors and emissivities for diffuse–gray surfaces.
 
 	\item $\sum_{j=1}^n$: sum over all nodes $j$, which are thermally connected to $i$. The terms $GL_{ij}(T_i-T_j)$ and $GR_{ij}(T_i^4-T_j^4)$ contribute as inflow when the expression in parentheses is negative.
 \end{itemize}
-% quiero que me ayudes a redactar el párrafo de abajo de mejor manera
-The discrete approximation has advantages in numerical as well as experimental work, and lends itself to 
-simple hand calculations as well as to computerised solution. A continuous system obeys a differential 
-equation, whereas a networked model obeys a system of algebraic equations, when studying a steady-state case, in a finite number of 
-variables which can be solved by standard techniques.\cite{thermal_eng_man} 
-Therefore, this method has a wide range of applications in the aeroespace industry, such as the thermal modeling of satellites, 
-where a balance between accuracy and efficiency is required . %\cite{tfgcarol}
+
+
+The discrete approximation simplifies the numerical solution of the thermal problem by reducing 
+a continuous system, governed by differential equations, to a finite set of equations 
+defined over a limited number of nodes. In steady-state conditions, this system becomes algebraic 
+and can be solved using standard numerical techniques, whereas in transient analysis it remains a 
+system of differential equations \cite{thermal_eng_man}.
+
+Once the energy balance is defined for each node, the complete model is obtained by assembling 
+all the equations into a coupled system. This system describes the temporal evolution of the nodal 
+temperatures, taking into account both internal heat sources and the thermal interactions between nodes. \cite{thermal_eng_man}
+
+In this framework, thermal systems are represented as networks of nodes connected through thermal 
+conductances. These conductances account for the main heat transfer mechanisms, such as conduction 
+through structural elements and radiation exchange between surfaces. Each node is characterised by 
+its thermal capacitance and exchanges heat with the rest of the system, enabling the prediction of 
+both steady-state and transient behaviour \cite{thermal_eng_man, spacethctrl}.
+
+The accuracy of this method depends on the discretisation of the system. A reduced number of nodes 
+may not capture the relevant temperature gradients, while an excessive number increases the 
+computational cost without providing significant accuracy in the results. Therefore, the definition of 
+the nodes represents a compromise between accuracy and efficiency. \cite{ecss_man}
+
+Therefore, due to its balance between accuracy and computational cost, this method is widely used in spacecraft
+thermal modelling and forms the basis of tools such as ESATAN-TMS. \cite{ecss_man}
+%Therefore, this method has a wide range of applications in the aeroespace industry, such as the thermal modeling of satellites, 
+%where a balance between accuracy and efficiency is required.
 
 \section{Software and Advanced Methods for Thermal Simulation}
 
 \section{Analytical Capabilities of ESATAN-TMS}
-
-
-
 
 
 

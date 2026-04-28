@@ -13,37 +13,37 @@
 \contentsline {section}{\numberline {4.2}Space Thermal Environment}{7}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Heat Transfer Mechanisms}{8}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Conduction Heat Transfer}{8}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Radiation Heat Transfer}{8}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Mathematical Modeling of Thermal Systems}{8}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Disadvantages of the Finite Element Method (FEM)}{8}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Lumped Parameter Method (LPM)}{8}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Software and Advanced Methods for Thermal Simulation}{10}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Analytical Capabilities of ESATAN-TMS}{10}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Development of the Thermal Model in ESATAN-TMS and Data Export/Analysis}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Subsystem Classification}{11}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Materials and Properties}{11}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Thermo-optical properties}{11}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}Steady-state radiative case}{11}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Boundary Conditions and Loads Definition}{11}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Model Verification: Group-Level Energy Balances}{11}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Data provided by the TMD}{11}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Use in the Python post-processing}{11}{subsection.5.6.1}%
-\contentsline {chapter}{\numberline {6}Design and Implementation of the Post-Processing Code}{13}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Code Structure and Architecture}{13}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Motivation for a Modular Architecture}{13}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Files overview}{13}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Software Stack and Dependencies}{13}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Filtering and Grouping Methods}{13}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Figure Conventions and Representation Criteria}{13}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Scope of Examples and Cryogenic-Flow Validation}{13}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Results and Visualisations from the Post-Processing Workflow}{15}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Filtering Results}{15}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Sankey Diagram}{15}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Network Graph Views (NX)}{15}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Stacked-Bar Balances}{15}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Cryogenic-Flow Views (ARIEL)}{15}{section.7.5}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{17}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusions}{17}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Future Work}{17}{section.8.2}%
-\contentsline {chapter}{References}{19}{section.8.2}%
-\contentsline {chapter}{Anexos}{21}{chapter*.8}%
+\contentsline {subsection}{\numberline {4.3.2}Radiation Heat Transfer}{10}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Mathematical Modeling of Thermal Systems}{10}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Disadvantages of the Finite Element Method (FEM)}{10}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Lumped Parameter Method (LPM)}{10}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Software and Advanced Methods for Thermal Simulation}{12}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Analytical Capabilities of ESATAN-TMS}{12}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Development of the Thermal Model in ESATAN-TMS and Data Export/Analysis}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Subsystem Classification}{13}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Materials and Properties}{13}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Thermo-optical properties}{13}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}Steady-state radiative case}{13}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Boundary Conditions and Loads Definition}{13}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Model Verification: Group-Level Energy Balances}{13}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Data provided by the TMD}{13}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Use in the Python post-processing}{13}{subsection.5.6.1}%
+\contentsline {chapter}{\numberline {6}Design and Implementation of the Post-Processing Code}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Code Structure and Architecture}{15}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Motivation for a Modular Architecture}{15}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Files overview}{15}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Software Stack and Dependencies}{15}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Filtering and Grouping Methods}{15}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Figure Conventions and Representation Criteria}{15}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Scope of Examples and Cryogenic-Flow Validation}{15}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Results and Visualisations from the Post-Processing Workflow}{17}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Filtering Results}{17}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Sankey Diagram}{17}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Network Graph Views (NX)}{17}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Stacked-Bar Balances}{17}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Cryogenic-Flow Views (ARIEL)}{17}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{19}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Conclusions}{19}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Future Work}{19}{section.8.2}%
+\contentsline {chapter}{References}{21}{section.8.2}%
+\contentsline {chapter}{Anexos}{23}{chapter*.9}%

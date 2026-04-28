@@ -6,12 +6,12 @@
 %   ---   DEFINICION DEL TRABAJO   ---   %
 
 \newcommand{\Project}{Trabajo de Fin de Grado}
-\newcommand{\ProjectTitle}{Desarrollo de una herramienta en Python para el postprocesado de modelos térmicos realizados con ESATAN-TMS}
+\newcommand{\ProjectTitle}{Desarrollo de una herramienta en Python para el postprocesado de modelos térmicos transitorios realizados con ESATAN-TMS}
 \newcommand{\ProjectSubject}{ESPECIALIDAD: Propulsión Aeroespacial}
 \newcommand{\ProjectAutor}{ Asier Fiel Mariblanca}
 \newcommand{\ProjectTutor}{ David González Bárcena}
 \newcommand{\ProjectLocation}{Madrid}
-\newcommand{\ProjectDate}{junio 2026}
+\newcommand{\ProjectDate}{septiembre 2026}
 
 % Descomentar si se tiene un repositorio del trabajo
 \newcommand{\ProjectGitHub}{https://github.com/asi1803/TFG/tree/main/TFG_Asier}
@@ -43,6 +43,23 @@
   \renewcommand{\contentsname}{Contents} % O el nombre que prefieras
 }
 
+% Cambiar nombres de figuras, tablas y ecuaciones a inglés
+\addto\captionsspanish{%
+  \renewcommand{\figurename}{Figure}%
+  \renewcommand{\tablename}{Table}%
+}
+% Para \autoref (hyperref)
+\addto\extrasenglish{%
+  \renewcommand{\figureautorefname}{Figure}%
+  \renewcommand{\tableautorefname}{Table}%
+  \renewcommand{\equationautorefname}{Equation}%
+}
+
+\addto\extrasspanish{%
+  \renewcommand{\figureautorefname}{Figure}%
+  \renewcommand{\tableautorefname}{Table}%
+  \renewcommand{\equationautorefname}{Equation}%
+}
 % Formato de los capítulos: Número y título en la misma línea
 \titleformat{\chapter}[hang]
   {\normalfont\huge\bfseries} % Estilo de la fuente
@@ -120,6 +137,7 @@
 \cleardoublepage
 
 %   ---   BIBLIOGRAFÍA/REFERENCIAS   ---   %
+\nocite{*}
 \input{./Chapters/References.tex}
 \cleardoublepage
 %\chapter{References}
