@@ -1,0 +1,36 @@
+\begin{table}[htbp]
+    \centering
+    \caption{Transient cases selected from the common thermal model.}
+    \label{tab:transient_cases}
+
+    \small
+    \setlength{\tabcolsep}{6pt}
+    \renewcommand{\arraystretch}{1.15}
+
+    \begin{tabularx}{\textwidth}{
+        |>{\raggedright\arraybackslash}p{0.17\textwidth}
+        |>{\raggedright\arraybackslash}p{0.27\textwidth}
+        |>{\raggedright\arraybackslash}X|
+    }
+        \hline
+        \textbf{Case} &
+        \textbf{Radiative case} &
+        \textbf{Purpose} \\
+        \hline
+
+        Nominal &
+        \texttt{rad\_nominal} &
+        Reference response used for comparison with the hot and cold cases. \\
+        \hline
+
+        Hot &
+        \texttt{rad\_hot\_operational} &
+        Response under higher external heat input and a shorter eclipse. \\
+        \hline
+
+        Cold &
+        \texttt{rad\_cold\_operational} &
+        Response under lower external heat input and a longer eclipse. \\
+        \hline
+    \end{tabularx}
+\end{table}

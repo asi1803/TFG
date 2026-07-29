@@ -1,9 +1,24 @@
-\newcommand{\clearemptydoublepage}{
-    \newpage{\pagestyle{empty}\cleardoublepage}
+\makeatletter
+
+\newcommand{\clearemptydoublepage}{%
+    \clearpage
+    \if@twoside
+        \ifodd\value{page}
+            % The next page is already odd: no blank page is required.
+        \else
+            % Insert an empty even page so that the next page is odd.
+            \thispagestyle{empty}%
+            \null
+            \newpage
+        \fi
+    \fi
 }
 
-\newcommand\blankpage{%
+\makeatother
+
+
+\newcommand{\blankpage}{%
     \null
     \thispagestyle{empty}%
-    \addtocounter{page}{-1}%
-    \newpage}
+    \newpage
+}

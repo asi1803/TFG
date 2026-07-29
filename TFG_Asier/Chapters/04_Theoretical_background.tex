@@ -1,228 +1,677 @@
-\chapter{Theoretical Background} \label{ch:chapter_04}
-\section{Thermal Control in Engineering}
-In engineering applications, thermal control is decisive to optimize the 
-performance of the system and its components, while keeping them within temperature limits. In some systems 
-and elements, such as engines, electric components or aeroespace systems, the implementation of a \acrfull{tcs} 
-is critical because thermal variations can produce a negative 
-impact on their performance and structural safety \cite{th_handbook}.
+\chapter{Theoretical Background}
+\label{ch:theoretical_background}
 
-Methods such as convection, conduction and radiation can be implemented on Earth's surface to study heat 
-transfer phenomena. However, the lack of an atmosphere in space, limits heat transfer mechanisms to conduction 
-in solids and thermal radiation into space \cite{spacethctrl}. 
+Spacecraft temperatures are determined by the interaction between internal heat 
+dissipation, external radiative loads and heat transfer through the structure. These 
+contributions change throughout the mission, leading to different temperature 
+conditions in each component. Their analysis requires an understanding of the space 
+environment, the main heat-transfer mechanisms and the mathematical methods used to 
+represent the physical system \cite{spacethctrl,th_handbook,thermal_eng_man}.
 
-The primary objective of a Spacecraft \acrshort{tcs} is to ensure that all onboard components operate within 
-their specified temperature ranges during all mission 
-phases, while minimizing resource consumption (mass and power)\cite{tcs_slides0}. 
-This is achieved through a careful balance of internal heat dissipation and external environmental fluxes, utilizing 
-both passive and active thermal control technologies \cite{th_handbook}.
+\section{Spacecraft Thermal Control}
+
+Thermal control is required in many engineering systems because temperature affects 
+equipment performance, material behaviour and reliability. Heat generated within a 
+system and energy exchanged with the external environment must be managed so that the components 
+remain within acceptable temperature limits \cite{hmt_f&a}.
+
+In spacecraft, the \acrfull{tcs} maintains onboard components within their specified 
+temperature limits throughout the mission, despite changes in environmental and operating 
+conditions. Excessive temperatures, large thermal gradients and repeated thermal cycles 
+can shorten component life, reduce measurement accuracy or prevent equipment from 
+functioning correctly. The design must also satisfy the restrictions imposed by the 
+available mass, volume and electrical power \cite{tcs_slides0,spacethctrl,th_handbook}.
+
+Thermal requirements depend on the function and operating state of each component. They 
+include allowable temperature ranges, limits on thermal gradients 
+and requirements for temperature stability. For example, electrical and electronic 
+equipment, including batteries and onboard computers, operate within specified temperature 
+ranges. Optical instruments such as telescopes often require tighter control of temperature 
+gradients to limit dimensional changes and maintain alignment 
+\cite{tcs_slides0,spacethctrl}.
+
+The temperature of each component depends on the balance between internally dissipated 
+power and the energy exchanged with the external environment. This balance is influenced 
+by the amount of energy absorbed by the external surfaces, the heat transferred through 
+the internal structure and the energy emitted towards space. Since these contributions 
+change during the mission, the required control must remain effective under different 
+operating and environmental conditions \cite{spacethctrl,th_handbook}.
+
+Different thermal-control measures are combined to meet these requirements. Surface 
+coatings modify solar absorption and infrared emission, radiators provide suitable 
+surfaces for heat rejection, and \acrfull{mli} limits unwanted radiative exchange. 
+Conductive links distribute heat between components and structural elements, while 
+heaters provide additional energy when passive measures are insufficient under cold 
+conditions \cite{spacethctrl,th_handbook,ecss_man}.
+
+The selection of these measures depends on the permitted temperature ranges, expected 
+heat loads and mission phases. Thermal control is therefore not limited to maintaining 
+a single uniform temperature. It must also control gradients, reduce excessive variations 
+and meet the individual requirements of each component 
+\cite{spacethctrl,tcs_slides0}.
 
 
-Those aspects are critical because, unlike terrestrial applications, the space environment is characterized by extreme conditions, 
-such as vacuum, a background temperature of 3K, and rapid, intense thermal cycling due to 
-exposure to sunlight and Earth's shadow \cite{tcs_slides0,spacethctrl}.
-
-
-Failure to comply with these thermal limits can lead to equipment malfunctions, accelerated material 
-degradation, reduced reliability, structural damage from thermal cycling, or even catastrophic failure.
-
-The objective of thermal control is to prevent those situations, ensuring operational reliability and 
-enhancing the efficiency of the system \cite{hmt_f&a}. Some key requirements for 
-the \acrshort{tcs} include \cite{tcs_slides1}:
-\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
-	\item Temperature Ranges: maintaining specific operational and survival temperature ranges 
-	for components: electronics, batteries or infrared detectors
-	\item Thermal Gradients and Stability: controlling temperature gradients and stability is essential 
-	for high-precision systems such as cameras, optical benches, and CCD sensors to 
-	avoid structural distortions and measurement errors
-\end{itemize}
- 
 \section{Space Thermal Environment}
 
-Spacecraft thermal control is a process of energy management in which environmental heating plays a major role 
-and therefore, has a major impact in the spacecraft design. There is no convection in space due to the absence of an atmosphere,
-being radiation the only possible method to dissipate heat in space. \newline
-Nevertheless, heat conduction between the structure and the components of the spacecraft still occurs. \cite{th_handbook}
+The space environment is one of the main factors affecting heat exchange through the 
+external surfaces of a spacecraft. In orbit, energy is exchanged with space mainly by 
+radiation because external convective transport is absent. Conduction remains important 
+within the structure and between connected components, but it does not provide a direct 
+mechanism for rejecting heat to space 
+\cite{spacethctrl,th_handbook}.
+% Sources:
+% Capitulos esenciales libro (inglés).pdf, PDF p. 22.
+% Thermal_Control_Handbook.pdf, PDF p. 35, printed p. 21.
 
-\section{Heat Transfer Mechanisms}
+For a spacecraft orbiting the Earth, the main environmental heat inputs are direct solar 
+radiation, solar radiation reflected by the Earth, known as albedo, and infrared radiation 
+emitted by the planet. At the same time, the external surfaces emit thermal radiation 
+towards deep space. These exchanges are represented in 
+Figure~\ref{fig:spacecraft_heat_exchanges} 
+\cite{spacethctrl,th_handbook,ecss_man}.
+% Sources:
+% Capitulos esenciales libro (inglés).pdf, PDF p. 22.
+% Thermal_Control_Handbook.pdf, PDF p. 35, printed p. 21.
+% ECSS-E-HB-31-03A15November2016.pdf, PDF p. 25.
 
-Heat can be defined as the form of energy that can be transferred from one system to another 
-as a result of temperature difference. The science that deals with the determination of the rates of such 
-energy transfers is heat transfer \cite{hmt_f&a}.
-Conduction, convection and radiation are the fundamental mechanisms of heat transfer. However, as it is mentioned earlier,
-there is no convection in space systems, leaving conduction and radiation as the predominant mechanisms. \cite{th_handbook}
+\begin{figure}[H]
+    \centering
+    % Source: Thermal_Control_Handbook.pdf,
+    % PDF page 35 (printed page 21), Figure 2.1.
+    \includegraphics[width=0.9\textwidth]
+    {Figures/marco_teorico/fig_01.png}
+    \caption{Main radiative exchanges between an orbiting spacecraft and the external environment. Taken from \cite{th_handbook}.}
+    \label{fig:spacecraft_heat_exchanges}
+\end{figure}
 
-% EJEMPLO DE COMO PONER UNA IMAGEN
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=100mm]{imag_07.png}
-%	\caption{ Spectral distribution of the emissive power of a blackbody at different temperatures.
-%The peak shifts to shorter wavelengths as temperature increases, according to Planck’s Law, \cite{heattransfer}} % Pie de imagen
-%	\label{fig:001_01}
-%\end{figure}
+Direct solar radiation generally provides the largest environmental heat input for an 
+Earth-orbiting spacecraft. The power absorbed by a flat surface depends on the solar 
+irradiance, surface area, orientation and solar absorptivity. It can be expressed as 
+\cite{spacethctrl}:
+
+\begin{equation}
+    \dot{Q}_{\mathrm{sun}}
+    =
+    \alpha_{\mathrm{s}}G_{\mathrm{s}}A\cos\theta
+    \label{eq:absorbed_solar_power}
+\end{equation}
+
+where $\alpha_{\mathrm{s}}$ is the solar absorptivity, $G_{\mathrm{s}}$ is the solar 
+irradiance, $A$ is the surface area and $\theta$ is the angle between the surface normal 
+and the solar rays. Since $G_{\mathrm{s}}$ is expressed in $\mathrm{W\,m^{-2}}$, the 
+resulting absorbed power is expressed in $\mathrm{W}$ 
+\cite{spacethctrl}.
+% Source:
+% Capitulos esenciales libro (inglés).pdf,
+% PDF pp. 23--25, Equation (2.1) on p. 25.
+
+Albedo is solar radiation reflected by the Earth's surface and atmosphere. The albedo's 
+contribution depends on the illuminated portion of the planet visible from the spacecraft 
+and on the fraction of reflected energy absorbed by each exposed surface. Planetary 
+infrared radiation instead originates from the Earth's thermal emission and depends on 
+the infrared properties of the exposed surfaces. In both cases, the incoming energy also 
+depends on the portion of the planet visible from each surface 
+\cite{spacethctrl,th_handbook}.
+% Sources:
+% Capitulos esenciales libro (inglés).pdf, PDF pp. 28--31.
+% Thermal_Control_Handbook.pdf, PDF pp. 37--38, printed pp. 23--24.
+
+The contribution made by each source varies with the orbit, spacecraft attitude, exposed 
+area and thermo-optical properties. During a total eclipse, the direct-solar term becomes 
+zero, and rapid variations occur when the spacecraft enters 
+or exits the eclipse region. Albedo follows the visible illuminated region of the Earth, 
+whereas planetary infrared radiation remains present during eclipse 
+\cite{spacethctrl,ecss_man}.
+% Sources:
+% Capitulos esenciales libro (inglés).pdf, PDF pp. 29--31.
+% ECSS-E-HB-31-03A15November2016.pdf, PDF p. 25.
+
+The periodic sequence of illuminated and eclipse phases exposes the spacecraft to 
+alternating heating and cooling during each orbit. Component temperatures adjust over 
+a finite interval because energy is stored and transferred through the structure. A 
+time-dependent analysis is required to represent this delayed response to the changing 
+environmental loads 
+\cite{spacethctrl,th_handbook}.
+
+\section{Heat Transfer and Thermal Energy Storage}
+
+The temperature response of a spacecraft depends on the amount of heat transferred and 
+stored over time. Heat transfer occurs by conduction, convection or radiation. Conduction 
+and radiation are the main mechanisms in spacecraft thermal analysis, while thermal 
+capacitance accounts for the energy stored by each component 
+\cite{spacethctrl,hmt_f&a}.
 
 \subsection{Conduction Heat Transfer}
 
-Heat transfer conduction is the mechanism by which thermal energy is transmitted 
-through solids or between solids in contact due to the presence of a temperature gradient, without any 
-macroscopic motion of the substance. This process is governed by microscopic interactions between 
-particles and, in metallic materials, the transport of free electrons \cite{hmt_f&a}.
+Conduction transfers thermal energy through a material or between bodies in contact without 
+bulk movement of matter. The conductive heat flow depends on the temperature gradient, the 
+thermal conductivity of the material and the area normal to the direction of transfer.
+For one-dimensional conduction, Fourier's law is written as \cite{heattransfer,hmt_f&a}
 
-From a macroscopic perspective, heat conduction is described by Fourier’s law:
 \begin{equation}
-q = -k A \frac{dT}{dx}
-\label{eq:Fourier}
+    \dot{Q}_{x}
+    =
+    -kA\frac{\mathrm{d}T}{\mathrm{d}x},
+    \label{eq:fourier_law}
 \end{equation}
 
-where: 
-\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
-	\item $q$ is the heat transfer rate (W) 
-	\item $k$ is the thermal conductivity (W/mK) 
-	\item $A$ is the cross-sectional area (m$^2$) 
-	\item $\frac{dT}{dx}$ is the temperature gradient (K/m). 
-\end{itemize}
-
-The negative sign in the temperature gradient indicates that heat flows from regions of higher 
-temperature to lower temperature \cite{hmt_f&a, spacethctrl}.
-
-Under steady-state conditions and simple geometries, 
-Fourier’s law can be integrated to obtain analytical expressions for heat transfer. 
-For instance, in a plane wall with constant thermal conductivity, the heat flux is directly proportional to the temperature
-difference between the boundaries and inversely proportional to the wall thickness \cite{hmt_f&a}. \newline
-\autoref{fig:001_07} illustrates one-dimensional heat conduction through a flat wall, consistent with the
-formulation of Fourier's law in \autoref{eq:Fourier}. 
+where $\dot{Q}_{x}$ is the conductive heat flow, $k$ is the thermal conductivity, $A$ is the area 
+normal to the heat flow and $\mathrm{d}T/\mathrm{d}x$ is the temperature gradient. The negative sign 
+indicates that heat flows in the direction of decreasing temperature. \newline
+Figure~\ref{fig:plane_wall_conduction} shows the one-dimensional plane-wall configuration 
+described by Fourier's law.
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=100mm]{imag_07.png}
-	\caption{One-dimensional heat conduction accross the wall, with thickness $\Delta x$ ,whose surfaces are at 
-temperatures  T1  and  T2  (T1  >  T2), respectively \cite{spacethctrl}} % Pie de imagen
-	\label{fig:001_07}
+    \centering
+    % Source: Heat_and_mass_transfer_fundamentals_and.pdf,
+    % PDF page 48 (printed page 17), Figure 1-23.
+    \includegraphics[width=0.6\textwidth]
+    {Figures/marco_teorico/Captura de pantalla 2026-07-26 181239.png}
+    \caption{One-dimensional heat conduction through a plane wall. Taken from \cite{hmt_f&a}.}
+    \label{fig:plane_wall_conduction}
 \end{figure}
 
-For more general cases involving spatial and temporal variations, the heat conduction process is 
-governed by the heat diffusion equation, expressed in cartesian coordinates as:
+For a plane layer of thickness $L$, constant area and constant conductivity, Fourier's law 
+can also be expressed in terms of thermal resistance \cite{heattransfer,hmt_f&a}:
+
+\begin{gather}
+    R_{\mathrm{cond}} = \frac{L}{kA}
+    \label{eq:conductive_resistance}
+    \\[0.6em]
+    \dot{Q}_{12} = \frac{T_{1}-T_{2}}{R_{\mathrm{cond}}}
+    \label{eq:conductive_resistance_heat_flow}
+\end{gather}
+
+The thermal-resistance formulation allows conductive paths to be combined in series or 
+parallel. At an interface between two components, the effective resistance also depends 
+on surface roughness, contact pressure and any intermediate materials. These effects are 
+represented by the contact resistance, while the linear thermal conductance is defined as 
+the inverse of that resistance 
+\cite{hmt_f&a,th_handbook}:
 
 \begin{equation}
-\rho c_p \frac{\partial T}{\partial t} = \nabla \cdot (k \nabla T) + \dot{q}
+    G_{12}^{L}
+    =
+    \frac{1}{R_{12}}
+    \label{eq:linear_thermal_conductance}
 \end{equation}
 
-where $\rho$ is the density (kg/m$^3$), $c_p$ is the specific heat (J/kgK), 
-and $\dot{q}$ represents internal heat generation per unit volume (W/m$^3$). 
-This equation forms the basis for thermal modelling in both analytical and numerical approaches, 
-including finite difference and nodal methods \cite{hmt_f&a, thermal_eng_man, ecss_man}.
-
-An additional useful concept in conduction analysis is thermal resistance, which simplifies 
-the study of heat transfer in complex systems. 
-For a homogeneous layer, the conductive thermal resistance is defined as:
-
-\begin{equation}
-R_{cond} = \frac{L}{kA}
-\end{equation}
-
-where $L$ is the thickness of the material. \newline
-In multilayer structures, individual resistances can be combined in series or parallel, allowing the overall 
-heat transfer to be evaluated using an approach analogous to electrical circuits \cite{hmt_f&a}.
-
-In the context of spacecraft thermal control, conduction plays a fundamental role in the 
-internal redistribution of heat. Conductive paths are essential to transport heat generated 
-by onboard components towards external radiative surfaces. Therefore, the design of conductive 
-interfaces, material selection, and contact conductance are critical factors in ensuring proper 
-thermal management \cite{spacethctrl, th_handbook, ecss_man}.
-
-Furthermore, in thermal modelling tools such as ESATAN, conduction is 
-typically represented through thermal conductances connecting discrete nodes within a network.
-These conductances depend on material properties and geometry and are used to solve the energy balance 
-equations governing the thermal behaviour of the system \cite{thermal_eng_man}.
+where $G_{12}^{L}$ is the linear thermal conductance between components 1 and 2, and 
+$R_{12}$ is the corresponding resistance. This relation is particularly useful in nodal 
+models because each conductive connection is represented by a conductance between two 
+nodes. When temperature changes with position or time, Fourier's law is combined with 
+conservation of energy to obtain the heat-diffusion equation 
+\cite{heattransfer,hmt_f&a,thermal_eng_man}.
 
 \subsection{Radiation Heat Transfer}
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=100mm]{imag_07.png}
-%	\caption{ Spectral distribution of the emissive power of a blackbody at different temperatures.
-%The peak shifts to shorter wavelengths as temperature increases, according to Planck’s Law, \cite{heattransfer}} % Pie de imagen
-%	\label{fig:001_01}
-%\end{figure}
-\section{Mathematical Modeling of Thermal Systems}
 
-Mathematical modeling is essential to predict the thermal behavior of space systems and design
-effective thermal control strategies. 
-
-\subsection{Disadvantages of the Finite Element Method (FEM)}
-
-
-
-\subsection{Lumped Parameter Method (LPM)}
-
-The \acrfull{lpm} is a discretization technique that simplifies a continuous physical system 
-into a finite number of discrete elements called nodes. 
-The fundamental assumption is that each node is isothermal, meaning its temperature is uniform throughout its entire volume. 
-This allows the system to be solved as a network of interconnected thermal resistances and 
-capacitances, analogous to an electrical circuit, 
-where temperature equates to voltage and heat flow to current flow. \cite{thermal_eng_man}
-
-\autoref{fig:001_04} shows a simplified thermal system and its equivalent nodal network representation:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=130mm]{imag_04.png}
-	\caption{Simplified heat transfer system and its corresponding thermal network \cite{lpm_elec}} % Pie de imagen
-	\label{fig:001_04}
-\end{figure}
-
-The behaviour of the network can be described as a system of differential equations whose coefficients are grouped values of the nodes. The mathematical expression for the nodal energy balance equation is:
+Unlike conduction, thermal radiation transfers energy through electromagnetic waves, 
+which propagate through vacuum. Radiative exchange takes place between spacecraft 
+surfaces, while external surfaces also emit energy towards space. The power emitted by a 
+real surface depends on the absolute temperature, area and emissivity, as expressed by 
+the Stefan--Boltzmann law \cite{hmt_f&a,spacethctrl}:
 
 \begin{equation}
-    C_i \frac{dT_i}{dt} = Q_i - \sum_{j=1}^{n} GL_{ij}(T_i - T_j) - \sum_{j=1}^{n} GR_{ij}(T_i^4 - T_j^4)
+    \dot{Q}
+    =
+    \varepsilon\sigma A T^{4}
+    \label{eq:emitted_radiation}
 \end{equation}
-where:
 
-\begin{itemize}[label={\scriptsize\raisebox{0.5ex}{\textbullet}}]
-	\item $C_i$ [J/K]: thermal capacitance of node $i$ ($m_i\ c_p,_i$); stores/releases heat as $T_i$ changes.  %El dolar se usa para ponerlo en formato formula
+where $\varepsilon$ is the surface emissivity, $\sigma$ is the Stefan--Boltzmann constant, 
+$A$ is the emitting area and $T$ is the absolute surface temperature. The value of the 
+Stefan--Boltzmann constant is \newline
+$\sigma=5.67\times10^{-8}\,\mathrm{W\,m^{-2}\,K^{-4}}$ 
+\cite{hmt_f&a}. \newline
+For an external surface facing deep space without obstruction, the net radiative heat flow 
+is expressed as \cite{spacethctrl}:
 
-	\item $T_i$ [K]: temperature of node $i$.
+\begin{equation}
+    \dot{Q}_{\mathrm{rad}}
+    =
+    \varepsilon\sigma A
+    \left(T^{4}-T_{\mathrm{space}}^{4}\right)
+    \label{eq:radiation_to_space}
+\end{equation}
 
-	\item $t$ [s]: time.
+where $T_{\mathrm{space}}$ is the effective temperature assigned to deep space. The term 
+$T_{\mathrm{space}}^{4}$ is generally small because the deep-space temperature is much 
+lower than the spacecraft surface temperature \cite{spacethctrl}.
 
-	\item $GL_{ij}$ [W/K]: conductive conductance between nodes $i$ and $j$. The value is zero if there is not a conductive path.
+The Stefan--Boltzmann law gives the total power emitted over all wavelengths. 
+The spectral distribution, however, depends on temperature. As temperature 
+increases, the emitted power rises and the maximum moves towards shorter 
+wavelengths. This behaviour explains why radiation received from the Sun is 
+mainly treated as short-wave radiation, whereas the Earth and spacecraft 
+surfaces emit primarily within the infrared range, as illustrated in 
+Figure~\ref{fig:blackbody_spectral_emission} 
+\cite{hmt_f&a,spacethctrl}.
 
-	\item $GR_{ij}$ [$W/K^4$]: radiative coupling factor between $i$ and $j$ in the non-linear $T^4$ form; it embeds
-$\sigma$, view factors and emissivities for diffuse–gray surfaces.
+\begin{figure}[H]
+    \centering
+    % Source image: Principios de Transferencia de Calor.
+    \includegraphics[width=0.88\textwidth]
+    {Figures/marco_teorico/imag_01.png}
+    \caption{Blackbody spectral emissive power at different temperatures and displacement of the emission maximum. Taken from \cite{heattransfer}.}
+    \label{fig:blackbody_spectral_emission}
+\end{figure}
 
-	\item $Q_i$ [W]: net heat source applied to node $i$ (internal dissipation, heaters, and absorbed external fluxes as modelled in the network).
+When radiation reaches a surface, part of it is absorbed, part is reflected and the remainder, 
+if any, is transmitted. Conservation of radiative energy requires the corresponding fractions 
+to satisfy \cite{hmt_f&a}
 
-	\item $\sum_{j=1}^n$: sum over all nodes $j$, which are thermally connected to $i$. The terms $GL_{ij}(T_i-T_j)$ and $GR_{ij}(T_i^4-T_j^4)$ contribute as inflow when the expression in parentheses is negative.
-\end{itemize}
+\begin{equation}
+    \alpha+\rho+\tau=1
+    \label{eq:radiative_properties}
+\end{equation}
 
+where $\alpha$, $\rho$ and $\tau$ are absorptivity, reflectivity and transmissivity, 
+respectively. For an opaque surface, no radiation is transmitted, and 
+Equation~\ref{eq:radiative_properties} reduces to $\alpha+\rho=1$ 
+\cite{hmt_f&a,spacethctrl}. 
 
-The discrete approximation simplifies the numerical solution of the thermal problem by reducing 
-a continuous system, governed by differential equations, to a finite set of equations 
-defined over a limited number of nodes. In steady-state conditions, this system becomes algebraic 
-and can be solved using standard numerical techniques, whereas in transient analysis it remains a 
-system of differential equations \cite{thermal_eng_man}.
+Since these properties depend on wavelength, the solar and infrared bands are treated 
+separately in spacecraft thermal analysis. Solar absorptivity represents the fraction 
+of short-wave solar radiation absorbed by a surface, while infrared emissivity governs 
+the exchange of long-wave thermal radiation. The same surface can therefore have different 
+properties in the two bands 
+\cite{spacethctrl,ecss_man,tcs_radiation1}.
+The wavelength range associated with thermal radiation is shown in 
+Figure~\ref{fig:thermal_radiation_spectrum}.
 
-Once the energy balance is defined for each node, the complete model is obtained by assembling 
-all the equations into a coupled system. This system describes the temporal evolution of the nodal 
-temperatures, taking into account both internal heat sources and the thermal interactions between nodes. \cite{thermal_eng_man}
+The view factor $F_{ij}$ represents the fraction of radiation leaving surface $i$ that reaches 
+surface $j$. The value of $F_{ij}$ depends on the relative position, orientation and area of the two surfaces, 
+as illustrated in Figure~\ref{fig:view_factor_geometry} \cite{spacethctrl}.
 
-In this framework, thermal systems are represented as networks of nodes connected through thermal 
-conductances. These conductances account for the main heat transfer mechanisms, such as conduction 
-through structural elements and radiation exchange between surfaces. Each node is characterised by 
-its thermal capacitance and exchanges heat with the rest of the system, enabling the prediction of 
-both steady-state and transient behaviour \cite{thermal_eng_man, spacethctrl}.
+\begin{figure}[H]
+    \centering
+    \phantomcaption
 
-The accuracy of this method depends on the discretisation of the system. A reduced number of nodes 
-may not capture the relevant temperature gradients, while an excessive number increases the 
-computational cost without providing significant accuracy in the results. Therefore, the definition of 
-the nodes represents a compromise between accuracy and efficiency. \cite{ecss_man}
+    \begin{subfigure}[t]{0.80\textwidth}
+        \centering
+        % Source image: Radiacion_I.pdf,
+        % PDF page 4, slide 4.
+        \includegraphics[width=\linewidth]
+        {Figures/marco_teorico/Captura de pantalla 2026-07-25 144427.png}
+        \caption{Wavelength range of thermal radiation. Taken from \cite{tcs_radiation1}.}
+        \label{fig:thermal_radiation_spectrum}
+    \end{subfigure}
+\end{figure}
 
-Therefore, due to its balance between accuracy and computational cost, this method is widely used in spacecraft
-thermal modelling and forms the basis of tools such as ESATAN-TMS. \cite{ecss_man}
-%Therefore, this method has a wide range of applications in the aeroespace industry, such as the thermal modeling of satellites, 
-%where a balance between accuracy and efficiency is required.
+\begin{figure}[H]
+    \ContinuedFloat
+    \centering
 
-\section{Software and Advanced Methods for Thermal Simulation}
+    \begin{subfigure}[t]{0.62\textwidth}
+        \centering
+        % Source image: Capitulos esenciales libro (inglés).pdf,
+        % PDF page 63 (printed page 83), Figure 5.5.
+        \includegraphics[width=\linewidth]
+        {Figures/marco_teorico/fig_03.png}
+        \caption{Geometry used to define a view factor. Taken from \cite{spacethctrl}.}
+        \label{fig:view_factor_geometry}
+    \end{subfigure}
 
-\section{Analytical Capabilities of ESATAN-TMS}
+    \caption{Wavelength dependence and geometrical definition of thermal radiation.}
+    \label{fig:radiation_fundamentals}
+\end{figure}
 
+\begin{samepage}
 
+View factors satisfy the reciprocity relation. When a set of $N$ surfaces forms a closed 
+enclosure, the factors from each surface also satisfy the following rule 
+\cite{spacethctrl,hmt_f&a}:
 
+\begin{gather}
+    A_iF_{ij} = A_jF_{ji}
+    \label{eq:view_factor_reciprocity}
+    \\[0.3em]
+    \sum_{j=1}^{N}F_{ij} = 1
+    \label{eq:view_factor_summation}
+\end{gather}
+
+where $N$ is the number of surfaces forming the enclosure.
+\end{samepage}
+
+Radiative exchange depends on the surface temperatures and thermo-optical properties, as well 
+as on the areas and relative geometry of the surfaces. Analytical view factors are available 
+for simple arrangements, whereas spacecraft radiative models generally calculate them 
+numerically \cite{spacethctrl,ecss_man}.
+
+\subsection{Thermal Capacitance and Transient Response}
+
+Thermal capacitance measures the energy required to change the temperature of a body. 
+For a body with uniform temperature and constant properties, it is given by 
+\cite{th_handbook,hmt_f&a}:
+
+\begin{gather}
+    C = mc_p
+    \label{eq:thermal_capacitance}
+    \\[0.6em]
+    \Delta E = C\Delta T
+    \label{eq:stored_thermal_energy}
+\end{gather}
+
+where $C$ is the thermal capacitance, $m$ is the mass, $c_p$ is the specific heat 
+capacity and $\Delta E$ represents the changes in the stored thermal energy of a body.
+
+For a transient process, the energy balance is expressed as \cite{spacethctrl}:
+
+\begin{equation}
+    C\frac{\mathrm{d}T}{\mathrm{d}t}
+    =
+    \dot{Q}_{\mathrm{net}}
+    \label{eq:transient_energy_balance}
+\end{equation}
+
+where $\dot{Q}_{\mathrm{net}}$ is the net heat flow into the body. For the same net 
+heat flow, a larger thermal capacitance results in a slower temperature change 
+\cite{hmt_f&a}.
+
+For a single body connected to a constant-temperature boundary through a linear 
+thermal resistance $R$, the thermal time constant and the corresponding temperature 
+response are expressed as \cite{hmt_f&a}:
+
+\begin{gather}
+    \tau_{\mathrm{th}} = RC
+    \label{eq:thermal_time_constant}
+    \\[0.6em]
+    T(t)
+    =
+    T_{\infty}
+    +
+    \left(T_{0}-T_{\infty}\right)
+    \exp\left(-\frac{t}{\tau_{\mathrm{th}}}\right)
+    \label{eq:first_order_thermal_response}
+\end{gather}
+
+\begin{samepage}
+where $T_0$ is the initial temperature and $T_\infty$ is the equilibrium temperature 
+approached as time increases. A larger time constant corresponds to a slower response 
+\cite{hmt_f&a}.
+
+During a transient process, heat flow changes with time, and the net energy 
+transferred between two instants is obtained by integrating the heat flow over 
+the corresponding interval \cite{hmt_f&a}:
+
+\begin{equation}
+    E_{12}
+    =
+    \int_{t_1}^{t_2}
+    \dot{Q}(t)\,\mathrm{d}t
+    \label{eq:integrated_thermal_energy}
+\end{equation}
+
+The sign of $E_{12}$ follows the sign convention adopted for $\dot{Q}$. In orbital 
+analysis, this integral quantifies the energy absorbed or released during a selected part 
+of the orbit. For example, energy is stored during an illuminated interval and released 
+after eclipse entry. The corresponding temperature change is delayed by the thermal 
+capacitance by the thermal capacitance and the conductive and radiative connections of the component with the 
+rest of the system 
+\cite{spacethctrl,th_handbook}.
+\end{samepage}
+
+\section{Mathematical Modelling of Spacecraft Thermal Systems}
+
+Spacecraft thermal models combine the equations governing heat transfer and energy 
+storage. The principle of conservation of energy is applied to calculate temperatures 
+and heat flows under specified loads and boundary conditions. Analytical methods provide 
+exact solutions when the geometry and boundary conditions are simple. More complex 
+configurations, involving multiple materials, interfaces and time-dependent inputs, are 
+formulated as a finite system of equations for numerical analysis 
+\cite{spacethctrl,ecss_man}.
+
+\subsection{Spatial Discretisation Approaches}
+
+The numerical solution of heat-transfer equations requires a discrete representation 
+of the geometry and temperature field. The geometry is divided into a finite number 
+of regions, each associated with one or more temperature values. This process is known 
+as spatial discretisation \cite{spacethctrl,ecss_man}. 
+
+\begin{sloppypar}
+Several numerical methods are available to discretise the thermal problem. 
+Finite-difference methods express spatial derivatives through temperature differences 
+between adjacent grid points. The \acrfull{fem} divides the geometry into connected 
+elements and describes the temperature variation within each element using interpolation 
+functions. Finite-volume methods apply an energy balance to each control volume using 
+the heat flows across the control-volume boundaries. The three formulations differ, but all of them 
+reduce the thermal problem to a finite system of equations expressed in terms of 
+discrete temperatures \cite{th_handbook,ecss_man}.
+\end{sloppypar}
+
+At system level, spacecraft thermal models commonly use a network of lumped nodes. 
+Each node represents a particular region of the model with a single temperature value. 
+Regions where small temperature gradients are expected can be represented by one node, 
+whereas regions with larger gradients or relevant heat-transfer paths are divided into 
+several nodes \cite{spacethctrl,ecss_man}. 
+
+A finer division provides greater spatial resolution, but it also increases the number 
+of conductive and radiative couplings, the calculation time and the volume of output 
+data. The selected nodalisation must resolve the temperatures, gradients and heat paths 
+relevant to the analysis without introducing unnecessary detail 
+\cite{th_handbook,ecss_man}.
+
+\subsection{
+    \texorpdfstring
+    {Lumped Parameter Method (\acrshort{lpm})}
+    {Lumped Parameter Method (LPM)}
+}
+
+In the \acrshort{lpm}, a thermal system is represented as a network of discrete nodes 
+linked by conductive and radiative couplings. 
+Each node represents a region whose temperature is assumed to be spatially uniform, 
+while the energy stored in that region is represented by a thermal capacitance. Figure~\ref{fig:lumped_discretisation} 
+illustrates the approximation of a continuous temperature distribution by discrete nodal values and the conductive 
+connection between two adjacent nodes \cite{th_handbook,thermal_eng_man}.
+
+\begin{figure}[H]
+    \centering
+    \phantomcaption
+
+    \begin{subfigure}[c]{0.7\textwidth}
+        \centering
+        % Source image: Thermal_Control_Handbook.pdf,
+        % PDF page 545 (printed page 540), Figure 15.2.
+        \includegraphics[width=\linewidth]
+        {Figures/marco_teorico/Captura de pantalla 2026-07-25 165441.png}
+        \caption{Approximation of a continuous temperature distribution by discrete nodal values.}
+        \label{fig:lumped_temperature_approximation}
+    \end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+    \ContinuedFloat
+    \centering
+
+    \begin{subfigure}[c]{0.7\textwidth}
+        \centering
+        % Source image: Thermal_Control_Handbook.pdf,
+        % PDF page 552 (printed page 547), Figure 15.13.
+        \includegraphics[width=\linewidth]
+        {Figures/marco_teorico/fig_05.png}
+        \caption{Conductive connection between two adjacent nodes.}
+        \label{fig:lumped_conductive_link}
+    \end{subfigure}
+
+    \caption{Temperature approximation and conductive coupling in a lumped-parameter model. Taken from \cite{th_handbook}.}
+    \label{fig:lumped_discretisation}
+\end{figure}
+
+The principle of conservation of energy is applied to each of the $N$ capacitive nodes 
+to establish the corresponding energy balance. This converts the continuous temperature field into a 
+coupled system of $N$ first-order ordinary differential equations, one for each nodal temperature. 
+The corresponding balance for a general node $i$ is written as \cite{spacethctrl,thermal_eng_man}: 
+
+\begin{equation}
+    C_{i}\frac{\mathrm{d}T_{i}}{\mathrm{d}t}
+    =
+    \dot{Q}_{i}(t)
+    +
+    \sum_{\substack{j=1 \\ j\neq i}}^{N}
+    G^{L}_{ij}\left(T_{j}-T_{i}\right)
+    +
+    \sigma
+    \sum_{\substack{j=1 \\ j\neq i}}^{N}
+    G^{R}_{ij}
+    \left(T_{j}^{4}-T_{i}^{4}\right)
+    \label{eq:lumped_nodal_balance}
+\end{equation}
+
+where $C_i$ is the nodal thermal capacitance, $\dot{Q}_i(t)$ is the net heat load applied to the node, 
+$G^L_{ij}$ is the linear conductance, $G^R_{ij}$ is the radiative exchange coefficient, $\sigma$ is the 
+Stefan--Boltzmann constant and $N$ is the total number of nodes in the network.
+
+Conductive exchange is proportional to the temperature difference $T_j-T_i$, whereas radiative exchange 
+depends on $T_j^4-T_i^4$. This $T^4$ dependence makes the 
+resulting system non-linear \cite{spacethctrl,thermal_eng_man}.
+
+\begin{sloppypar}
+The nodal equations are completed by assigning the applied loads and boundary conditions. 
+The loads represent internally dissipated power, external radiative heating or heat 
+supplied by temperature-controlled devices. Boundary conditions specify temperatures, 
+heat inputs or other interactions that are not calculated as unknown nodal temperatures 
+\cite{thermal_eng_man,esatan_training_man}.
+\end{sloppypar}
+
+A transient calculation also requires an initial temperature for each capacitive node. 
+This initial distribution affects the beginning of the solution and is obtained from an 
+estimated condition, a previous transient interval or a steady-state calculation. 
+The influence of this initial distribution must be considered when the required result 
+is a periodic orbital response 
+\cite{thermal_eng_man,esatan_training_man}.
+
+\subsection{Steady-State and Transient Formulations}
+
+In a steady-state solution, the nodal temperatures remain constant. As a result, 
+$\mathrm{d}T_i/\mathrm{d}t$ is zero, and the storage term in 
+Equation~\eqref{eq:lumped_nodal_balance} disappears. The resulting non-linear algebraic 
+equations determine the steady-state temperatures for fixed loads and boundary conditions. 
+However, they contain no information about the transition towards this equilibrium state 
+\cite{spacethctrl,thermal_eng_man}.
+
+In a transient solution, the storage term is retained and an initial temperature is 
+assigned to each capacitive node. The coupled differential equations are integrated over 
+time, allowing the loads and boundary conditions to change during the selected interval. 
+The resulting solution describes temperatures and heat flows as functions of time and 
+includes the energy stored in the capacitive nodes 
+\cite{spacethctrl,thermal_eng_man}.
+
+A transient calculation can therefore identify temporary maximum and minimum temperatures, 
+the time at which they occur and the delay between a change in load and the corresponding 
+temperature response. The selected formulation depends on whether only an equilibrium 
+condition is required or whether the evolution of the system must also be represented 
+\cite{th_handbook,ecss_man}.
+
+\subsection{Periodic Thermal Response and Cyclic Convergence}
+
+When the orbital geometry and operating sequence repeat after a period $P$, the applied 
+loads are also periodic. The thermal response is periodic when the nodal temperatures 
+repeat after the same period. To approach this condition, the final temperature 
+distribution from each calculated cycle is used to initialise the next one 
+\cite{spacethctrl,gaite2012linear,esatan_training_man}.
+
+\begin{equation}
+    \dot{Q}_{i}(t+P) = \dot{Q}_{i}(t)
+    \label{eq:periodic_heat_load}
+\end{equation}
+
+\begin{equation}
+    T_{i}(t+P) = T_{i}(t)
+    \label{eq:periodic_temperature}
+\end{equation}
+
+\begin{samepage}
+
+In numerical calculations, small differences generally remain between the temperatures 
+calculated at the beginning and end of a complete period. Cyclic convergence is accepted 
+when the maximum of these differences is below a selected tolerance 
+\cite{thermal_eng_man,esatan_training_man}.
+
+\begin{equation}
+    \max
+    \left|
+    T_{i}(t_{0}+P)-T_{i}(t_{0})
+    \right|
+    \leq
+    \varepsilon_{\mathrm{cyc}}
+    \label{eq:cyclic_convergence}
+\end{equation}
+
+where $\varepsilon_{\mathrm{cyc}}$ is the convergence criterion. Once this condition is 
+satisfied, the calculated cycle represents the response to the periodic loads rather 
+than the initial numerical adjustment of the model 
+\cite{gaite2012linear,thermal_eng_man,esatan_training_man}.
+
+\end{samepage}
+
+\section{
+    \texorpdfstring
+    {Thermal Modelling and Solution Framework in \acrshort{esatan-tms}}
+    {Thermal Modelling and Solution Framework in ESATAN-TMS}
+}
+
+\acrshort{esatan-tms} applies a lumped-parameter nodal formulation through connected 
+geometrical, radiative and thermal models. The physical description is converted into 
+a network containing thermal capacitances, conductive and radiative couplings, boundary 
+conditions and applied loads 
+\cite{thermal_eng_man,esatan_user_man,esatan_gsg}.
+
+The modelling process links the physical configuration with the equations solved during 
+the analysis. Geometrical and surface information is used in the radiative calculations, 
+while material properties and physical connections determine thermal storage and 
+conduction. These contributions are combined in the thermal network before the selected 
+numerical solution is performed 
+\cite{thermal_eng_man,esatan_user_man}.
+
+\subsection{Geometrical and Radiative Models}
+
+The geometrical model defines the dimensions, positions and orientations of the modelled 
+elements, together with their materials and thermo-optical properties. The geometrical discretisation 
+also establishes the regions that can later be associated with individual thermal nodes 
+\cite{esatan_user_man,esatan_gsg}.
+
+The corresponding surfaces form the radiative model. View factors and radiative exchange 
+factors between surfaces are calculated from their geometry and properties. During an 
+orbital analysis, the model also determines the solar, albedo and planetary infrared 
+loads absorbed at the selected orbital positions 
+\cite{esatan_user_man,esatan_gsg,ecss_man}.
+
+\subsection{Thermal Network Representation}
+
+The thermal network consists of capacitive nodes linked by conductors. Each capacitive 
+node represents a region with an associated temperature and heat-storage capacity. The 
+nodal capacitance is calculated from the mass and specific heat assigned to the 
+corresponding part of the model 
+\cite{thermal_eng_man,esatan_user_man}.
+
+Linear conductors represent solid conduction, contact conductance and other couplings 
+proportional to temperature difference. Radiative conductors represent energy exchange 
+between surfaces and are obtained from the radiative calculation. Environmental inputs, 
+internal dissipation and boundary conditions complete the nodal energy balances 
+\cite{thermal_eng_man,esatan_user_man,esatan_training_man}.
+
+Nodes and conductors are generated from the geometry or defined explicitly when a 
+physical element or connection is not represented directly by the geometrical model. 
+This allows equipment units, dedicated conductive links and user-defined thermal 
+interactions to be included without adding unnecessary geometrical detail 
+\cite{thermal_eng_man,esatan_user_man}.
+
+\subsection{Implementation of Steady-State, Transient and Cyclic Solutions}
+
+The steady-state solver determines the nodal temperatures for fixed loads 
+and boundary conditions. The transient solver retains the nodal capacitances and initial 
+temperatures and integrates the energy-balance equations over time. Calculation and 
+output times are selected according to the temporal resolution required for the analysis 
+\cite{thermal_eng_man,esatan_training_man}.
+
+For periodic cases, the cyclic solver repeats the defined interval and uses the final 
+temperature distribution of one cycle to initialise the next. The process continues 
+until the difference between consecutive cycles satisfies the selected convergence 
+criterion or the permitted number of cycles is reached 
+\cite{thermal_eng_man,esatan_training_man,esatan_gsg}.
+
+The numerical solution provides the nodal temperatures and the contributions included 
+in their energy balances. Depending on the selected outputs, these results may include 
+applied loads and conductive and radiative heat flows, which can subsequently be examined 
+as steady values or as functions of time 
+\cite{esatan_user_man,esatan_training_man}.

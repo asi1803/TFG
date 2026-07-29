@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  28 APR 2026 19:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.2)  29 JUL 2026 02:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1749,26 +1749,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `TFG_FIEL_MARIBLANCA_ASIER.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Info: Redefining \. on input line 75.
-LaTeX Info: Redefining \% on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1823,21 +1823,21 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 75.
+Package hyperref Info: Link coloring ON on input line 96.
  (TFG_FIEL_MARIBLANCA_ASIER.out) (TFG_FIEL_MARIBLANCA_ASIER.out)
 \@outlinefile=\write9
 \openout9 = `TFG_FIEL_MARIBLANCA_ASIER.out'.
 
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/lmr/m/n --> TS1/lmr/b/n on input line 75.
-Package gensymb Info: Math companion symbols declared on input line 75.
-LaTeX Info: Redefining \degree on input line 75.
-LaTeX Info: Redefining \celsius on input line 75.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 75.
-LaTeX Info: Redefining \ohm on input line 75.
-Package gensymb Info: Using \textohm for \ohm on input line 75.
-Package gensymb Info: Using \textmu for \micro on input line 75.
+(Font)                  TS1/lmr/m/n --> TS1/lmr/b/n on input line 96.
+Package gensymb Info: Math companion symbols declared on input line 96.
+LaTeX Info: Redefining \degree on input line 96.
+LaTeX Info: Redefining \celsius on input line 96.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 96.
+LaTeX Info: Redefining \ohm on input line 96.
+Package gensymb Info: Using \textohm for \ohm on input line 96.
+Package gensymb Info: Using \textmu for \micro on input line 96.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
@@ -1848,32 +1848,12 @@ Package caption Info: supertabular package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count477
- (TFG_FIEL_MARIBLANCA_ASIER.glsdefs
-
-Package glossaries Warning: entry `esa' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 27.
-
-
-Package glossaries Warning: entry `esatan-tms' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 55.
-
-
-Package glossaries Warning: entry `tcs' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 83.
-
-
-Package glossaries Warning: entry `lpm' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 111.
-
-
-Package glossaries Warning: entry `etsiae' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 139.
-
-
-Package glossaries Warning: entry `idr' has already been defined in the preamble (if you have moved the definition there from the document environment, delete TFG_FIEL_MARIBLANCA_ASIER.glsdefs) on input line 167.
-
-)
-LaTeX Info: Redefining \microtypecontext on input line 75.
-Package microtype Info: Applying patch `item' on input line 75.
-Package microtype Info: Applying patch `toc' on input line 75.
-Package microtype Info: Applying patch `eqnum' on input line 75.
-Package microtype Info: Applying patch `verbatim' on input line 75.
-LaTeX Info: Redefining \microtypesetup on input line 75.
+LaTeX Info: Redefining \microtypecontext on input line 96.
+Package microtype Info: Applying patch `item' on input line 96.
+Package microtype Info: Applying patch `toc' on input line 96.
+Package microtype Info: Applying patch `eqnum' on input line 96.
+Package microtype Info: Applying patch `verbatim' on input line 96.
+LaTeX Info: Redefining \microtypesetup on input line 96.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1884,26 +1864,21 @@ Package microtype Info: No adjustment of character kerning.
  (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) (Tex_Files/portada.tex
-<./Figures/Portada_HF/upm_logo.png, id=200, 398.4486pt x 185.0112pt>
+<./Figures/Portada_HF/upm_logo.png, id=320, 398.4486pt x 185.0112pt>
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
 Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 5.
 (pdftex.def)             Requested size: 140.84259pt x 65.39853pt.
-<./Figures/Portada_HF/descarga.png, id=202, 256.96pt x 148.555pt>
+<./Figures/Portada_HF/descarga.png, id=322, 256.96pt x 148.555pt>
 File: ./Figures/Portada_HF/descarga.png Graphic file (type png)
 <use ./Figures/Portada_HF/descarga.png>
 Package pdftex.def Info: ./Figures/Portada_HF/descarga.png  used on input line 7.
 (pdftex.def)             Requested size: 140.84259pt x 81.42441pt.
-
-
-LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 13.
-
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 26.
-(C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 26.
@@ -1952,41 +1927,46 @@ Package microtype Info: Character `029' is missing
 \openout4 = `TFG_FIEL_MARIBLANCA_ASIER.ist'.
 
 
-{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./Figures/Portada_HF/upm_logo.png> <./Figures/Portada_HF/descarga.png>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.52 \end{titlepage}
-                     [1]) (TFG_FIEL_MARIBLANCA_ASIER.toc
+{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./Figures/Portada_HF/upm_logo.png> <./Figures/Portada_HF/descarga.png>] [2]) (TFG_FIEL_MARIBLANCA_ASIER.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 4.
 
-Overfull \hbox (4.54016pt too wide) in paragraph at lines 22--22
- [] [][][]\T1/lmr/bx/n/10.95 Development of the Ther-mal Mo-del in ESATAN-TMS and Da-ta Ex-port/Analysis[][] []  
- []
+Underfull \vbox (badness 5203) has occurred while \output is active []
 
-[1
+ [1
 
-])
+]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 55.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 55.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55 ... Balance and Battery Model}{43}{chapter.8}
+                                                  % [2])
 \tf@toc=\write10
 \openout10 = `TFG_FIEL_MARIBLANCA_ASIER.toc'.
 
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 89.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 110.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 89.
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.89 \newpage
-              [2] (TFG_FIEL_MARIBLANCA_ASIER.lof
+l.110 \newpage
+               [3] (TFG_FIEL_MARIBLANCA_ASIER.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -1995,31 +1975,38 @@ LaTeX Info: Redefining \% on input line 1.
 
  [1
 
-{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 99.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 120.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 99.
-LaTeX Info: Redefining \% on input line 99.
- [2
-
-] (TFG_FIEL_MARIBLANCA_ASIER.lot
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
+ [2] (TFG_FIEL_MARIBLANCA_ASIER.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 12.
+ (C:\Users\asi18\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 )
 \tf@lot=\write12
 \openout12 = `TFG_FIEL_MARIBLANCA_ASIER.lot'.
 
  [3
 
+
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 105.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 126.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 105.
-LaTeX Info: Redefining \% on input line 105.
+LaTeX Info: Redefining \. on input line 126.
+LaTeX Info: Redefining \% on input line 126.
  [4
 
 ] (TFG_FIEL_MARIBLANCA_ASIER.acr) [5
@@ -2028,192 +2015,519 @@ LaTeX Info: Redefining \% on input line 105.
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 112.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 133.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 112.
-LaTeX Info: Redefining \% on input line 112.
+LaTeX Info: Redefining \. on input line 133.
+LaTeX Info: Redefining \% on input line 133.
  [6
 
 ] (Chapters/01_Abstract.tex
-Cap\'{\i }tulo 1.
+Chapter 1.
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.123 \cleardoublepage
+l.144 \cleardoublepage
                        [1
 
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 123.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 144.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 123.
-LaTeX Info: Redefining \% on input line 123.
- [2
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.144 \cleardoublepage
+                       [2
 
 ] (Chapters/02_Introduction.tex
-Cap\'{\i }tulo 2.
-) [3
+Chapter 2.
+[3
+
+])
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 147.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 147.
+LaTeX Info: Redefining \% on input line 147.
+ [4] (Chapters/03_State_of_art.tex
+Chapter 3.
+[5
+
+
+]
+<Figures/03/HELIOS.png, id=657, 882.29625pt x 329.73187pt>
+File: Figures/03/HELIOS.png Graphic file (type png)
+<use Figures/03/HELIOS.png>
+Package pdftex.def Info: Figures/03/HELIOS.png  used on input line 78.
+(pdftex.def)             Requested size: 375.57787pt x 140.35808pt.
+<Figures/03/geom_HELIOS.png, id=658, 983.92593pt x 430.60875pt>
+File: Figures/03/geom_HELIOS.png Graphic file (type png)
+<use Figures/03/geom_HELIOS.png>
+Package pdftex.def Info: Figures/03/geom_HELIOS.png  used on input line 87.
+(pdftex.def)             Requested size: 422.52063pt x 184.91502pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 102.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+ [6 <./Figures/03/HELIOS.png> <./Figures/03/geom_HELIOS.png>]
+<Figures/03/arquitectura_HELIOS.png, id=673, 543.53062pt x 538.26094pt>
+File: Figures/03/arquitectura_HELIOS.png Graphic file (type png)
+<use Figures/03/arquitectura_HELIOS.png>
+Package pdftex.def Info: Figures/03/arquitectura_HELIOS.png  used on input line 126.
+(pdftex.def)             Requested size: 319.23653pt x 316.15031pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 138.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 138.
+LaTeX Info: Redefining \% on input line 138.
+ [7 <./Figures/03/arquitectura_HELIOS.png>])
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 150.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 150.
+LaTeX Info: Redefining \% on input line 150.
+ [8] (Chapters/04_Theoretical_background.tex
+Chapter 4.
+[9
+
+
+]
+<Figures/marco_teorico/fig_01.png, id=715, 257.46187pt x 167.62625pt>
+File: Figures/marco_teorico/fig_01.png Graphic file (type png)
+<use Figures/marco_teorico/fig_01.png>
+Package pdftex.def Info: Figures/marco_teorico/fig_01.png  used on input line 82.
+(pdftex.def)             Requested size: 422.52063pt x 275.11598pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 91.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+ [10 <./Figures/marco_teorico/fig_01.png>]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 156.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+ [11{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+<Figures/marco_teorico/Captura de pantalla 2026-07-26 181239.png, id=746, 82.80937pt x 120.45pt>
+File: Figures/marco_teorico/Captura de pantalla 2026-07-26 181239.png Graphic file (type png)
+<use Figures/marco_teorico/Captura de pantalla 2026-07-26 181239.png>
+Package pdftex.def Info: Figures/marco_teorico/Captura de pantalla 2026-07-26 181239.png  used on input line 169.
+(pdftex.def)             Requested size: 281.68518pt x 409.86087pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 183.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 183.
+LaTeX Info: Redefining \% on input line 183.
+ [12 <./Figures/marco_teorico/Captura de pantalla 2026-07-26 181239.png>]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 249.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 249.
+LaTeX Info: Redefining \% on input line 249.
+ [13{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
+<Figures/marco_teorico/imag_01.png, id=782, 757.32938pt x 386.19281pt>
+File: Figures/marco_teorico/imag_01.png Graphic file (type png)
+<use Figures/marco_teorico/imag_01.png>
+Package pdftex.def Info: Figures/marco_teorico/imag_01.png  used on input line 254.
+(pdftex.def)             Requested size: 413.13637pt x 210.6742pt.
+<Figures/marco_teorico/Captura de pantalla 2026-07-25 144427.png, id=795, 271.51437pt x 140.525pt>
+File: Figures/marco_teorico/Captura de pantalla 2026-07-25 144427.png Graphic file (type png)
+<use Figures/marco_teorico/Captura de pantalla 2026-07-25 144427.png>
+Package pdftex.def Info: Figures/marco_teorico/Captura de pantalla 2026-07-25 144427.png  used on input line 295.
+(pdftex.def)             Requested size: 375.57787pt x 194.39214pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 300.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 300.
+LaTeX Info: Redefining \% on input line 300.
+ [14 <./Figures/marco_teorico/imag_01.png>]
+<Figures/marco_teorico/fig_03.png, id=807, 190.21063pt x 119.44624pt>
+File: Figures/marco_teorico/fig_03.png Graphic file (type png)
+<use Figures/marco_teorico/fig_03.png>
+Package pdftex.def Info: Figures/marco_teorico/fig_03.png  used on input line 310.
+(pdftex.def)             Requested size: 291.06944pt x 182.80316pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 340.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 340.
+LaTeX Info: Redefining \% on input line 340.
+ [15 <./Figures/marco_teorico/Captura de pantalla 2026-07-25 144427.png> <./Figures/marco_teorico/fig_03.png>]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 413.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 413.
+LaTeX Info: Redefining \% on input line 413.
+ [16]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 466.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 466.
+LaTeX Info: Redefining \% on input line 466.
+ [17]
+<Figures/marco_teorico/Captura de pantalla 2026-07-25 165441.png, id=861, 212.29312pt x 96.86188pt>
+File: Figures/marco_teorico/Captura de pantalla 2026-07-25 165441.png Graphic file (type png)
+<use Figures/marco_teorico/Captura de pantalla 2026-07-25 165441.png>
+Package pdftex.def Info: Figures/marco_teorico/Captura de pantalla 2026-07-25 165441.png  used on input line 476.
+(pdftex.def)             Requested size: 328.62794pt x 149.94809pt.
+<Figures/marco_teorico/fig_05.png, id=862, 199.24437pt x 90.83937pt>
+File: Figures/marco_teorico/fig_05.png Graphic file (type png)
+<use Figures/marco_teorico/fig_05.png>
+Package pdftex.def Info: Figures/marco_teorico/fig_05.png  used on input line 491.
+(pdftex.def)             Requested size: 328.62794pt x 149.8466pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 518.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 518.
+LaTeX Info: Redefining \% on input line 518.
+ [18 <./Figures/marco_teorico/Captura de pantalla 2026-07-25 165441.png> <./Figures/marco_teorico/fig_05.png>]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 572.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 572.
+LaTeX Info: Redefining \% on input line 572.
+ [19]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 646.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 646.
+LaTeX Info: Redefining \% on input line 646.
+ [20])
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 153.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 153.
+LaTeX Info: Redefining \% on input line 153.
+ [21]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 153.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 153.
+LaTeX Info: Redefining \% on input line 153.
+ [22
+
+] (Chapters/05_Development_thermal.tex
+Chapter 5.
+<./Figures/05/Image_02.png, id=953, 1533.73pt x 733.74126pt>
+File: ./Figures/05/Image_02.png Graphic file (type png)
+<use ./Figures/05/Image_02.png>
+Package pdftex.def Info: ./Figures/05/Image_02.png  used on input line 57.
+(pdftex.def)             Requested size: 384.96928pt x 161.48862pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 58.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 58.
+<./Figures/05/Comp_disipativos.png, id=955, 1533.73pt x 768.8725pt>
+File: ./Figures/05/Comp_disipativos.png Graphic file (type png)
+<use ./Figures/05/Comp_disipativos.png>
+Package pdftex.def Info: ./Figures/05/Comp_disipativos.png  used on input line 73.
+(pdftex.def)             Requested size: 338.01936pt x 145.11276pt.
+<./Figures/05/Satelite.png, id=957, 1533.73pt x 768.8725pt>
+File: ./Figures/05/Satelite.png Graphic file (type png)
+<use ./Figures/05/Satelite.png>
+Package pdftex.def Info: ./Figures/05/Satelite.png  used on input line 90.
+(pdftex.def)             Requested size: 431.91203pt x 185.42242pt.
+[23
 
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 125.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 98.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 125.
-LaTeX Info: Redefining \% on input line 125.
- [4
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+ [24 <./Figures/05/Image_02.png (PNG copy)> <./Figures/05/Comp_disipativos.png (PNG copy)> <./Figures/05/Satelite.png (PNG copy)>] (Tables/tabla_subsistemas.tex)
+<Figures/05/OBC_Rad_nodes.png, id=977, 1533.73pt x 768.8725pt>
+File: Figures/05/OBC_Rad_nodes.png Graphic file (type png)
+<use Figures/05/OBC_Rad_nodes.png>
+Package pdftex.def Info: Figures/05/OBC_Rad_nodes.png  used on input line 135.
+(pdftex.def)             Requested size: 366.18645pt x 183.57114pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 140.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+ [25]
+<Figures/05/OBC_Rad_nodes2.png, id=983, 1533.73pt x 768.8725pt>
+File: Figures/05/OBC_Rad_nodes2.png Graphic file (type png)
+<use Figures/05/OBC_Rad_nodes2.png>
+Package pdftex.def Info: Figures/05/OBC_Rad_nodes2.png  used on input line 148.
+(pdftex.def)             Requested size: 366.18645pt x 183.57114pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 183.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 183.
+LaTeX Info: Redefining \% on input line 183.
+ [26 <./Figures/05/OBC_Rad_nodes.png (PNG copy)> <./Figures/05/OBC_Rad_nodes2.png (PNG copy)>] (Tables/tabla_materiales.tex
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 32.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 32.
+)
+<./Figures/05/thermal_conductivity2.png, id=996, 1533.73pt x 768.8725pt>
+File: ./Figures/05/thermal_conductivity2.png Graphic file (type png)
+<use ./Figures/05/thermal_conductivity2.png>
+Package pdftex.def Info: ./Figures/05/thermal_conductivity2.png  used on input line 205.
+(pdftex.def)             Requested size: 375.57787pt x 156.81439pt.
+<./Figures/05/thermal_conductivity.png, id=998, 1533.73pt x 768.8725pt>
+File: ./Figures/05/thermal_conductivity.png Graphic file (type png)
+<use ./Figures/05/thermal_conductivity.png>
+Package pdftex.def Info: ./Figures/05/thermal_conductivity.png  used on input line 221.
+(pdftex.def)             Requested size: 328.62794pt x 137.2126pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 230.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 230.
+LaTeX Info: Redefining \% on input line 230.
+ [27 <./Figures/05/thermal_conductivity2.png (PNG copy)>] (Tables/tabla_propiedades_termo_opticas.tex)
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 270.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
+ [28 <./Figures/05/thermal_conductivity.png (PNG copy)>]
+<./Figures/05/solar_absorptivity.png, id=1024, 1533.73pt x 768.8725pt>
+File: ./Figures/05/solar_absorptivity.png Graphic file (type png)
+<use ./Figures/05/solar_absorptivity.png>
+Package pdftex.def Info: ./Figures/05/solar_absorptivity.png  used on input line 278.
+(pdftex.def)             Requested size: 469.47055pt x 235.3446pt.
+<./Figures/05/solar_absorptivity2.png, id=1025, 1533.73pt x 768.8725pt>
+File: ./Figures/05/solar_absorptivity2.png Graphic file (type png)
+<use ./Figures/05/solar_absorptivity2.png>
+Package pdftex.def Info: ./Figures/05/solar_absorptivity2.png  used on input line 291.
+(pdftex.def)             Requested size: 469.47055pt x 235.3446pt.
+<./Figures/05/solar_reflectivity.png, id=1026, 1533.73pt x 768.8725pt>
+File: ./Figures/05/solar_reflectivity.png Graphic file (type png)
+<use ./Figures/05/solar_reflectivity.png>
+Package pdftex.def Info: ./Figures/05/solar_reflectivity.png  used on input line 308.
+(pdftex.def)             Requested size: 469.47055pt x 235.3446pt.
+<./Figures/05/solar_reflectivity2.png, id=1027, 1533.73pt x 768.8725pt>
+File: ./Figures/05/solar_reflectivity2.png Graphic file (type png)
+<use ./Figures/05/solar_reflectivity2.png>
+Package pdftex.def Info: ./Figures/05/solar_reflectivity2.png  used on input line 321.
+(pdftex.def)             Requested size: 469.47055pt x 235.3446pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 331.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 331.
+LaTeX Info: Redefining \% on input line 331.
+ [29 <./Figures/05/solar_absorptivity.png (PNG copy)> <./Figures/05/solar_absorptivity2.png (PNG copy)>]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 331.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 331.
+LaTeX Info: Redefining \% on input line 331.
+ [30 <./Figures/05/solar_reflectivity.png (PNG copy)> <./Figures/05/solar_reflectivity2.png (PNG copy)>]
+<./Figures/05/infrarred_emmisivity.png, id=1040, 1533.73pt x 768.8725pt>
+File: ./Figures/05/infrarred_emmisivity.png Graphic file (type png)
+<use ./Figures/05/infrarred_emmisivity.png>
+Package pdftex.def Info: ./Figures/05/infrarred_emmisivity.png  used on input line 349.
+(pdftex.def)             Requested size: 469.47055pt x 235.3446pt.
+<./Figures/05/infrarred_emmisivity2.png, id=1041, 1533.73pt x 768.8725pt>
+File: ./Figures/05/infrarred_emmisivity2.png Graphic file (type png)
+<use ./Figures/05/infrarred_emmisivity2.png>
+Package pdftex.def Info: ./Figures/05/infrarred_emmisivity2.png  used on input line 362.
+(pdftex.def)             Requested size: 469.47055pt x 235.3446pt.
+<./Figures/05/infrarred_reflectivity.png, id=1042, 1533.73pt x 768.8725pt>
+File: ./Figures/05/infrarred_reflectivity.png Graphic file (type png)
+<use ./Figures/05/infrarred_reflectivity.png>
+Package pdftex.def Info: ./Figures/05/infrarred_reflectivity.png  used on input line 379.
+(pdftex.def)             Requested size: 469.47055pt x 235.3446pt.
+<./Figures/05/infrarred_reflectivity2.png, id=1043, 1533.73pt x 768.8725pt>
+File: ./Figures/05/infrarred_reflectivity2.png Graphic file (type png)
+<use ./Figures/05/infrarred_reflectivity2.png>
+Package pdftex.def Info: ./Figures/05/infrarred_reflectivity2.png  used on input line 392.
+(pdftex.def)             Requested size: 469.47055pt x 235.3446pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 402.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 402.
+LaTeX Info: Redefining \% on input line 402.
+ [31 <./Figures/05/infrarred_emmisivity.png (PNG copy)> <./Figures/05/infrarred_emmisivity2.png (PNG copy)>]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 402.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 402.
+LaTeX Info: Redefining \% on input line 402.
+ [32 <./Figures/05/infrarred_reflectivity.png (PNG copy)> <./Figures/05/infrarred_reflectivity2.png (PNG copy)>] (Tables/tabla_cargas_internas_5_4.tex)
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 451.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 451.
+LaTeX Info: Redefining \% on input line 451.
+ [33]
+Overfull \hbox (7.35161pt too wide) in paragraph at lines 452--460
+[]\T1/lmr/m/n/10.95 Three ra-dia-ti-ve ca-ses are se-lec-ted: \T1/lmtt/m/n/10.95 rad_nominal\T1/lmr/m/n/10.95 , \T1/lmtt/m/n/10.95 rad_hot_operational \T1/lmr/m/n/10.95 and \T1/lmtt/m/n/10.95 rad_cold_operational\T1/lmr/m/n/10.95 .
+ []
 
-] (Chapters/03_State_of_art.tex
-Cap\'{\i }tulo 3.
-) [5
+<Figures/05/nominal_orbit_positions.png, id=1070, 1533.73pt x 768.8725pt>
+File: Figures/05/nominal_orbit_positions.png Graphic file (type png)
+<use Figures/05/nominal_orbit_positions.png>
+Package pdftex.def Info: Figures/05/nominal_orbit_positions.png  used on input line 469.
+(pdftex.def)             Requested size: 469.47055pt x 235.3446pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 498.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 498.
+LaTeX Info: Redefining \% on input line 498.
+[34 <./Figures/05/nominal_orbit_positions.png (PNG copy)>] (Tables/tabla_casos_transitorios.tex)
+<Figures/05/solver_execution_block.png, id=1076, 364.36125pt x 124.21407pt>
+File: Figures/05/solver_execution_block.png Graphic file (type png)
+<use Figures/05/solver_execution_block.png>
+Package pdftex.def Info: Figures/05/solver_execution_block.png  used on input line 517.
+(pdftex.def)             Requested size: 422.52063pt x 144.04669pt.
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 534.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 534.
+LaTeX Info: Redefining \% on input line 534.
+ [35 <./Figures/05/solver_execution_block.png>] (Tables/tabla_resumen_tmd.tex)
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 586.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 586.
+LaTeX Info: Redefining \% on input line 586.
+ [36])
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 156.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+ [37]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 156.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+ [38
+
+] (Chapters/06_Post_process.tex
+Chapter 6.
+) [39
 
 ]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 127.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 159.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 127.
-LaTeX Info: Redefining \% on input line 127.
- [6
+LaTeX Info: Redefining \. on input line 159.
+LaTeX Info: Redefining \% on input line 159.
+ [40
 
-] (Chapters/04_Theoretical_background.tex
-Cap\'{\i }tulo 4.
-[7
+] (Chapters/07_Transient.tex
+Chapter 7.
+) [41
 
-{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-<./Figures/01/imag_07.png, id=379, 132.99687pt x 140.02313pt>
-File: ./Figures/01/imag_07.png Graphic file (type png)
-<use ./Figures/01/imag_07.png>
-Package pdftex.def Info: ./Figures/01/imag_07.png  used on input line 96.
-(pdftex.def)             Requested size: 284.52756pt x 299.62088pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 98.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 98.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 98.
+]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 101.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 162.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
- [8{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+LaTeX Info: Redefining \. on input line 162.
+LaTeX Info: Redefining \% on input line 162.
+ [42
+
+] (Chapters/08_Elec_balance.tex
+Chapter 8.
+) [43
+
+]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 125.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 165.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 125.
-LaTeX Info: Redefining \% on input line 125.
- [9 <./Figures/01/imag_07.png>]
-<./Figures/01/imag_04.png, id=411, 904.88063pt x 292.84406pt>
-File: ./Figures/01/imag_04.png Graphic file (type png)
-<use ./Figures/01/imag_04.png>
-Package pdftex.def Info: ./Figures/01/imag_04.png  used on input line 167.
-(pdftex.def)             Requested size: 369.88582pt x 119.7049pt.
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+ [44
+
+] (Chapters/09_Results.tex
+Chapter 9.
+) [45
+
+]
+File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
+<use ./Figures/Portada_HF/upm_logo.png>
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 168.
+(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
+LaTeX Info: Redefining \. on input line 168.
+LaTeX Info: Redefining \% on input line 168.
+ [46
+
+] (Chapters/Conclusions.tex
+Chapter 10.
+) [47
+
+]
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
 Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 171.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
 LaTeX Info: Redefining \. on input line 171.
 LaTeX Info: Redefining \% on input line 171.
- [10]
-File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
-<use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 206.
-(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 206.
-LaTeX Info: Redefining \% on input line 206.
- [11{C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./Figures/01/imag_04.png>])
-File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
-<use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 129.
-(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 129.
-LaTeX Info: Redefining \% on input line 129.
- [12] (Chapters/05_Development_thermal.tex
-Cap\'{\i }tulo 5.
+ [48
 
-Overfull \hbox (56.62004pt too wide) in paragraph at lines 1--1
-|[]\T1/lmr/bx/n/20.74 Development of the Ther-mal Mo-del in ESATAN-
+] (Chapters/References.tex (TFG_FIEL_MARIBLANCA_ASIER.bbl
+Underfull \hbox (badness 3449) in paragraph at lines 30--35
+\T1/lmr/m/n/10.95 URL [][]$\T1/lmtt/m/n/10.95 https : / / exchange . esa . int / thermal-[]workshop / attachments / workshop2007 /
  []
 
-) [13
 
+Underfull \hbox (badness 10000) in paragraph at lines 46--53
+\T1/lmr/m/n/10.95 URL [][]$\T1/lmtt/m/n/10.95 https : / / tfaws . nasa . gov / wp-[]content / uploads /
+ []
 
-]
-File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
-<use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 131.
-(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 131.
-LaTeX Info: Redefining \% on input line 131.
- [14
-
-] (Chapters/06_Post_process.tex
-Cap\'{\i }tulo 6.
-) [15
+[49
 
 ]
+Underfull \hbox (badness 2376) in paragraph at lines 103--106
+[]\T1/lmr/m/n/10.95 European Coope-ra-tion for Spa-ce Stan-dar-di-za-tion, ECSS-E-ST-10-04C Rev. 1: Spa-ce
+ []
+
+))
 File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
 <use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 133.
+Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 176.
 (pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 133.
-LaTeX Info: Redefining \% on input line 133.
- [16
-
-] (Chapters/07_Results.tex
-Cap\'{\i }tulo 7.
-) [17
-
-]
-File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
-<use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 135.
-(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 135.
-LaTeX Info: Redefining \% on input line 135.
- [18
-
-] (Chapters/Conclusions.tex
-Cap\'{\i }tulo 8.
-) [19
-
-]
-File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
-<use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 137.
-(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 137.
-LaTeX Info: Redefining \% on input line 137.
- [20
-
-] (Chapters/References.tex (TFG_FIEL_MARIBLANCA_ASIER.bbl)) [21
-
-]
-File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
-<use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 142.
-(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 142.
-LaTeX Info: Redefining \% on input line 142.
- [22
-
-] (Tex_Files/A_01.tex) [23
-
-]
-File: ./Figures/Portada_HF/upm_logo.png Graphic file (type png)
-<use ./Figures/Portada_HF/upm_logo.png>
-Package pdftex.def Info: ./Figures/Portada_HF/upm_logo.png  used on input line 163.
-(pdftex.def)             Requested size: 99.58464pt x 46.23856pt.
-LaTeX Info: Redefining \. on input line 163.
-LaTeX Info: Redefining \% on input line 163.
- [24
-
-] 
+LaTeX Info: Redefining \. on input line 176.
+LaTeX Info: Redefining \% on input line 176.
+ [50] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (TFG_FIEL_MARIBLANCA_ASIER.aux
 LaTeX Info: Redefining \. on input line 19.
@@ -2223,25 +2537,27 @@ LaTeX Info: Redefining \% on input line 19.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package rerunfilecheck Info: File `TFG_FIEL_MARIBLANCA_ASIER.out' has not changed.
-(rerunfilecheck)             Checksum: 5ADA88E2FFFA1C5212ABB7C5CE0E222E;10017.
+(rerunfilecheck)             Checksum: D86D95A834FE8155086660D0B82F8F02;17949.
  ) 
 Here is how much of TeX's memory you used:
- 50152 strings out of 467867
- 1000450 string characters out of 5418335
- 1590520 words of memory out of 5000000
- 78025 multiletter control sequences out of 15000+600000
- 733754 words of font info for 130 fonts, out of 8000000 for 9000
+ 51218 strings out of 467867
+ 1025986 string characters out of 5418335
+ 1621400 words of memory out of 5000000
+ 78940 multiletter control sequences out of 15000+600000
+ 756911 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,15n,111p,2620b,2467s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on TFG_FIEL_MARIBLANCA_ASIER.pdf (34 pages, 631334 bytes).
+ 113i,17n,111p,2620b,2492s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{page.ii} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{page.i} has been referenced but does not exist, replaced by a fixed one
+
+<C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib7.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/asi18/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on TFG_FIEL_MARIBLANCA_ASIER.pdf (61 pages, 2722509 bytes).
 PDF statistics:
- 576 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 18861 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 1335 PDF objects out of 1440 (max. 8388607)
+ 226 named destinations out of 1000 (max. 500000)
+ 25400 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -1,0 +1,66 @@
+% Uses packages already loaded in Tex_Files/packages.tex.
+
+\begin{table}[H]
+    \centering
+    \caption{Thermo-optical coating properties used in the thermal model.}
+    \label{tab:thermo-optical-properties}
+
+    \setlength{\tabcolsep}{3pt}
+    \renewcommand{\arraystretch}{1.15}
+    
+    \resizebox{0.6\textwidth}{!}{%
+        \begin{tabular}{|l|*{8}{c|}}
+            \hline
+            \multirow{2}{*}{\textbf{Name}} &
+            \multicolumn{4}{c|}{\textbf{Infrared}} &
+            \multicolumn{4}{c|}{\textbf{Solar}} \\
+            \cline{2-9}
+
+            &
+            \(\boldsymbol{\varepsilon}\) &
+            \(\boldsymbol{\tau}\) &
+            \(\boldsymbol{\rho_{\mathrm{spec}}}\) &
+            \(\boldsymbol{\rho_{\mathrm{diff}}}\) &
+            \(\boldsymbol{\alpha}\) &
+            \(\boldsymbol{\tau}\) &
+            \(\boldsymbol{\rho_{\mathrm{spec}}}\) &
+            \(\boldsymbol{\rho_{\mathrm{diff}}}\) \\
+            \hline
+
+            Al anodized
+            & 0.6 & 0 & 0 & 0.4
+            & 0.2 & 0 & 0 & 0.8 \\
+            \hline
+
+            Black paint
+            & 0.9 & 0 & 0 & 0.1
+            & 0.9 & 0 & 0 & 0.1 \\
+            \hline
+
+            OSR
+            & 0.8 & 0 & 0.2 & 0
+            & 0.08 & 0 & 0.92 & 0 \\
+            \hline
+
+            Solar cells
+            & 0.75 & 0 & 0 & 0.25
+            & 0.75 & 0 & 0 & 0.25 \\
+            \hline
+
+            IR lens
+            & 0.1 & 0.9 & 0 & 0
+            & 0.5 & 0 & 0 & 0.5 \\
+            \hline
+
+            Kapton ITO
+            & 0.8 & 0 & 0 & 0.2
+            & 0.5 & 0 & 0 & 0.5 \\
+            \hline
+
+            MLI\_int
+            & 0.2 & 0 & 0 & 0.8
+            & 0.2 & 0 & 0 & 0.8 \\
+            \hline
+        \end{tabular}
+    }   
+\end{table}

@@ -1,27 +1,22 @@
 \chapter{Abstract} \label{ch:chapter_01}
-	
-This Bachelor’s Thesis focuses on implementing post-processing tools for the thermal analysis 
-of space systems, leveraging results obtained from the \acrshort{esatan-tms} software. 
 
-Building upon a previous study limited to a steady-state radiative case, the main objective is to evaluate the dynamic 
-thermal behavior of the system by applying a fully transient model. 
+This Bachelor's Thesis focuses on the development of a Python-based post-processing tool for the thermal 
+analysis of space systems using results generated with \acrshort{esatan-tms}.
 
-Since \acrshort{esatan-tms} 
-presents limitations regarding integrated data visualization, this project develops custom post-processing 
-routines in Python, leveraging libraries such as NumPy, Pandas, and Matplotlib. These tools automate 
-the extraction of nodal data to generate advanced graphical representations, including temperature evolution 
-curves and transient heat fluxes over time. Ultimately, this methodology optimizes the interpretation of 
-complex thermal results, facilitating the comparison of different scenarios and ensuring the system's 
-performance under realistic orbital thermal cycles.
+Building upon a previous study limited to the post-processing of steady-state radiative cases, 
+this work extends the analysis to fully transient thermal simulations. In addition, the tool has been 
+designed to handle and compare multiple simulation cases associated with the same thermal model, allowing a more 
+complete assessment of the system response under different operating conditions and orbital scenarios.
 
-%Nevertheless, the developed tool is flexible and can be easily adapted to process results from other
-%thermal analysis software such as Thermal Desktop (Thermal Desktop), THERMICA (THERMICA), 
-%or Systems Improved Numerical Differential Analyzer (SINDA/FLUINT). The main objective is the 
-%clear and accurate graphical representation of heat flows using various types of diagrams.
-%The automated generation of images representing heat flow diagrams between nodes or groups of
-%nodes has been successfully achieved, significantly facilitating the visual interpretation of results.
-%In addition to visualization, the tool allows for easy comparison of different thermal analysis cases.
-%To this end, specific functions have been incorporated to quickly obtain the temperature variation of
-%nodes or node groups according to the analyzed thermal case, enabling straightforward evaluation
-%of the impact of a design parameter. The tool, developed entirely in Python, stands out for its
-%accessibility, modularity, open nature, and ease of adaptation to different space thermal analysis needs.
+Since \acrshort{esatan-tms} presents limitations regarding integrated data visualization and case-to-case 
+comparison, this project implements custom post-processing routines in Python, using libraries such as 
+NumPy, Pandas, and Matplotlib. These routines automate the extraction, organization, and visualization of 
+nodal results, including temperature evolution curves, transient heat flows, and comparative plots between 
+different cases.
+
+The resulting methodology improves the interpretation of complex transient thermal results and provides a 
+more flexible framework for evaluating the thermal performance of a system throughout realistic orbital 
+thermal cycles. By enabling the simultaneous analysis of several cases belonging to the same 
+model, the developed tool supports a more efficient and systematic validation of thermal behaviour 
+in space applications.
+

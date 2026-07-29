@@ -1,0 +1,197 @@
+% Uses packages already loaded in Tex_Files/packages.tex.
+
+\begin{table}[H]
+    \centering
+    \caption{Thermal-model hierarchy and node identifiers.}
+    \label{tab:subsystem-classification}
+
+    \scriptsize
+    \setlength{\tabcolsep}{2.5pt}
+    \renewcommand{\arraystretch}{1.06}
+
+    \begin{tabularx}{\textwidth}{
+        |>{\raggedright\arraybackslash}X
+        |c
+        |>{\raggedright\arraybackslash}X
+        |l
+        |>{\raggedright\arraybackslash}X
+        |c|
+    }
+        \hline
+        \textbf{Group} &
+        \textbf{Level} &
+        \textbf{Parent} &
+        \textbf{ID} &
+        \textbf{Label} &
+        \textbf{Power} \\
+        \hline
+
+        Space
+        & 0 & None
+        & \#99999
+        & SPACE
+        & False \\
+        \hline
+
+        SAT\_AFM
+        & 0 & None
+        & \#10000--75250
+        & SAT\_AFM
+        & False \\
+        \hline
+
+        STRUCTURE
+        & 1 & SAT\_AFM
+        & \#10000--51150
+        & STR
+        & False \\
+        \hline
+
+        SOLAR\_PANELS
+        & 1 & SAT\_AFM
+        & \#70000--75250
+        & SP
+        & False \\
+        \hline
+
+        BODY
+        & 2 & STRUCTURE
+        & \#10000--13650
+        & STR\_BOD
+        & False \\
+        \hline
+
+        CAMERA
+        & 2 & STRUCTURE
+        & \#40000--43750
+        & STR\_CAM
+        & False \\
+        \hline
+
+        AVIONICS
+        & 2 & STRUCTURE
+        & \#30000--35550
+        & STR\_AV
+        & False \\
+        \hline
+
+        MLI
+        & 2 & STRUCTURE
+        & \#50000--51150
+        & STR\_MLI
+        & False \\
+        \hline
+
+        SOLAR\_PANEL\_1
+        & 3 & SOLAR\_PANELS
+        & \#70000--72550
+        & SP\_1
+        & False \\
+        \hline
+
+        SOLAR\_PANEL\_2
+        & 3 & SOLAR\_PANELS
+        & \#73000--75250
+        & SP\_2
+        & False \\
+        \hline
+
+        BODY\_PANEL
+        & 3 & BODY
+        & \#10000--11150
+        & STR\_BOD\_P
+        & False \\
+        \hline
+
+        BODY\_PLATE\_INF
+        & 3 & BODY
+        & \#12000--12550
+        & STR\_BOD\_PLI
+        & False \\
+        \hline
+
+        BODY\_PLATE\_MED
+        & 3 & BODY
+        & \#12600--13050
+        & STR\_BOD\_PLM
+        & False \\
+        \hline
+
+        BODY\_PLATE\_SUP
+        & 3 & BODY
+        & \#13100--13650
+        & STR\_BOD\_PLS
+        & False \\
+        \hline
+
+        CAMERA\_BASE
+        & 3 & CAMERA
+        & \#40000--40450
+        & STR\_CAM\_BASE
+        & False \\
+        \hline
+
+        CAMERA\_ELEC
+        & 3 & CAMERA
+        & \#40500--41050
+        & STR\_CAM\_ELEC
+        & True \\
+        \hline
+
+        CAMERA\_LENS
+        & 3 & CAMERA
+        & \#41500--42150
+        & STR\_CAM\_LENS
+        & False \\
+        \hline
+
+        CAMERA\_CYL
+        & 3 & CAMERA
+        & \#42500--43550
+        & STR\_CAM\_CYL
+        & False \\
+        \hline
+
+        BATTERY
+        & 3 & AVIONICS
+        & \#30000--30550
+        & STR\_AV\_BAT
+        & True \\
+        \hline
+
+        OBC\_BOX
+        & 3 & AVIONICS
+        & \#31000--31550
+        & STR\_AV\_OBC
+        & True \\
+        \hline
+
+        COMMS\_BOX
+        & 3 & AVIONICS
+        & \#32000--32550
+        & STR\_AV\_COM
+        & True \\
+        \hline
+
+        ADCS\_UNIT
+        & 3 & AVIONICS
+        & \#33000--33550
+        & STR\_AV\_ADCS
+        & True \\
+        \hline
+
+        RADIATOR
+        & 3 & AVIONICS
+        & \#34000--35550
+        & STR\_AV\_RAD
+        & False \\
+        \hline
+
+        MLI\_PANELS
+        & 3 & MLI
+        & \#50000--51150
+        & STR\_MLI\_P
+        & False \\
+        \hline
+    \end{tabularx}
+\end{table}

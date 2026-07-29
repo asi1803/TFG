@@ -1,0 +1,33 @@
+% Uses packages already loaded in Tex_Files/packages.tex.
+
+\begin{table}[H]
+    \centering
+    \caption{Material properties used in the thermal model.}
+    \label{tab:material-properties}
+    
+    \small
+    \setlength{\tabcolsep}{6pt}
+    \renewcommand{\arraystretch}{1.12}
+    \resizebox{0.7\textwidth}{!}{%
+        \begin{tabular}{|l|c|c|c|}
+            \hline
+            \textbf{Name} &
+            \(\boldsymbol{k}\,[\mathrm{W\,m^{-1}\,K^{-1}}]\) &
+            \(\boldsymbol{c_p}\,[\mathrm{J\,kg^{-1}\,K^{-1}}]\) &
+            \(\boldsymbol{\rho}\,[\mathrm{kg\,m^{-3}}]\) \\
+            \hline
+
+            Al\_6061 & 160 & 900 & 2700 \\
+            \hline
+
+            GaAs & 55 & 1000 & 5300 \\
+            \hline
+
+            Glass & 59 & 310 & 5330 \\
+            \hline
+
+            MLI\_foil & 0 & 900 & 300 \\
+            \hline
+        \end{tabular}
+    }
+\end{table}

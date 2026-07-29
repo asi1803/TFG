@@ -2,9 +2,26 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces External and internal views of the HELIOS thermal model. Taken from \cite {tfg_carol}.}}{6}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Post-processing architecture used in the previous project. Taken from \cite {tfg_carol}.}}{7}{figure.caption.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces One-dimensional heat conduction accross the wall, with thickness $\Delta x$ ,whose surfaces are at temperatures T1 and T2 (T1 > T2), respectively \cite {spacethctrl}}}{9}{figure.caption.6}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified heat transfer system and its corresponding thermal network \cite {lpm_elec}}}{11}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Main radiative exchanges between an orbiting spacecraft and the external environment. Taken from \cite {th_handbook}.}}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces One-dimensional heat conduction through a plane wall. Taken from \cite {hmt_f&a}.}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Blackbody spectral emissive power at different temperatures and displacement of the emission maximum. Taken from \cite {heattransfer}.}}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Wavelength dependence and geometrical definition of thermal radiation.}}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Temperature approximation and conductive coupling in a lumped-parameter model. Taken from \cite {th_handbook}.}}{18}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Internal configuration of the spacecraft thermal model viewed from opposite sides. The colours correspond to the geometry layer and do not represent temperatures.}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Final external configuration of the spacecraft thermal model in \acrshort {esatan-tms}. The colours correspond to the geometry layer and do not represent temperatures.}}{24}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Example of nodal numbering for the OBC and adjacent radiator surfaces, shown from opposite sides. The figure illustrates the node ranges listed in Table~\ref {tab:subsystem-classification}.}}{26}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Thermal conductivity distribution over the final spacecraft model, viewed from opposite sides.}}{28}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Solar absorptivity distribution over the final spacecraft model, viewed from opposite sides.}}{29}{figure.caption.26}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Solar reflectivity distribution over the final spacecraft model, viewed from opposite sides.}}{30}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Infrared emissivity distribution over the final spacecraft model, viewed from opposite sides.}}{31}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Infrared reflectivity distribution over the final spacecraft model, viewed from opposite sides.}}{32}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Nominal orbital configuration and the 24 positions used for the radiative calculation. The green segment represents the portion outside eclipse, while the red segment indicates the eclipse interval.}}{34}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \textit {Solution Control} execution block used to obtain cyclic convergence and calculate the final transient orbital period in \acrshort {esatan-tms}.}}{35}{figure.caption.36}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

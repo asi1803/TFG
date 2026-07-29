@@ -2,48 +2,78 @@
 \contentsline {chapter}{\numberline {1}Abstract}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Introduction}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Objectives}{3}{section.2.1}%
-\contentsline {chapter}{\numberline {3}State of Art}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Thermal Tools in the Aerospace Industry}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Post-Processing Capabilities in ESATAN-TMS}{5}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Custom Interfaces: JPL Example}{5}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Practical Application: FalconSat-2}{5}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Motivation for the Present Work}{5}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Theoretical Background}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Thermal Control in Engineering}{7}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Space Thermal Environment}{7}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Heat Transfer Mechanisms}{8}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Conduction Heat Transfer}{8}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Radiation Heat Transfer}{10}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Mathematical Modeling of Thermal Systems}{10}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Disadvantages of the Finite Element Method (FEM)}{10}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Lumped Parameter Method (LPM)}{10}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Software and Advanced Methods for Thermal Simulation}{12}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Analytical Capabilities of ESATAN-TMS}{12}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Development of the Thermal Model in ESATAN-TMS and Data Export/Analysis}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Subsystem Classification}{13}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Materials and Properties}{13}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Thermo-optical properties}{13}{subsection.5.2.1}%
-\contentsline {section}{\numberline {5.3}Steady-state radiative case}{13}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Boundary Conditions and Loads Definition}{13}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Model Verification: Group-Level Energy Balances}{13}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Data provided by the TMD}{13}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Use in the Python post-processing}{13}{subsection.5.6.1}%
-\contentsline {chapter}{\numberline {6}Design and Implementation of the Post-Processing Code}{15}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Code Structure and Architecture}{15}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Motivation for a Modular Architecture}{15}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Files overview}{15}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Software Stack and Dependencies}{15}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Filtering and Grouping Methods}{15}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Figure Conventions and Representation Criteria}{15}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Scope of Examples and Cryogenic-Flow Validation}{15}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Results and Visualisations from the Post-Processing Workflow}{17}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Filtering Results}{17}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Sankey Diagram}{17}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Network Graph Views (NX)}{17}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Stacked-Bar Balances}{17}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Cryogenic-Flow Views (ARIEL)}{17}{section.7.5}%
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{19}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusions}{19}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Future Work}{19}{section.8.2}%
-\contentsline {chapter}{References}{21}{section.8.2}%
-\contentsline {chapter}{Anexos}{23}{chapter*.9}%
+\contentsline {chapter}{\numberline {3}State of the Art}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Post-Processing Capabilities in ESATAN-TMS}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Steady-State Thermal Model: HELIOS}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Python-Based Post-Processing of Steady-State Cases}{7}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Motivation for the Present Work}{8}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Theoretical Background}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Spacecraft Thermal Control}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Space Thermal Environment}{10}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Heat Transfer and Thermal Energy Storage}{11}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Conduction Heat Transfer}{11}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Radiation Heat Transfer}{13}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Thermal Capacitance and Transient Response}{16}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Mathematical Modelling of Spacecraft Thermal Systems}{17}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Spatial Discretisation Approaches}{17}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2} Lumped Parameter Method (\acrshort {lpm}) }{18}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Steady-State and Transient Formulations}{19}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Periodic Thermal Response and Cyclic Convergence}{19}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5} Thermal Modelling and Solution Framework in \acrshort {esatan-tms} }{20}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Geometrical and Radiative Models}{20}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Thermal Network Representation}{21}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Implementation of Steady-State, Transient and Cyclic Solutions}{21}{subsection.4.5.3}%
+\contentsline {chapter}{\numberline {5}Thermal Model Development and Analysis Cases}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Model Development and Geometrical Configuration}{23}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Thermal Model Hierarchy}{25}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Material and Surface Properties}{26}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Bulk Properties}{27}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Thermo-optical Properties}{28}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Nodal Discretisation and Thermal Network Definition}{33}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Orbital Environment and Radiative Cases}{33}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Transient Analysis Cases}{35}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Definition of Analysis Cases}{35}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Solver Configuration and Temporal Sampling}{35}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}Thermal Model Verification}{36}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Simulation Results Export in TMD Format}{36}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Multi-Case Post-Processing Tool}{39}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Starting Point and Development Scope}{39}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Application Architecture and Data Flow}{39}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Multi-Case Loading and Data Management}{39}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Model Hierarchy, Selection and Case Comparison}{39}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Model Inspection and Instantaneous Flow Visualisation}{39}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Saving, Restoring and Exporting Analyses}{39}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Transient Thermal Analysis}{41}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Transient Data Processing}{41}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Temperature and Thermal-Load Evolution}{41}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Interface Temperature-Difference Analysis}{41}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Interfaces between Model Components}{41}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Variation over Selected Time Intervals}{41}{subsection.7.3.2}%
+\contentsline {section}{\numberline {7.4}Thermal Summary Tables}{41}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Heat-Flow Evolution}{41}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Thermal Energy and Summary Tables}{41}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Electrical Power Balance and Battery Model}{43}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Method Overview and Thermal Inputs}{43}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Solar Power Conversion}{43}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Input Properties and Conversion Efficiency}{43}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Incident and Electrical Power Calculation}{43}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3}Electrical Loads and Net Power Balance}{43}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Battery Model and Operating Strategy}{43}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Pack Configuration and Electrical Parameters}{43}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Voltage, Internal Resistance and State of Charge}{43}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Charge and Discharge Control}{43}{subsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.4.4}Temperature Effects on Battery Performance}{43}{subsection.8.4.4}%
+\contentsline {section}{\numberline {8.5}Calculation Procedure and Output Variables}{43}{section.8.5}%
+\contentsline {chapter}{\numberline {9}Results}{45}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Verification of the Post-Processing Tool}{45}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Transient Thermal Results}{45}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Temperature Evolution and Case Comparison}{45}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Effect of the Battery Heater}{45}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Interfaces, Heat Flows and Thermal Energy}{45}{subsection.9.2.3}%
+\contentsline {section}{\numberline {9.3}Electrical Power and Battery Results}{45}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Solar Generation and Load Balance}{45}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Battery Performance}{45}{subsection.9.3.2}%
+\contentsline {chapter}{\numberline {10}Conclusions and Future Work}{47}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Conclusions}{47}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Future Work}{47}{section.10.2}%
+\contentsline {chapter}{References}{49}{section.10.2}%
