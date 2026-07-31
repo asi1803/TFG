@@ -22,6 +22,16 @@
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Nominal orbital configuration and the 24 positions used for the radiative calculation. The green segment represents the portion outside eclipse, while the red segment indicates the eclipse interval.}}{34}{figure.caption.34}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces \textit {Solution Control} execution block used to obtain cyclic convergence and calculate the final transient orbital period in \acrshort {esatan-tms}.}}{35}{figure.caption.36}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Representative heat-flow visualisations generated for the HELIOS steady-state case with the original application. Extracted from \cite {tfg_carol}.}}{40}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Main data flow and software architecture of the current post-processing application.}}{42}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Multi-case loading interface combining a common hierarchy spreadsheet with several \texttt {.TMD} result files.}}{43}{figure.caption.42}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces General organisation of the final post-processing application after loading three transient cases. The sidebar contains the common hierarchy, the internal analysis name and the result files, while the main area provides access to the model-inspection, transient and electrical-analysis modules.}}{45}{figure.caption.43}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces General inspection modules adapted to the common transient and multi-case interface.}}{46}{figure.caption.44}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Conductor, nodal and group-study modules after integration into the final application.}}{46}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Output-time selector used by the instantaneous inspection modules when transient data are available.}}{47}{figure.caption.46}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Configuration of the case-difference representation.}}{48}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Sequence used to save, restore and manage an analysis output within the section history.}}{50}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Examples of saved-scene management in different transient result areas.}}{51}{figure.caption.52}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

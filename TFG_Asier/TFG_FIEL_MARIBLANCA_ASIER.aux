@@ -23,6 +23,7 @@
 \citation{hmt_f&a}
 \citation{heattransfer}
 \citation{th_handbook}
+\citation{tfg_carol}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Abstract}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -291,94 +292,162 @@
 \newlabel{sec:tmd_export}{{5.8}{36}{Simulation Results Export in TMD Format}{section.5.8}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Structural and temporal characteristics of the exported \texttt  {.TMD} files.}}{37}{table.caption.37}\protected@file@percent }
 \newlabel{tab:tmd_summary}{{5.6}{37}{Structural and temporal characteristics of the exported \texttt {.TMD} files}{table.caption.37}{}}
+\citation{tfg_carol}
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Multi-Case Post-Processing Tool}{39}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{ch:multicase_tool}{{6}{39}{Multi-Case Post-Processing Tool}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Starting Point and Development Scope}{39}{section.6.1}\protected@file@percent }
-\newlabel{sec:development_scope}{{6.1}{39}{Starting Point and Development Scope}{section.6.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Application Architecture and Data Flow}{39}{section.6.2}\protected@file@percent }
-\newlabel{sec:application_architecture}{{6.2}{39}{Application Architecture and Data Flow}{section.6.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Multi-Case Loading and Data Management}{39}{section.6.3}\protected@file@percent }
-\newlabel{sec:multicase_loading}{{6.3}{39}{Multi-Case Loading and Data Management}{section.6.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Model Hierarchy, Selection and Case Comparison}{39}{section.6.4}\protected@file@percent }
-\newlabel{sec:hierarchy_case_comparison}{{6.4}{39}{Model Hierarchy, Selection and Case Comparison}{section.6.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Model Inspection and Instantaneous Flow Visualisation}{39}{section.6.5}\protected@file@percent }
-\newlabel{sec:model_inspection_visualisation}{{6.5}{39}{Model Inspection and Instantaneous Flow Visualisation}{section.6.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Saving, Restoring and Exporting Analyses}{39}{section.6.6}\protected@file@percent }
-\newlabel{sec:analysis_management}{{6.6}{39}{Saving, Restoring and Exporting Analyses}{section.6.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Transient Thermal Analysis}{41}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Baseline and Post-Processing Code Evolution}{39}{section.6.1}\protected@file@percent }
+\newlabel{sec:helios_to_present_application}{{6.1}{39}{Baseline and Post-Processing Code Evolution}{section.6.1}{}}
+\citation{tfg_carol}
+\citation{tfg_carol}
+\newlabel{fig:original_helios_sankey}{{6.1a}{40}{Sankey representation of the HELIOS heat balance}{figure.caption.38}{}}
+\newlabel{sub@fig:original_helios_sankey}{{a}{40}{Sankey representation of the HELIOS heat balance}{figure.caption.38}{}}
+\newlabel{fig:original_helios_nx}{{6.1b}{40}{NX diagram of HELIOS including all heat-flow types}{figure.caption.39}{}}
+\newlabel{sub@fig:original_helios_nx}{{b}{40}{NX diagram of HELIOS including all heat-flow types}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Representative heat-flow visualisations generated for the HELIOS steady-state case with the original application. Extracted from \cite  {tfg_carol}.}}{40}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:original_helios_representations}{{6.1}{40}{Representative heat-flow visualisations generated for the HELIOS steady-state case with the original application. Extracted from \cite {tfg_carol}}{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Application Architecture and Data Flow}{41}{section.6.2}\protected@file@percent }
+\newlabel{sec:application_architecture}{{6.2}{41}{Application Architecture and Data Flow}{section.6.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Main software modules and responsibilities in the final application.}}{42}{table.caption.40}\protected@file@percent }
+\newlabel{tab:application_module_roles}{{6.1}{42}{Main software modules and responsibilities in the final application}{table.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Main data flow and software architecture of the current post-processing application.}}{42}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:current_application_architecture}{{6.2}{42}{Main data flow and software architecture of the current post-processing application}{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Multi-Case Loading and Case Organisation}{43}{section.6.3}\protected@file@percent }
+\newlabel{sec:multicase_loading}{{6.3}{43}{Multi-Case Loading and Case Organisation}{section.6.3}{}}
+\newlabel{fig:multicase_loading_initial}{{6.3a}{43}{Initial hierarchy and result-file inputs}{figure.caption.42}{}}
+\newlabel{sub@fig:multicase_loading_initial}{{a}{43}{Initial hierarchy and result-file inputs}{figure.caption.42}{}}
+\newlabel{fig:multicase_loading_cases}{{6.3b}{43}{Configuration of several files through editable case names}{figure.caption.42}{}}
+\newlabel{sub@fig:multicase_loading_cases}{{b}{43}{Configuration of several files through editable case names}{figure.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Multi-case loading interface combining a common hierarchy spreadsheet with several \texttt  {.TMD} result files.}}{43}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:multicase_loading}{{6.3}{43}{Multi-case loading interface combining a common hierarchy spreadsheet with several \texttt {.TMD} result files}{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Final Application Interface}{44}{section.6.4}\protected@file@percent }
+\newlabel{sec:final_application_interface}{{6.4}{44}{Final Application Interface}{section.6.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces General organisation of the final post-processing application after loading three transient cases. The sidebar contains the common hierarchy, the internal analysis name and the result files, while the main area provides access to the model-inspection, transient and electrical-analysis modules.}}{45}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:final_interface_general}{{6.4}{45}{General organisation of the final post-processing application after loading three transient cases. The sidebar contains the common hierarchy, the internal analysis name and the result files, while the main area provides access to the model-inspection, transient and electrical-analysis modules}{figure.caption.43}{}}
+\newlabel{fig:display_flow_explorer}{{6.5a}{46}{Flow Explorer}{figure.caption.44}{}}
+\newlabel{sub@fig:display_flow_explorer}{{a}{46}{Flow Explorer}{figure.caption.44}{}}
+\newlabel{fig:display_case_info}{{6.5b}{46}{Case information}{figure.caption.44}{}}
+\newlabel{sub@fig:display_case_info}{{b}{46}{Case information}{figure.caption.44}{}}
+\newlabel{fig:display_group_attributes}{{6.5c}{46}{Group attributes}{figure.caption.44}{}}
+\newlabel{sub@fig:display_group_attributes}{{c}{46}{Group attributes}{figure.caption.44}{}}
+\newlabel{fig:display_gl_conductors}{{6.5d}{46}{Linear conductors}{figure.caption.44}{}}
+\newlabel{sub@fig:display_gl_conductors}{{d}{46}{Linear conductors}{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces General inspection modules adapted to the common transient and multi-case interface.}}{46}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:inherited_tabs_current_a}{{6.5}{46}{General inspection modules adapted to the common transient and multi-case interface}{figure.caption.44}{}}
+\newlabel{fig:display_gr_conductors}{{6.6a}{46}{Radiative conductors}{figure.caption.45}{}}
+\newlabel{sub@fig:display_gr_conductors}{{a}{46}{Radiative conductors}{figure.caption.45}{}}
+\newlabel{fig:display_nodes}{{6.6b}{46}{Nodal information}{figure.caption.45}{}}
+\newlabel{sub@fig:display_nodes}{{b}{46}{Nodal information}{figure.caption.45}{}}
+\newlabel{fig:display_group_study}{{6.6c}{46}{Group study}{figure.caption.45}{}}
+\newlabel{sub@fig:display_group_study}{{c}{46}{Group study}{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Conductor, nodal and group-study modules after integration into the final application.}}{46}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:inherited_tabs_current_b}{{6.6}{46}{Conductor, nodal and group-study modules after integration into the final application}{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Time Selection}{47}{subsection.6.4.1}\protected@file@percent }
+\newlabel{subsec:time_selection}{{6.4.1}{47}{Time Selection}{subsection.6.4.1}{}}
+\newlabel{fig:time_selection_initial}{{6.7a}{47}{Initial output instants}{figure.caption.46}{}}
+\newlabel{sub@fig:time_selection_initial}{{a}{47}{Initial output instants}{figure.caption.46}{}}
+\newlabel{fig:time_selection_final}{{6.7b}{47}{Final output instants}{figure.caption.46}{}}
+\newlabel{sub@fig:time_selection_final}{{b}{47}{Final output instants}{figure.caption.46}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Output-time selector used by the instantaneous inspection modules when transient data are available.}}{47}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:time_selection_examples}{{6.7}{47}{Output-time selector used by the instantaneous inspection modules when transient data are available}{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Multi-Case Representation Options}{47}{subsection.6.4.2}\protected@file@percent }
+\newlabel{subsec:multicase_representation_options}{{6.4.2}{47}{Multi-Case Representation Options}{subsection.6.4.2}{}}
+\newlabel{fig:case_difference_mode}{{6.8a}{48}{Selection of the case-difference representation mode}{figure.caption.47}{}}
+\newlabel{sub@fig:case_difference_mode}{{a}{48}{Selection of the case-difference representation mode}{figure.caption.47}{}}
+\newlabel{fig:case_difference_cases}{{6.8b}{48}{Definition of the reference and comparison cases}{figure.caption.47}{}}
+\newlabel{sub@fig:case_difference_cases}{{b}{48}{Definition of the reference and comparison cases}{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Configuration of the case-difference representation.}}{48}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:case_difference_configuration}{{6.8}{48}{Configuration of the case-difference representation}{figure.caption.47}{}}
+\newlabel{eq:case_difference_ch6}{{6.1}{48}{Multi-Case Representation Options}{equation.6.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Saving, Restoring and Exporting Analyses}{48}{section.6.5}\protected@file@percent }
+\newlabel{sec:analysis_history_export}{{6.5}{48}{Saving, Restoring and Exporting Analyses}{section.6.5}{}}
+\newlabel{fig:scene_save_options}{{6.9a}{49}{Definition of the scene name, involved elements and optional description before saving the output}{figure.caption.48}{}}
+\newlabel{sub@fig:scene_save_options}{{a}{49}{Definition of the scene name, involved elements and optional description before saving the output}{figure.caption.48}{}}
+\newlabel{fig:saved_scene_and_derivation}{{6.9b}{49}{Saved-scene history containing an original analysis and a subsequently derived version. Selecting a scene name restores its configuration, while the adjacent controls allow its metadata to be edited or the entry to be deleted}{figure.caption.49}{}}
+\newlabel{sub@fig:saved_scene_and_derivation}{{b}{49}{Saved-scene history containing an original analysis and a subsequently derived version. Selecting a scene name restores its configuration, while the adjacent controls allow its metadata to be edited or the entry to be deleted}{figure.caption.49}{}}
+\newlabel{fig:scene_metadata_editing}{{6.9c}{50}{Editing of the name and description associated with an existing scene}{figure.caption.50}{}}
+\newlabel{sub@fig:scene_metadata_editing}{{c}{50}{Editing of the name and description associated with an existing scene}{figure.caption.50}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Sequence used to save, restore and manage an analysis output within the section history.}}{50}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:scene_saving_workflow}{{6.9}{50}{Sequence used to save, restore and manage an analysis output within the section history}{figure.caption.50}{}}
+\newlabel{fig:transient_plot_history_example}{{6.10a}{51}{History containing different parameters generated from transient results}{figure.caption.51}{}}
+\newlabel{sub@fig:transient_plot_history_example}{{a}{51}{History containing different parameters generated from transient results}{figure.caption.51}{}}
+\newlabel{fig:transient_flow_history_example}{{6.10b}{51}{History containing transient-flow figures and associated tabular results}{figure.caption.52}{}}
+\newlabel{sub@fig:transient_flow_history_example}{{b}{51}{History containing transient-flow figures and associated tabular results}{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Examples of saved-scene management in different transient result areas.}}{51}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:history_examples_across_tabs}{{6.10}{51}{Examples of saved-scene management in different transient result areas}{figure.caption.52}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Transient Thermal Analysis}{53}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:transient_analysis}{{7}{41}{Transient Thermal Analysis}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Transient Data Processing}{41}{section.7.1}\protected@file@percent }
-\newlabel{sec:transient_data_processing}{{7.1}{41}{Transient Data Processing}{section.7.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Temperature and Thermal-Load Evolution}{41}{section.7.2}\protected@file@percent }
-\newlabel{sec:thermal_histories}{{7.2}{41}{Temperature and Thermal-Load Evolution}{section.7.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Interface Temperature-Difference Analysis}{41}{section.7.3}\protected@file@percent }
-\newlabel{sec:interface_temperature_analysis}{{7.3}{41}{Interface Temperature-Difference Analysis}{section.7.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Interfaces between Model Components}{41}{subsection.7.3.1}\protected@file@percent }
-\newlabel{subsec:component_interfaces}{{7.3.1}{41}{Interfaces between Model Components}{subsection.7.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Variation over Selected Time Intervals}{41}{subsection.7.3.2}\protected@file@percent }
-\newlabel{subsec:temperature_time_intervals}{{7.3.2}{41}{Variation over Selected Time Intervals}{subsection.7.3.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.4}Thermal Summary Tables}{41}{section.7.4}\protected@file@percent }
-\newlabel{sec:thermal_summary_tables}{{7.4}{41}{Thermal Summary Tables}{section.7.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.5}Heat-Flow Evolution}{41}{section.7.5}\protected@file@percent }
-\newlabel{sec:heat_flow_evolution}{{7.5}{41}{Heat-Flow Evolution}{section.7.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.6}Thermal Energy and Summary Tables}{41}{section.7.6}\protected@file@percent }
-\newlabel{sec:thermal_energy_summary}{{7.6}{41}{Thermal Energy and Summary Tables}{section.7.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Electrical Power Balance and Battery Model}{43}{chapter.8}\protected@file@percent }
+\newlabel{ch:transient_analysis}{{7}{53}{Transient Thermal Analysis}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Transient Data Processing}{53}{section.7.1}\protected@file@percent }
+\newlabel{sec:transient_data_processing}{{7.1}{53}{Transient Data Processing}{section.7.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Temperature and Thermal-Load Evolution}{53}{section.7.2}\protected@file@percent }
+\newlabel{sec:thermal_histories}{{7.2}{53}{Temperature and Thermal-Load Evolution}{section.7.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Interface Temperature-Difference Analysis}{53}{section.7.3}\protected@file@percent }
+\newlabel{sec:interface_temperature_analysis}{{7.3}{53}{Interface Temperature-Difference Analysis}{section.7.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.1}Interfaces between Model Components}{53}{subsection.7.3.1}\protected@file@percent }
+\newlabel{subsec:component_interfaces}{{7.3.1}{53}{Interfaces between Model Components}{subsection.7.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3.2}Variation over Selected Time Intervals}{53}{subsection.7.3.2}\protected@file@percent }
+\newlabel{subsec:temperature_time_intervals}{{7.3.2}{53}{Variation over Selected Time Intervals}{subsection.7.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Thermal Summary Tables}{53}{section.7.4}\protected@file@percent }
+\newlabel{sec:thermal_summary_tables}{{7.4}{53}{Thermal Summary Tables}{section.7.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}Heat-Flow Evolution}{53}{section.7.5}\protected@file@percent }
+\newlabel{sec:heat_flow_evolution}{{7.5}{53}{Heat-Flow Evolution}{section.7.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.6}Thermal Energy and Summary Tables}{53}{section.7.6}\protected@file@percent }
+\newlabel{sec:thermal_energy_summary}{{7.6}{53}{Thermal Energy and Summary Tables}{section.7.6}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Electrical Power Balance and Battery Model}{55}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:electrical_battery_analysis}{{8}{43}{Electrical Power Balance and Battery Model}{chapter.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Method Overview and Thermal Inputs}{43}{section.8.1}\protected@file@percent }
-\newlabel{sec:electrical_method_overview}{{8.1}{43}{Method Overview and Thermal Inputs}{section.8.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Solar Power Conversion}{43}{section.8.2}\protected@file@percent }
-\newlabel{sec:solar_electrical_conversion}{{8.2}{43}{Solar Power Conversion}{section.8.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.1}Input Properties and Conversion Efficiency}{43}{subsection.8.2.1}\protected@file@percent }
-\newlabel{subsec:solar_conversion_inputs}{{8.2.1}{43}{Input Properties and Conversion Efficiency}{subsection.8.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.2}Incident and Electrical Power Calculation}{43}{subsection.8.2.2}\protected@file@percent }
-\newlabel{subsec:solar_power_calculation}{{8.2.2}{43}{Incident and Electrical Power Calculation}{subsection.8.2.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.3}Electrical Loads and Net Power Balance}{43}{section.8.3}\protected@file@percent }
-\newlabel{sec:electrical_load_balance}{{8.3}{43}{Electrical Loads and Net Power Balance}{section.8.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.4}Battery Model and Operating Strategy}{43}{section.8.4}\protected@file@percent }
-\newlabel{sec:battery_model_strategy}{{8.4}{43}{Battery Model and Operating Strategy}{section.8.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.1}Pack Configuration and Electrical Parameters}{43}{subsection.8.4.1}\protected@file@percent }
-\newlabel{subsec:battery_pack_parameters}{{8.4.1}{43}{Pack Configuration and Electrical Parameters}{subsection.8.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.2}Voltage, Internal Resistance and State of Charge}{43}{subsection.8.4.2}\protected@file@percent }
-\newlabel{subsec:battery_electrical_state}{{8.4.2}{43}{Voltage, Internal Resistance and State of Charge}{subsection.8.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.3}Charge and Discharge Control}{43}{subsection.8.4.3}\protected@file@percent }
-\newlabel{subsec:battery_charge_control}{{8.4.3}{43}{Charge and Discharge Control}{subsection.8.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.4}Temperature Effects on Battery Performance}{43}{subsection.8.4.4}\protected@file@percent }
-\newlabel{subsec:battery_temperature_effects}{{8.4.4}{43}{Temperature Effects on Battery Performance}{subsection.8.4.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.5}Calculation Procedure and Output Variables}{43}{section.8.5}\protected@file@percent }
-\newlabel{sec:electrical_calculation_outputs}{{8.5}{43}{Calculation Procedure and Output Variables}{section.8.5}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Results}{45}{chapter.9}\protected@file@percent }
+\newlabel{ch:electrical_battery_analysis}{{8}{55}{Electrical Power Balance and Battery Model}{chapter.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Method Overview and Thermal Inputs}{55}{section.8.1}\protected@file@percent }
+\newlabel{sec:electrical_method_overview}{{8.1}{55}{Method Overview and Thermal Inputs}{section.8.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Solar Power Conversion}{55}{section.8.2}\protected@file@percent }
+\newlabel{sec:solar_electrical_conversion}{{8.2}{55}{Solar Power Conversion}{section.8.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.1}Input Properties and Conversion Efficiency}{55}{subsection.8.2.1}\protected@file@percent }
+\newlabel{subsec:solar_conversion_inputs}{{8.2.1}{55}{Input Properties and Conversion Efficiency}{subsection.8.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.2}Incident and Electrical Power Calculation}{55}{subsection.8.2.2}\protected@file@percent }
+\newlabel{subsec:solar_power_calculation}{{8.2.2}{55}{Incident and Electrical Power Calculation}{subsection.8.2.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}Electrical Loads and Net Power Balance}{55}{section.8.3}\protected@file@percent }
+\newlabel{sec:electrical_load_balance}{{8.3}{55}{Electrical Loads and Net Power Balance}{section.8.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Battery Model and Operating Strategy}{55}{section.8.4}\protected@file@percent }
+\newlabel{sec:battery_model_strategy}{{8.4}{55}{Battery Model and Operating Strategy}{section.8.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.1}Pack Configuration and Electrical Parameters}{55}{subsection.8.4.1}\protected@file@percent }
+\newlabel{subsec:battery_pack_parameters}{{8.4.1}{55}{Pack Configuration and Electrical Parameters}{subsection.8.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.2}Voltage, Internal Resistance and State of Charge}{55}{subsection.8.4.2}\protected@file@percent }
+\newlabel{subsec:battery_electrical_state}{{8.4.2}{55}{Voltage, Internal Resistance and State of Charge}{subsection.8.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.3}Charge and Discharge Control}{55}{subsection.8.4.3}\protected@file@percent }
+\newlabel{subsec:battery_charge_control}{{8.4.3}{55}{Charge and Discharge Control}{subsection.8.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4.4}Temperature Effects on Battery Performance}{55}{subsection.8.4.4}\protected@file@percent }
+\newlabel{subsec:battery_temperature_effects}{{8.4.4}{55}{Temperature Effects on Battery Performance}{subsection.8.4.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.5}Calculation Procedure and Output Variables}{55}{section.8.5}\protected@file@percent }
+\newlabel{sec:electrical_calculation_outputs}{{8.5}{55}{Calculation Procedure and Output Variables}{section.8.5}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Results}{57}{chapter.9}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:results}{{9}{45}{Results}{chapter.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.1}Verification of the Post-Processing Tool}{45}{section.9.1}\protected@file@percent }
-\newlabel{sec:tool_verification}{{9.1}{45}{Verification of the Post-Processing Tool}{section.9.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.2}Transient Thermal Results}{45}{section.9.2}\protected@file@percent }
-\newlabel{sec:transient_thermal_results}{{9.2}{45}{Transient Thermal Results}{section.9.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.1}Temperature Evolution and Case Comparison}{45}{subsection.9.2.1}\protected@file@percent }
-\newlabel{subsec:temperature_case_results}{{9.2.1}{45}{Temperature Evolution and Case Comparison}{subsection.9.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.2}Effect of the Battery Heater}{45}{subsection.9.2.2}\protected@file@percent }
-\newlabel{subsec:battery_heater_results}{{9.2.2}{45}{Effect of the Battery Heater}{subsection.9.2.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.3}Interfaces, Heat Flows and Thermal Energy}{45}{subsection.9.2.3}\protected@file@percent }
-\newlabel{subsec:interfaces_flows_energy_results}{{9.2.3}{45}{Interfaces, Heat Flows and Thermal Energy}{subsection.9.2.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.3}Electrical Power and Battery Results}{45}{section.9.3}\protected@file@percent }
-\newlabel{sec:electrical_battery_results}{{9.3}{45}{Electrical Power and Battery Results}{section.9.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Solar Generation and Load Balance}{45}{subsection.9.3.1}\protected@file@percent }
-\newlabel{subsec:solar_load_results}{{9.3.1}{45}{Solar Generation and Load Balance}{subsection.9.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.2}Battery Performance}{45}{subsection.9.3.2}\protected@file@percent }
-\newlabel{subsec:battery_performance_results}{{9.3.2}{45}{Battery Performance}{subsection.9.3.2}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {10}Conclusions and Future Work}{47}{chapter.10}\protected@file@percent }
+\newlabel{ch:results}{{9}{57}{Results}{chapter.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Verification of the Post-Processing Tool}{57}{section.9.1}\protected@file@percent }
+\newlabel{sec:tool_verification}{{9.1}{57}{Verification of the Post-Processing Tool}{section.9.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Transient Thermal Results}{57}{section.9.2}\protected@file@percent }
+\newlabel{sec:transient_thermal_results}{{9.2}{57}{Transient Thermal Results}{section.9.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.1}Temperature Evolution and Case Comparison}{57}{subsection.9.2.1}\protected@file@percent }
+\newlabel{subsec:temperature_case_results}{{9.2.1}{57}{Temperature Evolution and Case Comparison}{subsection.9.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.2}Effect of the Battery Heater}{57}{subsection.9.2.2}\protected@file@percent }
+\newlabel{subsec:battery_heater_results}{{9.2.2}{57}{Effect of the Battery Heater}{subsection.9.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.3}Interfaces, Heat Flows and Thermal Energy}{57}{subsection.9.2.3}\protected@file@percent }
+\newlabel{subsec:interfaces_flows_energy_results}{{9.2.3}{57}{Interfaces, Heat Flows and Thermal Energy}{subsection.9.2.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}Electrical Power and Battery Results}{57}{section.9.3}\protected@file@percent }
+\newlabel{sec:electrical_battery_results}{{9.3}{57}{Electrical Power and Battery Results}{section.9.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Solar Generation and Load Balance}{57}{subsection.9.3.1}\protected@file@percent }
+\newlabel{subsec:solar_load_results}{{9.3.1}{57}{Solar Generation and Load Balance}{subsection.9.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.2}Battery Performance}{57}{subsection.9.3.2}\protected@file@percent }
+\newlabel{subsec:battery_performance_results}{{9.3.2}{57}{Battery Performance}{subsection.9.3.2}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {10}Conclusions and Future Work}{59}{chapter.10}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:chapter_08}{{10}{47}{Conclusions and Future Work}{chapter.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {10.1}Conclusions}{47}{section.10.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {10.2}Future Work}{47}{section.10.2}\protected@file@percent }
+\newlabel{ch:chapter_08}{{10}{59}{Conclusions and Future Work}{chapter.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.1}Conclusions}{59}{section.10.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10.2}Future Work}{59}{section.10.2}\protected@file@percent }
 \bibstyle{elsarticle-num}
 \bibdata{references}
 \bibcite{tfg_carol}{1}
@@ -391,7 +460,7 @@
 \bibcite{thermal_eng_man}{8}
 \bibcite{esatan_user_man}{9}
 \bibcite{esatan_training_man}{10}
-\@writefile{toc}{\contentsline {chapter}{References}{49}{section.10.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{References}{61}{section.10.2}\protected@file@percent }
 \bibcite{spacethctrl}{11}
 \bibcite{tcs_slides0}{12}
 \bibcite{ecss_man}{13}
@@ -401,7 +470,7 @@
 \bibcite{kauder2005coatings}{17}
 \bibcite{ecss_st_10_04c}{18}
 \gdef\svg@ink@ver@settings{{\m@ne }{inkscape}{\m@ne }}
-\newlabel{LastPage}{{10.2}{50}{Future Work}{page.50}{}}
-\gdef\lastpage@lastpage{50}
-\gdef\lastpage@lastpageHy{50}
-\gdef \@abspage@last{61}
+\newlabel{LastPage}{{10.2}{62}{Future Work}{page.62}{}}
+\gdef\lastpage@lastpage{62}
+\gdef\lastpage@lastpageHy{62}
+\gdef \@abspage@last{73}
