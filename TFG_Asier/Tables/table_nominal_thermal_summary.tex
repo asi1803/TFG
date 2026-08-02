@@ -1,0 +1,85 @@
+% File: Tables/table_nominal_thermal_summary.tex
+%
+% Usage:
+%   \NominalThermalExtremaTable[0.94\textwidth]
+%   \NominalThermalRangeTable[0.98\textwidth]
+%
+% Each optional argument controls the width of its table independently.
+
+\newcommand{\NominalThermalExtremaTable}[1][0.94\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Global temperature extrema of the selected elements in the
+    nominal transient case.}
+    \label{tab:nominal_thermal_extrema}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.14}
+    \setlength{\tabcolsep}{3.6pt}
+    \resizebox{#1}{!}{%
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Element} &
+        \textbf{$T_{\max}$ [$^\circ$C]} &
+        \textbf{$t_{T_{\max}}$ [s]} &
+        \textbf{Node} &
+        \textbf{$T_{\min}$ [$^\circ$C]} &
+        \textbf{$t_{T_{\min}}$ [s]} &
+        \textbf{Node} \\ \hline
+        \texttt{ADCS\_UNIT} & 18.81 & 2964.6 & 33002 & 18.04 & 4840.2 & 33005 \\ \hline
+        \texttt{SOLAR\_PANEL\_2} & 62.29 & 1452.1 & 73004 & -17.34 & 3388.1 & 75203 \\ \hline
+        \texttt{SOLAR\_PANEL\_1} & 62.35 & 1452.1 & 70004 & -17.27 & 3388.1 & 72502 \\ \hline
+        \texttt{MLI\_PANELS} & 134.92 & 1452.1 & 50800 & -107.97 & 4356.2 & 51003 \\ \hline
+        \texttt{COMMS\_BOX} & 20.81 & 2057.1 & 32000 & 19.24 & 3630.1 & 32005 \\ \hline
+        \texttt{OBC\_BOX} & 15.51 & 2299.1 & 31022 & 12.97 & 3388.1 & 31011 \\ \hline
+        \texttt{RADIATOR} & 1.33 & 4235.2 & 35504 & -6.23 & 3388.1 & 34002 \\ \hline
+        \texttt{BATTERY} & 23.46 & 3388.1 & 30000 & 19.96 & 3932.7 & 30005 \\ \hline
+        \texttt{CAMERA\_CYL} & -1.76 & 1452.1 & 42500 & -27.80 & 3388.1 & 43500 \\ \hline
+        \texttt{CAMERA\_ELEC} & 12.78 & 2783.1 & 40501 & 12.17 & 0.0 & 40500 \\ \hline
+        \texttt{CAMERA\_BASE} & -6.57 & 1452.1 & 40404 & -15.39 & 3630.1 & 40000 \\ \hline
+        \texttt{BODY\_PLATE\_INF} & 20.25 & 1694.1 & 12001 & 17.85 & 4537.7 & 12502 \\ \hline
+        \texttt{BODY\_PLATE\_MED} & 15.57 & 2359.6 & 13002 & 14.98 & 3690.7 & 12601 \\ \hline
+        \texttt{BODY\_PLATE\_SUP} & 12.76 & 2178.1 & 13600 & 12.34 & 4961.2 & 13103 \\ \hline
+        \texttt{BODY\_PANEL} & 20.56 & 1452.1 & 10601 & 6.66 & 4053.7 & 11002 \\ \hline
+    \end{tabular}%
+    }
+\end{table}%
+}
+
+\newcommand{\NominalThermalRangeTable}[1][0.98\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Maximum and minimum spatial temperature ranges of the selected
+    elements in the nominal transient case.}
+    \label{tab:nominal_thermal_spatial_ranges}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.14}
+    \setlength{\tabcolsep}{3.2pt}
+    \resizebox{#1}{!}{%
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Element} &
+        \textbf{\shortstack{$\Delta T_{\max}^{\mathrm{sp}}$\\($^\circ$C)}} &
+        \textbf{$t_{\Delta T_{\max}}$ [s]} &
+        \textbf{Hot--cold nodes} &
+        \textbf{\shortstack{$\Delta T_{\min}^{\mathrm{sp}}$\\($^\circ$C)}} &
+        \textbf{$t_{\Delta T_{\min}}$ [s]} &
+        \textbf{Hot--cold nodes} \\ \hline
+        \texttt{ADCS\_UNIT} & 0.62 & 4053.7 & 33002--33005 & 0.49 & 1754.6 & 33002--33005 \\ \hline
+        \texttt{SOLAR\_PANEL\_2} & 2.62 & 3811.7 & 73005--75200 & 0.15 & 2541.1 & 73004--75203 \\ \hline
+        \texttt{SOLAR\_PANEL\_1} & 2.65 & 3811.7 & 70003--72502 & 0.20 & 2541.1 & 70003--72500 \\ \hline
+        \texttt{MLI\_PANELS} & 240.79 & 4053.7 & 50801--51003 & 111.98 & 2722.6 & 50500--51003 \\ \hline
+        \texttt{COMMS\_BOX} & 1.19 & 3448.6 & 32000--32005 & 0.45 & 1452.1 & 32002--32005 \\ \hline
+        \texttt{OBC\_BOX} & 2.47 & 3388.1 & 31022--31011 & 1.17 & 5505.7 & 31022--31011 \\ \hline
+        \texttt{RADIATOR} & 5.82 & 786.5 & 35504--34002 & 5.48 & 4295.7 & 35504--34002 \\ \hline
+        \texttt{BATTERY} & 2.97 & 3388.1 & 30000--30005 & 0.12 & 484.0 & 30002--30004 \\ \hline
+        \texttt{CAMERA\_CYL} & 0.00 & 3448.6 & 42500--43500 & 0.00 & 1815.1 & 42500--43500 \\ \hline
+        \texttt{CAMERA\_ELEC} & 0.45 & 1633.6 & 40501--40500 & 0.44 & 3932.7 & 40501--40500 \\ \hline
+        \texttt{CAMERA\_BASE} & 7.41 & 1452.1 & 40404--40008 & 5.06 & 1936.1 & 40009--40008 \\ \hline
+        \texttt{BODY\_PLATE\_INF} & 2.19 & 1633.6 & 12001--12502 & 1.70 & 3630.1 & 12001--12502 \\ \hline
+        \texttt{BODY\_PLATE\_MED} & 0.48 & 3085.6 & 13002--12601 & 0.30 & 4416.7 & 13000--12601 \\ \hline
+        \texttt{BODY\_PLATE\_SUP} & 0.26 & 5203.2 & 13600--13103 & 0.16 & 3267.1 & 13600--13103 \\ \hline
+        \texttt{BODY\_PANEL} & 13.71 & 1452.1 & 10601--11002 & 12.73 & 3388.1 & 10701--11002 \\ \hline
+    \end{tabular}%
+    }
+\end{table}%
+}

@@ -16,12 +16,12 @@
 \contentsline {subsection}{\numberline {4.3.3}Thermal Capacitance and Transient Response}{16}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}Mathematical Modelling of Spacecraft Thermal Systems}{17}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Spatial Discretisation Approaches}{17}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2} Lumped Parameter Method (\acrshort {lpm}) }{18}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.2} Lumped Parameter Method (\acrshort {lpm}) }{17}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Steady-State and Transient Formulations}{19}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Periodic Thermal Response and Cyclic Convergence}{19}{subsection.4.4.4}%
 \contentsline {section}{\numberline {4.5} Thermal Modelling and Solution Framework in \acrshort {esatan-tms} }{20}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Geometrical and Radiative Models}{20}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Thermal Network Representation}{21}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.2}Thermal Network Representation}{20}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}Implementation of Steady-State, Transient and Cyclic Solutions}{21}{subsection.4.5.3}%
 \contentsline {chapter}{\numberline {5}Thermal Model Development and Analysis Cases}{23}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Model Development and Geometrical Configuration}{23}{section.5.1}%
@@ -37,44 +37,43 @@
 \contentsline {section}{\numberline {5.7}Thermal Model Verification}{36}{section.5.7}%
 \contentsline {section}{\numberline {5.8}Simulation Results Export in TMD Format}{36}{section.5.8}%
 \contentsline {chapter}{\numberline {6}Multi-Case Post-Processing Tool}{39}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Baseline and Post-Processing Code Evolution}{39}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Evolution of the Original Post-Processing Application}{39}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Application Architecture and Data Flow}{41}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Multi-Case Loading and Case Organisation}{43}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Final Application Interface}{44}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Time Selection}{47}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Multi-Case Representation Options}{47}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}Saving, Restoring and Exporting Analyses}{48}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Transient Thermal Analysis}{53}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Transient Data Processing}{53}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Temperature and Thermal-Load Evolution}{53}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Interface Temperature-Difference Analysis}{53}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Interfaces between Model Components}{53}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Variation over Selected Time Intervals}{53}{subsection.7.3.2}%
-\contentsline {section}{\numberline {7.4}Thermal Summary Tables}{53}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Heat-Flow Evolution}{53}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Thermal Energy and Summary Tables}{53}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Electrical Power Balance and Battery Model}{55}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Method Overview and Thermal Inputs}{55}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Solar Power Conversion}{55}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Input Properties and Conversion Efficiency}{55}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Incident and Electrical Power Calculation}{55}{subsection.8.2.2}%
-\contentsline {section}{\numberline {8.3}Electrical Loads and Net Power Balance}{55}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Battery Model and Operating Strategy}{55}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Pack Configuration and Electrical Parameters}{55}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Voltage, Internal Resistance and State of Charge}{55}{subsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.4.3}Charge and Discharge Control}{55}{subsection.8.4.3}%
-\contentsline {subsection}{\numberline {8.4.4}Temperature Effects on Battery Performance}{55}{subsection.8.4.4}%
-\contentsline {section}{\numberline {8.5}Calculation Procedure and Output Variables}{55}{section.8.5}%
-\contentsline {chapter}{\numberline {9}Results}{57}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Verification of the Post-Processing Tool}{57}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Transient Thermal Results}{57}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Temperature Evolution and Case Comparison}{57}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Effect of the Battery Heater}{57}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Interfaces, Heat Flows and Thermal Energy}{57}{subsection.9.2.3}%
-\contentsline {section}{\numberline {9.3}Electrical Power and Battery Results}{57}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Solar Generation and Load Balance}{57}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Battery Performance}{57}{subsection.9.3.2}%
-\contentsline {chapter}{\numberline {10}Conclusions and Future Work}{59}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Conclusions}{59}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Future Work}{59}{section.10.2}%
-\contentsline {chapter}{References}{61}{section.10.2}%
+\contentsline {section}{\numberline {6.4}Functional Adaptation of the Application Interface}{44}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Time Selection}{45}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Multi-Case Representation Options}{46}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Saving, Restoring and Exporting Analyses}{47}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Transient Thermal Analysis}{51}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Temperature and Thermal-Load Evolution}{51}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Interface Temperature-Difference Analysis}{54}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Temperature Variation over Selected Time Windows}{56}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Transient Thermal Summary Table}{59}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Conductive and Radiative Heat-Flow Evolution}{62}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Absorbed and Released Thermal Energy}{64}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Electrical Power Balance and Battery Model}{67}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Solar-to-Electrical Power Conversion}{67}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Conversion Method}{67}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Input Selection and Electrical-Balance Display}{69}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Battery Model}{70}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Energy-Discharge-Level Basis}{70}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Thermal Derating and Battery-Pack Configuration}{72}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Electrical Parameters and CC--CV Charge Control}{73}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Battery Output Curves and Summary Results}{75}{subsection.8.2.4}%
+\contentsline {chapter}{\numberline {9}Multi-Case Results and Discussion}{79}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Comparison Basis and Verification}{79}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Transient Thermal Comparison}{79}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Temperature and Load Evolution}{79}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Temperature Changes and Interface Differences}{79}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Heat Flows and Integrated Energy}{79}{subsection.9.2.3}%
+\contentsline {section}{\numberline {9.3}Heater Influence in the Cold Case}{79}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Electrical and Battery Comparison}{79}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Solar Generation and Load Balance}{79}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Battery State and Operating Limits}{79}{subsection.9.4.2}%
+\contentsline {section}{\numberline {9.5}Main Findings}{79}{section.9.5}%
+\contentsline {chapter}{\numberline {10}Conclusions and Future Work}{81}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Conclusions}{81}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Future Work}{81}{section.10.2}%
+\contentsline {chapter}{References}{83}{section.10.2}%
+\contentsline {chapter}{\numberline {A}Application Launch and Interface Overview}{85}{section*.77}%
+\contentsline {section}{\numberline {A.1}Inspection and Conductor Modules}{85}{section.Alph1.1}%

@@ -104,4 +104,11 @@ L.~Kauder, Spacecraft thermal control coatings references, Tech. Rep.
   Space Engineering---Space Environment, ECSS Secretariat, Noordwijk, The
   Netherlands, issued 15 June 2020 (2020).
 
+\bibitem{porras2018battery}
+{\'A}.~Porras-Hermoso, S.~Pindado, J.~Cubas, Lithium-ion battery performance
+  modeling based on the energy discharge level, Measurement Science and
+  Technology 29~(11) (2018) 117002.
+\newblock \href {http://dx.doi.org/10.1088/1361-6501/aae231}
+  {\path{doi:10.1088/1361-6501/aae231}}.
+
 \end{thebibliography}

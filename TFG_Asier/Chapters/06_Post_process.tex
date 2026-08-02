@@ -2,48 +2,48 @@
 {Development of the Multi-Case\\Post-Processing Tool}
 \label{ch:multicase_tool}
 
-This chapter describes the transformation of the original HELIOS
-post-processing application into a tool capable of loading, inspecting and
-comparing several transient cases associated with a common
-\acrshort{esatan-tms} model. The development retains the hierarchy-based
-selection and instantaneous heat-flow views of the starting code, while it
-reorganises file loading, model storage, interface modules and output
-management around a shared collection of cases.
+The original post-processing application is extended to handle several
+transient cases associated with a single \acrshort{esatan-tms} model.
+The hierarchy-based selection and heat-flow representation functions already
+available are adapted to analyse selected transient instants, while the 
+workflow is expanded to support multi-case loading, comparison and 
+reusable outputs.
 
-The application reads each \texttt{.TMD} file independently and links its
-numerical results to the hierarchy defined in an external Excel spreadsheet.
-This structure allows the same physical selection, output instant and
-representation criteria to be applied to equivalent elements in every loaded
-case. Direct overlays and reference-minus-comparison results can therefore be
-generated without merging or modifying the source files.
+Each \texttt{.TMD} file is treated as an independent case and linked to the
+model hierarchy defined in a common Excel spreadsheet for all cases. 
+This arrangement allows
+equivalent elements to be examined using consistent selection, time and
+representation criteria across all loaded simulations.
 
-\acrshort{esatan-tms} continues to perform the numerical solution. Python does
-not repeat the nodal calculation or alter the imported results. Its role is to
-organise the available data and provide the selection, visualisation,
-persistence and export functions required for post-processing. The transient
-and electrical-analysis modules use this common architecture and are developed
-in the following chapters.
+The nodal model is solved exclusively in \acrshort{esatan-tms}. The
+post-processing tool neither repeats the thermal calculation nor modifies the
+imported data. Its purpose is to organise these values and provide the
+functional controls required for inspection, transient post-processing,
+multi-case comparison and electrical assessment. The capabilities specific to
+the transient and energy-balance modules are developed in the following
+chapters.
 
-\section{Baseline and Post-Processing Code Evolution}
+\section{Evolution of the Original Post-Processing Application}
 \label{sec:helios_to_present_application}
 
-The work starts from the Python-based application developed for the steady-state
-analysis of the HELIOS model. Its workflow combines a solved \texttt{.TMD}
-file with an Excel spreadsheet that assigns numerical node identifiers to
-physical components and subsystems. The application then uses this hierarchy
-to filter results and generate temperatures, group attributes, conductor
-tables and heat-flow representations \cite{tfg_carol}.
+The starting point is the Python-based code developed for the steady-state
+post-processing of \acrshort{esatan-tms} models. Its workflow combines the
+data contained in a \texttt{.TMD} file with an Excel spreadsheet that
+associates node identifiers with physical components and subsystems. This
+mapping supports result filtering and the generation of temperature views,
+group-attribute and conductor tables, and heat-flow representations.
 
-The result reader, hierarchy-based filters and main heat-flow views provide a
-valid basis for the present development. Figure~\ref{fig:original_helios_representations}
-shows two representative outputs generated for HELIOS. These functions are
-retained because their physical interpretation remains valid when they are
-applied to one selected instant of a transient solution.
-
+The result reader, hierarchical selection routines and main heat-flow views
+form the functional basis for the present development. These capabilities can
+also be applied to transient inspection, since the state of a solved model can
+be examined at a chosen output instant.
+Figure~\ref{fig:original_helios_representations} illustrates two representative
+visualisations generated for the HELIOS steady-state case
+\cite{tfg_carol}.
 \begin{figure}[H]
     \centering
 
-    \begin{subfigure}[t]{0.74\textwidth}
+    \begin{subfigure}[t]{0.82\textwidth}
         \centering
         \includegraphics[
             width=\textwidth,
@@ -76,110 +76,87 @@ applied to one selected instant of a transient solution.
     \label{fig:original_helios_representations}
 \end{figure}
 
-The original interface mainly organises the analysis around one result file.
-Although some routines can read more than one output instant when the source
-contains them, transient handling does not form part of a coordinated
-application workflow. Case selection, time selection and output storage also
-remain independent from one another.
+The original interface is mainly designed for the inspection of a single result
+file. Although some routines already allow access to several output instants
+when they are present in the source file, most of the interface is oriented
+towards steady-state analysis. In addition, saved figures and tables do not
+record the active case, involved elements or output instant used to re-create 
+them, so the associated configuration cannot be restored directly.
 
-The present model introduces three requirements that affect the complete
-application rather than a single plotting function. First, several result
-files must remain available at the same time. Second, every tab must apply the
-same physical hierarchy and interpret the selected instant consistently.
-Third, each saved result must retain enough information to identify its cases,
-physical elements and representation settings.
+The current implementation incorporates several new functions that expand the
+capabilities of the application. Multiple compatible cases remain accessible
+within a single session, equivalent elements are selected through a shared
+hierarchy, and instantaneous outputs are generated at a single selected
+transient time. Saved figures and tables also store the case, element and
+representation settings required to restore the saved configuration.
 
-The development therefore preserves the useful numerical and graphical
-routines but replaces the single-file workflow that surrounds them. The final
-application supports any number of compatible \texttt{.TMD} cases within the
-available input slots, provided that they describe the same model hierarchy
-and contain the analysis identifier entered by the user. Nominal, hot and cold
-cases are used throughout this work as representative examples rather than as
-a fixed limit of the implementation.
+Accordingly, the existing reading, filtering and representation functions are
+integrated into an expanded workflow. The resulting tool accepts multiple
+\texttt{.TMD} files associated with a shared model structure and incorporates
+the transient and electrical-balance modules required to meet the objectives
+of the project. Nominal, hot and cold simulations serve as representative
+cases, but the implemented workflow is not limited to these specific
+conditions.
 
 
 \section{Application Architecture and Data Flow}
 \label{sec:application_architecture}
 
-A modular architecture separates file interpretation, application
-coordination, shared processing, analysis tabs and local persistence. This
-organisation keeps the entry point concise and allows the inherited routines
-to coexist with the transient and electrical modules without concentrating
-the complete workflow in one script.
+The software follows a modular organisation that separates data
+interpretation, interface coordination and the individual functional areas.
+The architecture is described through the path followed by the imported data
+rather than as a detailed inventory of internal storage or execution
+mechanisms.
 
-Execution starts in \path{app_thermalviewer/app_interactiva.py}. The Streamlit
-entry point receives the hierarchy spreadsheet, the internal analysis name and
-the selected \texttt{.TMD} files. It then creates the common case collection,
-maintains the session state and passes the required data and helper functions
-to each tab.
+Execution starts in
+\path{app_thermalviewer/app_interactiva.py}, which receives the shared
+hierarchy, the internal analysis identifier and the selected
+\texttt{.TMD} files. This entry point builds the collection of loaded cases
+and distributes it among the tabs forming the user interface.
 
-\path{core/thermaldata.py} interprets each result file and provides the nodal,
-group and conductor information required by the interface. The application
-keeps the data from every \texttt{.TMD} file as an independent case and links
-all of them to the hierarchy obtained from Excel. The analysis tabs can
-therefore access several compatible cases during the same session without
-merging their numerical results or reopening the source files for each
-operation.
+\path{core/thermaldata.py} acts as the data layer. It interprets each result
+file and gives the interface access to nodal, group, time-dependent and
+conductor information. Individual \texttt{.TMD} files are processed
+separately, while the Excel mapping defines the component organisation required
+to select equivalent elements.
 
-Shared operations are concentrated in \path{app_helpers.py} and
-\path{viewer_utils.py}. They provide hierarchy ordering, descendant searches,
-redundant-selection removal, unit handling, case-representation controls,
-numerical subtraction, validation and common output preparation. The modules
-inside \path{tabs/} focus on the selections and results specific to each
-analysis area.
+Shared operations are grouped in \path{app_helpers.py} and
+\path{viewer_utils.py}. These modules handle hierarchy ordering, selection
+validation, unit management, time-dependent access, and direct or
+difference-based representations across several cases.
 
-Scene persistence follows a separate branch. \path{scene_manager.py} manages
-the SQLite records and files stored in \path{scene_store/};
-\path{scene_ui.py} provides the saving and history controls; and
-\path{restored_scenes.py} returns a stored configuration to the corresponding
-widgets. Table~\ref{tab:application_module_roles} summarises the role of the
-main groups of files.
+The files contained in \path{tabs/} apply these operations to the controls,
+tables and figures associated with each functional area. Each file implements
+one of the main interface tabs. For example,
+\path{tab_case_info.py} displays general information about the loaded simulations,
+\path{tab_flow_explorer.py} handles heat-flow inspection,
+\path{tab_transient.py} implements the transient post-processing module, and
+\path{tab_sp.py} contains the electrical-balance and battery calculations.
+Further modules, including \path{tab_group_attributes.py},
+\path{tab_gl_conductors.py}, \path{tab_gr_conductors.py},
+\path{tab_nodes.py} and \path{tab_group_study.py}, cover the remaining
+model-inspection and conductor-analysis areas.
 
-\begin{table}[H]
-    \centering
-    \caption{Main software modules and responsibilities in the final
-    application.}
-    \label{tab:application_module_roles}
-    \renewcommand{\arraystretch}{1.18}
-    \begin{tabularx}{0.97\textwidth}{@{}p{0.30\textwidth}X@{}}
-        \toprule
-        \textbf{Module or directory} & \textbf{Main responsibility} \\
-        \midrule
-        \path{app_interactiva.py} &
-        Coordinates inputs, loaded cases, Streamlit session state and tab
-        execution. \\
 
-        \path{core/thermaldata.py} &
-        Reads each result file and provides access to nodes, attributes,
-        time histories and conductor data. \\
+A final group of modules handles the saving, restoration and export of
+analyses throughout the interface. Each generated figure or table is linked
+to the main settings needed to reproduce or export it.
+Table~\ref{tab:application_module_roles} summarises the functional
+responsibilities of the principal software groups.
 
-        \path{app_helpers.py}, \path{viewer_utils.py} &
-        Supply hierarchy, validation, formatting, unit, comparison and shared
-        output functions. \\
+\input{Tables/table_application_module_roles.tex}
+\ApplicationModuleTable[0.97\textwidth]
 
-        \path{tabs/} &
-        Contains the model-inspection, heat-flow, transient and electrical
-        analysis interfaces. \\
-
-        \path{scene_manager.py}, \path{scene_ui.py},
-        \path{restored_scenes.py} &
-        Store, list and restore complete analysis configurations and their
-        generated artifacts. \\
-        \bottomrule
-    \end{tabularx}
-\end{table}
-
-Figure~\ref{fig:current_application_architecture} summarises the resulting
-data flow. The result reader processes the input files as independent cases,
-the application entry point coordinates their use across the interface, and
-the shared functions support the different analysis tabs. A separate
-persistence branch stores generated outputs and returns saved configurations
-to their source modules.
+Figure~\ref{fig:current_application_architecture} outlines the resulting data
+flow. The input files are interpreted separately, coordinated through a
+central application layer and passed to the relevant processing modules. This
+structure links the generated figures and tables to the saving and
+export controls available in each area.
 
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.8\textwidth,
+        width=0.96\textwidth,
         keepaspectratio
     ]{Figures/06/arquitectura.png}
     \caption{Main data flow and software architecture of the current
@@ -187,35 +164,33 @@ to their source modules.
     \label{fig:current_application_architecture}
 \end{figure}
 
-The application keeps imported results separate from values calculated during
-post-processing. A change in selected groups, units, output time or graphical
-configuration only affects the current representation. It does not modify the
-\texttt{.TMD} file or the processed object from which the values are read.
-This separation also allows several tabs to reuse the same cases without
-introducing inconsistent intermediate copies.
-
+Imported simulation data are kept separate from the values calculated during
+post-processing. Changes to the active groups, cases, units, output time or
+representation mode affect only the current analysis and leave the imported
+\texttt{.TMD} files unchanged. Consequently, every tab can access the loaded case collection and apply
+consistent selections without creating modified copies
+of the source data.
 
 \section{Multi-Case Loading and Case Organisation}
 \label{sec:multicase_loading}
 
-The input stage combines one hierarchy spreadsheet with several transient
-result files. A common Excel file is sufficient because the cases used in this
-work retain the same node identifiers, physical groups and parent--child
+The loading stage combines a single Excel hierarchy with multiple transient
+\texttt{.TMD} files. One spreadsheet serves all simulations because they
+share identical node identifiers, physical groups and parent--child
 relationships. Environmental and operating conditions change between
 simulations, but the model organisation remains unchanged.
 
-The interface distinguishes the internal analysis name from the visible case
-name. The internal name identifies the result structure stored inside each
-\texttt{.TMD} file, whereas the visible name identifies the simulation in the
-application. Different files may therefore contain the same internal
-identifier, such as \texttt{ANALISIS}, while appearing as \emph{Nominal},
-\emph{Hot} or \emph{Cold} in selectors, legends, tables and saved scenes.
+Each \texttt{.TMD} file contains an internal analysis identifier, while the
+interface assigns a visible name to the loaded simulation. Different files may
+therefore use an identical internal identifier, such as \texttt{ANALISIS}, but
+appear as \emph{Nominal}, \emph{Hot} or \emph{Cold} in selectors, legends,
+tables and saved analyses.
 
-Each uploaded file opens an editable case-name field before the processed
-object is created. When two visible names coincide, the interface adds a
-suffix so that the keys in the case collection remain unique.
-Figure~\ref{fig:multicase_loading} shows the initial inputs and the subsequent
-configuration of several files.
+Before loading a file, the interface provides an editable field for its
+visible name. If two entries receive identical names, a suffix is added to keep
+every key in the case collection unique.
+Figure~\ref{fig:multicase_loading} shows the initial inputs and the
+configuration of multiple result files.
 
 \begin{figure}[H]
     \centering
@@ -241,188 +216,114 @@ configuration of several files.
         \label{fig:multicase_loading_cases}
     \end{subfigure}
 
-    \caption{Multi-case loading interface combining a common hierarchy
-    spreadsheet with several \texttt{.TMD} result files.}
+    \caption{Multi-case loading interface with one shared hierarchy and
+    multiple \texttt{.TMD} result files.}
     \label{fig:multicase_loading}
 \end{figure}
 
-The loader reads every file separately and preserves its results as an
-independent case. The interface can then request the same variable or physical
-selection from one or more cases without combining their original numerical
-data.
+The loader processes every file separately and stores it as an independent
+case. Any compatible tab can then request the corresponding variable or
+component selection from one or more simulations without combining or modifying their
+original numerical data.
 
-%BORRAR
-% Streamlit re-executes the script whenever a widget changes. Reprocessing the
-% same large inputs after every interaction would make the interface
-% unnecessarily slow. The application therefore combines Streamlit resource
-% caching with reusable pickle files. A fingerprint formed from the contents of
-% the \texttt{.TMD} file and the Excel spreadsheet becomes part of the pickle
-% name. Two files that share a filename but contain different results produce
-% different cache entries, while unchanged inputs reuse the processed object.
+The Excel hierarchy does more than replace node identifiers with readable
+names. It maps each physical group to its node range and defines its position
+within the parent--child structure of the model. Since all loaded simulations use
+this mapping, one component selection can be applied directly to each of
+them.
 
-The Excel hierarchy performs a second function beyond displaying readable
-names. It relates each physical group to its node range and parent--child
-position within the model. Since all loaded cases share this structure, the
-application can apply the same physical selection to each of them.
-
-For example, selecting \texttt{BODY} does not require the user to enter the
-corresponding node numbers separately for the nominal, hot and cold cases. The
-hierarchy resolves the group once, and each case supplies the values of those
-nodes at the requested time. The resulting tables or curves therefore refer
-to the same physical part of the model before any overlay or subtraction is
-performed.
+For example, after the user selects \texttt{BODY}, the tool resolves its node
+range once. Each simulation then supplies the values of those nodes at the
+requested time, without requiring the numerical identifiers to be entered again for the
+nominal, hot and cold simulations. The resulting tables and curves therefore
+refer to the corresponding region before any overlay or difference calculation
+is performed.
 
 The hierarchy also controls ordering and prevents double counting. Selectors
-follow the physical parent--child sequence defined in Excel rather than a
+follow the hierarchical parent--child sequence defined in Excel rather than a
 purely alphabetical list. When a parent group and one of its descendants are
-selected together, the application removes the descendant because the parent
+chosen together, the application removes the descendant because the parent
 already contains its nodes. A visible warning identifies the corrected
 selection. This check is particularly important for heat-flow and aggregated
 load results, where repeated nodes would otherwise alter the numerical total.
 
-\section{Final Application Interface}
+\section{Functional Adaptation of the Application Interface}
 \label{sec:final_application_interface}
 
-The final interface uses one layout throughout the complete workflow. The
-sidebar contains the shared inputs, while the main area contains independent
-tabs. Since every module receives the same case dictionary and hierarchy, the
-user can move between model inspection, transient processing and electrical
-analysis without reloading the files.
+The final version brings the inherited inspection tabs and the newly developed
+modules together within a single interface. The sidebar contains the inputs
+required throughout the session, while every tab receives the loaded case
+collection and shared Excel hierarchy. The user can therefore move
+between model inspection, transient and electrical post-processing
+without loading the source files again or redefining the model structure.
 
-Figure~\ref{fig:final_interface_general} shows the resulting interface after
-loading the common hierarchy and three transient cases. The sidebar retains
-the shared model inputs, whereas the main area concentrates the case,
-hierarchy, time and representation controls associated with the active
-analysis tab.
+Figure~\ref{fig:final_interface_general} presents the resulting layout after
+loading the Excel hierarchy spreadsheet and three transient cases. The 
+sidebar groups the model inputs, whereas the main area provides access to 
+the different tabs and their case, element, time and representation 
+controls.
 
-\begin{figure}[H]
+\begin{figure}[htpb]
     \centering
     \includegraphics[
         width=\textwidth,
         keepaspectratio
     ]{Figures/06/final_interface_general.png}
-    \caption{General organisation of the final post-processing application
-    after loading three transient cases. The sidebar contains the common
-    hierarchy, the internal analysis name and the result files, while the
-    main area provides access to the model-inspection, transient and
-    electrical-analysis modules.}
+    \caption{Final post-processing interface after loading three transient
+    cases. The sidebar groups the shared inputs, while the main area provides
+    access to the model-inspection, transient and electrical-analysis
+    modules.}
     \label{fig:final_interface_general}
 \end{figure}
 
-The first group of tabs examines the imported model and retains the main
-capabilities of the starting application. \texttt{Case info} summarises the
-available node tables, groups and couplings. \texttt{Group attributes},
-\texttt{Nodes} and \texttt{Group study} provide progressively more detailed
-information about selected parts of the hierarchy. \texttt{GL conductors} and
-\texttt{GR conductors} inspect conductive and radiative connections,
-respectively. \texttt{Flow Explorer: Multilevel Comparison} uses the same
-hierarchical selections to create instantaneous Sankey and network views.
+The existing group of tabs covers model inspection and the heat-flow functions
+offered by the original tool. \texttt{Case info} summarises the datasets,
+groups and couplings contained in the loaded simulations.
+\texttt{Group attributes}, \texttt{Nodes} and \texttt{Group study} provide
+different levels of detail for the chosen parts of the model.
+\texttt{GL conductors} and \texttt{GR conductors} examine conductive and
+radiative connections, respectively. \texttt{Flow Explorer: Multilevel
+Comparison} uses equivalent component selections to generate instantaneous
+Sankey and network representations.
 
-Figures~\ref{fig:inherited_tabs_current_a} and
-\ref{fig:inherited_tabs_current_b} show the organisation of these modules
-after their adaptation to the common multi-case and transient workflow. The
-screens illustrate the consistent case selector, hierarchy-based controls,
-time inputs and history areas used across the interface.
+Most changes introduced in these tabs affect their operation rather than
+their appearance. Each compatible module now reads from the loaded case
+collection, applies a consistent component selection and, when transient data are
+available, evaluates the requested information at a chosen output instant.
 
-\begin{figure}[H]
-    \centering
+\begin{samepage}
 
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]
-        {Figures/06/display01.png}
-        \caption{Flow Explorer.}
-        \label{fig:display_flow_explorer}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]
-        {Figures/06/display02.png}
-        \caption{Case information.}
-        \label{fig:display_case_info}
-    \end{subfigure}
+Enlarged views of these functional areas are included in
+Appendix~\ref{app:application_interface_overview}. Each tab is
+presented separately to provide a readable view of its case, hierarchy, time
+and representation controls.
 
-    \vspace{0.8em}
-
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]
-        {Figures/06/display03.png}
-        \caption{Group attributes.}
-        \label{fig:display_group_attributes}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]
-        {Figures/06/display04.png}
-        \caption{Linear conductors.}
-        \label{fig:display_gl_conductors}
-    \end{subfigure}
-
-    \caption{General inspection modules adapted to the common transient and
-    multi-case interface.}
-    \label{fig:inherited_tabs_current_a}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]
-        {Figures/06/display05.png}
-        \caption{Radiative conductors.}
-        \label{fig:display_gr_conductors}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]
-        {Figures/06/display06.png}
-        \caption{Nodal information.}
-        \label{fig:display_nodes}
-    \end{subfigure}
-
-    \vspace{0.8em}
-
-    \begin{subfigure}[t]{0.72\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]
-        {Figures/06/display07.png}
-        \caption{Group study.}
-        \label{fig:display_group_study}
-    \end{subfigure}
-
-    \caption{Conductor, nodal and group-study modules after integration into
-    the final application.}
-    \label{fig:inherited_tabs_current_b}
-\end{figure}
-
-The controls adapt to the information available in the selected cases.
-Temperature units already defined in the result file remain fixed, while
-compatible heat-flow and display units can be changed where appropriate.
-Validation messages identify empty case selections, unsupported combinations
-or missing data before a figure or table is generated. These checks provide a
-uniform response across modules that originally followed separate interaction
-patterns.
+The controls shown by each tab depend on the information present in the
+active case. Temperature units already defined in the result file remain
+fixed, whereas compatible heat-flow and display units can be changed when
+required. Before generating a figure or table, the tool checks for empty case
+selections, unsupported combinations and missing data. Clear messages identify
+the problem and prevent the calculation from continuing with incomplete
+inputs. These checks give all compatible modules a consistent operating logic.
+    
+\end{samepage}
 
 \subsection{Time Selection}
 \label{subsec:time_selection}
 
-The inherited modules represent the model at one instant, even when their
-source is a complete transient solution. Each compatible area therefore
-includes a time selector when the selected result contains more than one
-output step. The tab obtains the available instants from the transient data
-and applies the chosen value to attributes, nodal tables, conductor summaries
-or instantaneous-flow diagrams.
+The inherited tabs represent the state of the model at one output instant,
+even when the source file contains a complete transient solution. When multiple
+output steps are present, each compatible tab adds a time selector. The
+module reads the stored time vector and applies the chosen instant to group
+attributes, nodal tables, conductor summaries and instantaneous heat-flow
+representations.
 
-This extension preserves the interpretation of the original steady-state
-views. Instead of replacing them with complete histories, it allows the user
-to inspect any stored stage of the transient solution using the same physical
-and graphical tools. Figure~\ref{fig:time_selection_examples} shows the
-selector at the beginning and end of one available time vector.
+This adaptation extends the original steady-state views without changing
+their interpretation. Instead of replacing them with complete time histories,
+the user can inspect any stored output instant with the defined component
+selection and graphical tools.
+Figure~\ref{fig:time_selection_examples} illustrates the selector at the
+beginning and end of a stored time vector.
 
 \begin{figure}[H]
     \centering
@@ -448,53 +349,34 @@ selector at the beginning and end of one available time vector.
     \label{fig:time_selection_examples}
 \end{figure}
 
-When a module compares several cases, it evaluates each selected object at the
-requested instant available to that analysis. The chosen time is also added
-to the scene recipe so that restoring a saved result returns the selector to
-the same position.
+When multiple simulations are active, the module applies the chosen instant to
+each compatible simulation. Saving the analysis also records this setting, so
+restoring it returns the time control to its previous position.
 
 
 \subsection{Multi-Case Representation Options}
 \label{subsec:multicase_representation_options}
 
-The common case selector allows each compatible tab to work with one or more
-loaded simulations. In direct representation mode, the module applies the
-same physical and temporal configuration to all selected cases. Curves can be
-superimposed when a shared graph supports clear comparison; tables and more
-complex network outputs can instead remain separated by case.
+The case selector allows each compatible tab to work with one or more
+loaded simulations. In direct representation mode, the tool applies consistent
+selection and temporal settings to every chosen case. Curves can be
+superimposed when a shared graph provides a clear comparison, whereas tables
+and complex network representations remain separated when combining them
+would reduce readability.
 
-An additional \emph{Case difference} mode isolates the numerical change
-between simulations. The user selects one reference case and one or more
-comparison cases. The application includes the reference and all selected
-comparisons in the calculation, verifies that the requested variables are
-compatible and produces one difference result for each pair.
-Figure~\ref{fig:case_difference_configuration} shows the representation mode
-and the subsequent reference/comparison controls.
+The additional \emph{Case difference} mode isolates the numerical change
+between simulations. The user chooses one reference case and one or more
+comparison cases. The tool checks that the requested variables are compatible
+and generates one difference result for each reference--comparison pair.
+Figure~\ref{fig:case_difference_configuration} presents the representation mode
+and the associated case controls.
 
 \begin{figure}[H]
     \centering
-
-    \begin{subfigure}[t]{0.58\textwidth}
-        \centering
-        \includegraphics[
-            width=\textwidth,
-            keepaspectratio
-        ]{Figures/06/case_difference01.png}
-        \caption{Selection of the case-difference representation mode.}
-        \label{fig:case_difference_mode}
-    \end{subfigure}
-
-    \vspace{0.8em}
-
-    \begin{subfigure}[t]{0.90\textwidth}
-        \centering
-        \includegraphics[
-            width=\textwidth,
-            keepaspectratio
-        ]{Figures/06/case_difference.png}
-        \caption{Definition of the reference and comparison cases.}
-        \label{fig:case_difference_cases}
-    \end{subfigure}
+    \includegraphics[
+        width= \textwidth,
+        keepaspectratio
+    ]{Figures/06/case_difference.png}
 
     \caption{Configuration of the case-difference representation.}
     \label{fig:case_difference_configuration}
@@ -509,47 +391,63 @@ For any compatible quantity \(x\), the adopted convention is
     \label{eq:case_difference_ch6}
 \end{equation}
 
-where \(R\) denotes the reference case and \(C\) denotes one comparison case.
-A positive value means that the reference result is greater, whereas a
-negative value means that the comparison result is greater. The application
-retains the same order in legends, table headings, captions and saved-scene
-metadata.
+where \(R\) denotes the reference case and \(C\) one comparison case. A
+positive value indicates that the reference result is greater, while a
+negative value indicates that the comparison result is greater. The
+reference--comparison order is used consistently in legends, table headings,
+captions and saved analyses.
 
-Direct representation and case difference answer different questions. An
-overlay preserves the absolute response of every case and makes common trends
-visible. The difference removes the shared level and highlights the effect of
-the modified environmental or operating condition. Both modes use the same
-hierarchy, units and time settings, which avoids repeating the complete input
-configuration when the user changes the form of comparison.
+Direct representation and case difference serve different purposes. An
+overlay keeps the absolute response of each simulation visible and makes shared
+trends easier to identify. The difference removes the common level and
+highlights the effect of a change in environmental or operating conditions.
+Both modes use the defined component selections, units and time settings, so
+the user can change the representation without entering the complete
+configuration again.
 
-The two final tabs contain the main analysis extensions developed in this
-work. \texttt{TRANSIENT} processes complete histories of temperatures, loads,
-interfaces and heat flows. \texttt{Energy balance} derives solar generation,
-electrical demand and battery behaviour from the selected cases. Their
-specific calculations and outputs are presented separately in the following
-chapters.
+The last two tabs contain the main modules introduced in this work.
+\texttt{TRANSIENT} processes complete histories of temperatures, loads,
+interfaces and heat flows. \texttt{Energy balance} calculates solar
+generation, electrical demand and battery behaviour from the chosen simulations.
+The following chapters develop the calculations and outputs of both modules
+separately.
 
 \section{Saving, Restoring and Exporting Analyses}
 \label{sec:analysis_history_export}
 
-The combination of cases, physical groups, variables, time instants and
-graphical settings can generate many valid outputs. An exported figure or
-table preserves the final result but not the complete configuration required
-to reconstruct it. The application therefore adds a local scene history to
-the analysis areas that produce reusable outputs.
+Combining several simulations, involved elements, variables, time instants and
+representation settings can produce a large number of valid outputs. Exporting
+a figure or table preserves the final result, but not the complete
+configuration needed to reproduce it inside the interface. For this reason,
+the compatible tabs include an area for saving and restoring their generated
+outputs.
 
-Once a figure or table has been generated, the corresponding control opens a
-saving form adapted to the output type. The command appears as \emph{Save
-plot}, \emph{Save table} or a combined option when both artifacts belong to
-the same analysis. The user assigns a descriptive name and may add a short
-explanation. The interface also records the source tab, selected cases and
-physical element or interface inferred from the active controls.
+Once a figure or table has been created, the corresponding saving control
+becomes active. Depending on the result type, the option appears as
+\emph{Save plot}, \emph{Save table} or as a combined control when both outputs
+belong to a single analysis. The user assigns a descriptive name and may add a
+short explanation before saving it.
 
-Figure~\ref{fig:scene_saving_workflow} shows the complete saving sequence. The
-first view contains the information entered before storage. The second shows
-an original scene and a later version derived from it. The third illustrates
-how the name and description can be edited without changing the stored
-numerical result.
+Each saved analysis, referred to as a scene within the interface, records the
+source tab together with the cases, involved elements, variables, units, time
+instant and representation mode used to produce the result. These settings
+allow the stored configuration to be recovered without repeating the complete
+selection process.
+
+Saved analyses use two coordinated storage levels. The SQLite database
+\path{scene_memory.db} records the model, cases, source tab, configuration
+settings and paths associated with each entry, while the local \path{scene_store/}
+directory contains the generated files. Each scene stores its metadata and
+configuration in \texttt{scene.json}; Plotly figures are saved in JSON and
+HTML formats, Matplotlib figures in PNG and SVG, and tables in CSV and XLSX.
+The database entry and its associated local folder must remain consistent for
+the complete configuration to be restored.
+
+Figure~\ref{fig:scene_saving_workflow} illustrates the main operations
+available after generating an output. The first view contains the information entered
+before saving it. The second shows an original analysis and a later version
+derived from it, while the third illustrates the editing of its identifying
+information.
 
 \begin{figure}[H]
     \centering
@@ -572,16 +470,16 @@ numerical result.
     \centering
     \setcounter{subfigure}{1}
 
-    \begin{subfigure}[t]{0.65\textwidth}
+    \begin{subfigure}[t]{0.75\textwidth}
         \centering
         \includegraphics[
             width=\textwidth,
             keepaspectratio
         ]{Figures/06/Edicion_scenes_guardadas.png}
-        \caption{Saved-scene history containing an original analysis and a
-            subsequently derived version. Selecting a scene name restores its
-            configuration, while the adjacent controls allow its metadata to be edited
-            or the entry to be deleted.}
+        \caption{Saved-analysis list containing an original result and a
+        subsequently derived version. Selecting the displayed name restores
+        its configuration, while the adjacent controls allow the entry to be
+        edited or deleted.}
         \label{fig:saved_scene_and_derivation}
     \end{subfigure}
 
@@ -592,7 +490,7 @@ numerical result.
     \centering
     \setcounter{subfigure}{2}
 
-    \begin{subfigure}[t]{0.7\textwidth}
+    \begin{subfigure}[t]{0.65\textwidth}
         \centering
         \includegraphics[
             width=\textwidth,
@@ -603,100 +501,85 @@ numerical result.
         \label{fig:scene_metadata_editing}
     \end{subfigure}
 
-    \caption{Sequence used to save, restore and manage an analysis output
-    within the section history.}
+    \caption{Sequence used to save, restore and manage a generated output.}
     \label{fig:scene_saving_workflow}
 \end{figure}
 
-The persistence layer separates the scene records from their generated
-artifacts. The SQLite database stores the saved analyses, their associated
-cases and the references required to locate their outputs. The directory
-\path{scene_store/} contains the generated files and the metadata needed to
-restore each configuration.
+Selecting the name of a stored entry returns its main settings to the tab from
+which it was created. The source files and required cases must already be
+loaded, but the physical selections, variables, units, output time and
+representation options are recovered automatically. The controls placed next
+to each entry allow its name and description to be modified or the complete
+entry to be removed.
 
-Every scene includes a recipe that records the widget values needed to
-recreate the analysis. Depending on the source tab, the recipe can contain
-case names, hierarchy selections, variables, units, time values, comparison
-mode and plot options.
+Restoring an analysis does not overwrite the saved result. If the recovered
+configuration is modified and stored again, the tool creates a new entry and
+identifies it as a derived version. The previous output remains accessible,
+while the new one can use another case, time instant, variable or
+representation setting.
 
-The scene name displayed in each history entry acts as the restoration
-control. Selecting it loads the stored recipe into the source tab and recovers
-the associated cases, hierarchy selections, units, time values and
-representation settings. The adjacent pencil and bin controls modify the
-scene name and description or delete the entry, respectively. The same result
-files must be loaded, and retaining the original visible case names improves
-the reliability of widget restoration.
+Search and ordering controls simplify the management of larger collections.
+Saved analyses can be located through their name, case, model element,
+description or output type. Although all compatible tabs follow a consistent
+saving procedure, each area displays the entries and files associated with
+its own calculations.
 
-The storage format follows the output type. Plotly figures are saved as JSON
-and HTML, data tables as CSV and Excel files, and Matplotlib figures as PNG and
-SVG. Each scene also receives a \texttt{scene.json} file that contains its
-name, description, scope, cases and reconstruction recipe. This combination
-supports both interactive recovery inside the application and direct access
-to conventional engineering file formats.
+Figures and tables can also be exported using the formats offered by their
+source module. These files provide conventional outputs for reports,
+engineering documentation or later processing outside the interface.
 
-Restoring a scene does not overwrite the original entry. If the user changes
-its recovered configuration and saves the new result, the application creates
-a separate scene and adds the source-scene information to the new recipe. The
-history can therefore show the derived relationship while preserving the
-original analysis.
+% Figure~\ref{fig:history_examples_across_tabs} shows the same saving system in
+% two transient analysis areas. The first contains plots of different
+% parameters, whereas the second combines heat-flow figures with their
+% associated tables.
 
-Search and ordering controls act on the complete history. Entries can be
-located through their name, case, physical element, description or output
-type, and each item can be renamed or deleted from the same area. The history
-mechanism is common to the application, although each tab stores the artifacts
-that correspond to its own analysis.
+% \begin{figure}[H]
+%     \centering
 
-Figure~\ref{fig:history_examples_across_tabs} shows the same system applied to
-two transient result areas. One history contains parameter plots, whereas the
-other combines heat-flow figures with associated tables.
+%     \begin{subfigure}[t]{0.96\textwidth}
+%         \centering
+%         \includegraphics[
+%             width=\textwidth,
+%             keepaspectratio
+%         ]{Figures/06/ej_historial.png}
+%         \caption{History containing different parameters
+%         generated from transient results.}
+%         \label{fig:transient_plot_history_example}
+%     \end{subfigure}
 
-\begin{figure}[H]
-    \centering
+% \end{figure}
 
-    \begin{subfigure}[t]{0.96\textwidth}
-        \centering
-        \includegraphics[
-            width=\textwidth,
-            keepaspectratio
-        ]{Figures/06/ej_historial.png}
-        \caption{History containing different parameters
-        generated from transient results.}
-        \label{fig:transient_plot_history_example}
-    \end{subfigure}
+% \begin{figure}[H]
+%     \ContinuedFloat
+%     \centering
+%     \setcounter{subfigure}{1}
 
-\end{figure}
+%     \begin{subfigure}[t]{0.88\textwidth}
+%         \centering
+%         \includegraphics[
+%             width=\textwidth,
+%             keepaspectratio
+%         ]{Figures/06/ej_historial02.png}
+%         \caption{History containing transient-flow figures and associated
+%         tabular results.}
+%         \label{fig:transient_flow_history_example}
+%     \end{subfigure}
 
-\begin{figure}[H]
-    \ContinuedFloat
-    \centering
-    \setcounter{subfigure}{1}
+%     \caption{Examples of saved-scene management in different transient
+%     result areas.}
+%     \label{fig:history_examples_across_tabs}
+% \end{figure}
 
-    \begin{subfigure}[t]{0.88\textwidth}
-        \centering
-        \includegraphics[
-            width=\textwidth,
-            keepaspectratio
-        ]{Figures/06/ej_historial02.png}
-        \caption{History containing transient-flow figures and associated
-        tabular results.}
-        \label{fig:transient_flow_history_example}
-    \end{subfigure}
-
-    \caption{Examples of saved-scene management in different transient
-    result areas.}
-    \label{fig:history_examples_across_tabs}
-\end{figure}
-
-Scene storage and file export fulfil complementary purposes. The history
-preserves the configuration and relationships required to continue an
-analysis inside the application. Download controls create external copies of
+Scene storage and file export fulfil complementary purposes. The saved-analysis
+system preserves the configuration and relationships required to continue the
+work inside the application. Download controls create external copies of
 figures or tables for reports and engineering documentation. Together, both
 functions connect interactive exploration with reproducible post-processing
 and final result presentation.
 
 The resulting chapter-level workflow can be summarised as follows: the
-application loads several compatible cases, associates them with one physical
-hierarchy, applies common selections and time settings, generates direct or
-difference outputs, and stores the complete configuration whenever the
-analysis must be recovered. This architecture provides the common foundation
+application loads multiple compatible cases, associates them with one
+hierarchy, applies consistent selections and time settings, generates direct
+or difference outputs, and stores the complete configuration whenever it must
+be recovered. This architecture provides the shared foundation
 for the transient and electrical modules developed next.

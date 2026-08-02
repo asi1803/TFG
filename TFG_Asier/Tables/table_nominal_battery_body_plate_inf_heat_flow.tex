@@ -1,0 +1,30 @@
+% File: Tables/table_nominal_battery_body_plate_inf_heat_flow.tex
+% Usage: \NominalBatteryBodyPlateHeatFlowTable[0.76\textwidth]
+% This compact table is optional; the complete time series remains available
+% in the exported CSV file.
+
+\newcommand{\NominalBatteryBodyPlateHeatFlowTable}[1][0.76\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Extreme conductive, radiative and total heat-flow values for the
+    \texttt{BATTERY}--\texttt{BODY\_PLATE\_INF} selection in the nominal
+    transient case.}
+    \label{tab:nominal_battery_body_plate_heat_flow}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.18}
+    \setlength{\tabcolsep}{5pt}
+    \resizebox{#1}{!}{%
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Term} &
+        \textbf{Minimum [W]} &
+        \textbf{$t_{\min}$ [s]} &
+        \textbf{Maximum [W]} &
+        \textbf{$t_{\max}$ [s]} \\ \hline
+        $Q_{\mathrm{GL}}$ & -6.641 & 3388.1 & -0.170 & 1452.1 \\ \hline
+        $Q_{\mathrm{GR}}$ & -0.535 & 3388.1 & -0.074 & 1452.1 \\ \hline
+        $Q_{\mathrm{GT}}$ & -7.176 & 3388.1 & -0.243 & 1452.1 \\ \hline
+    \end{tabular}%
+    }
+\end{table}%
+}

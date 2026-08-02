@@ -1,0 +1,53 @@
+% Closed table for Chapter 6.
+% Usage:
+%   \input{Figures/06/table_application_module_roles.tex}
+%   \ApplicationModuleTable[0.95\textwidth]
+%
+% Change the optional width argument to resize the complete table.
+% The table uses tabularx and array.
+
+\newcommand{\ApplicationModuleTable}[1][0.97\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Main software groups and their functional responsibilities.}
+    \label{tab:application_module_roles}
+    \renewcommand{\arraystretch}{1.18}
+    \setlength{\tabcolsep}{6pt}
+    \footnotesize
+    \begin{tabularx}{#1}{
+        |>{\raggedright\arraybackslash\hsize=0.60\hsize}X
+        |>{\raggedright\arraybackslash\hsize=1.40\hsize}X|
+    }
+        \hline
+        \textbf{Module or directory} &
+        \textbf{Main responsibility} \\
+        \hline
+
+        \path{app_interactiva.py} &
+        Coordinates file inputs, loaded cases and execution of the analysis tabs. \\
+        \hline
+
+        \path{core/thermaldata.py} &
+        Reads each result file and provides access to nodes, attributes,
+        time histories and conductor data. \\
+        \hline
+
+        \path{app_helpers.py}, \path{viewer_utils.py} &
+        Provide hierarchy management, selection validation, unit handling,
+        case-comparison operations and common output preparation. \\
+        \hline
+
+        \path{tabs/} &
+        Contains one module for each analysis tab, including case inspection,
+        heat-flow exploration, conductor analysis, transient post-processing,
+        and the electrical balance and battery model. \\
+        \hline
+
+        \path{scene_manager.py}, \path{scene_ui.py},
+        \path{restored_scenes.py} &
+        Provide the controls required to save, list, restore and export complete
+        analysis configurations and their generated outputs. \\
+        \hline
+    \end{tabularx}
+\end{table}%
+}

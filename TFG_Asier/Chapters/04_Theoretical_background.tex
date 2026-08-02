@@ -79,7 +79,7 @@ Figure~\ref{fig:spacecraft_heat_exchanges}
     % Source: Thermal_Control_Handbook.pdf,
     % PDF page 35 (printed page 21), Figure 2.1.
     \includegraphics[width=0.9\textwidth]
-    {Figures/marco_teorico/fig_01.png}
+    {Figures/04/fig_01.png}
     \caption{Main radiative exchanges between an orbiting spacecraft and the external environment. Taken from \cite{th_handbook}.}
     \label{fig:spacecraft_heat_exchanges}
 \end{figure}
@@ -147,14 +147,12 @@ Conduction transfers thermal energy through a material or between bodies in cont
 bulk movement of matter. The conductive heat flow depends on the temperature gradient, the 
 thermal conductivity of the material and the area normal to the direction of transfer.
 For one-dimensional conduction, Fourier's law is written as \cite{heattransfer,hmt_f&a}
-
 \begin{equation}
     \dot{Q}_{x}
     =
     -kA\frac{\mathrm{d}T}{\mathrm{d}x},
     \label{eq:fourier_law}
 \end{equation}
-
 where $\dot{Q}_{x}$ is the conductive heat flow, $k$ is the thermal conductivity, $A$ is the area 
 normal to the heat flow and $\mathrm{d}T/\mathrm{d}x$ is the temperature gradient. The negative sign 
 indicates that heat flows in the direction of decreasing temperature. \newline
@@ -166,14 +164,13 @@ described by Fourier's law.
     % Source: Heat_and_mass_transfer_fundamentals_and.pdf,
     % PDF page 48 (printed page 17), Figure 1-23.
     \includegraphics[width=0.6\textwidth]
-    {Figures/marco_teorico/Captura de pantalla 2026-07-26 181239.png}
+    {Figures/04/Captura de pantalla 2026-07-26 181239.png}
     \caption{One-dimensional heat conduction through a plane wall. Taken from \cite{hmt_f&a}.}
     \label{fig:plane_wall_conduction}
 \end{figure}
 
 For a plane layer of thickness $L$, constant area and constant conductivity, Fourier's law 
 can also be expressed in terms of thermal resistance \cite{heattransfer,hmt_f&a}:
-
 \begin{gather}
     R_{\mathrm{cond}} = \frac{L}{kA}
     \label{eq:conductive_resistance}
@@ -181,21 +178,18 @@ can also be expressed in terms of thermal resistance \cite{heattransfer,hmt_f&a}
     \dot{Q}_{12} = \frac{T_{1}-T_{2}}{R_{\mathrm{cond}}}
     \label{eq:conductive_resistance_heat_flow}
 \end{gather}
-
 The thermal-resistance formulation allows conductive paths to be combined in series or 
 parallel. At an interface between two components, the effective resistance also depends 
 on surface roughness, contact pressure and any intermediate materials. These effects are 
 represented by the contact resistance, while the linear thermal conductance is defined as 
 the inverse of that resistance 
 \cite{hmt_f&a,th_handbook}:
-
 \begin{equation}
     G_{12}^{L}
     =
     \frac{1}{R_{12}}
     \label{eq:linear_thermal_conductance}
 \end{equation}
-
 where $G_{12}^{L}$ is the linear thermal conductance between components 1 and 2, and 
 $R_{12}$ is the corresponding resistance. This relation is particularly useful in nodal 
 models because each conductive connection is represented by a conductance between two 
@@ -210,14 +204,12 @@ which propagate through vacuum. Radiative exchange takes place between spacecraf
 surfaces, while external surfaces also emit energy towards space. The power emitted by a 
 real surface depends on the absolute temperature, area and emissivity, as expressed by 
 the Stefan--Boltzmann law \cite{hmt_f&a,spacethctrl}:
-
 \begin{equation}
     \dot{Q}
     =
     \varepsilon\sigma A T^{4}
     \label{eq:emitted_radiation}
 \end{equation}
-
 where $\varepsilon$ is the surface emissivity, $\sigma$ is the Stefan--Boltzmann constant, 
 $A$ is the emitting area and $T$ is the absolute surface temperature. The value of the 
 Stefan--Boltzmann constant is \newline
@@ -225,7 +217,6 @@ $\sigma=5.67\times10^{-8}\,\mathrm{W\,m^{-2}\,K^{-4}}$
 \cite{hmt_f&a}. \newline
 For an external surface facing deep space without obstruction, the net radiative heat flow 
 is expressed as \cite{spacethctrl}:
-
 \begin{equation}
     \dot{Q}_{\mathrm{rad}}
     =
@@ -233,7 +224,6 @@ is expressed as \cite{spacethctrl}:
     \left(T^{4}-T_{\mathrm{space}}^{4}\right)
     \label{eq:radiation_to_space}
 \end{equation}
-
 where $T_{\mathrm{space}}$ is the effective temperature assigned to deep space. The term 
 $T_{\mathrm{space}}^{4}$ is generally small because the deep-space temperature is much 
 lower than the spacecraft surface temperature \cite{spacethctrl}.
@@ -251,7 +241,7 @@ Figure~\ref{fig:blackbody_spectral_emission}
     \centering
     % Source image: Principios de Transferencia de Calor.
     \includegraphics[width=0.88\textwidth]
-    {Figures/marco_teorico/imag_01.png}
+    {Figures/04/imag_01.png}
     \caption{Blackbody spectral emissive power at different temperatures and displacement of the emission maximum. Taken from \cite{heattransfer}.}
     \label{fig:blackbody_spectral_emission}
 \end{figure}
@@ -259,12 +249,10 @@ Figure~\ref{fig:blackbody_spectral_emission}
 When radiation reaches a surface, part of it is absorbed, part is reflected and the remainder, 
 if any, is transmitted. Conservation of radiative energy requires the corresponding fractions 
 to satisfy \cite{hmt_f&a}
-
 \begin{equation}
     \alpha+\rho+\tau=1
     \label{eq:radiative_properties}
 \end{equation}
-
 where $\alpha$, $\rho$ and $\tau$ are absorptivity, reflectivity and transmissivity, 
 respectively. For an opaque surface, no radiation is transmitted, and 
 Equation~\ref{eq:radiative_properties} reduces to $\alpha+\rho=1$ 
@@ -292,7 +280,7 @@ as illustrated in Figure~\ref{fig:view_factor_geometry} \cite{spacethctrl}.
         % Source image: Radiacion_I.pdf,
         % PDF page 4, slide 4.
         \includegraphics[width=\linewidth]
-        {Figures/marco_teorico/Captura de pantalla 2026-07-25 144427.png}
+        {Figures/04/Captura de pantalla 2026-07-25 144427.png}
         \caption{Wavelength range of thermal radiation. Taken from \cite{tcs_radiation1}.}
         \label{fig:thermal_radiation_spectrum}
     \end{subfigure}
@@ -307,7 +295,7 @@ as illustrated in Figure~\ref{fig:view_factor_geometry} \cite{spacethctrl}.
         % Source image: Capitulos esenciales libro (inglés).pdf,
         % PDF page 63 (printed page 83), Figure 5.5.
         \includegraphics[width=\linewidth]
-        {Figures/marco_teorico/fig_03.png}
+        {Figures/04/fig_03.png}
         \caption{Geometry used to define a view factor. Taken from \cite{spacethctrl}.}
         \label{fig:view_factor_geometry}
     \end{subfigure}
@@ -321,7 +309,6 @@ as illustrated in Figure~\ref{fig:view_factor_geometry} \cite{spacethctrl}.
 View factors satisfy the reciprocity relation. When a set of $N$ surfaces forms a closed 
 enclosure, the factors from each surface also satisfy the following rule 
 \cite{spacethctrl,hmt_f&a}:
-
 \begin{gather}
     A_iF_{ij} = A_jF_{ji}
     \label{eq:view_factor_reciprocity}
@@ -329,7 +316,6 @@ enclosure, the factors from each surface also satisfy the following rule
     \sum_{j=1}^{N}F_{ij} = 1
     \label{eq:view_factor_summation}
 \end{gather}
-
 where $N$ is the number of surfaces forming the enclosure.
 \end{samepage}
 
@@ -343,7 +329,6 @@ numerically \cite{spacethctrl,ecss_man}.
 Thermal capacitance measures the energy required to change the temperature of a body. 
 For a body with uniform temperature and constant properties, it is given by 
 \cite{th_handbook,hmt_f&a}:
-
 \begin{gather}
     C = mc_p
     \label{eq:thermal_capacitance}
@@ -351,19 +336,16 @@ For a body with uniform temperature and constant properties, it is given by
     \Delta E = C\Delta T
     \label{eq:stored_thermal_energy}
 \end{gather}
-
 where $C$ is the thermal capacitance, $m$ is the mass, $c_p$ is the specific heat 
 capacity and $\Delta E$ represents the changes in the stored thermal energy of a body.
 
 For a transient process, the energy balance is expressed as \cite{spacethctrl}:
-
 \begin{equation}
     C\frac{\mathrm{d}T}{\mathrm{d}t}
     =
     \dot{Q}_{\mathrm{net}}
     \label{eq:transient_energy_balance}
 \end{equation}
-
 where $\dot{Q}_{\mathrm{net}}$ is the net heat flow into the body. For the same net 
 heat flow, a larger thermal capacitance results in a slower temperature change 
 \cite{hmt_f&a}.
@@ -371,7 +353,6 @@ heat flow, a larger thermal capacitance results in a slower temperature change
 For a single body connected to a constant-temperature boundary through a linear 
 thermal resistance $R$, the thermal time constant and the corresponding temperature 
 response are expressed as \cite{hmt_f&a}:
-
 \begin{gather}
     \tau_{\mathrm{th}} = RC
     \label{eq:thermal_time_constant}
@@ -384,8 +365,6 @@ response are expressed as \cite{hmt_f&a}:
     \exp\left(-\frac{t}{\tau_{\mathrm{th}}}\right)
     \label{eq:first_order_thermal_response}
 \end{gather}
-
-\begin{samepage}
 where $T_0$ is the initial temperature and $T_\infty$ is the equilibrium temperature 
 approached as time increases. A larger time constant corresponds to a slower response 
 \cite{hmt_f&a}.
@@ -393,7 +372,6 @@ approached as time increases. A larger time constant corresponds to a slower res
 During a transient process, heat flow changes with time, and the net energy 
 transferred between two instants is obtained by integrating the heat flow over 
 the corresponding interval \cite{hmt_f&a}:
-
 \begin{equation}
     E_{12}
     =
@@ -401,7 +379,6 @@ the corresponding interval \cite{hmt_f&a}:
     \dot{Q}(t)\,\mathrm{d}t
     \label{eq:integrated_thermal_energy}
 \end{equation}
-
 The sign of $E_{12}$ follows the sign convention adopted for $\dot{Q}$. In orbital 
 analysis, this integral quantifies the energy absorbed or released during a selected part 
 of the orbit. For example, energy is stored during an illuminated interval and released 
@@ -409,7 +386,6 @@ after eclipse entry. The corresponding temperature change is delayed by the ther
 capacitance by the thermal capacitance and the conductive and radiative connections of the component with the 
 rest of the system 
 \cite{spacethctrl,th_handbook}.
-\end{samepage}
 
 \section{Mathematical Modelling of Spacecraft Thermal Systems}
 
@@ -473,7 +449,7 @@ connection between two adjacent nodes \cite{th_handbook,thermal_eng_man}.
         % Source image: Thermal_Control_Handbook.pdf,
         % PDF page 545 (printed page 540), Figure 15.2.
         \includegraphics[width=\linewidth]
-        {Figures/marco_teorico/Captura de pantalla 2026-07-25 165441.png}
+        {Figures/04/Captura de pantalla 2026-07-25 165441.png}
         \caption{Approximation of a continuous temperature distribution by discrete nodal values.}
         \label{fig:lumped_temperature_approximation}
     \end{subfigure}
@@ -488,7 +464,7 @@ connection between two adjacent nodes \cite{th_handbook,thermal_eng_man}.
         % Source image: Thermal_Control_Handbook.pdf,
         % PDF page 552 (printed page 547), Figure 15.13.
         \includegraphics[width=\linewidth]
-        {Figures/marco_teorico/fig_05.png}
+        {Figures/04/fig_05.png}
         \caption{Conductive connection between two adjacent nodes.}
         \label{fig:lumped_conductive_link}
     \end{subfigure}
@@ -501,7 +477,6 @@ The principle of conservation of energy is applied to each of the $N$ capacitive
 to establish the corresponding energy balance. This converts the continuous temperature field into a 
 coupled system of $N$ first-order ordinary differential equations, one for each nodal temperature. 
 The corresponding balance for a general node $i$ is written as \cite{spacethctrl,thermal_eng_man}: 
-
 \begin{equation}
     C_{i}\frac{\mathrm{d}T_{i}}{\mathrm{d}t}
     =
@@ -516,7 +491,6 @@ The corresponding balance for a general node $i$ is written as \cite{spacethctrl
     \left(T_{j}^{4}-T_{i}^{4}\right)
     \label{eq:lumped_nodal_balance}
 \end{equation}
-
 where $C_i$ is the nodal thermal capacitance, $\dot{Q}_i(t)$ is the net heat load applied to the node, 
 $G^L_{ij}$ is the linear conductance, $G^R_{ij}$ is the radiative exchange coefficient, $\sigma$ is the 
 Stefan--Boltzmann constant and $N$ is the total number of nodes in the network.
@@ -569,24 +543,18 @@ loads are also periodic. The thermal response is periodic when the nodal tempera
 repeat after the same period. To approach this condition, the final temperature 
 distribution from each calculated cycle is used to initialise the next one 
 \cite{spacethctrl,gaite2012linear,esatan_training_man}.
-
 \begin{equation}
     \dot{Q}_{i}(t+P) = \dot{Q}_{i}(t)
     \label{eq:periodic_heat_load}
 \end{equation}
-
 \begin{equation}
     T_{i}(t+P) = T_{i}(t)
     \label{eq:periodic_temperature}
 \end{equation}
-
-\begin{samepage}
-
 In numerical calculations, small differences generally remain between the temperatures 
 calculated at the beginning and end of a complete period. Cyclic convergence is accepted 
 when the maximum of these differences is below a selected tolerance 
 \cite{thermal_eng_man,esatan_training_man}.
-
 \begin{equation}
     \max
     \left|
@@ -596,13 +564,10 @@ when the maximum of these differences is below a selected tolerance
     \varepsilon_{\mathrm{cyc}}
     \label{eq:cyclic_convergence}
 \end{equation}
-
 where $\varepsilon_{\mathrm{cyc}}$ is the convergence criterion. Once this condition is 
 satisfied, the calculated cycle represents the response to the periodic loads rather 
 than the initial numerical adjustment of the model 
 \cite{gaite2012linear,thermal_eng_man,esatan_training_man}.
-
-\end{samepage}
 
 \section{
     \texorpdfstring

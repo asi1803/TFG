@@ -22,3 +22,14 @@
     \thispagestyle{empty}%
     \newpage
 }
+
+% Anexo numerado internamente, pero sin mostrar la letra en el título
+\newcommand{\hiddenappendixchapter}[2]{%
+    \refstepcounter{chapter}%
+    \chapter*{#1}%
+    \phantomsection%
+    \addcontentsline{toc}{chapter}
+        {\protect\numberline{\thechapter}#1}%
+    \markboth{#1}{#1}%
+    \label{#2}%
+}

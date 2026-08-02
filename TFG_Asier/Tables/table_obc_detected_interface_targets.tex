@@ -1,0 +1,32 @@
+% File: Tables/table_obc_detected_interface_targets.tex
+% Usage: \OBCDetectedInterfaceTargetsTable[0.92\textwidth]
+% This table is optional and is better suited to an appendix or verification section.
+
+\newcommand{\OBCDetectedInterfaceTargetsTable}[1][0.92\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Target groups detected from the real GL and GR conductors
+    connected to \texttt{OBC\_BOX}.}
+    \label{tab:obc_detected_interface_targets}
+    \renewcommand{\arraystretch}{1.18}
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{#1}{!}{%
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Target group} &
+        \textbf{GL pairs} &
+        \textbf{$\sum |GL|$ [W/K]} &
+        \textbf{GR pairs} &
+        \textbf{$\sum |GR|$ [m$^2$]} &
+        \textbf{Total pairs} \\ \hline
+        \texttt{BODY} & 4 & 22.68 & 559 & 0.355732 & 563 \\ \hline
+        \texttt{RADIATOR} & 4 & 0.40 & 181 & 0.020584 & 185 \\ \hline
+        \texttt{BODY\_PLATE\_MED} & 4 & 22.68 & 96 & 0.115546 & 100 \\ \hline
+        \texttt{BODY\_PANEL} & 0 & 0.00 & 364 & 0.147134 & 364 \\ \hline
+        \texttt{BODY\_PLATE\_SUP} & 0 & 0.00 & 91 & 0.092968 & 91 \\ \hline
+        \texttt{Space} & 0 & 0.00 & 24 & 0.001042 & 24 \\ \hline
+        \texttt{BODY\_PLATE\_INF} & 0 & 0.00 & 8 & 0.000083 & 8 \\ \hline
+    \end{tabular}%
+    }
+\end{table}%
+}
