@@ -1,0 +1,79 @@
+% File: Tables/table_appendix_secondary_improvements.tex
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.25\textwidth}|>{\raggedright\arraybackslash}p{0.35\textwidth}|>{\raggedright\arraybackslash}p{0.27\textwidth}|}
+    \caption{Comparison of selected secondary implementation improvements.}
+    \label{tab:appendix_secondary_improvements}\\
+    \hline
+    \textbf{Initial behaviour} & \textbf{Final behaviour} & \textbf{Main location} \\
+    \hline
+    \endfirsthead
+
+    \multicolumn{3}{c}{\tablename\ \thetable\ -- continued}\\
+    \hline
+    \textbf{Initial behaviour} & \textbf{Final behaviour} & \textbf{Main location} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    Group selectors were not consistently ordered according to the model
+    structure. &
+    Available groups follow the parent--child order defined by the Excel
+    hierarchy, with fallback ordering for malformed or disconnected branches. &
+    Common hierarchy-selection helpers and inherited group selectors. \\
+    \hline
+    Parent and descendant groups could be selected together and counted twice
+    in aggregated results. &
+    Descendants already included in a selected parent are removed and a visible
+    message identifies the corrected selection. &
+    Flow Explorer and compatible hierarchical selectors. \\
+    \hline
+    Several inherited modules evaluated only the active or first stored output
+    state. &
+    The selected value from the result-file time vector is applied to each
+    compatible calculation and retained when the analysis is restored. &
+    Flow Explorer, Group Attributes, GL/GR Conductors, Nodes and Group Study. \\
+    \hline
+    GL and GR inspection focused on individual source--target tables. &
+    The final tabs also provide matrix-quality summaries, configurable high and
+    low thresholds and detailed issue tables. &
+    GL Conductors and GR Conductors. \\
+    \hline
+    Nodal filtering was applied while the filter text was being entered. &
+    Separate \textit{Apply filter} and \textit{Clear filter} controls preserve
+    an explicit active-filter state. &
+    Nodes. \\
+    \hline
+    Interface candidates could be selected from hierarchy groups without
+    confirming an explicit thermal connection. &
+    GL and GR definitions are scanned to identify connected target groups and
+    node pairs before the interface calculation. &
+    Transient interface analysis. \\
+    \hline
+    Temperature changes over prescribed time intervals were not available as a
+    complete analysis area. &
+    Maximum and minimum temperature changes are calculated over selectable
+    10-, 15-, 30- and 60-minute windows and summarised by group. &
+    Transient temperature-variation analysis. \\
+    \hline
+    Validation and feedback differed between individual interface blocks. &
+    Missing cases, empty selections and unavailable data produce visible
+    messages before the calculation continues. &
+    All final analysis modules. \\
+    \hline
+    Saving logic was distributed among individual output areas. &
+    Saved analyses share a common database, file store, restoration recipe and
+    editing workflow. &
+    Scene-management and restoration modules. \\
+    \hline
+    Most interface areas were concentrated in the main application script. &
+    The launcher, analysis tabs, shared helpers and persistence functions are
+    separated into dedicated modules. &
+    Application architecture. \\
+    \hline
+\end{longtable}
+\endgroup

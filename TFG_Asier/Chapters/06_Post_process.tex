@@ -41,7 +41,7 @@ visualisations generated for the HELIOS steady-state case
 \begin{figure}[H]
     \centering
 
-    \begin{subfigure}[t]{0.82\textwidth}
+    \begin{subfigure}[t]{0.9\textwidth}
         \centering
         \includegraphics[
             width=\textwidth,
@@ -291,10 +291,11 @@ available, evaluates the requested information at a chosen output instant.
 
 \begin{samepage}
 
-Enlarged views of these functional areas are included in
-Appendix~\ref{app:application_interface_overview}. Each tab is
-presented separately to provide a readable view of its case, hierarchy, time
-and representation controls.
+A visual comparison between the initial and final versions of these
+inherited modules is provided in
+Appendix~\ref{app:inherited_interface_evolution}. The comparison focuses on
+the transient and multi-case adaptations while retaining equivalent physical
+selections in both interfaces.
 
 The controls shown by each tab depend on the information present in the
 active case. Temperature units already defined in the result file remain
@@ -303,7 +304,12 @@ required. Before generating a figure or table, the tool checks for empty case
 selections, unsupported combinations and missing data. Clear messages identify
 the problem and prevent the calculation from continuing with incomplete
 inputs. These checks give all compatible modules a consistent operating logic.
-    
+
+Further secondary implementation details, including hierarchy safeguards,
+temporal evaluation, conductor inspection, validation feedback and
+persistent-storage integrity checks, are documented in
+Appendix~\ref{app:secondary_implementation_improvements}.
+
 \end{samepage}
 
 \subsection{Time Selection}
@@ -381,14 +387,12 @@ and the associated case controls.
 \end{figure}
 
 For any compatible result \(x\), the adopted convention is
-
 \begin{equation}
     \Delta x_{R-C}
     =
     x_R-x_C,
     \label{eq:case_difference_ch6}
 \end{equation}
-
 where \(R\) denotes the reference case and \(C\) one comparison case. A
 positive value indicates that the reference result is greater, while a
 negative value indicates that the comparison result is greater. The
@@ -467,7 +471,7 @@ information.
     \centering
     \setcounter{subfigure}{1}
 
-    \begin{subfigure}[t]{0.75\textwidth}
+    \begin{subfigure}[t]{0.7\textwidth}
         \centering
         \includegraphics[
             width=\textwidth,

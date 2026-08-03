@@ -1,0 +1,33 @@
+% File: Tables/table_appendix_obc_detected_targets.tex
+% Usage: \AppendixOBCDetectedTargetsTable[0.94\textwidth]
+
+\newcommand{\AppendixOBCDetectedTargetsTable}[1][0.94\textwidth]{%
+\begin{table}[!htbp]
+    \centering
+    \caption{Target groups detected from the explicit GL and GR connections
+    to \texttt{OBC\_BOX} in the nominal case.}
+    \label{tab:appendix_obc_detected_targets}
+    \renewcommand{\arraystretch}{1.16}
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{#1}{!}{%
+    \begin{tabular}{@{}lrrrrr@{}}
+        \toprule
+        \textbf{Target group} &
+        \textbf{GL pairs} &
+        \textbf{$\sum |GL|$ [W/K]} &
+        \textbf{GR pairs} &
+        \textbf{$\sum |GR|$ [m$^2$]} &
+        \textbf{Total pairs} \\
+        \midrule
+        \texttt{BODY} & 4 & 22.68 & 559 & 0.355732 & 563 \\
+        \texttt{RADIATOR} & 4 & 0.40 & 181 & 0.020584 & 185 \\
+        \texttt{BODY\_PLATE\_MED} & 4 & 22.68 & 96 & 0.115546 & 100 \\
+        \texttt{BODY\_PANEL} & 0 & 0.00 & 364 & 0.147134 & 364 \\
+        \texttt{BODY\_PLATE\_SUP} & 0 & 0.00 & 91 & 0.092968 & 91 \\
+        \texttt{Space} & 0 & 0.00 & 24 & 0.001042 & 24 \\
+        \texttt{BODY\_PLATE\_INF} & 0 & 0.00 & 8 & 0.000083 & 8 \\
+        \bottomrule
+    \end{tabular}%
+    }
+\end{table}%
+}

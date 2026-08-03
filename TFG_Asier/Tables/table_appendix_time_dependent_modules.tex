@@ -1,0 +1,38 @@
+% File: Tables/table_appendix_time_dependent_modules.tex
+\begin{table}[H]
+    \centering
+    \caption{Use of the selected output time in the inherited modules.}
+    \label{tab:appendix_time_dependent_modules}
+    \small
+    \renewcommand{\arraystretch}{1.13}
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{0.18\textwidth}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+        \hline
+        \textbf{Module} & \textbf{Time-dependent output} & \textbf{Stored setting} \\
+        \hline
+        Flow Explorer &
+        Instantaneous source--target heat flows used by the selected graph. &
+        Output time, groups, units, tolerance and graph type. \\
+        \hline
+        Group Attributes &
+        Group temperatures, thermal loads and selected metadata. &
+        Output time, cases, groups, attributes and representation mode. \\
+        \hline
+        GL Conductors &
+        Linear-conductor values between the selected source and target. &
+        Output time, groups and case selection. \\
+        \hline
+        GR Conductors &
+        Radiative-conductor values between the selected source and target. &
+        Output time, groups and case selection. \\
+        \hline
+        Nodes &
+        Nodal temperatures, loads and selected node attributes. &
+        Output time, cases, groups, attributes and active filter. \\
+        \hline
+        Group Study &
+        Group summary and internal or external conductor values. &
+        Output time, case, group, conductor type and units. \\
+        \hline
+    \end{tabularx}
+\end{table}

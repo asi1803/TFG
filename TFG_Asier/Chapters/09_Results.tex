@@ -17,7 +17,6 @@ defined in Chapter~\ref{ch:electrical_battery_analysis}; consequently, their
 variations originate from the imported thermal results and the case-dependent
 load profiles.
 
-
 \section{Cases and Comparison Criteria}
 \label{sec:comparison_criteria}
 
@@ -100,7 +99,7 @@ $4\,^{\circ}\mathrm{C}$.
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.9\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/09/battery_load_temperature_comparison.png}
     \caption{Internal heat load and mean temperature of \texttt{BATTERY} in
@@ -176,7 +175,7 @@ cooling over the selected window and positive values identify heating.
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.9\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/09/body_panel_deltaT_comparison.png}
     \caption{Temperature-change envelopes of \texttt{BODY\_PANEL} over a
@@ -199,12 +198,19 @@ Figure~\ref{fig:obc_radiator_interface_comparison}. At each instant, the upper
 and lower curves correspond to the connected pair that produces the largest
 absolute difference for that case. The pair can change during the simulation,
 so the figure is interpreted together with the maximum-value summary in
-Table~\ref{tab:multicase_interface_summary}.
+Table~\ref{tab:multicase_interface_summary}. The maximum interface
+difference increases from $17.78\,^{\circ}\mathrm{C}$ in the cold case to
+$20.81\,^{\circ}\mathrm{C}$ in the nominal case and
+$24.67\,^{\circ}\mathrm{C}$ in the hot case. The nominal and hot maxima are
+formed by nodes 31023 and 35506, while the cold maximum involves nodes 31017
+and 35502. Both conductive and radiative couplings are present in every
+critical pair, and the hot environment produces the largest separation
+between the selected OBC and radiator nodes.
 
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.8\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/09/obc_radiator_interface_comparison.png}
     \caption{Critical connected-node temperatures between
@@ -213,17 +219,7 @@ Table~\ref{tab:multicase_interface_summary}.
 \end{figure}
 
 \input{Tables/table_multicase_interface_summary.tex}
-\MultiCaseInterfaceSummaryTable[0.98\textwidth]
-
-The maximum interface difference increases from
-$17.78\,^{\circ}\mathrm{C}$ in the cold case to
-$20.81\,^{\circ}\mathrm{C}$ in the nominal case and
-$24.67\,^{\circ}\mathrm{C}$ in the hot case. The nominal and hot maxima are
-formed by nodes 31023 and 35506, while the cold maximum involves nodes 31017
-and 35502. Both conductive and radiative couplings are present in every
-critical pair. The hot environment therefore not only shifts both components
-to higher temperatures, but also produces the largest separation between the
-selected OBC and radiator nodes.
+\MultiCaseInterfaceSummaryTable[0.94\textwidth]
 
 
 \subsection{Heat Flows and Net Energy Transfer}
@@ -239,7 +235,7 @@ $Q_{\mathrm{GT}}$ for the three cases.
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.9\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/09/battery_body_plate_total_heat_flow_comparison.png}
     \caption{Total heat flow between \texttt{BATTERY} and
@@ -268,7 +264,7 @@ case-dependent battery dissipation.
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.9\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/09/battery_body_plate_heat_flow_difference.png}
     \caption{Nominal-minus-hot and nominal-minus-cold differences in total
@@ -276,52 +272,86 @@ case-dependent battery dissipation.
     \label{fig:battery_body_plate_heat_flow_difference}
 \end{figure}
 
-The complete battery thermal balance and its time integral are compared in
-Figure~\ref{fig:battery_net_energy_comparison}. The integral starts from zero
-for each case and represents the net thermal-energy change relative to the
-initial instant. It can increase or decrease according to the sign of
-$Q_{\mathrm{balance}}$ and must not be interpreted as the absolute energy
-stored in the battery.
+The absorbed direct-solar and albedo contributions of
+\texttt{SOLAR\_PANELS} are integrated over time to compare the thermal energy
+received in the three environments. These contributions are selected because
+they are directly determined by the orbital radiative conditions and clearly
+show how the instantaneous input produces a time-integrated energy transfer.
+
+Figure~\ref{fig:solar_panels_QS_energy_comparison} represents the direct-solar
+power \(Q_S\) and its time integral \(E_{Q_S}\). The power becomes zero during
+eclipse, so the corresponding integrated-energy curve remains constant until
+direct illumination resumes. The different eclipse intervals therefore
+produce distinct plateaus in the three cases.
 
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.9\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
-    ]{Figures/09/battery_net_thermal_energy_comparison.png}
-    \caption{Battery thermal balance and net thermal-energy change relative to
-    the initial instant.}
-    \label{fig:battery_net_energy_comparison}
+    ]{Figures/09/solar_panels_thermal_energy_comparison.png}
+    \caption{Direct-solar thermal power and its time-integrated energy
+    contribution for \texttt{SOLAR\_PANELS} in the nominal, hot and cold
+    cases.}
+    \label{fig:solar_panels_QS_energy_comparison}
 \end{figure}
 
-The nominal curve initially rises to $1.08\,\mathrm{Wh}$ and subsequently
-falls to $-0.13\,\mathrm{Wh}$ at the end of the simulation. The cold case
-reaches $0.57\,\mathrm{Wh}$ and ends at $0.16\,\mathrm{Wh}$, indicating a
-small positive net change over the analysed interval. The hot case presents a
-predominantly negative integral, reaches $-1.79\,\mathrm{Wh}$ before its late
-eclipse transition and finishes at $-1.12\,\mathrm{Wh}$. These values describe
-the balance of all selected thermal contributions and are independent of the
-electrical energy stored by the battery model.
+The hot case receives the largest direct-solar energy over the complete
+simulation because its illuminated intervals are longer. The nominal and cold
+curves contain longer constant segments during eclipse, although their
+instantaneous power levels remain comparable while illumination is present.
+The final value of each curve represents the thermal energy transferred by
+direct solar radiation from the initial instant, rather than energy stored
+within the panels.
 
-Figure~\ref{fig:battery_thermal_balance_energy_difference} provides an
-additional \textit{Case difference} example for nominal minus cold. The power
-difference ranges from approximately $-6.65$ to $6.32\,\mathrm{W}$, while the
-difference between their integrated thermal-energy changes remains between
-$-0.35$ and $0.58\,\mathrm{Wh}$ and ends at $-0.28\,\mathrm{Wh}$. The energy
-difference follows the accumulated effect of the signed power difference and
-therefore varies more gradually than the instantaneous curve.
+The albedo contribution in
+Figure~\ref{fig:solar_panels_QA_energy_comparison} varies more gradually with
+orbital position. Unlike \(Q_S\), it does not follow a two-level illuminated
+and eclipse pattern. Its integration therefore produces smoother curves and
+smaller final energy values.
 
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.98\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
-    ]{Figures/09/battery_thermal_balance_energy_difference.png}
-    \caption{Nominal-minus-cold difference in battery thermal balance and net
-    thermal-energy change.}
-    \label{fig:battery_thermal_balance_energy_difference}
+    ]{Figures/09/solar_panels_thermal_energy_comparison_QA.png}
+    \caption{Albedo thermal power and its time-integrated energy contribution
+    for \texttt{SOLAR\_PANELS} in the nominal, hot and cold cases.}
+    \label{fig:solar_panels_QA_energy_comparison}
 \end{figure}
 
+The albedo profiles reach their maxima at different orbital positions and
+become negligible during intervals in which the corresponding planetary
+reflection is not visible. The final integrated values show that this
+contribution remains considerably smaller than the direct-solar input, while
+still differing between the three radiative environments.
+
+The \textit{Case difference} representation in
+Figure~\ref{fig:solar_panels_QS_energy_difference} isolates the effect of the
+non-coincident eclipse intervals. The nominal-minus-hot and
+nominal-minus-cold power differences change abruptly whenever one case is
+illuminated and the other remains in eclipse. Their integrated curves evolve
+linearly during these intervals and remain constant whenever the instantaneous
+difference becomes zero.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=1.0\textwidth,
+        keepaspectratio
+    ]{Figures/09/solar_panels_thermal_energy_diff_QS.png}
+    \caption{Nominal-minus-hot and nominal-minus-cold differences in
+    direct-solar thermal power and its time-integrated energy contribution for
+    \texttt{SOLAR\_PANELS}.}
+    \label{fig:solar_panels_QS_energy_difference}
+\end{figure}
+
+This comparison demonstrates that the difference between two integrated
+energy curves is governed by both the magnitude of the instantaneous power
+separation and the duration for which it is maintained. The result is not an
+absolute stored-energy difference, but the difference between the
+time-integrated direct-solar contributions of the two cases.
 
 \section{Electrical and Battery Response}
 \label{sec:electrical_battery_comparison}
@@ -346,7 +376,7 @@ the smallest load with the longest eclipse.
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.9\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/09/solar_electrical_balance_comparison.png}
     \caption{Estimated solar electrical generation and selected load demand
@@ -376,7 +406,7 @@ panel-temperature-dependent efficiencies.
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.9\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/09/solar_electrical_generation_difference.png}
     \caption{Nominal-minus-hot and nominal-minus-cold differences in estimated
@@ -411,7 +441,7 @@ main comparison.
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.82\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/09/battery_soc_comparison.png}
     \caption{Battery state of charge obtained with the common battery
@@ -441,7 +471,7 @@ throughout the complete $100.84\,\mathrm{min}$ simulation.
 \begin{figure}[H]
     \centering
     \includegraphics[
-        width=0.85\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/09/battery_temperature_derating_comparison.png}
     \caption{Battery temperature, charge-derating factor and electrical
@@ -463,7 +493,7 @@ retained in the three subfigures.
 \begin{figure}[H]
     \centering
 
-    \begin{subfigure}[t]{0.85\textwidth}
+    \begin{subfigure}[t]{1.0\textwidth}
         \centering
         \includegraphics[
             width=\textwidth,
@@ -478,7 +508,7 @@ retained in the three subfigures.
     \ContinuedFloat
     \centering
 
-    \begin{subfigure}[t]{0.8\textwidth}
+    \begin{subfigure}[t]{1.0\textwidth}
         \centering
         \includegraphics[
             width=\textwidth,
@@ -494,7 +524,7 @@ retained in the three subfigures.
     \ContinuedFloat
     \centering
 
-    \begin{subfigure}[t]{0.74\textwidth}
+    \begin{subfigure}[t]{1.0\textwidth}
         \centering
         \includegraphics[
             width=\textwidth,
@@ -509,11 +539,6 @@ retained in the three subfigures.
     \label{fig:battery_voltage_current_comparison}    
 \end{figure}
 
-\FloatBarrier
-
-\input{Tables/table_multicase_battery_summary.tex}
-\MultiCaseBatterySummaryTable[0.7\textwidth]
-
 The nominal voltage ranges from $22.65$ to $24.38\,\mathrm{V}$, with maximum
 charge and discharge currents of $1.50$ and $0.95\,\mathrm{A}$. The hot case
 reaches $24.52\,\mathrm{V}$ and the largest discharge current,
@@ -522,6 +547,11 @@ discharge power. The cold case reaches $24.25\,\mathrm{V}$, while its maximum
 charge and discharge currents remain at $1.29$ and $0.24\,\mathrm{A}$. The
 reduced cold-case current is consistent with both the lower selected load and
 the active charge derating.
+
+\FloatBarrier
+
+\input{Tables/table_multicase_battery_summary.tex}
+\MultiCaseBatterySummaryTable[0.7\textwidth]
 
 The summary confirms that no case reaches the lower SOC limit or leaves
 electrical demand unserved. The hot case produces the largest curtailed solar

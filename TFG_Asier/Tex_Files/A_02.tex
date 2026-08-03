@@ -1,0 +1,228 @@
+\hiddenappendixchapter
+    {Secondary Implementation Improvements}
+    {app:secondary_implementation_improvements}
+
+\providecommand{\appBimage}[1]{%
+    \IfFileExists{#1}{%
+        \includegraphics[
+            width=\linewidth,
+            keepaspectratio
+        ]{#1}%
+    }{%
+        \fbox{%
+            \parbox[c][0.13\textheight][c]{0.92\linewidth}{%
+                \centering
+                \textbf{Capture pending}\\[0.6em]
+                \texttt{\detokenize{#1}}
+            }%
+        }%
+    }%
+}
+
+Several adaptations introduced during the development are secondary to the
+transient and electrical methods described in the main chapters. They improve
+selection consistency, temporal evaluation, conductor inspection, user
+feedback, persistent storage and code organisation. The following sections
+compare the relevant behaviour of the initial and final implementations and
+document only functions present in the final application.
+
+\section{Comparison of Initial and Final Behaviour}
+\label{appsec:secondary_behaviour_comparison}
+
+Table~\ref{tab:appendix_secondary_improvements} summarises the selected
+adaptations. The comparison is based on the operation of both application
+versions and on the final source-code organisation. It is not intended as a
+complete change log, since the transient and electrical developments are
+already described in Chapters~\ref{ch:multicase_tool},
+\ref{ch:transient_analysis} and~\ref{ch:electrical_battery_analysis}.
+
+\input{Tables/table_appendix_secondary_improvements.tex}
+
+\section{Hierarchy Safeguards and Time-Dependent Inspection}
+\label{appsec:hierarchy_time_safeguards}
+
+Hierarchy-aware selection prevents the same physical branch from being
+included more than once in an aggregated result. Figure~
+\ref{fig:appendix_hierarchy_warning} shows the message produced when a parent
+group and one or more of its descendants are selected simultaneously. The
+descendants are removed because their nodes are already contained in the
+parent selection.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[
+        width=0.94\textwidth,
+        keepaspectratio
+    ]{Figures/Anexo_02/hierarchy_selection_warning.png}
+    \caption{Automatic removal of redundant descendant groups.}
+    \label{fig:appendix_hierarchy_warning}
+\end{figure}
+
+The inherited modules use the output-time vector stored in each transient
+result file. The selected instant is evaluated independently in each tab so
+that its configuration can be saved and restored together with the remaining
+controls. Table~\ref{tab:appendix_time_dependent_modules} identifies the
+result evaluated at that instant.
+
+\input{Tables/table_appendix_time_dependent_modules.tex}
+
+Figure~\ref{fig:appendix_time_controls} provides two representative examples.
+The Group Attributes selector is populated from the transient result vector,
+whereas the GL tab uses the chosen time when generating the conductor table.
+Equivalent controls are used by the remaining compatible modules.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \appBimage{Figures/Anexo_02/time_control_group_attributes.png}
+        \caption{Group Attributes.}
+        \label{fig:appendix_time_group_attributes}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \appBimage{Figures/Anexo_02/time_control_gl_conductors.png}
+        \caption{GL Conductors.}
+        \label{fig:appendix_time_gl_conductors}
+    \end{subfigure}
+
+    \caption{Representative output-time controls in inherited modules.}
+    \label{fig:appendix_time_controls}
+\end{figure}
+
+\FloatBarrier
+
+\section{Conductor Inspection and Interface Detection}
+\label{appsec:conductor_interface_detection}
+
+The GL and GR tabs include matrix-level diagnostics in addition to the
+source--target tables described in Appendix~
+\ref{app:inherited_interface_evolution}. The summaries report the number of
+couplings and classify values according to configurable high and low
+thresholds. Detailed issue tables can then isolate the affected pairs and be
+saved independently.
+
+\begin{figure}[!htbp]
+    \centering
+
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \appBimage{Figures/Anexo_02/gl_matrix_quality_summary.png}
+        \caption{GL matrix summary.}
+        \label{fig:appendix_gl_matrix_summary}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \appBimage{Figures/Anexo_02/gr_matrix_quality_summary.png}
+        \caption{GR matrix summary.}
+        \label{fig:appendix_gr_matrix_summary}
+    \end{subfigure}
+
+    \caption{Matrix-quality summaries available in the conductor tabs.}
+    \label{fig:appendix_conductor_matrix_summaries}
+\end{figure}
+
+The transient interface analysis uses the same explicit connection data to
+restrict the destination selector when the conductor filter is active. Only
+node pairs connected through GL or GR definitions are evaluated. The
+hierarchy remains available as a fallback when no explicit target is detected.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[
+        width=0.94\textwidth,
+        keepaspectratio
+    ]{Figures/Anexo_02/interface_conductor_filter.png}
+    \caption{Conductor-based filtering of candidate interface groups.}
+    \label{fig:appendix_interface_conductor_filter}
+\end{figure}
+
+Table~\ref{tab:appendix_obc_detected_targets} provides a numerical example for
+\texttt{OBC\_BOX}. The target groups and pair counts are obtained from the
+same connection scan used to populate the interface selector. The table
+documents the connection basis applied before the temperature differences are
+calculated.
+
+\input{Tables/table_appendix_obc_detected_targets.tex}
+
+\FloatBarrier
+
+\section{Input Validation and User Feedback}
+\label{appsec:validation_feedback}
+
+The final interface checks the information required by each calculation before
+processing begins. Missing cases, empty group selections, unsupported
+combinations and unavailable conductor data produce visible messages instead
+of incomplete outputs or uncaught errors. Figure~
+\ref{fig:appendix_validation_no_case} shows the response when no case has been
+selected. Equivalent checks are applied locally by the remaining modules.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[
+        width=0.72\textwidth,
+        keepaspectratio
+    ]{Figures/Anexo_02/validation_no_case.png}
+    \caption{Validation message displayed when no case is selected.}
+    \label{fig:appendix_validation_no_case}
+\end{figure}
+
+\section{Persistent Analysis Storage}
+\label{appsec:persistent_analysis_storage}
+
+The saving workflow described in Section~\ref{sec:analysis_saving_export}
+uses an SQLite database together with a structured file store. The database
+relates each saved analysis to its model, cases, source tab, model element and
+stored recipe. The file directory contains the generated representations and
+a JSON description of the settings required for restoration.
+
+A saved entry follows the general structure below. The exact intermediate
+folders depend on whether the output belongs to one case, several cases or a
+case-difference comparison.
+
+\begin{lstlisting}[basicstyle=\ttfamily\small, frame=single]
+scene_store/
++-- <model>/
+    +-- <scope_and_cases>/
+        +-- <element_type>_<element>/
+            +-- scene_<timestamp>_<tab>_<name>/
+                +-- scene.json
+                +-- figure.plotly.json
+                +-- figure.html
+                +-- table.csv
+                +-- table.xlsx
+                +-- figure.png
+                +-- figure.svg
+\end{lstlisting}
+
+Only the files associated with the generated output are created. Plotly
+figures produce JSON and HTML files, data tables produce CSV and spreadsheet
+files, and Matplotlib figures produce PNG and SVG images. The metadata file is
+always written.
+
+\input{Tables/table_appendix_saved_analysis_artifacts.tex}
+
+Consistency checks remove database entries whose folders no longer exist and
+scene folders that are no longer referenced by the database. An auxiliary
+cleanup script creates backups before removing saved analyses unrelated to a
+defined set of retained model files. These functions reduce stale references
+without changing the original \texttt{.TMD} or hierarchy files.
+
+\section{Source-Code Reorganisation}
+\label{appsec:source_code_reorganisation}
+
+The initial interface concentrates the inherited tabs in a single application
+script. The final organisation separates each analysis area from the launcher
+and isolates saving and restoration functions in dedicated modules. This
+structure allows one tab to be modified without rewriting the complete
+interface and supports the addition of the transient and electrical modules.
+
+\input{Tables/table_appendix_code_reorganisation.tex}
+
+The reorganisation changes only the software structure; all modules continue
+to share the same imported case and hierarchy objects.
+
+\FloatBarrier

@@ -135,10 +135,10 @@ the associated node count and the corresponding surface labels. The present
 conversion uses $\alpha$; $\varepsilon$ is displayed to preserve the complete
 surface-property reference selected by the user.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.88\textwidth,
         keepaspectratio
     ]{Figures/08/solar_electrical_balance_configuration.png}
     \caption{Configuration of the solar-panel electrical conversion, load
@@ -159,26 +159,28 @@ For the nominal calculation, the selected thermal group is
     \right].
     \label{eq:solar_efficiency_selected_ch8}
 \end{equation}
-The demand includes the \texttt{ADCS\_UNIT}, \texttt{BATTERY},
-\texttt{CAMERA\_ELEC}, \texttt{COMMS\_BOX} and \texttt{OBC\_BOX} groups.
+The demand includes the \texttt{ADCS\_UNIT}, \texttt{CAMERA\_ELEC},
+\texttt{COMMS\_BOX} and \texttt{OBC\_BOX} groups. The
+\texttt{BATTERY} group is excluded because its prescribed \(Q_I\)
+represents thermal dissipation within the battery rather than an independent
+electrical load. The battery-model losses are calculated separately during
+post-processing.
 
-\begin{samepage}
 The available thermo-optical definitions may be inspected directly before a
 property set is selected. Figure~\ref{fig:solar_property_selection_ch8} shows
 this list for the imported model and allows the solar-cell definition to be
 identified from its labels and absorptivity.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.94\textwidth,
         keepaspectratio
     ]{Figures/08/eleccion_prop_celdas_fotovoltaicas.png}
     \caption{Selection of the thermo-optical property set associated with the
     solar-cell nodes.}
     \label{fig:solar_property_selection_ch8}
 \end{figure}
-\end{samepage}
 
 The graphical output can include $Q_S$, $Q_{S,\mathrm{elec}}$ and
 $Q_{\mathrm{load}}$. Their representation identifies the illuminated and
@@ -193,10 +195,10 @@ solar-cell efficiency. In the first case, a constant value of
 \(\eta=0.30\) is applied. In the second, the temperature-dependent expression
 defined in Equation~\eqref{eq:solar_efficiency_selected_ch8} is used.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.88\textwidth,
         keepaspectratio
     ]{Figures/08/nominal_solar_electrical_power_balance_cte.png}
     \caption{Solar electrical generation and selected load demand for the
@@ -205,10 +207,10 @@ defined in Equation~\eqref{eq:solar_efficiency_selected_ch8} is used.
     \label{fig:solar_balance_constant_efficiency_ch8}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.88\textwidth,
         keepaspectratio
     ]{Figures/08/nominal_solar_electrical_power_balance.png}
     \caption{Solar electrical generation and selected load demand for the
@@ -356,10 +358,10 @@ controls. The lower and upper charge-temperature limits define the interval in
 which charging is permitted, while the ramp margin introduces a linear
 transition near each limit.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.86\textwidth,
         keepaspectratio
     ]{Figures/08/battery_pack_configuration.png}
     \caption{Battery-temperature source, charge derating and cell-pack
@@ -450,10 +452,10 @@ The second block defines the electrical efficiencies, terminal-power limits,
 internal resistances and simplified CC--CV control. Figure~\ref{fig:battery_electrical_inputs_ch8}
 shows this area of the interface.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.86\textwidth,
         keepaspectratio
     ]{Figures/08/battery_electrical_parameters.png}
     \caption{Battery efficiencies, power limits, internal resistances and
@@ -545,44 +547,42 @@ segments indicate net energy storage, falling segments indicate battery
 support of the load, and horizontal segments correspond to no net exchange or
 to an active operating restriction.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.86\textwidth,
         keepaspectratio
     ]{Figures/08/nominal_battery_soc.png}
     \caption{Battery state-of-charge evolution for the nominal transient case.}
     \label{fig:battery_soc_output_ch8}
 \end{figure}
 
-\begin{samepage}
 The second output combines terminal voltage with separate non-negative charge
 and discharge currents. Voltage uses the left vertical axis, while both
 currents use the right axis. The detailed output table also retains a signed
 battery current, defined as positive during discharge and negative during
 charge.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.86\textwidth,
         keepaspectratio
     ]{Figures/08/nominal_battery_voltage_currents.png}
     \caption{Battery terminal voltage and charge/discharge currents for the
     nominal transient case.}
     \label{fig:battery_voltage_current_output_ch8}
 \end{figure}
-\end{samepage}
 
 The third graph combines the mean battery temperature with the charge-derating
 factor and the charge and discharge efficiencies. It distinguishes a thermal
 charging restriction from variations introduced by the selected efficiency
 expressions.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.79\textwidth,
         keepaspectratio
     ]{Figures/08/nominal_battery_temperature_derating_efficiency.png}
     \caption{Battery temperature, charge-derating factor and charge/discharge
@@ -616,6 +616,6 @@ battery configuration. The same results are used to compare the nominal, hot
 and cold cases in \autoref{ch:results_discussion}.
 
 \input{Tables/table_nominal_battery_summary.tex}
-\NominalBatterySummaryTable[0.9\textwidth]
+\NominalBatterySummaryTable[0.90\textwidth]
 
 \FloatBarrier

@@ -1,0 +1,182 @@
+\chapter{Conclusions and Future Work}
+\label{ch:conclusions_future_work}
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+The developed application meets the main objective of processing, analysing
+and comparing several transient cases associated with the same
+\acrshort{esatan-tms} thermal model. The initial steady-state tool has been
+extended without removing its previous inspection capabilities, providing a
+common environment for examining complete time series and results at selected
+instants.
+
+A representative spacecraft thermal model has been developed to support the
+implementation and evaluation of these functions. The nominal, hot and cold
+cases retain the same geometry, node hierarchy, materials and thermal
+connections, while the environmental conditions and internal dissipations are
+modified. This common basis allows equivalent groups, nodes and exported
+result fields to be compared directly throughout the simulated interval.
+
+The application can load several compatible result files, preserve their case
+identity and apply the same selection to all of them. Transient temperatures,
+thermal loads, conductive and radiative heat flows, interface temperature
+differences and time-integrated energy transfers can be represented using
+superposed curves. The \textit{Case difference} option complements these
+absolute results by calculating the separation between a reference case and
+one or more comparison cases. Together, both representations preserve the
+physical operating levels and make smaller differences or non-coincident
+orbital events easier to identify.
+
+Additional calculations extend the imported \acrshort{esatan-tms} results.
+Temperature changes can be evaluated over selected time windows, critical
+interfaces are identified from explicit thermal connections and summary tables
+condense the main extrema and their occurrence times. Analyses and their
+configurations can also be saved, restored and exported, reducing the need to
+repeat the complete selection process when the same result must be examined
+again.
+
+The thermal post-processing is complemented by an electrical analysis based on
+the selected solar-panel and internal-load results. The absorbed solar load is
+used to estimate incident and converted electrical power, while the selected
+internal dissipations provide an approximation of the electrical load demand.
+These profiles supply a separate battery model that calculates state of charge,
+terminal voltage, current, accepted and curtailed power, conversion and
+resistive losses, and temperature-dependent operating restrictions. All these
+results are obtained during post-processing and do not modify the original
+thermal solution.
+
+The comparison of the three cases confirms that the highest absolute
+temperature does not necessarily coincide with the largest temporal variation
+or the greatest local gradient. The hot case produces the highest equipment
+temperatures and the largest OBC--radiator interface difference, whereas the
+cold case produces the lowest battery temperature and activates the charging
+derating. Differences in eclipse timing also affect solar generation, load
+support and the final battery state.
+
+The hot case generates the greatest electrical energy but finishes with the
+lowest state of charge because its late eclipse and higher demand produce the
+strongest final discharge. The cold case receives less solar energy and
+remains thermally restricted, although its lower load prevents unserved
+demand. These results show that battery operation cannot be determined from
+the generated or demanded energy alone, since their temporal distribution and
+the active operating limits are also relevant.
+
+The resulting tool therefore connects transient thermal inspection,
+multi-case comparison and a simplified electrical interpretation within the
+same workflow. It does not replace the thermal solver or constitute a complete
+spacecraft electrical-power-system model. Its purpose is to organise the
+exported results, reproduce consistent analyses and reveal the relations
+between environmental conditions, thermal response, electrical generation and
+battery operation. The modular structure also provides a suitable basis for
+further extensions without requiring the existing analysis areas to be
+redesigned.
+
+
+\section{Future Work}
+\label{sec:future_work}
+
+
+The following lines extend the current physical models, analysis capabilities
+and software architecture without changing the scope of the completed
+implementation.
+
+\begin{itemize}[
+    leftmargin=*,
+    itemsep=0.9em,
+    topsep=0.5em,
+    parsep=0pt
+]
+    \item \textbf{Battery-model extension.}
+    The current implementation is a configurable post-processing approximation
+    based on a generic piecewise voltage curve, separate charge and discharge
+    resistances and a simplified CC--CV strategy. Greater physical fidelity
+    would require voltage--SOC curves calibrated for a specific cell, different
+    charge and discharge characteristics, temperature-dependent resistance and
+    usable capacity, hysteresis and dynamic RC branches. Ageing,
+    cycle-dependent capacity loss and validation against experimental or
+    manufacturer data would also allow the calculated voltage, current and
+    state of charge to be evaluated for a defined battery technology.
+
+    \item \textbf{Bidirectional thermal--electrical coupling.}
+    The thermal and electrical calculations currently follow a one-directional
+    sequence: thermal results determine solar generation, load demand and
+    battery operation, but the calculated electrical losses are not returned
+    to the thermal model. A bidirectional procedure could convert battery
+    resistive losses, conversion losses and operating-mode changes into
+    time-dependent heat loads for a subsequent \acrshort{esatan-tms} solution.
+    An iterative exchange between both models would provide a more consistent
+    thermo-electrical response without requiring the post-processing
+    application to replace the thermal solver.
+
+    \item \textbf{Comparison between different thermal-model architectures.}
+    Multi-case comparison is presently restricted to result files that share a
+    common node hierarchy. A further extension could compare successive
+    versions or different architectures of the same thermal model by defining
+    correspondences between equivalent groups and components. The comparison
+    would then identify common elements, warn about unmatched regions and
+    normalise selected results by properties such as area, mass or thermal
+    capacitance when a direct nodal subtraction is not meaningful.
+
+    \item \textbf{Alignment by orbital events.}
+    Temporal alignment by eclipse entry, eclipse exit or orbital phase would
+    permit comparisons between simulations with different starting instants or
+    output-time vectors. This option would separate the effect of the physical
+    event from a displacement in the simulation timeline and facilitate the
+    comparison of cases with different eclipse durations.
+
+    \item \textbf{Sensitivity and uncertainty analysis.}
+    The existing multi-case framework provides a basis for sensitivity and
+    uncertainty studies. Sets of cases could be generated by varying contact
+    conductances, thermo-optical properties, internal dissipations, orbital
+    conditions or electrical parameters. Automated envelopes, uncertainty
+    bands and rankings would identify the inputs with the greatest influence on
+    each component.
+
+    \item \textbf{Automatic critical-event detection.}
+    The same process could detect temperature-limit violations, maximum case
+    differences, rapid thermal variations, changes in heat-flow direction,
+    minimum state of charge, active derating and periods of unserved load. A
+    common event table could then identify the affected case, element, time and
+    result without requiring every curve to be inspected individually.
+
+    \item \textbf{Performance and scalability.}
+    Larger thermal models and broader collections of transient cases would
+    benefit from selective loading of required result fields, deferred
+    processing, reuse of intermediate calculations and parallel execution
+    between cases. These improvements could reduce memory use and response time
+    when processing long simulations, finer temporal discretisations or a
+    large number of result files.
+
+    \item \textbf{Batch processing and automatic report generation.}
+    A batch mode could apply a saved analysis configuration to an entire folder
+    of cases and export the corresponding plots, tables and numerical
+    summaries. Report templates for LaTeX, PDF or spreadsheet formats would
+    extend this process towards reproducible and partially automated result
+    documentation.
+
+    \item \textbf{Persistent-storage improvements.}
+    Metadata, widget configurations and generated files are currently
+    coordinated between a local database and output folders. A unified
+    transactional layer could prevent incomplete records, detect orphaned
+    files and avoid unnecessary duplication. Portable analysis packages would
+    allow complete configurations to be exported, transferred and restored on
+    another installation. Version information and migration rules would
+    preserve compatibility when the application structure or available
+    controls change.
+
+    \item \textbf{Dedicated web architecture.}
+    The interface may evolve from Streamlit towards a separate frontend based
+    on HTML, CSS and JavaScript, connected to a Python backend through an
+    application programming interface. This architecture would offer greater
+    control over layout, asynchronous calculations, user sessions and remote
+    deployment while retaining the calculation modules as an independent
+    backend.
+
+    \item \textbf{Automated testing and validation.}
+    Unit, integration and regression tests could check file loading, sign
+    conventions, numerical integration, multi-case differences, battery
+    calculations and saved-analysis restoration after each software change.
+    These tests would also provide a stable basis for introducing new result
+    formats, analysis modules and physical models.
+\end{itemize}

@@ -1,109 +1,319 @@
 \hiddenappendixchapter
-    {Application Launch and Interface Overview}
-    {app:application_interface_overview}
+    {Evolution of the Inherited Inspection Modules}
+    {app:inherited_interface_evolution}
+% Compatibility with the reference used by the previous appendix version.
+\label{app:application_interface_overview}
 
-\section{Inspection and Conductor Modules}
-\label{appsec:inspection_modules}
+\providecommand{\appAimage}[1]{%
+    \IfFileExists{#1}{%
+        \includegraphics[
+            width=\linewidth,
+            height=0.30\textheight,
+            keepaspectratio
+        ]{#1}%
+    }{%
+        \fbox{%
+            \parbox[c][0.19\textheight][c]{0.94\linewidth}{%
+                \centering
+                \textbf{Capture pending}\\[0.6em]
+                \texttt{\detokenize{#1}}
+            }%
+        }%
+    }%
+}
 
-The model-inspection and conductor-analysis tabs follow the general interface
-organisation described in Chapter~6. The following views show each area
-separately so that its main selectors, controls and output regions can be
-identified clearly.
+The inspection modules retained from the initial application were adapted to
+use the common case collection and model hierarchy described in
+Section~\ref{sec:final_application_interface}. Their main purpose remains the
+inspection of groups, nodes and thermal connections at a selected model state,
+but the final implementation applies the same physical selection to several
+compatible cases and evaluates transient data at a specified output instant.
 
-\begin{figure}[p]
+The comparisons below focus on the interface changes rather than on new
+thermal results. The nominal case and the same hierarchy spreadsheet should be
+loaded in both versions. The hot and cold cases are added only in the final
+interface when required to expose the multi-case controls. Browser width,
+zoom, selected groups and displayed units should remain unchanged between each
+pair of captures.
+
+\section{Flow Explorer}
+\label{appsec:flow_explorer_evolution}
+
+The initial Flow Explorer provides hierarchical source and destination
+selections and generates Sankey, network and bar representations for the
+active dataset. Its group lists are assembled from the available hierarchy,
+but the initial interface does not consistently preserve the parent--child
+order and permits redundant selections in which a parent and one of its
+descendants are included simultaneously.
+
+\begin{figure}[H]
     \centering
-    \includegraphics[
-        width=\textwidth,
-        height=0.76\textheight,
-        keepaspectratio
-    ]{Figures/Anexo_01/display01.png}
-    \caption{Flow Explorer interface for hierarchical heat-flow inspection
-    and multi-case representation.}
-    \label{fig:appendix_flow_explorer}
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/original_flow_explorer.png}
+        \caption{Initial single-case interface.}
+        \label{fig:appendix_original_flow_explorer}
+    \end{subfigure}
+    \caption{Evolution of the Flow Explorer interface.}
+    \label{fig:appendix_flow_explorer_evolution}
 \end{figure}
 
-\clearpage
+The final module orders the available groups according to the Excel hierarchy
+and removes descendant selections already contained in a selected parent. A
+visible message identifies the corrected selection. The same controls are
+then applied to one or more cases at a selected output time. Superposed and
+\textit{Case difference} representations are available, and the generated
+figure can be exported or stored together with the configuration required for
+later restoration.
 
-\begin{figure}[p]
+% Capture with the same root, source, destination, units and graphical type.
+% Recommended selection: root AVIONICS, source OBC_BOX, destination RADIATOR,
+% total heat flow, t = 0 s. In the final version also load the hot and cold
+% cases and keep the multi-case controls visible.
+
+
+\begin{figure}[H]
+    \ContinuedFloat
     \centering
-    \includegraphics[
-        width=\textwidth,
-        height=0.76\textheight,
-        keepaspectratio
-    ]{Figures/Anexo_01/display02.png}
-    \caption{Case-information interface showing the datasets, groups and
-    couplings available in the loaded simulation.}
-    \label{fig:appendix_case_information}
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/final_flow_explorer.png}
+        \caption{Final transient and multi-case interface.}
+        \label{fig:appendix_final_flow_explorer}
+    \end{subfigure}
+    \caption[]{Evolution of the Flow Explorer interface. (continued)}
 \end{figure}
 
-\clearpage
+\FloatBarrier
 
-\begin{figure}[p]
+\section{Case Information}
+\label{appsec:case_information_evolution}
+
+The initial \textit{Model info} tab reports the node, group and coupling data
+associated with the active result file. The final \textit{Case info} tab
+retains these summaries for every selected case and adds level-based coupling
+inspection at a chosen output time. The visible case name is kept separate
+from the internal analysis identifier, allowing files with the same internal
+name to remain distinguishable throughout the interface.
+
+% Original: show the main model metrics and one generated group-information
+% block. Final: show the corresponding Case info metrics for the nominal case,
+% plus the level coupling selector. Crop both images to the active tab.
+\begin{figure}[H]
     \centering
-    \includegraphics[
-        width=\textwidth,
-        height=0.76\textheight,
-        keepaspectratio
-    ]{Figures/Anexo_01/display03.png}
-    \caption{Group-attribute interface for inspecting the selected model
-    elements at a specified output instant.}
-    \label{fig:appendix_group_attributes}
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/original_model_info.png}
+        \caption{Initial model-information view.}
+        \label{fig:appendix_original_model_info}
+    \end{subfigure}
+    \caption{Evolution from active-model information to case-specific inspection.}
+    \label{fig:appendix_case_information_evolution}
 \end{figure}
 
-\clearpage
-
-\begin{figure}[p]
+\begin{figure}[H]
+    \ContinuedFloat
     \centering
-    \includegraphics[
-        width=\textwidth,
-        height=0.76\textheight,
-        keepaspectratio
-    ]{Figures/Anexo_01/display04.png}
-    \caption{Linear-conductor interface with case, group and output-time
-    controls.}
-    \label{fig:appendix_gl_conductors}
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/final_case_info.png}
+        \caption{Final case-information view.}
+        \label{fig:appendix_final_case_info}
+    \end{subfigure}
+    \caption[]{Evolution from active-model information to case-specific inspection. (continued)}
 \end{figure}
 
-\clearpage
+\FloatBarrier
 
-\begin{figure}[p]
+\section{Group Attributes}
+\label{appsec:group_attributes_evolution}
+
+The initial group table is generated for one active case and reads the first
+available temporal row. This behaviour is sufficient for a steady-state
+solution but does not allow the inspected instant to be selected in a
+transient dataset. The final tab uses the stored output-time vector, evaluates
+the selected attributes at the requested instant and creates independent
+tables for the active cases. The same area can also calculate reference-minus-
+comparison tables when \textit{Case difference} is selected.
+
+% Use BATTERY, OBC_BOX and RADIATOR with Tmean, QI and QR. Generate the table
+% at t = 0 s in both versions. In the final capture select the three cases and
+% keep the representation selector visible above the table.
+\begin{figure}[H]
     \centering
-    \includegraphics[
-        width=\textwidth,
-        height=0.76\textheight,
-        keepaspectratio
-    ]{Figures/Anexo_01/display05.png}
-    \caption{Radiative-conductor interface with case, group and output-time
-    controls.}
-    \label{fig:appendix_gr_conductors}
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/original_group_attributes.png}
+        \caption{Initial table obtained from the active result file.}
+        \label{fig:appendix_original_group_attributes}
+    \end{subfigure}
+    \caption{Evolution of the group-attribute inspection area.}
+    \label{fig:appendix_group_attributes_evolution}
 \end{figure}
 
-\clearpage
-
-\begin{figure}[p]
+\begin{figure}[H]
+    \ContinuedFloat
     \centering
-    \includegraphics[
-        width=\textwidth,
-        height=0.76\textheight,
-        keepaspectratio
-    ]{Figures/Anexo_01/display06.png}
-    \caption{Nodal-information interface for the selected hierarchy
-    elements.}
-    \label{fig:appendix_nodes}
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/final_group_attributes.png}
+        \caption{Final time-dependent and multi-case table.}
+        \label{fig:appendix_final_group_attributes}
+    \end{subfigure}
+    \caption[]{Evolution of the group-attribute inspection area. (continued)}
 \end{figure}
 
-\clearpage
+\FloatBarrier
 
-\begin{figure}[p]
+\section{Linear and Radiative Conductors}
+\label{appsec:conductor_modules_evolution}
+
+The initial conductor tabs inspect the GL and GR matrices of the active case
+and provide tables between selected groups. Their table values are tied to the
+first stored conductor row, even when the source file contains a transient
+solution. The final modules expose an output-time selector and preserve the
+source--target sign convention in the generated table. Each case reports the
+number of detected couplings and the corresponding total GL or GR value, and
+the result can be exported as a separate table.
+
+% GL capture: source OBC_BOX, destination RADIATOR, t = 0 s, generated table.
+% Keep the count and total visible in the final image.
+\begin{figure}[H]
     \centering
-    \includegraphics[
-        width=\textwidth,
-        height=0.76\textheight,
-        keepaspectratio
-    ]{Figures/Anexo_01/display07.png}
-    \caption{Group-study interface for the inspection of selected components
-    and their thermal connections.}
-    \label{fig:appendix_group_study}
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/original_gl_conductors.png}
+        \caption{Initial GL-conductor table.}
+        \label{fig:appendix_original_gl_conductors}
+    \end{subfigure}
+    \caption{Evolution of the linear-conductor inspection area.}
+    \label{fig:appendix_gl_conductors_evolution}
 \end{figure}
 
-\clearpage
+\begin{figure}[H]
+    \ContinuedFloat
+    \centering
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/final_gl_conductors.png}
+        \caption{Final GL-conductor table at the selected output time.}
+        \label{fig:appendix_final_gl_conductors}
+    \end{subfigure}
+    \caption[]{Evolution of the linear-conductor inspection area. (continued)}
+\end{figure}
+
+\FloatBarrier
+
+% GR capture: source OBC_BOX, destination RADIATOR, t = 0 s, generated table.
+% Use the same vertical crop as the GL comparison.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/original_gr_conductors.png}
+        \caption{Initial GR-conductor table.}
+        \label{fig:appendix_original_gr_conductors}
+    \end{subfigure}
+    \caption{Evolution of the radiative-conductor inspection area.}
+    \label{fig:appendix_gr_conductors_evolution}
+\end{figure}
+
+\begin{figure}[H]
+    \ContinuedFloat
+    \centering
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/final_gr_conductors.png}
+        \caption{Final GR-conductor table at the selected output time.}
+        \label{fig:appendix_final_gr_conductors}
+    \end{subfigure}
+    \caption[]{Evolution of the radiative-conductor inspection area. (continued)}
+\end{figure}
+
+\FloatBarrier
+
+\section{Nodes and Group Study}
+\label{appsec:nodes_group_study_evolution}
+
+The nodal table in the initial application already supports attribute and
+group selection, but filtering is applied directly while text is entered. The
+final implementation adds explicit \textit{Apply filter} and
+\textit{Clear filter} controls, records the selected output time and generates
+case-specific or difference tables without modifying the imported data.
+
+% Select BATTERY and OBC_BOX, attributes T, QI, QR and L, t = 0 s. Apply a
+% label filter in the final capture so that the new Apply/Clear controls and
+% active-filter message are visible.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/original_nodes.png}
+        \caption{Initial nodal table and direct text filter.}
+        \label{fig:appendix_original_nodes}
+    \end{subfigure}
+    \caption{Evolution of the nodal-inspection interface.}
+    \label{fig:appendix_nodes_evolution}
+\end{figure}
+
+\begin{figure}[H]
+    \ContinuedFloat
+    \centering
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/final_nodes.png}
+        \caption{Final nodal table with explicit filter control.}
+        \label{fig:appendix_final_nodes}
+    \end{subfigure}
+    \caption[]{Evolution of the nodal-inspection interface. (continued)}
+\end{figure}
+
+\FloatBarrier
+
+The initial \textit{Group study} tab combines a group summary with internal
+and external conductor inspection. The final tab retains this scope while
+applying the common case selector, output-time control, representation mode
+and export logic. GL and GR results are stored independently so that the
+configuration associated with each conductor type can be restored without
+altering the other analysis.
+
+% Select BATTERY, t = 0 s, generate the summary and keep the internal/external
+% GL and GR analysis controls visible. Use the same selected group in both
+% versions.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/original_group_study.png}
+        \caption{Initial component summary and conductor inspection.}
+        \label{fig:appendix_original_group_study}
+    \end{subfigure}
+    \caption{Evolution of the group-study interface.}
+    \label{fig:appendix_group_study_evolution}
+\end{figure}
+
+\begin{figure}[H]
+    \ContinuedFloat
+    \centering
+    \begin{subfigure}[t]{0.96\textwidth}
+        \centering
+        \appAimage{Figures/Anexo_01/final_group_study.png}
+        \caption{Final multi-case group and conductor analysis.}
+        \label{fig:appendix_final_group_study}
+    \end{subfigure}
+    \caption[]{Evolution of the group-study interface. (continued)}
+\end{figure}
+
+\FloatBarrier
+
+\section{Summary of the Inherited Modules}
+\label{appsec:inherited_modules_summary}
+
+Table~\ref{tab:appendix_inherited_module_summary} condenses the adaptations
+shown in the preceding figures. The initial function of each module is
+retained; the changes mainly affect case organisation, transient evaluation,
+selection consistency and reproducibility.
+
+\input{Tables/table_appendix_inherited_module_summary.tex}
+
+\FloatBarrier

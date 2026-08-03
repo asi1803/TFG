@@ -1,0 +1,56 @@
+% File: Tables/table_appendix_code_reorganisation.tex
+\begingroup
+\footnotesize
+\renewcommand{\arraystretch}{1.06}
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.32\textwidth}|>{\raggedright\arraybackslash}p{0.58\textwidth}|}
+    \caption{Correspondence between the initial interface blocks and the final modules.}
+    \label{tab:appendix_code_reorganisation}\\
+    \hline
+    \textbf{Initial block} & \textbf{Final module} \\
+    \hline
+    \endfirsthead
+
+    \multicolumn{2}{c}{\tablename\ \thetable\ -- continued}\\
+    \hline
+    \textbf{Initial block} & \textbf{Final module} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    Flow Explorer block in \texttt{app\_interactiva.py} &
+    \texttt{tabs/tab\_flow\_explorer.py} \\
+    \hline
+    Model-information block &
+    \texttt{tabs/tab\_case\_info.py} \\
+    \hline
+    Group-attribute block &
+    \texttt{tabs/tab\_group\_attributes.py} \\
+    \hline
+    GL and GR blocks &
+    \texttt{tabs/tab\_gl\_conductors.py} and
+    \texttt{tabs/tab\_gr\_conductors.py} \\
+    \hline
+    Nodes and group-study blocks &
+    \texttt{tabs/tab\_nodes.py} and
+    \texttt{tabs/tab\_group\_study.py} \\
+    \hline
+    Initial transient prototype &
+    \texttt{tabs/tab\_transient.py} \\
+    \hline
+    Solar and battery calculations &
+    \texttt{tabs/tab\_sp.py} \\
+    \hline
+    Saving and restoration functions &
+    \texttt{app\_thermalviewer/scene\_manager.py},
+    \texttt{scene\_ui.py}, \texttt{restored\_scenes.py} and
+    \texttt{scene\_editor.py} \\
+    \hline
+    Common widget, hierarchy and export routines &
+    \texttt{app\_thermalviewer/app\_helpers.py} and
+    \texttt{viewer\_utils.py} \\
+    \hline
+\end{longtable}
+\endgroup

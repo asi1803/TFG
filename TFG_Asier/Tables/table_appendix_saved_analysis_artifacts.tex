@@ -1,0 +1,34 @@
+% File: Tables/table_appendix_saved_analysis_artifacts.tex
+\begin{table}[!htbp]
+    \centering
+    \caption{Files and records associated with a saved analysis.}
+    \label{tab:appendix_saved_analysis_artifacts}
+    \small
+    \renewcommand{\arraystretch}{1.14}
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{0.26\textwidth}|>{\raggedright\arraybackslash}X|}
+        \hline
+        \textbf{Stored item} & \textbf{Purpose} \\
+        \hline
+        SQLite model, case and analysis records &
+        Relate the saved output to its source files, visible case names,
+        element, tab and creation metadata. \\
+        \hline
+        Recipe JSON in the database &
+        Stores widget values required to restore the analysis configuration. \\
+        \hline
+        \texttt{scene.json} &
+        Provides a readable file copy of the saved metadata and recipe. \\
+        \hline
+        \texttt{figure.plotly.json} and \texttt{figure.html} &
+        Preserve an interactive Plotly figure and provide an independent
+        browser representation. \\
+        \hline
+        \texttt{table.csv} and \texttt{table.xlsx} &
+        Preserve a generated numerical table in two conventional formats. \\
+        \hline
+        \texttt{figure.png} and \texttt{figure.svg} &
+        Preserve a Matplotlib figure for reports and scalable editing. \\
+        \hline
+    \end{tabularx}
+\end{table}
