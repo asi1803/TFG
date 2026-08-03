@@ -1,0 +1,4 @@
+﻿Case,Element,Requested window [min],Effective window [min],Min ΔT [°C],Time of min ΔT [min],Node of min ΔT,Max ΔT [°C],Time of max ΔT [min],Node of max ΔT,Max |ΔT| [°C],Max |ΔT| / Δt [°C/min]
+Cold_case,BODY_PANEL,30,30.251236,-2.0340672,81.678337,10202,1.0947378,30.251236,10202,2.0340672,0.067239145
+Hot_case,BODY_PANEL,30,30.251236,-1.2708983,98.820704,10602,0.71864104,30.251236,10602,1.2708983,0.04201145
+Nominal_case,BODY_PANEL,30,30.251236,-2.2290719,62.519221,10202,1.6170757,89.745333,10602,2.2290719,0.073685317

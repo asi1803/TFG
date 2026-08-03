@@ -7,7 +7,7 @@ transient cases associated with a single \acrshort{esatan-tms} model.
 The hierarchy-based selection and heat-flow representation functions already
 available are adapted to analyse selected transient instants, while the 
 workflow is expanded to support multi-case loading, comparison and 
-reusable outputs.
+saved and restorable analyses.
 
 Each \texttt{.TMD} file is treated as an independent case and linked to the
 model hierarchy defined in a common Excel spreadsheet for all cases. 
@@ -17,11 +17,9 @@ representation criteria across all loaded simulations.
 
 The nodal model is solved exclusively in \acrshort{esatan-tms}. The
 post-processing tool neither repeats the thermal calculation nor modifies the
-imported data. Its purpose is to organise these values and provide the
-functional controls required for inspection, transient post-processing,
-multi-case comparison and electrical assessment. The capabilities specific to
-the transient and energy-balance modules are developed in the following
-chapters.
+imported data. Its purpose is to organise these results and provide the functional controls
+required for inspection, transient post-processing, multi-case comparison and
+electrical assessment.
 
 \section{Evolution of the Original Post-Processing Application}
 \label{sec:helios_to_present_application}
@@ -34,7 +32,7 @@ mapping supports result filtering and the generation of temperature views,
 group-attribute and conductor tables, and heat-flow representations.
 
 The result reader, hierarchical selection routines and main heat-flow views
-form the functional basis for the present development. These capabilities can
+form the functional basis for the expanded application. These capabilities can
 also be applied to transient inspection, since the state of a solved model can
 be examined at a chosen output instant.
 Figure~\ref{fig:original_helios_representations} illustrates two representative
@@ -120,8 +118,8 @@ conductor information. Individual \texttt{.TMD} files are processed
 separately, while the Excel mapping defines the component organisation required
 to select equivalent elements.
 
-Shared operations are grouped in \path{app_helpers.py} and
-\path{viewer_utils.py}. These modules handle hierarchy ordering, selection
+Shared operations are grouped in \path{app_thermalviewer/app_helpers.py} and
+\path{app_thermalviewer/viewer_utils.py}. These modules handle hierarchy ordering, selection
 validation, unit management, time-dependent access, and direct or
 difference-based representations across several cases.
 
@@ -311,7 +309,7 @@ inputs. These checks give all compatible modules a consistent operating logic.
 \subsection{Time Selection}
 \label{subsec:time_selection}
 
-The inherited tabs represent the state of the model at one output instant,
+The inherited inspection tabs represent the state of the model at one output instant,
 even when the source file contains a complete transient solution. When multiple
 output steps are present, each compatible tab adds a time selector. The
 module reads the stored time vector and applies the chosen instant to group
@@ -319,7 +317,7 @@ attributes, nodal tables, conductor summaries and instantaneous heat-flow
 representations.
 
 This adaptation extends the original steady-state views without changing
-their interpretation. Instead of replacing them with complete time histories,
+their interpretation. Instead of replacing them with complete time series,
 the user can inspect any stored output instant with the defined component
 selection and graphical tools.
 Figure~\ref{fig:time_selection_examples} illustrates the selector at the
@@ -382,7 +380,7 @@ and the associated case controls.
     \label{fig:case_difference_configuration}
 \end{figure}
 
-For any compatible quantity \(x\), the adopted convention is
+For any compatible result \(x\), the adopted convention is
 
 \begin{equation}
     \Delta x_{R-C}
@@ -405,15 +403,14 @@ Both modes use the defined component selections, units and time settings, so
 the user can change the representation without entering the complete
 configuration again.
 
-The last two tabs contain the main modules introduced in this work.
-\texttt{TRANSIENT} processes complete histories of temperatures, loads,
-interfaces and heat flows. \texttt{Energy balance} calculates solar
-generation, electrical demand and battery behaviour from the chosen simulations.
-The following chapters develop the calculations and outputs of both modules
-separately.
+The last two tabs contain the main modules added to the application.
+\texttt{TRANSIENT} processes complete time series of temperatures, thermal
+loads, interface temperature differences and heat flows. \texttt{Energy
+balance} estimates solar generation, electrical load demand and battery
+behaviour from the chosen simulations.
 
 \section{Saving, Restoring and Exporting Analyses}
-\label{sec:analysis_history_export}
+\label{sec:analysis_saving_export}
 
 Combining several simulations, involved elements, variables, time instants and
 representation settings can produce a large number of valid outputs. Exporting
@@ -528,47 +525,7 @@ Figures and tables can also be exported using the formats offered by their
 source module. These files provide conventional outputs for reports,
 engineering documentation or later processing outside the interface.
 
-% Figure~\ref{fig:history_examples_across_tabs} shows the same saving system in
-% two transient analysis areas. The first contains plots of different
-% parameters, whereas the second combines heat-flow figures with their
-% associated tables.
 
-% \begin{figure}[H]
-%     \centering
-
-%     \begin{subfigure}[t]{0.96\textwidth}
-%         \centering
-%         \includegraphics[
-%             width=\textwidth,
-%             keepaspectratio
-%         ]{Figures/06/ej_historial.png}
-%         \caption{History containing different parameters
-%         generated from transient results.}
-%         \label{fig:transient_plot_history_example}
-%     \end{subfigure}
-
-% \end{figure}
-
-% \begin{figure}[H]
-%     \ContinuedFloat
-%     \centering
-%     \setcounter{subfigure}{1}
-
-%     \begin{subfigure}[t]{0.88\textwidth}
-%         \centering
-%         \includegraphics[
-%             width=\textwidth,
-%             keepaspectratio
-%         ]{Figures/06/ej_historial02.png}
-%         \caption{History containing transient-flow figures and associated
-%         tabular results.}
-%         \label{fig:transient_flow_history_example}
-%     \end{subfigure}
-
-%     \caption{Examples of saved-scene management in different transient
-%     result areas.}
-%     \label{fig:history_examples_across_tabs}
-% \end{figure}
 
 Scene storage and file export fulfil complementary purposes. The saved-analysis
 system preserves the configuration and relationships required to continue the
@@ -577,9 +534,8 @@ figures or tables for reports and engineering documentation. Together, both
 functions connect interactive exploration with reproducible post-processing
 and final result presentation.
 
-The resulting chapter-level workflow can be summarised as follows: the
-application loads multiple compatible cases, associates them with one
-hierarchy, applies consistent selections and time settings, generates direct
-or difference outputs, and stores the complete configuration whenever it must
-be recovered. This architecture provides the shared foundation
-for the transient and electrical modules developed next.
+Overall, the application loads multiple compatible cases, associates them
+with one hierarchy, applies consistent selections and time settings, generates
+direct or difference outputs, and stores the complete configuration whenever
+it must be recovered. This architecture provides a common foundation for the
+transient and electrical modules.

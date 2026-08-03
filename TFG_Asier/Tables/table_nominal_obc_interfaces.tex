@@ -1,9 +1,9 @@
 % File: Tables/table_nominal_obc_interfaces.tex
 % Usage: \NominalOBCInterfaceTable[0.98\textwidth]
-% Change the optional width argument when a smaller or larger table is required.
+% Modify the optional argument to adjust the table width.
 
 \newcommand{\NominalOBCInterfaceTable}[1][0.98\textwidth]{%
-\begin{table}[H]
+\begin{table}[htpb]
     \centering
     \caption{Maximum interface temperature differences detected from
     \texttt{OBC\_BOX} in the nominal transient case.}
@@ -21,21 +21,21 @@
         \textbf{$T_{\mathrm{cold}}$ [\(^\circ\)C]} &
         \textbf{Hot--cold nodes} &
         \textbf{Coupling} \\ \hline
-        \texttt{RADIATOR} & 21.41 & 3388.1 & 15.19 & -6.23 & 31023--35506 & GL+GR \\ \hline
-        \texttt{BODY} & 7.80 & 5929.2 & 14.56 & 6.76 & 31014--11102 & GL+GR \\ \hline
-        \texttt{BODY\_PLATE\_MED} & 2.52 & 3388.1 & 15.49 & 12.97 & 12602--31011 & GL+GR \\ \hline
-        \texttt{BODY\_PANEL} & 7.80 & 5929.2 & 14.56 & 6.76 & 31014--11102 & GR \\ \hline
-        \texttt{BODY\_PLATE\_SUP} & 2.96 & 1512.6 & 15.43 & 12.47 & 31022--13603 & GR \\ \hline
-        \texttt{Space} & 285.51 & 2299.1 & 15.51 & -270.00 & 31022--99999 & GR \\ \hline
-        \texttt{BODY\_PLATE\_INF} & 6.04 & 1875.6 & 19.88 & 13.85 & 12000--31008 & GR \\ \hline
+        \texttt{RADIATOR} & 20.81 & 3388.1 & 13.44 & -7.37 & 31023--35506 & GL+GR \\ \hline
+        \texttt{BODY} & 7.71 & 6050.2 & 12.87 & 5.16 & 31014--11102 & GL+GR \\ \hline
+        \texttt{BODY\_PLATE\_MED} & 2.41 & 3388.1 & 13.70 & 11.30 & 12602--31011 & GL+GR \\ \hline
+        \texttt{BODY\_PANEL} & 7.71 & 6050.2 & 12.87 & 5.16 & 31014--11102 & GR \\ \hline
+        \texttt{BODY\_PLATE\_SUP} & 2.95 & 1512.6 & 13.67 & 10.73 & 31022--13603 & GR \\ \hline
+        \texttt{Space} & 283.74 & 2238.6 & 13.74 & -270.00 & 31022--99999 & GR \\ \hline
+        \texttt{BODY\_PLATE\_INF} & 6.01 & 1875.6 & 18.18 & 12.17 & 12000--31008 & GR \\ \hline
     \end{tabular}%
     }
     \par\vspace{0.3em}
     \begin{minipage}{#1}
         \footnotesize
-        \textit{Note:} \texttt{Space} is included because the detection also
-        identifies GR links to the environmental boundary. Identical results may
-        occur when target groups overlap within the model hierarchy.
+        \textit{Note:} \texttt{Space} is included because GR links to the
+        environmental boundary are also detected. Equal values may occur
+        when target groups overlap within the model hierarchy.
     \end{minipage}
 \end{table}%
 }

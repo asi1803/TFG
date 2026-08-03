@@ -1,0 +1,53 @@
+% File: Tables/table_nominal_battery_summary.tex
+% Usage: \NominalBatterySummaryTable[0.78\textwidth]
+% Values obtained from the corrected nominal-case battery export.
+
+\newcommand{\NominalBatterySummaryTable}[1][0.78\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Initial state and main battery results for the nominal transient
+    case using the selected \(6S1P\) configuration.}
+    \label{tab:nominal_battery_summary}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.18}
+    \setlength{\tabcolsep}{6pt}
+    \begin{tabularx}{#1}{
+        |>{\raggedright\arraybackslash}X
+        |>{\centering\arraybackslash}c
+        |>{\centering\arraybackslash}c|
+    }
+        \hline
+        \textbf{Item} &
+        \textbf{Value} &
+        \textbf{Unit} \\ \hline
+        Initial state of charge
+        & 60.00 & \% \\ \hline
+        Final state of charge
+        & 94.43 & \% \\ \hline
+        Stored energy at the final instant
+        & 62.889 & Wh \\ \hline
+        Terminal-voltage range
+        & 22.648--24.376 & V \\ \hline
+        Maximum charge current
+        & 1.500 & A \\ \hline
+        Maximum discharge current
+        & 0.946 & A \\ \hline
+        Maximum charge power
+        & 35.350 & W \\ \hline
+        Maximum discharge power
+        & 21.429 & W \\ \hline
+        Battery-temperature range
+        & 18.400--20.900 & \(^{\circ}\mathrm{C}\) \\ \hline
+        Minimum charge-derating factor
+        & 1.000 & -- \\ \hline
+        Curtailed solar energy
+        & 276.228 & Wh \\ \hline
+        Unserved-load energy
+        & \(\approx 0\) & Wh \\ \hline
+        Integrated internal resistive loss
+        & 0.252 & Wh \\ \hline
+        Integrated conversion loss
+        & 0.923 & Wh \\ \hline
+    \end{tabularx}
+\end{table}%
+}

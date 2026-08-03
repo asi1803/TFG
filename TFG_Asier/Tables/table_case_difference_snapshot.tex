@@ -1,0 +1,39 @@
+% File: Tables/table_case_difference_snapshot.tex
+% Usage: \CaseDifferenceSnapshotTable[0.98\textwidth]
+% The values correspond to the selected output instant t = 95.80 min.
+
+\newcommand{\CaseDifferenceSnapshotTable}[1][0.98\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Case differences at \(t=95.80\) min, corresponding to the
+    maximum absolute nominal--hot difference in mean battery temperature.}
+    \label{tab:case_difference_snapshot}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.18}
+    \setlength{\tabcolsep}{3.4pt}
+    \resizebox{#1}{!}{%
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        & \multicolumn{3}{c|}{\textbf{Nominal -- Hot}} &
+          \multicolumn{3}{c|}{\textbf{Nominal -- Cold}} \\ \cline{2-7}
+        \textbf{Group} &
+        \textbf{$\Delta T_{\mathrm{mean}}$ [$^\circ$C]} &
+        \textbf{$\Delta Q_S$ [W]} &
+        \textbf{$\Delta Q_I$ [W]} &
+        \textbf{$\Delta T_{\mathrm{mean}}$ [$^\circ$C]} &
+        \textbf{$\Delta Q_S$ [W]} &
+        \textbf{$\Delta Q_I$ [W]} \\ \hline
+        \texttt{SOLAR\_PANEL\_1} & 42.96  & 372.87 & 0.00   & 25.57 & 15.07  & 0.00  \\ \hline
+        \texttt{OBC\_BOX}        & -16.33 & 4.54   & -1.00  & 12.89 & 0.18   & 2.00  \\ \hline
+        \texttt{RADIATOR}         & -11.98 & 12.65  & 0.00   & 9.54  & 0.51   & 0.00  \\ \hline
+        \texttt{BATTERY}          & -19.75 & 0.002  & -12.25 & 14.79 & $<0.001$ & 1.13 \\ \hline
+    \end{tabular}%
+    }
+    \par\vspace{0.3em}
+    \begin{minipage}{#1}
+        \footnotesize
+        \textit{Note:} Differences follow the reference-minus-comparison
+        convention defined in Equation~\eqref{eq:results_case_difference}.
+    \end{minipage}
+\end{table}%
+}

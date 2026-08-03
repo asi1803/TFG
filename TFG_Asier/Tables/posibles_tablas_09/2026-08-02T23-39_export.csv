@@ -1,0 +1,4 @@
+﻿,case,final_SOC [%],min_SOC [%],max_SOC [%],max_discharge_power [W],max_charge_power [W],unserved_load [Wh],curtailed_solar [Wh],charge_CC_time [s],charge_CV_time [s],charge_solar_limited_time [s],discharge_time [s],discharge_voltage_limited_time [s],min_T_batt [°C],max_T_batt [°C],min_charge_derating [-],charge_derated_time [s],min_eta_charge [-],max_eta_charge [-],min_eta_discharge [-],max_eta_discharge [-]
+0,Nominal_case,94.427554,60,94.427554,21.428572,35.35015,5.1945757e-15,276.22811,2904.1187,1270.5518,0,1875.5766,0,18.400345,20.900211,1,0,0.98,0.98,0.98,0.98
+1,Cold_case,93.076736,60,93.076736,5.6122451,30.23817,5.0453063e-15,274.50827,2480.6013,1512.5617,0,2057.084,0,3.6627825,4.4589365,0.73255651,6050.2471,0.98,0.98,0.98,0.98
+2,Hot_case,90.838168,60,97.562559,30.867346,35.400199,2.0897718e-15,364.18439,1754.5717,3206.6309,0,726.02966,0,35.501729,38.203044,1,0,0.98,0.98,0.98,0.98

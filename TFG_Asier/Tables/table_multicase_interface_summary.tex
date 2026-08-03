@@ -1,0 +1,30 @@
+% File: Tables/table_multicase_interface_summary.tex
+% Usage: \MultiCaseInterfaceSummaryTable[0.98\textwidth]
+% Values obtained from the OBC_BOX--RADIATOR interface exports.
+
+\newcommand{\MultiCaseInterfaceSummaryTable}[1][0.98\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Maximum connected-node temperature difference between
+    \texttt{OBC\_BOX} and \texttt{RADIATOR} in the three transient cases.}
+    \label{tab:multicase_interface_summary}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.18}
+    \setlength{\tabcolsep}{3.6pt}
+    \resizebox{#1}{!}{%
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        \textbf{Case} &
+        \textbf{$|\Delta T|_{\max}$ [$^\circ$C]} &
+        \textbf{Time [min]} &
+        \textbf{$T_{\mathrm{hot}}$ [$^\circ$C]} &
+        \textbf{$T_{\mathrm{cold}}$ [$^\circ$C]} &
+        \textbf{Hot--cold nodes} &
+        \textbf{Coupling} \\ \hline
+        Nominal & 20.81 & 56.47 & 13.44 & -7.37  & 31023--35506 & GL+GR \\ \hline
+        Hot     & 24.67 & 95.80 & 30.22 & 5.56   & 31023--35506 & GL+GR \\ \hline
+        Cold    & 17.78 & 76.64 & 0.52  & -17.25 & 31017--35502 & GL+GR \\ \hline
+    \end{tabular}%
+    }
+\end{table}%
+}

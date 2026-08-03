@@ -34,9 +34,9 @@ levels of the main body. The dissipative components represented in the model
 are the camera electronics, the battery, the \acrfull{obc}, the communications 
 unit and the \acrfull{adcs}. Each unit is represented separately, allowing an 
 individual internal heat load to be assigned and the corresponding temperature 
-and heat exchanges to be analysed independently
+and heat exchanges to be analysed independently.
 
-The final external configuration is shown in
+The external configuration is presented in
 Figure~\ref{fig:final_external_model}. The main body presents a rectangular geometry 
 and is divided into several surface nodes. Two solar-panel wings extend from 
 opposite sides and are discretised independently. The camera assembly extends 
@@ -64,7 +64,7 @@ environment.
     \ContinuedFloat
     \centering
 
-    \begin{subfigure}[c]{0.72\textwidth}
+    \begin{subfigure}[c]{0.7\textwidth}
         \centering
         \includegraphics[
             width=\linewidth,
@@ -84,7 +84,7 @@ environment.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.92\textwidth,
+        width=0.95\textwidth,
         trim=0 55 0 55,
         clip
     ]{Satelite.png}
@@ -163,8 +163,7 @@ The temperature response of each geometrical element depends on the
 assigned bulk material and the thermo-optical properties of the surfaces. 
 Thermal conductivity, density and specific heat capacity determine 
 heat conduction and energy storage, while the surface properties govern the 
-interaction with solar and infrared radiation. The same definitions are used 
-in all analysis cases. Consequently, changes in the calculated results are 
+interaction with solar and infrared radiation. These definitions are common to all analysis cases. Consequently, changes in the calculated results are 
 associated with the environmental and operating inputs rather than with 
 modifications to the model.
 
@@ -431,9 +430,8 @@ for eclipse and non-eclipse intervals.
 
 \input{./Tables/tabla_cargas_internas_5_4.tex}
 
-The node definitions and conductive and radiative couplings remain unchanged in all 
-transient cases. Only the environmental conditions and internal heat loads 
-are modified as requires for each case. Consequently, each node and thermal coupling 
+The node definitions and thermal couplings remain unchanged in all transient 
+cases. Only the environmental conditions and internal heat loads are modified. Consequently, each node and thermal coupling 
 represents the same physical element in every exported result file, allowing direct 
 comparison between cases.
 
@@ -498,11 +496,10 @@ Table~\ref{tab:transient_cases}.
 
 \input{./Tables/tabla_casos_transitorios.tex}
 
-The same geometry, materials, surface properties, node labels, hierarchy and
-thermal couplings are retained in all three simulations. Only the radiative
-environment and internal heat loads change between cases. Equivalent nodes and
-variables therefore retain the same physical meaning, allowing the hot and
-cold results to be compared directly with the nominal case.
+All three simulations use the common model configuration defined above. Only
+the radiative environment and internal heat loads change between cases.
+Equivalent nodes and exported result fields therefore retain the same physical
+meaning, allowing direct comparison with the nominal case.
 
 
 \subsection{Solver Configuration and Temporal Sampling}
@@ -566,7 +563,7 @@ operating conditions.
 
 After each simulation is completed, the result set obtained for each case is exported from
 \acrshort{esatan-tms} as a separate \texttt{.TMD} file. Each file stores the
-time vector and the nodal quantities selected for post-processing, including
+time vector and the nodal results selected for post-processing, including
 temperatures, applied loads, absorbed environmental loads, and conductive and
 radiative heat flows. Node numbers and labels are preserved during export,
 allowing each variable to be associated with the corresponding group in the
@@ -588,7 +585,7 @@ The 101 output instants correspond to the temporal sampling of the transient
 solution and should not be confused with the 24 orbital positions used in the
 radiative calculation. For each nodal variable, one file therefore contains
 \(284 \times 101 = 28\,684\) values before the conductor results and remaining
-nodal quantities are considered.
+nodal result fields are considered.
 
 The absorbed solar loads calculated for the solar panels are also retained in
 the exported data. These values are used as inputs for the

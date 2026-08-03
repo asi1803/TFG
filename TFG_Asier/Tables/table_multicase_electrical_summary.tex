@@ -1,0 +1,38 @@
+% File: Tables/table_multicase_electrical_summary.tex
+% Usage: \MultiCaseElectricalSummaryTable[0.94\textwidth]
+% Energies are obtained by trapezoidal integration of the exported power
+% profiles over the complete simulated interval.
+
+\newcommand{\MultiCaseElectricalSummaryTable}[1][0.94\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Integrated solar generation and selected load demand for the
+    nominal, hot and cold transient cases.}
+    \label{tab:multicase_electrical_summary}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.18}
+    \setlength{\tabcolsep}{4.2pt}
+    \resizebox{#1}{!}{%
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Case} &
+        \textbf{Generated energy [Wh]} &
+        \textbf{Load energy [Wh]} &
+        \textbf{Direct surplus [Wh]} &
+        \textbf{Direct deficit [Wh]} &
+        \textbf{Net balance [Wh]} \\ \hline
+        Nominal & 328.07 & 25.58 & 313.78 & 11.29 & 302.49 \\ \hline
+        Hot     & 421.60 & 33.75 & 394.46 & 6.61  & 387.85 \\ \hline
+        Cold    & 306.41 & 6.92  & 302.73 & 3.24  & 299.49 \\ \hline
+    \end{tabular}%
+    }
+    \par\vspace{0.3em}
+    \begin{minipage}{#1}
+        \footnotesize
+        \textit{Note:} Direct surplus and deficit are the time integrals of
+        the positive and negative parts, respectively, of
+        \(Q_{S,\mathrm{elec}}-Q_{\mathrm{load}}\), before applying the battery
+        operating limits.
+    \end{minipage}
+\end{table}%
+}

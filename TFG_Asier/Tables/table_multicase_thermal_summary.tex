@@ -1,0 +1,46 @@
+% File: Tables/table_multicase_thermal_summary.tex
+% Usage: \MultiCaseThermalSummaryTable[0.82\textwidth]
+% Values obtained from the thermal-summary exports for the nominal, hot and
+% cold transient cases.
+
+\newcommand{\MultiCaseThermalSummaryTable}[1][0.82\textwidth]{%
+\begin{table}[H]
+    \centering
+    \caption{Temperature extrema and maximum spatial temperature ranges of
+    the selected elements in the nominal, hot and cold transient cases.}
+    \label{tab:multicase_thermal_summary}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.16}
+    \setlength{\tabcolsep}{5.0pt}
+    \resizebox{#1}{!}{%
+    \begin{tabular}{|l|l|c|c|c|}
+        \hline
+        \textbf{Element} &
+        \textbf{Case} &
+        \textbf{$T_{\max}$ [$^\circ$C]} &
+        \textbf{$T_{\min}$ [$^\circ$C]} &
+        \textbf{$\Delta T_{\max}^{\mathrm{sp}}$ [$^\circ$C]} \\ \hline
+
+        \texttt{SOLAR\_PANEL\_1} & Nominal & 62.45 & -17.25 & 8.52 \\ \cline{2-5}
+        & Hot  & 65.42 & 12.15  & 5.78 \\ \cline{2-5}
+        & Cold & 56.63 & -21.31 & 10.14 \\ \hline
+
+        \texttt{BODY\_PANEL} & Nominal & 18.87 & 5.05  & 13.63 \\ \cline{2-5}
+        & Hot  & 35.76 & 20.90 & 14.72 \\ \cline{2-5}
+        & Cold & 5.63  & -5.55 & 10.99 \\ \hline
+
+        \texttt{OBC\_BOX} & Nominal & 13.74 & 11.30 & 2.36 \\ \cline{2-5}
+        & Hot  & 30.43 & 27.83 & 2.59 \\ \cline{2-5}
+        & Cold & 0.85  & -1.28 & 2.05 \\ \hline
+
+        \texttt{RADIATOR} & Nominal & 0.05   & -7.37  & 5.66 \\ \cline{2-5}
+        & Hot  & 14.49  & 5.56   & 6.68 \\ \cline{2-5}
+        & Cold & -10.85 & -17.26 & 4.88 \\ \hline
+
+        \texttt{BATTERY} & Nominal & 21.77 & 18.25 & 2.98 \\ \cline{2-5}
+        & Hot  & 38.97 & 35.43 & 2.90 \\ \cline{2-5}
+        & Cold & 4.60  & 3.50  & 0.84 \\ \hline
+    \end{tabular}%
+    }
+\end{table}%
+}

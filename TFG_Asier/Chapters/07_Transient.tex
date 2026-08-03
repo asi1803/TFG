@@ -11,15 +11,14 @@ temperatures, thermal loads and conductor data stored in the imported
 remain unchanged, and all additional calculations are performed during
 post-processing.
 
-The functions available in the tab are described using the nominal case
-\texttt{SAT\_AFM\_TRANSITORIO.TMD}. The analysis covers temperature and
-thermal-load evolution, interface temperature differences, variations over
+The nominal case \texttt{SAT\_AFM\_TRANSITORIO.TMD} is used to
+illustrate temperature and thermal-load evolution, interface temperature differences, variations over
 selected time windows, summary values, conductive and radiative heat flows,
 and accumulated thermal energy. Comparisons between different environmental
 and operating cases are reserved for the results chapter.
 
 \section{Temperature and Thermal-Load Evolution}
-\label{sec:thermal_histories}
+\label{sec:thermal_evolution}
 
 The first area provides a general view of the transient response through the
 evolution of temperatures, thermal loads and selected group attributes. To
@@ -46,8 +45,8 @@ group are calculated as:
     \max\!\left[ T_n(t) \right]_{n\in\mathcal{N}_g}
     \label{eq:transient_group_tmax}
 \end{align}
-Thermal loads are additive parameters, so they are combined through a
-different aggregation rule. For any available contribution \(Q_x\), the
+Nodal thermal-load contributions are additive, so they are combined through
+a different aggregation rule. For any available contribution \(Q_x\), the
 corresponding group evolution is obtained from:
 \begin{equation}
     Q_{x,g}(t)
@@ -60,58 +59,59 @@ corresponding group evolution is obtained from:
 Here, \(Q_A\), \(Q_E\) and \(Q_S\) denote the absorbed albedo, planetary
 infrared and direct-solar loads, respectively, while \(Q_I\) and \(Q_R\)
 represent the internal and additional applied loads exported with the solved
-model. Together with the temperature parameters defined above, these
-aggregated series set the basis for the subsequent analyses available in
+model. Together with the temperature statistics defined above, these aggregated
+series form the basis for the subsequent analyses available in
 the tab.
 
 The configuration begins with the selection of one or more cases and model
-elements. For each element, the user then chooses the parameters to be
+elements. For each element, the user then chooses the attributes to be
 represented. The available options are \(T_{\max}\), \(T_{\mathrm{mean}}\),
 \(T_{\min}\), \(Q_A\), \(Q_E\), \(Q_S\), \(Q_I\), \(Q_R\), \(C\) and
-\(A\). The three temperature parameters are activated by default, although 
+\(A\). The three temperature statistics are activated by default, although 
 the user can select any other combination.
 
-The temperature parameters describe the thermal state of the selected
+The temperature statistics describe the thermal state of the selected
 element. \(T_{\mathrm{mean}}\) represents its overall evolution, while
 \(T_{\max}\) and \(T_{\min}\) identify the highest and lowest nodal
 temperatures at each output instant. The distance between both limits defines
 the instantaneous temperature range within the corresponding group.
 
-The thermal-load parameters can be represented separately or together with
-the temperature parameters. Their curves show how the environmental and
+The thermal-load terms can be represented separately or together with the
+temperature statistics. Their curves show how the environmental and
 internally applied loads acting on the selected element vary throughout the
 simulation. When an element contains several nodes, the displayed value
 corresponds to the group sum defined in
 Equation~\eqref{eq:transient_group_load}.
 
-Thermal capacity \(C\) and surface area \(A\) can also be displayed. Unlike
+Thermal capacitance \(C\) and surface area \(A\) can also be displayed. Unlike
 the temperatures and loads, these properties remain constant throughout the
 transient simulation and are therefore not used in the time-dependent
 examples presented below.
 
-The display units are configured independently from the parameter selection.
-Temperatures are restricted to degrees Celsius, while thermal loads can be represented
-in watts or milliwatts, and elapsed time in seconds, minutes, hours, days,
-months or years. \newline 
-Further controls modify the horizontal-axis label, graph
-width and height, axis tick font size and legend font size. 
+The display units are configured independently from the attribute selection.
+The temperature unit is fixed to the value stored in the loaded
+\texttt{.TMD} file, while thermal loads can be represented in watts or
+milliwatts and elapsed time in seconds, minutes, hours, days, months or
+years. Further controls modify the horizontal-axis label, graph width and height,
+axis tick font size and legend font size.
+
 The interface also provides the multi-case representation alternative introduced
 in Section~\ref{subsec:multicase_representation_options}. The examples
 presented here use a single case, since this is sufficient to explain the
 functionality of this area of the tab.
 
 Figure~\ref{fig:transient_attribute_selection} shows the complete
-configuration area used to define the cases, elements, parameters, units and
+configuration area used to define the cases, elements, attributes, units and
 graphical settings of the resulting plot.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.82\textwidth,
+        width=0.8\textwidth,
         keepaspectratio
     ]{Figures/07/display08.png}
     \caption{Configuration area for selecting cases, model elements,
-    represented parameters, display units and graphical settings.}
+    represented attributes, display units and graphical settings.}
     \label{fig:transient_attribute_selection}
 \end{figure}
 
@@ -121,10 +121,10 @@ single-axis representation using the nominal temperature response of
 throughout the simulated orbital period, while their separation indicates the
 temperature range among its nodes.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.96\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_solar_panel_1_temperature.png}
     \caption{Minimum, mean and maximum temperatures of
@@ -132,8 +132,8 @@ temperature range among its nodes.
     \label{fig:nominal_solar_panel_temperature}
 \end{figure}
 
-A second vertical axis can be added when parameters with different units are
-combined in one plot. The parameters assigned to both axes retain a common
+A second vertical axis can be added when attributes with different units are
+combined in one plot. The attributes assigned to both axes retain a common
 time coordinate, allowing their evolution to be examined simultaneously.
 
 Figure~\ref{fig:nominal_battery_temperature_qi} illustrates a dual-axis
@@ -142,17 +142,20 @@ axis, while the internal load \(Q_I\) is shown on the right axis. The values
 assigned during and outside eclipse are given in
 Table~\ref{tab:internal_heat_loads}.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.96\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_battery_temperature_qi.png}
-    \caption{Battery temperatures and eclipse-dependent internal load \(Q_I\)
-    for the nominal transient case.}
+    \caption[Battery temperatures and internal load in the nominal case.]{Battery
+    temperatures and eclipse-dependent internal load \(Q_I\) for the nominal
+    transient case.}
     \label{fig:nominal_battery_temperature_qi}
 \end{figure}
 
+
+\FloatBarrier
 
 \section{Interface Temperature-Difference Analysis}
 \label{sec:interface_temperature_analysis}
@@ -163,8 +166,8 @@ several source--target pairs may be added to the same analysis. One or more
 cases can then be evaluated using the resulting interface selection.
 
 The target list may be restricted to groups connected to the source through
-real GL or GR conductors. This filter facilitates the identification of
-interfaces represented directly in the thermal network. The user can add one
+explicit GL or GR conductors. This filter limits the selection to interfaces
+represented directly in the thermal network. The user can add one
 target at a time or include all the connections detected for the chosen
 source.
 
@@ -174,10 +177,10 @@ Figure~\ref{fig:interface_analysis_configuration} shows the controls used to
 select the cases, source and target groups, calculation method and acceptance
 limit.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.85\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/display09.png}
     \caption{Configuration area for selecting cases, source and target
@@ -186,8 +189,8 @@ limit.
     \label{fig:interface_analysis_configuration}
 \end{figure}
 
-The default calculation basis uses the real node pairs connected through GL
-or GR conductors. Let \(\mathcal{P}_{AB}\) contain the pairs \((i,j)\)
+The default calculation basis uses the node pairs connected through explicit
+GL or GR conductors. Let \(\mathcal{P}_{AB}\) contain the pairs \((i,j)\)
 linking source group \(A\) with target group \(B\). The absolute temperature
 difference associated with each pair is
 \begin{equation}
@@ -215,43 +218,45 @@ The maximum difference reached throughout the complete simulation is then
     \right]_{t}
     \label{eq:if_absolute_max_delta_t}
 \end{equation}
-Once this result has been identified, the tool represents the complete
-temperature curves of the two nodes forming the critical pair. The hotter
-node and the colder node are displayed separately, while a vertical marker
-indicates the instant at which the maximum difference occurs.
+At each output instant, the tool represents the hotter and colder
+temperatures of the connected pair producing the largest absolute difference.
+This pair may change throughout the simulation. A vertical marker identifies
+the global maximum, and the summary output records the nodes and coupling
+associated with that event.
 
 The example presented below uses \texttt{OBC\_BOX} as the source and
 \texttt{RADIATOR} as the target. This interface is representative because the
 thermal network includes an additional conductive link between both elements,
 as described in Section~\ref{sec:thermal_network_definition}.
 Figure~\ref{fig:nominal_obc_radiator_interface} shows that the maximum
-temperature difference reaches \(21.4\,^{\circ}\mathrm{C}\) at
+temperature difference reaches \(20.8\,^{\circ}\mathrm{C}\) at
 \(3388.1\,\mathrm{s}\).
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.85\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_obc_radiator_interface_temperature.png}
-    \caption{Hot-node and cold-node temperatures for the interface between
-    \texttt{OBC\_BOX} and \texttt{RADIATOR} in the nominal transient case.
-    The vertical marker identifies the maximum temperature difference.}
+    \caption{Hot and cold temperatures of the connected pair producing the
+    largest interface difference at each output instant between
+    \texttt{OBC\_BOX} and \texttt{RADIATOR}. The vertical marker identifies
+    the global maximum in the nominal transient case.}
     \label{fig:nominal_obc_radiator_interface}
 \end{figure}
 
-The same source group was subsequently used to add all the targets detected
-from its real conductors. For each source--target pair,
+All targets connected to the same source group through explicit conductors
+were then added. For each source--target pair,
 Table~\ref{tab:nominal_obc_interfaces} records the maximum absolute
 temperature difference, the event time, the hot and cold temperatures, the
-critical node pair and the coupling involved.
+critical node pair and the coupling or couplings involved.
 
 \input{Tables/table_nominal_obc_interfaces.tex}
-\NominalOBCInterfaceTable[0.9\textwidth]
+\NominalOBCInterfaceTable[1.0\textwidth]
 
 The alternative calculation basis uses the complete temperature envelopes of
 the source and target groups. It does not require the nodes producing the
-result to be connected by a real conductor. The corresponding difference is
+result to be connected by an explicit conductor. The corresponding difference is
 defined as
 \begin{equation}
     \Delta T_{A,B}^{\mathrm{env}}(t)
@@ -283,12 +288,14 @@ whereas a negative value produces \texttt{FAIL}. Setting
 \(\Delta T_{\mathrm{lim}}\) to zero disables this criterion, as in the
 nominal example presented above.
 
+\FloatBarrier
+
 \section{Temperature Variation over Selected Time Windows}
 \label{sec:temperature_time_windows}
 
 The third area evaluates how much the temperature of each node changes over a
 selected time window. This representation complements the absolute
-temperatures examined in Section~\ref{sec:thermal_histories}, since a
+temperatures examined in Section~\ref{sec:thermal_evolution}, since a
 component may remain within its operating limits while still undergoing a
 significant increase or decrease during a shorter interval.
 
@@ -304,10 +311,10 @@ Figure~\ref{fig:delta_t_window_configuration} shows the controls used to
 define the cases, elements, time windows, representation method and acceptance
 criteria.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.90\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/display10.png}
     \caption{Configuration area for selecting the cases, model elements,
@@ -318,18 +325,15 @@ criteria.
 
 For a requested window \(\tau\), the temperature variation of node \(n\) is
 calculated from
-
 \begin{equation}
     \Delta T_n(t;\tau)
     =
     T_n(t)-T_n(t-\tau^{*})
     \label{eq:window_delta_t}
 \end{equation}
-
 where \(\tau^{*}\) is the effective interval reproduced by the output-time
 vector. When the simulation uses a uniform output step \(\Delta t_m\), the
 number of samples required for the calculation is
-
 \begin{equation}
     k_{\tau}
     =
@@ -340,14 +344,12 @@ number of samples required for the calculation is
     \tau^{*}=k_{\tau}\Delta t_m
     \label{eq:effective_delta_t_window}
 \end{equation}
-
 The ceiling operation prevents the effective interval from being shorter than
 the requested value. If both values differ, the interface reports
 \(\tau^{*}\) together with the selected window.
 
 For a group \(g\), the maximum--minimum representation is obtained from the
 nodal variations:
-
 \begin{align}
     \Delta T_{g,\min}(t;\tau)
     &=
@@ -363,7 +365,6 @@ nodal variations:
     \right]_{n\in\mathcal{N}_g}
     \label{eq:window_group_delta_t_max}
 \end{align}
-
 Positive values indicate that the node has warmed during the preceding
 interval, whereas negative values indicate cooling. The separation between
 both curves shows whether the nodes of the selected element follow a similar
@@ -375,10 +376,10 @@ different responses to make the maximum--minimum envelopes visible.
 The effective intervals obtained from the available output grid are
 approximately \(10.084\) and \(30.251\) minutes.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.96\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_body_panel_deltaT_windows.png}
     \caption{Maximum and minimum temperature variations of
@@ -392,7 +393,6 @@ temperature change over a greater part of the orbital cycle. However, the
 largest absolute variation does not by itself indicate how rapidly the change
 occurs. For this purpose, the application also calculates the average
 magnitude over the effective interval:
-
 \begin{equation}
     R_{T,n}(t;\tau)
     =
@@ -403,8 +403,7 @@ magnitude over the effective interval:
     }
     \label{eq:window_average_rate}
 \end{equation}
-
-This parameter represents an average change over the selected window rather
+This metric represents an average change over the selected window rather
 than an instantaneous derivative. Its value therefore depends on the duration
 of the interval.
 
@@ -414,11 +413,11 @@ temperature changes, their event times and nodes, the largest absolute
 variation and its corresponding average magnitude.
 
 \input{Tables/table_nominal_body_panel_deltaT_windows.tex}
-\NominalBodyPanelDeltaTTable[0.98\textwidth]
+\NominalBodyPanelDeltaTTable[1.0\textwidth]
 
 The 30-minute interval reaches the largest absolute variation,
-\(2.42\,^{\circ}\mathrm{C}\), whereas the 10-minute interval produces the
-higher average magnitude, \(0.105\,^{\circ}\mathrm{C/min}\). The two results
+\(2.23\,^{\circ}\mathrm{C}\), whereas the 10-minute interval produces the
+higher average magnitude, \(0.095\,^{\circ}\mathrm{C/min}\). The two results
 therefore describe different aspects of the transient response: the longer
 window identifies the greater accumulated change, while the shorter one is
 more sensitive to rapid variations.
@@ -428,6 +427,8 @@ interface. Optional limits for \(\left|\Delta T\right|\) and
 \(\left|\Delta T\right|/\tau^{*}\) allow margins and acceptance states to be
 calculated. A value of zero disables the corresponding criterion, as in the
 example presented here.
+
+\FloatBarrier
 
 \section{Transient Thermal Summary Table}
 \label{sec:thermal_summary_table}
@@ -448,21 +449,21 @@ content and organisation of the resulting table.
 Figure~\ref{fig:thermal_summary_configuration} shows the selection area of
 this function.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.90\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/display11.png}
-    \caption{Configuration area for selecting the cases and model elements
-    included in the transient thermal summary.}
+    \caption[Transient thermal-summary configuration.]{Configuration area for
+    selecting the cases and model elements included in the transient thermal
+    summary.}
     \label{fig:thermal_summary_configuration}
 \end{figure}
 
 Let \(\mathcal{T}_{\mathrm{out}}\) denote the set of output instants contained
 in the transient result file. The global maximum and minimum temperatures of
-a group \(g\) are calculated as
-
+a group \(g\) are calculated as:
 \begin{align}
     T_{g,\max}^{\mathrm{glob}}
     &=
@@ -488,24 +489,20 @@ a group \(g\) are calculated as
     }
     \label{eq:summary_absolute_tmin}
 \end{align}
-
 For each extreme, the output also identifies the node and simulation time at
 which it occurs. These data allow the critical value to be located without
 inspecting the temperature curves of all the nodes individually.
 
 The table also evaluates the spatial temperature range of each group at every
 output instant:
-
 \begin{equation}
     \Delta T_g^{\mathrm{sp}}(t)
     =
     T_{g,\max}(t)-T_{g,\min}(t)
     \label{eq:summary_spatial_delta_t}
 \end{equation}
-
 Its maximum and minimum values throughout the simulation are then obtained
-from
-
+from:
 \begin{align}
     \Delta T_{g,\max}^{\mathrm{sp}}
     &=
@@ -521,7 +518,6 @@ from
     \right]_{t\in\mathcal{T}_{\mathrm{out}}}
     \label{eq:summary_spatial_delta_t_min}
 \end{align}
-
 The corresponding times and hot--cold node pairs are retained in the output.
 This calculation differs from the time-window method of
 Section~\ref{sec:temperature_time_windows}. There,
@@ -538,9 +534,9 @@ minimum spatial ranges reached by the same elements. The associated node pairs
 identify the locations that define each range.
 
 \input{Tables/table_nominal_thermal_summary.tex}
-\NominalThermalExtremaTable[0.7\textwidth]
+\NominalThermalExtremaTable[0.75\textwidth]
 
-\NominalThermalRangeTable[0.7\textwidth]
+\NominalThermalRangeTable[0.85\textwidth]
 
 The two outputs serve different purposes. Global extrema indicate the highest
 and lowest temperatures reached by an element during the complete simulation,
@@ -553,37 +549,38 @@ later inspection. No separate graph is required in this area, since its main
 function is to provide a compact numerical screening of the transient
 solution.
 
+\FloatBarrier
+
 \section{Conductive and Radiative Heat-Flow Evolution}
 \label{sec:heat_flow_evolution}
 
 The fifth function examines the heat transferred between a selected source
 and target throughout the transient simulation. After choosing one or more
 cases, the user defines both elements and selects the conductive,
-radiative or total heat-flow parameters to be represented. The output can be
+radiative or total heat-flow components to be represented. The output can be
 expressed in watts or milliwatts, while the horizontal axis uses the selected
 elapsed-time unit.
 
 Figure~\ref{fig:heat_flow_configuration} shows the corresponding controls.
-The three available parameters are \(Q_{\mathrm{GL}}\),
+The three available components are \(Q_{\mathrm{GL}}\),
 \(Q_{\mathrm{GR}}\) and \(Q_{\mathrm{GT}}\), representing the linear
 conductive, radiative and combined exchanges, respectively. Their sign follows
 the source--target order defined in the interface.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.96\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/display12.png}
     \caption{Configuration area for selecting the cases, source and target
-    elements, heat-flow parameters and display units.}
+    elements, heat-flow components and display units.}
     \label{fig:heat_flow_configuration}
 \end{figure}
 
 Let \(\mathcal{P}_{AB}^{\mathrm{GL}}\) contain the node pairs connected by
 linear conductors between source \(A\) and target \(B\). The conductive
 contribution is calculated as
-
 \begin{equation}
     Q_{\mathrm{GL},A\leftarrow B}(t)
     =
@@ -592,11 +589,9 @@ contribution is calculated as
     \left[T_j(t)-T_i(t)\right]
     \label{eq:transient_gl_flow}
 \end{equation}
-
 where node \(i\) belongs to the source and node \(j\) to the target. The
 radiative contribution is obtained from the pairs contained in
 \(\mathcal{P}_{AB}^{\mathrm{GR}}\):
-
 \begin{equation}
     Q_{\mathrm{GR},A\leftarrow B}(t)
     =
@@ -608,10 +603,8 @@ radiative contribution is obtained from the pairs contained in
     \right]
     \label{eq:transient_gr_flow}
 \end{equation}
-
 The temperatures are converted to kelvin before evaluating the fourth-power
 term. The total exchange combines both mechanisms:
-
 \begin{equation}
     Q_{\mathrm{GT},A\leftarrow B}(t)
     =
@@ -620,23 +613,22 @@ term. The total exchange combines both mechanisms:
     Q_{\mathrm{GR},A\leftarrow B}(t)
     \label{eq:transient_total_flow}
 \end{equation}
-
 With this ordering, a positive value represents heat entering the selected
 source from the target. A negative value indicates heat leaving the source
 towards the target. Reversing the source and target therefore reverses the
 sign of the represented exchange.
 
 The nominal example uses \texttt{BATTERY} as the source and
-\texttt{BODY\_PLATE\_INF} as the target. The three heat-flow parameters are
+\texttt{BODY\_PLATE\_INF} as the target. The three heat-flow components are
 represented in watts over the complete simulation.
 Figure~\ref{fig:nominal_battery_body_plate_heat_flow} shows that all values
 remain negative, indicating a continuous transfer from the battery towards
 its supporting plate.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.98\textwidth,
+        width=0.8\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_battery_body_plate_inf_heat_flow.png}
     \caption{Conductive, radiative and total heat flows between
@@ -644,6 +636,7 @@ its supporting plate.
     case. Negative values indicate heat leaving the battery.}
     \label{fig:nominal_battery_body_plate_heat_flow}
 \end{figure}
+\FloatBarrier
 
 The conductive term provides the main contribution, while the radiative
 exchange remains comparatively small. Consequently,
@@ -652,35 +645,36 @@ slightly larger outward magnitude. The transfer increases during the eclipse
 interval and reaches its most negative value at approximately
 \(3388.1\,\mathrm{s}\).
 
-The interface also generates a table containing the value of each parameter
-at every output instant. Since the complete export would be unnecessarily
+The interface also generates a table containing the value of each
+heat-flow component at every output instant. Since the complete export would be unnecessarily
 long for the document, Table~
 \ref{tab:nominal_battery_body_plate_heat_flow} summarises only the minimum and
 maximum values and their corresponding times.
 
 \input{Tables/table_nominal_battery_body_plate_inf_heat_flow.tex}
-\NominalBatteryBodyPlateHeatFlowTable[0.76\textwidth]
+\NominalBatteryBodyPlateHeatFlowTable[0.6\textwidth]
 
 The total heat flow ranges from approximately
-\(-0.243\,\mathrm{W}\) to \(-7.176\,\mathrm{W}\). The negative sign is
+\(-0.235\,\mathrm{W}\) to \(-7.177\,\mathrm{W}\). The negative sign is
 retained in the table because it forms part of the source--target convention,
 rather than indicating the magnitude alone.
 
+\FloatBarrier
+\newpage
 \section{Absorbed and Released Thermal Energy}
 \label{sec:absorbed_released_energy}
 
-The final area converts the thermal-power parameters associated with a
-selected element into cumulative energy. Its configuration begins with the
-selection of one or more cases and a model element. The user then defines the
-power contributions to be included and chooses the time, power and energy
-units used in the representation.
+The final area integrates the thermal-power terms associated with a selected
+element over time. Its configuration begins with the selection of one or more
+cases and a model element. The user then defines the power contributions to be
+included and chooses the time, power and energy units used in the
+representation.
 
-The available parameters comprise \(Q_A\), \(Q_E\), \(Q_S\), \(Q_I\) and
+The available power terms comprise \(Q_A\), \(Q_E\), \(Q_S\), \(Q_I\) and
 \(Q_R\), together with the net conductive and radiative exchanges with nodes
 outside the selected group, \(Q_{\mathrm{GL,ext}}\) and
 \(Q_{\mathrm{GR,ext}}\). The complete thermal balance is also available and
 is calculated as
-
 \begin{equation}
     Q_{\mathrm{balance},g}(t)
     =
@@ -699,31 +693,29 @@ is calculated as
     Q_{\mathrm{GR,ext},g}(t)
     \label{eq:component_thermal_balance}
 \end{equation}
-
 where the external conductive and radiative terms contain only exchanges
 between nodes belonging to group \(g\) and nodes outside that group. Internal
 connections between two nodes of the selected element are excluded because
 they redistribute energy within the group without changing its total balance.
 
 Figure~\ref{fig:thermal_energy_configuration} shows the controls used to
-select the cases, element, power parameters and display units. The power
-curves may be expressed in watts or milliwatts, while the accumulated energy
-is represented in joules or watt-hours.
+select the cases, element, power terms and display units. The power curves may
+be expressed in watts or milliwatts, while the time-integrated energy is
+represented in joules or watt-hours.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.94\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/display13.png}
     \caption{Configuration area for selecting the cases, model element,
-    thermal-power parameters and units used in the energy calculation.}
+    thermal-power terms and units used in the energy calculation.}
     \label{fig:thermal_energy_configuration}
 \end{figure}
 
-For a selected parameter \(Q_{x,g}\), the energy transferred from the start
-of the simulation to time \(t\) is
-
+For a selected power term \(Q_{x,g}\), the net energy transferred from the
+start of the simulation to time \(t\) is
 \begin{equation}
     E_{x,g}(t)
     =
@@ -732,10 +724,8 @@ of the simulation to time \(t\) is
     \mathrm{d}\xi
     \label{eq:thermal_energy_integral}
 \end{equation}
-
 The numerical integration follows the output-time vector contained in the
 result file. Between two successive instants, the trapezoidal rule gives
-
 \begin{equation}
     E_{x,g}(t_k)
     =
@@ -751,10 +741,8 @@ result file. Between two successive instants, the trapezoidal rule gives
     \right)
     \label{eq:thermal_energy_trapezoidal}
 \end{equation}
-
 with \(E_{x,g}(t_0)=0\). When time is expressed in seconds, the resulting
 energy is obtained directly in joules. Its conversion to watt-hours follows
-
 \begin{equation}
     E_{x,g}^{\mathrm{Wh}}(t)
     =
@@ -763,46 +751,55 @@ energy is obtained directly in joules. Its conversion to watt-hours follows
     }{3600}
     \label{eq:joule_to_watt_hour}
 \end{equation}
-
-The sign of the power parameter determines the slope of its accumulated
-energy curve. A positive value increases the stored integral and represents
-energy entering the selected group, whereas a negative value decreases it and
-represents energy leaving the group. When the power becomes zero, the
-corresponding cumulative energy remains constant.
+The sign of the power term determines the evolution of its time-integrated
+energy. A positive value represents energy entering the selected group and
+increases the integrated value, whereas a negative value represents energy
+leaving the group and decreases it. When the power becomes zero, the
+corresponding value remains constant. The resulting curve is therefore not
+necessarily monotonic and represents the net energy transferred relative to
+the initial instant.
 
 The nominal example uses the group \texttt{SOLAR\_PANELS} and represents the
 albedo and direct-solar contributions \(Q_A\) and \(Q_S\). Power is expressed
 in watts, energy in watt-hours and elapsed time in minutes. Both the
-instantaneous parameters and their integrated values are displayed in the
-same graph using separate vertical axes.
+instantaneous power curves and their time-integrated values are displayed in
+the same graph using separate vertical axes.
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.98\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_solar_panels_thermal_balance_energy.png}
-    \caption{Albedo and direct-solar thermal powers and their cumulative
-    energies for \texttt{SOLAR\_PANELS} in the nominal transient case.}
+    \caption{Albedo and direct-solar thermal powers and their time-integrated
+    energy contributions for \texttt{SOLAR\_PANELS} in the nominal transient
+    case.}
     \label{fig:nominal_solar_panels_thermal_energy}
 \end{figure}
 
 The direct-solar contribution dominates while the spacecraft remains
-illuminated and becomes zero during eclipse. Consequently, its cumulative
+illuminated and becomes zero during eclipse. Consequently, its integrated
 energy increases during the illuminated intervals and remains constant while
 direct solar radiation is absent. The albedo contribution is smaller and
 varies according to the orbital position, producing a more gradual change in
 its integrated value.
 
 The graph illustrates the relation between an instantaneous thermal input and
-the energy transferred over a finite interval. The same calculation can be
-applied to individual loads, external heat exchanges or the complete
-\(Q_{\mathrm{balance}}\) parameter. In the latter case, increases and
-decreases of the cumulative curve identify periods of net energy absorption
-and release by the selected element.
+the net energy transferred over a finite interval.
+
+The same calculation can be applied to individual loads, external heat
+exchanges or the complete balance \(Q_{\mathrm{balance}}\). In the latter
+case, increases and decreases of the integrated curve identify periods of net
+energy absorption and release by the selected element. Provided that all
+relevant exchanges are included, the curve represents the change in thermal
+energy relative to the initial instant, rather than the absolute energy stored
+in the element.
 
 These results describe thermal power and thermal energy obtained from the
 \acrshort{esatan-tms} solution. They do not represent the electrical energy
 generated by the solar cells. The conversion of the incident solar load into
-electrical power and its use within the battery model are developed in the
-following chapter.
+electrical power and its use within the battery model are treated separately
+in the electrical-balance analysis.
+
+
+\FloatBarrier

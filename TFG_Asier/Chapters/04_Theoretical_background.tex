@@ -22,7 +22,7 @@ can shorten component life, reduce measurement accuracy or prevent equipment fro
 functioning correctly. The design must also satisfy the restrictions imposed by the 
 available mass, volume and electrical power \cite{tcs_slides0,spacethctrl,th_handbook}.
 
-Thermal requirements depend on the function and operating state of each component. They 
+Thermal requirements are defined by the function and operating state of each component. They 
 include allowable temperature ranges, limits on thermal gradients 
 and requirements for temperature stability. For example, electrical and electronic 
 equipment, including batteries and onboard computers, operate within specified temperature 
@@ -30,7 +30,7 @@ ranges. Optical instruments such as telescopes often require tighter control of 
 gradients to limit dimensional changes and maintain alignment 
 \cite{tcs_slides0,spacethctrl}.
 
-The temperature of each component depends on the balance between internally dissipated 
+The temperature of each component is determined by the balance between internally dissipated 
 power and the energy exchanged with the external environment. This balance is influenced 
 by the amount of energy absorbed by the external surfaces, the heat transferred through 
 the internal structure and the energy emitted towards space. Since these contributions 
@@ -44,7 +44,7 @@ Conductive links distribute heat between components and structural elements, whi
 heaters provide additional energy when passive measures are insufficient under cold 
 conditions \cite{spacethctrl,th_handbook,ecss_man}.
 
-The selection of these measures depends on the permitted temperature ranges, expected 
+The selection of these measures is governed by the permitted temperature ranges, expected 
 heat loads and mission phases. Thermal control is therefore not limited to maintaining 
 a single uniform temperature. It must also control gradients, reduce excessive variations 
 and meet the individual requirements of each component 
@@ -105,12 +105,12 @@ resulting absorbed power is expressed in $\mathrm{W}$
 % Capitulos esenciales libro (inglés).pdf,
 % PDF pp. 23--25, Equation (2.1) on p. 25.
 
-Albedo is solar radiation reflected by the Earth's surface and atmosphere. The albedo's 
-contribution depends on the illuminated portion of the planet visible from the spacecraft 
+Albedo is solar radiation reflected by the Earth's surface and atmosphere. The albedo 
+contribution is governed by the illuminated portion of the planet visible from the spacecraft 
 and on the fraction of reflected energy absorbed by each exposed surface. Planetary 
-infrared radiation instead originates from the Earth's thermal emission and depends on 
+infrared radiation instead originates from the Earth's thermal emission and is influenced by 
 the infrared properties of the exposed surfaces. In both cases, the incoming energy also 
-depends on the portion of the planet visible from each surface 
+varies with the portion of the planet visible from each surface 
 \cite{spacethctrl,th_handbook}.
 % Sources:
 % Capitulos esenciales libro (inglés).pdf, PDF pp. 28--31.
@@ -135,7 +135,7 @@ environmental loads
 
 \section{Heat Transfer and Thermal Energy Storage}
 
-The temperature response of a spacecraft depends on the amount of heat transferred and 
+The temperature response of a spacecraft is governed by the amount of heat transferred and 
 stored over time. Heat transfer occurs by conduction, convection or radiation. Conduction 
 and radiation are the main mechanisms in spacecraft thermal analysis, while thermal 
 capacitance accounts for the energy stored by each component 
@@ -144,7 +144,7 @@ capacitance accounts for the energy stored by each component
 \subsection{Conduction Heat Transfer}
 
 Conduction transfers thermal energy through a material or between bodies in contact without 
-bulk movement of matter. The conductive heat flow depends on the temperature gradient, the 
+bulk movement of matter. The conductive heat flow is determined by the temperature gradient, the 
 thermal conductivity of the material and the area normal to the direction of transfer.
 For one-dimensional conduction, Fourier's law is written as \cite{heattransfer,hmt_f&a}
 \begin{equation}
@@ -202,7 +202,7 @@ conservation of energy to obtain the heat-diffusion equation
 Unlike conduction, thermal radiation transfers energy through electromagnetic waves, 
 which propagate through vacuum. Radiative exchange takes place between spacecraft 
 surfaces, while external surfaces also emit energy towards space. The power emitted by a 
-real surface depends on the absolute temperature, area and emissivity, as expressed by 
+real surface is determined by the absolute temperature, area and emissivity, as expressed by 
 the Stefan--Boltzmann law \cite{hmt_f&a,spacethctrl}:
 \begin{equation}
     \dot{Q}
@@ -229,7 +229,7 @@ $T_{\mathrm{space}}^{4}$ is generally small because the deep-space temperature i
 lower than the spacecraft surface temperature \cite{spacethctrl}.
 
 The Stefan--Boltzmann law gives the total power emitted over all wavelengths. 
-The spectral distribution, however, depends on temperature. As temperature 
+The spectral distribution, however, varies with temperature. As temperature 
 increases, the emitted power rises and the maximum moves towards shorter 
 wavelengths. This behaviour explains why radiation received from the Sun is 
 mainly treated as short-wave radiation, whereas the Earth and spacecraft 
@@ -258,7 +258,7 @@ respectively. For an opaque surface, no radiation is transmitted, and
 Equation~\ref{eq:radiative_properties} reduces to $\alpha+\rho=1$ 
 \cite{hmt_f&a,spacethctrl}. 
 
-Since these properties depend on wavelength, the solar and infrared bands are treated 
+Since these properties vary with wavelength, the solar and infrared bands are treated 
 separately in spacecraft thermal analysis. Solar absorptivity represents the fraction 
 of short-wave solar radiation absorbed by a surface, while infrared emissivity governs 
 the exchange of long-wave thermal radiation. The same surface can therefore have different 
@@ -268,7 +268,7 @@ The wavelength range associated with thermal radiation is shown in
 Figure~\ref{fig:thermal_radiation_spectrum}.
 
 The view factor $F_{ij}$ represents the fraction of radiation leaving surface $i$ that reaches 
-surface $j$. The value of $F_{ij}$ depends on the relative position, orientation and area of the two surfaces, 
+surface $j$. The value of $F_{ij}$ is determined by the relative position, orientation and area of the two surfaces, 
 as illustrated in Figure~\ref{fig:view_factor_geometry} \cite{spacethctrl}.
 
 \begin{figure}[H]
@@ -319,7 +319,7 @@ enclosure, the factors from each surface also satisfy the following rule
 where $N$ is the number of surfaces forming the enclosure.
 \end{samepage}
 
-Radiative exchange depends on the surface temperatures and thermo-optical properties, as well 
+Radiative exchange is governed by the surface temperatures and thermo-optical properties, as well 
 as on the areas and relative geometry of the surfaces. Analytical view factors are available 
 for simple arrangements, whereas spacecraft radiative models generally calculate them 
 numerically \cite{spacethctrl,ecss_man}.
@@ -337,7 +337,7 @@ For a body with uniform temperature and constant properties, it is given by
     \label{eq:stored_thermal_energy}
 \end{gather}
 where $C$ is the thermal capacitance, $m$ is the mass, $c_p$ is the specific heat 
-capacity and $\Delta E$ represents the changes in the stored thermal energy of a body.
+capacity and $\Delta E$ represents the change in the stored thermal energy of a body.
 
 For a transient process, the energy balance is expressed as \cite{spacethctrl}:
 \begin{equation}
@@ -381,10 +381,10 @@ the corresponding interval \cite{hmt_f&a}:
 \end{equation}
 The sign of $E_{12}$ follows the sign convention adopted for $\dot{Q}$. In orbital 
 analysis, this integral quantifies the energy absorbed or released during a selected part 
-of the orbit. For example, energy is stored during an illuminated interval and released 
-after eclipse entry. The corresponding temperature change is delayed by the thermal 
-capacitance by the thermal capacitance and the conductive and radiative connections of the component with the 
-rest of the system 
+of the orbit. For example, a component may store energy during an illuminated interval and
+release it after eclipse entry. The corresponding temperature change is delayed
+by the thermal capacitance of the component and by its conductive and radiative
+connections with the rest of the system 
 \cite{spacethctrl,th_handbook}.
 
 \section{Mathematical Modelling of Spacecraft Thermal Systems}
@@ -532,7 +532,7 @@ includes the energy stored in the capacitive nodes
 
 A transient calculation can therefore identify temporary maximum and minimum temperatures, 
 the time at which they occur and the delay between a change in load and the corresponding 
-temperature response. The selected formulation depends on whether only an equilibrium 
+temperature response. The selected formulation is determined by whether only an equilibrium 
 condition is required or whether the evolution of the system must also be represented 
 \cite{th_handbook,ecss_man}.
 
