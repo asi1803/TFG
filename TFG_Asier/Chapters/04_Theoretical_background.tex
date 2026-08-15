@@ -107,7 +107,7 @@ resulting absorbed power is expressed in $\mathrm{W}$
 
 Albedo is solar radiation reflected by the Earth's surface and atmosphere. The albedo 
 contribution is governed by the illuminated portion of the planet visible from the spacecraft 
-and on the fraction of reflected energy absorbed by each exposed surface. Planetary 
+and the fraction of reflected energy absorbed by each exposed surface. Planetary 
 infrared radiation instead originates from the Earth's thermal emission and is influenced by 
 the infrared properties of the exposed surfaces. In both cases, the incoming energy also 
 varies with the portion of the planet visible from each surface 
@@ -150,7 +150,7 @@ For one-dimensional conduction, Fourier's law is written as \cite{heattransfer,h
 \begin{equation}
     \dot{Q}_{x}
     =
-    -kA\frac{\mathrm{d}T}{\mathrm{d}x},
+    -kA\frac{\mathrm{d}T}{\mathrm{d}x}
     \label{eq:fourier_law}
 \end{equation}
 where $\dot{Q}_{x}$ is the conductive heat flow, $k$ is the thermal conductivity, $A$ is the area 
@@ -316,11 +316,12 @@ enclosure, the factors from each surface also satisfy the following rule
     \sum_{j=1}^{N}F_{ij} = 1
     \label{eq:view_factor_summation}
 \end{gather}
-where $N$ is the number of surfaces forming the enclosure.
+where $A_i$ and $A_j$ are the areas of surfaces $i$ and $j$,
+respectively, and $N$ is the number of surfaces forming the enclosure.
 \end{samepage}
 
 Radiative exchange is governed by the surface temperatures and thermo-optical properties, as well 
-as on the areas and relative geometry of the surfaces. Analytical view factors are available 
+as by the areas and relative geometry of the surfaces. Analytical view factors are available 
 for simple arrangements, whereas spacecraft radiative models generally calculate them 
 numerically \cite{spacethctrl,ecss_man}.
 
@@ -491,12 +492,13 @@ The corresponding balance for a general node $i$ is written as \cite{spacethctrl
     \left(T_{j}^{4}-T_{i}^{4}\right)
     \label{eq:lumped_nodal_balance}
 \end{equation}
-where $C_i$ is the nodal thermal capacitance, $\dot{Q}_i(t)$ is the net heat load applied to the node, 
+where $C_i$ is the nodal thermal capacitance, $\dot{Q}_i(t)$ is the applied heat load on the node, 
 $G^L_{ij}$ is the linear conductance, $G^R_{ij}$ is the radiative exchange coefficient, $\sigma$ is the 
 Stefan--Boltzmann constant and $N$ is the total number of nodes in the network.
 
 Conductive exchange is proportional to the temperature difference $T_j-T_i$, whereas radiative exchange 
-depends on $T_j^4-T_i^4$. This $T^4$ dependence makes the 
+depends on $T_j^4-T_i^4$, with the temperatures in the radiative term expressed in kelvin. The conductance
+coefficients may be constant or depend on the thermal conditions defined in the model. This $T^4$ dependence makes the 
 resulting system non-linear \cite{spacethctrl,thermal_eng_man}.
 
 \begin{sloppypar}
@@ -556,7 +558,7 @@ calculated at the beginning and end of a complete period. Cyclic convergence is 
 when the maximum of these differences is below a selected tolerance 
 \cite{thermal_eng_man,esatan_training_man}.
 \begin{equation}
-    \max
+    \max_i
     \left|
     T_{i}(t_{0}+P)-T_{i}(t_{0})
     \right|
@@ -564,7 +566,8 @@ when the maximum of these differences is below a selected tolerance
     \varepsilon_{\mathrm{cyc}}
     \label{eq:cyclic_convergence}
 \end{equation}
-where $\varepsilon_{\mathrm{cyc}}$ is the convergence criterion. Once this condition is 
+where $t_0$ is the initial instant of the evaluated cycle and
+$\varepsilon_{\mathrm{cyc}}$ is the convergence criterion. Once this condition is 
 satisfied, the calculated cycle represents the response to the periodic loads rather 
 than the initial numerical adjustment of the model 
 \cite{gaite2012linear,thermal_eng_man,esatan_training_man}.

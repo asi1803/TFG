@@ -1,0 +1,35 @@
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Thermal-model hierarchy and node identifiers.}}{25}{table.caption.18}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Material properties used in the thermal model.}}{27}{table.caption.21}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Thermo-optical coating properties used in the thermal model.}}{28}{table.caption.24}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Internal heat loads applied in the selected transient cases.}}{33}{table.caption.33}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Transient cases selected from the common thermal model.}}{35}{table.caption.35}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Structural and temporal characteristics of the exported \texttt {.TMD} files.}}{37}{table.caption.37}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Main software groups and their functional responsibilities.}}{42}{table.caption.40}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Maximum interface temperature differences detected from \texttt {OBC\_BOX} in the nominal transient case.}}{55}{table.caption.54}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Temperature variations of \texttt {BODY\_PANEL} over the selected time windows in the nominal transient case.}}{58}{table.caption.57}%
+\contentsline {table}{\numberline {7.3}{\ignorespaces Global temperature extrema of the selected elements in the nominal transient case.}}{60}{table.caption.59}%
+\contentsline {table}{\numberline {7.4}{\ignorespaces Maximum and minimum spatial temperature ranges of the selected elements in the nominal transient case.}}{60}{table.caption.60}%
+\contentsline {table}{\numberline {7.5}{\ignorespaces Extreme conductive, radiative and total heat-flow values for the \texttt {BATTERY}--\texttt {BODY\_PLATE\_INF} selection in the nominal transient case.}}{63}{table.caption.63}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {8.1}{\ignorespaces Initial state and main battery results for the nominal transient case using the selected \(6S1P\) configuration.}}{80}{table.caption.75}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {9.1}{\ignorespaces Temperature extrema and maximum spatial temperature ranges of the selected elements in the nominal, hot and cold transient cases.}}{83}{table.caption.78}%
+\contentsline {table}{\numberline {9.2}{\ignorespaces Case differences at \(t=95.80\) min, corresponding to the maximum absolute nominal--hot difference in mean battery temperature.}}{84}{table.caption.80}%
+\contentsline {table}{\numberline {9.3}{\ignorespaces Maximum connected-node temperature difference between \texttt {OBC\_BOX} and \texttt {RADIATOR} in the three transient cases.}}{86}{table.caption.83}%
+\contentsline {table}{\numberline {9.4}{\ignorespaces Integrated solar generation and selected load demand for the nominal, hot and cold transient cases.}}{91}{table.caption.91}%
+\contentsline {table}{\numberline {9.5}{\ignorespaces Main battery results for the nominal, hot and cold transient cases using the common battery configuration.}}{94}{table.caption.97}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Adaptation of the inherited inspection modules.}}{111}{table.A.1}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces Comparison of selected secondary implementation improvements.}}{113}{table.B.1}%
+\contentsline {table}{\numberline {B.2}{\ignorespaces Use of the selected output time in the inherited modules.}}{115}{table.caption.112}%
+\contentsline {table}{\numberline {B.3}{\ignorespaces Target groups detected from the explicit GL and GR connections to \texttt {OBC\_BOX} in the nominal case.}}{116}{table.caption.116}%
+\contentsline {table}{\numberline {B.4}{\ignorespaces Files and records associated with a saved analysis.}}{118}{table.caption.118}%
+\contentsline {table}{\numberline {B.5}{\ignorespaces Correspondence between the initial interface blocks and the final modules.}}{118}{table.B.5}%

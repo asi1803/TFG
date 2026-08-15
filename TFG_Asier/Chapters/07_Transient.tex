@@ -53,7 +53,7 @@ corresponding group evolution is obtained from:
     =
     \sum_{n\in\mathcal{N}_g} Q_{x,n}(t),
     \qquad
-    x\in\{A,E,S,I,R\}.
+    x\in\{A,E,S,I,R\}
     \label{eq:transient_group_load}
 \end{equation}
 Here, \(Q_A\), \(Q_E\) and \(Q_S\) denote the absorbed albedo, planetary
@@ -73,8 +73,8 @@ the user can select any other combination.
 The temperature statistics describe the thermal state of the selected
 element. \(T_{\mathrm{mean}}\) represents its overall evolution, while
 \(T_{\max}\) and \(T_{\min}\) identify the highest and lowest nodal
-temperatures at each output instant. The distance between both limits defines
-the instantaneous temperature range within the corresponding group.
+temperatures at each output instant. The difference between these limits
+defines the instantaneous temperature range within the corresponding group.
 
 The thermal-load terms can be represented separately or together with the
 temperature statistics. Their curves show how the environmental and
@@ -180,7 +180,7 @@ limit.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.7\textwidth,
         keepaspectratio
     ]{Figures/07/display09.png}
     \caption{Configuration area for selecting cases, source and target
@@ -190,9 +190,9 @@ limit.
 \end{figure}
 
 The default calculation basis uses the node pairs connected through explicit
-GL or GR conductors. Let \(\mathcal{P}_{AB}\) contain the pairs \((i,j)\)
-linking source group \(A\) with target group \(B\). The absolute temperature
-difference associated with each pair is
+GL or GR conductors. The set \(\mathcal{P}_{AB}\) contains the pairs \((i,j)\) 
+linking source group \(A\) with target group \(B\). The absolute temperature difference
+associated with each pair is
 \begin{equation}
     \Delta T_{ij}(t)
     =
@@ -226,8 +226,11 @@ associated with that event.
 
 The example presented below uses \texttt{OBC\_BOX} as the source and
 \texttt{RADIATOR} as the target. This interface is representative because the
-thermal network includes an additional conductive link between both elements,
-as described in Section~\ref{sec:thermal_network_definition}.
+thermal network contains explicit thermal couplings between both elements, as
+described in Section~\ref{sec:thermal_network_definition}. The critical node
+pair identified for the nominal case is connected through a radiative
+conductor, GR.
+
 Figure~\ref{fig:nominal_obc_radiator_interface} shows that the maximum
 temperature difference reaches \(20.8\,^{\circ}\mathrm{C}\) at
 \(3388.1\,\mathrm{s}\).
@@ -235,7 +238,7 @@ temperature difference reaches \(20.8\,^{\circ}\mathrm{C}\) at
 \begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.9\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_obc_radiator_interface_temperature.png}
     \caption{Hot and cold temperatures of the connected pair producing the
@@ -249,10 +252,10 @@ All targets connected to the same source group through explicit conductors
 were then added. For each source--target pair,
 Table~\ref{tab:nominal_obc_interfaces} records the maximum absolute
 temperature difference, the event time, the hot and cold temperatures, the
-critical node pair and the coupling or couplings involved.
+critical node pair and the coupling type or types defined for that pair.
 
 \input{Tables/table_nominal_obc_interfaces.tex}
-\NominalOBCInterfaceTable[1.0\textwidth]
+\NominalOBCInterfaceTable[0.8\textwidth]
 
 The alternative calculation basis uses the complete temperature envelopes of
 the source and target groups. It does not require the nodes producing the
@@ -314,7 +317,7 @@ criteria.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.7\textwidth,
         keepaspectratio
     ]{Figures/07/display10.png}
     \caption{Configuration area for selecting the cases, model elements,
@@ -379,7 +382,7 @@ approximately \(10.084\) and \(30.251\) minutes.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.9\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_body_panel_deltaT_windows.png}
     \caption{Maximum and minimum temperature variations of
@@ -413,7 +416,7 @@ temperature changes, their event times and nodes, the largest absolute
 variation and its corresponding average magnitude.
 
 \input{Tables/table_nominal_body_panel_deltaT_windows.tex}
-\NominalBodyPanelDeltaTTable[1.0\textwidth]
+\NominalBodyPanelDeltaTTable[0.9\textwidth]
 
 The 30-minute interval reaches the largest absolute variation,
 \(2.23\,^{\circ}\mathrm{C}\), whereas the 10-minute interval produces the
@@ -452,7 +455,7 @@ this function.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=1.0\textwidth,
+        width=0.7\textwidth,
         keepaspectratio
     ]{Figures/07/display11.png}
     \caption[Transient thermal-summary configuration.]{Configuration area for
@@ -461,9 +464,9 @@ this function.
     \label{fig:thermal_summary_configuration}
 \end{figure}
 
-Let \(\mathcal{T}_{\mathrm{out}}\) denote the set of output instants contained
-in the transient result file. The global maximum and minimum temperatures of
-a group \(g\) are calculated as:
+The set of output instants contained in the transient result file is denoted
+by \(\mathcal{T}_{\mathrm{out}}\). The global maximum and minimum
+temperatures of a group \(g\) are calculated as:
 \begin{align}
     T_{g,\max}^{\mathrm{glob}}
     &=
@@ -534,9 +537,9 @@ minimum spatial ranges reached by the same elements. The associated node pairs
 identify the locations that define each range.
 
 \input{Tables/table_nominal_thermal_summary.tex}
-\NominalThermalExtremaTable[0.75\textwidth]
+\NominalThermalExtremaTable[0.7\textwidth]
 
-\NominalThermalRangeTable[0.85\textwidth]
+\NominalThermalRangeTable[0.7\textwidth]
 
 The two outputs serve different purposes. Global extrema indicate the highest
 and lowest temperatures reached by an element during the complete simulation,
@@ -578,9 +581,9 @@ the source--target order defined in the interface.
     \label{fig:heat_flow_configuration}
 \end{figure}
 
-Let \(\mathcal{P}_{AB}^{\mathrm{GL}}\) contain the node pairs connected by
-linear conductors between source \(A\) and target \(B\). The conductive
-contribution is calculated as
+The set \(\mathcal{P}^{\mathrm{GL}}_{AB}\) contains the node pairs connected
+by linear conductors between source \(A\) and target \(B\). The conductive
+contribution is calculated as:
 \begin{equation}
     Q_{\mathrm{GL},A\leftarrow B}(t)
     =
@@ -628,7 +631,7 @@ its supporting plate.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.8\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_battery_body_plate_inf_heat_flow.png}
     \caption{Conductive, radiative and total heat flows between
@@ -671,8 +674,8 @@ representation.
 The available power terms comprise \(Q_A\), \(Q_E\), \(Q_S\), \(Q_I\) and
 \(Q_R\), together with the net conductive and radiative exchanges with nodes
 outside the selected group, \(Q_{\mathrm{GL,ext}}\) and
-\(Q_{\mathrm{GR,ext}}\). The complete thermal balance is also available and
-is calculated as
+\(Q_{\mathrm{GR,ext}}\). A reconstructed thermal balance is also available
+and is calculated as:
 \begin{equation}
     Q_{\mathrm{balance},g}(t)
     =
@@ -704,7 +707,7 @@ represented in joules or watt-hours.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.95\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/display13.png}
     \caption{Configuration area for selecting the cases, model element,
@@ -749,6 +752,35 @@ energy is obtained directly in joules. Its conversion to watt-hours follows
     }{3600}
     \label{eq:joule_to_watt_hour}
 \end{equation}
+For the transient cases considered in this work, the nodal capacitances
+remain constant over the exported interval. The change in thermal energy
+stored by a selected group can therefore be evaluated independently from the
+nodal temperatures as
+\begin{equation}
+    \Delta U_g(t)
+    =
+    \sum_{n\in\mathcal{N}_g}
+    C_n
+    \left[
+        T_n(t)-T_n(t_0)
+    \right]
+    \label{eq:stored_thermal_energy_change}
+\end{equation}
+This quantity provides an independent reference for assessing the
+post-processed balance reconstruction. The corresponding energy-closure
+residual is defined as
+\begin{equation}
+    R_{E,g}(t)
+    =
+    E_{\mathrm{balance},g}(t)
+    -
+    \Delta U_g(t)
+    \label{eq:thermal_energy_closure_residual}
+\end{equation}
+where \(E_{\mathrm{balance},g}\) is obtained by integrating
+\(Q_{\mathrm{balance},g}\). A non-negligible residual indicates that the
+reconstructed exchange terms should not be interpreted as a closed energy
+balance for that selection.
 The sign of the power term determines the evolution of its time-integrated
 energy. A positive value represents energy entering the selected group and
 increases the integrated value, whereas a negative value represents energy
@@ -766,7 +798,7 @@ the same graph using separate vertical axes.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[
-        width=0.97\textwidth,
+        width=1.0\textwidth,
         keepaspectratio
     ]{Figures/07/nominal_solar_panels_thermal_balance_energy.png}
     \caption{Albedo and direct-solar thermal powers and their time-integrated
@@ -785,19 +817,19 @@ its integrated value.
 The graph illustrates the relation between an instantaneous thermal input and
 the net energy transferred over a finite interval.
 
-The same calculation can be applied to individual loads, external heat
-exchanges or the complete balance \(Q_{\mathrm{balance}}\). In the latter
-case, increases and decreases of the integrated curve identify periods of net
-energy absorption and release by the selected element. Provided that all
-relevant exchanges are included, the curve represents the change in thermal
-energy relative to the initial instant, rather than the absolute energy stored
-in the element.
+The same integration can be applied to individual loads, external heat
+exchanges or the reconstructed balance \(Q_{\mathrm{balance}}\). The
+individual curves represent the time-integrated contribution of the
+corresponding exported or reconstructed power term. For
+\(Q_{\mathrm{balance}}\), its integral is compared with
+\(\Delta U_g\) through the closure residual defined above. Only when this
+residual is sufficiently small can the integrated reconstructed balance be
+identified with the change in thermal energy stored by the selected element.
 
 These results describe thermal power and thermal energy obtained from the
 \acrshort{esatan-tms} solution. They do not represent the electrical energy
 generated by the solar cells. The conversion of the incident solar load into
 electrical power and its use within the battery model are treated separately
 in the electrical-balance analysis.
-
 
 \FloatBarrier

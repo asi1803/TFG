@@ -118,9 +118,8 @@ represent. This hierarchy consists of four levels:
 \end{itemize}
 
 Each group is identified by a node range and a short label, giving a 
-consistent naming system throughout the model. The \textit{Power} field 
-indicates the equipment groups which have an internal heat load applied. 
-The complete classification is given in 
+consistent naming system throughout the model. The \textit{Power} field
+identifies the equipment groups to which an internal heat load is applied.
 \autoref{tab:subsystem-classification}.
 
 \input{./Tables/tabla_subsistemas.tex}
@@ -175,10 +174,10 @@ The geometrical elements use four material definitions. Aluminium 6061 is
 assigned to the main structural panels, internal plates and equipment 
 housings. Gallium arsenide represents the solar-cell elements, while a 
 separate optical material is used for the camera lens. The 
-\acrshort{mli} foil has an independent definition whose conductivity is set 
-to zero. This prevents the geometrical shell from introducing a 
-solid-conduction connection, while the intended couplings are defined 
-explicitly in the thermal network.
+\acrshort{mli} foil has an independent bulk definition whose conductivity is 
+set to zero. Through-thickness heat transfer is represented separately by 
+temperature-dependent effective conductance properties assigned to the 
+\acrshort{mli} surfaces.
 
 The conductivity, specific heat capacity and density assigned to each material 
 are listed in \autoref{tab:material-properties}. 
@@ -202,7 +201,7 @@ allows the assignments to the structure, solar cells, camera and
             trim=0 8 0 120,
             clip
         ]{thermal_conductivity2.png}
-        \caption{View from the side $+Y$.}
+        \caption{View from the $+Y$ side.}
         \label{fig:conductivity_distribution_opposite}
     \end{subfigure}
 \end{figure}
@@ -218,7 +217,7 @@ allows the assignments to the structure, solar cells, camera and
             trim=0 8 0 120,
             clip
         ]{thermal_conductivity.png}
-        \caption{View from side $-Y$.}
+        \caption{View from the $-Y$ side.}
         \label{fig:conductivity_distribution_view_a}
     \end{subfigure}
 
@@ -236,10 +235,11 @@ allows the assignments to the structure, solar cells, camera and
 The surface definitions are assigned according to the function of each 
 element. Anodised aluminium is used on selected structural surfaces, while 
 black paint is applied to the internal equipment. An \acrfull{osr} defines the 
-radiator surface, and the solar cells use a separate coating definition. The 
-external \acrshort{mli} is represented by Kapton coated with 
-\acrfull{ito}, while independent properties are assigned to the internal 
-\acrshort{mli} and the infrared lens.
+radiator surface, and the solar cells use a separate coating definition. 
+The external and internal \acrshort{mli} surfaces use the 
+\texttt{MLI\_ext} and \texttt{MLI\_int} definitions, respectively, while 
+Kapton coated with \acrfull{ito} is assigned to the rear surfaces of the 
+solar panels. An independent property is assigned to the infrared lens.
 
 The solar and infrared bands are defined separately. For each surface, the 
 model specifies absorptivity or emissivity, transmissivity and the specular 
@@ -561,7 +561,7 @@ operating conditions.
 \section{Simulation Results Export in TMD Format}
 \label{sec:tmd_export}
 
-After each simulation is completed, the result set obtained for each case is exported from
+After each simulation, the corresponding result set is exported from
 \acrshort{esatan-tms} as a separate \texttt{.TMD} file. Each file stores the
 time vector and the nodal results selected for post-processing, including
 temperatures, applied loads, absorbed environmental loads, and conductive and
@@ -584,7 +584,7 @@ respect to the nominal case.
 The 101 output instants correspond to the temporal sampling of the transient
 solution and should not be confused with the 24 orbital positions used in the
 radiative calculation. For each nodal variable, one file therefore contains
-\(284 \times 101 = 28\,684\) values before the conductor results and remaining
+\(284 \times 101 = 28\,684\) values before the conductor results and the remaining
 nodal result fields are considered.
 
 The absorbed solar loads calculated for the solar panels are also retained in

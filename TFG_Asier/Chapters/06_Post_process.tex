@@ -5,9 +5,9 @@
 The original post-processing application is extended to handle several
 transient cases associated with a single \acrshort{esatan-tms} model.
 The hierarchy-based selection and heat-flow representation functions already
-available are adapted to analyse selected transient instants, while the 
-workflow is expanded to support multi-case loading, comparison and 
-saved and restorable analyses.
+available are adapted to analyse selected transient instants, while the
+workflow is expanded to support multi-case loading and comparison, together
+with the saving and restoration of analyses.
 
 Each \texttt{.TMD} file is treated as an independent case and linked to the
 model hierarchy defined in a common Excel spreadsheet for all cases. 
@@ -237,13 +237,22 @@ nominal, hot and cold simulations. The resulting tables and curves therefore
 refer to the corresponding region before any overlay or difference calculation
 is performed.
 
-The hierarchy also controls ordering and prevents double counting. Selectors
-follow the hierarchical parent--child sequence defined in Excel rather than a
-purely alphabetical list. When a parent group and one of its descendants are
-chosen together, the application removes the descendant because the parent
-already contains its nodes. A visible warning identifies the corrected
-selection. This check is particularly important for heat-flow and aggregated
-load results, where repeated nodes would otherwise alter the numerical total.
+The hierarchy also controls the ordering of the available model elements.
+Selectors follow the hierarchical parent--child sequence defined in Excel
+rather than a purely alphabetical list.
+
+In hierarchy-aware selectors, when a parent group and one of its descendants
+are chosen together, the application removes the descendant because the
+parent already contains its nodes. A visible warning identifies the corrected
+selection. This safeguard prevents repeated nodes from altering aggregated
+results.
+
+Some modules intentionally retain a direct additive selection rule and display
+all hierarchy levels. In these modules, selecting both a parent and one of its
+descendants would add both contributions, so the user must choose mutually
+disjoint groups. The electrical-load groups selected in
+Chapter~\ref{ch:electrical_battery_analysis} are Level-3 equipment groups with
+non-overlapping node ranges and therefore do not introduce double counting.
 
 \section{Functional Adaptation of the Application Interface}
 \label{sec:final_application_interface}
@@ -315,11 +324,11 @@ Appendix~\ref{app:secondary_implementation_improvements}.
 \subsection{Time Selection}
 \label{subsec:time_selection}
 
-The inherited inspection tabs represent the state of the model at one output instant,
-even when the source file contains a complete transient solution. When multiple
-output steps are present, each compatible tab adds a time selector. The
-module reads the stored time vector and applies the chosen instant to group
-attributes, nodal tables, conductor summaries and instantaneous heat-flow
+The inherited inspection tabs represent the state of the model at a selected
+output instant, even when the source file contains a complete transient
+solution. When multiple output steps are present, each compatible tab adds a 
+time selector. The module reads the stored time vector and applies the chosen 
+instant to group attributes, nodal tables, conductor summaries and instantaneous heat-flow
 representations.
 
 This adaptation extends the original steady-state views without changing
@@ -390,7 +399,7 @@ For any compatible result \(x\), the adopted convention is
 \begin{equation}
     \Delta x_{R-C}
     =
-    x_R-x_C,
+    x_R-x_C
     \label{eq:case_difference_ch6}
 \end{equation}
 where \(R\) denotes the reference case and \(C\) one comparison case. A
@@ -435,9 +444,9 @@ instant and representation mode used to produce the result. These settings
 allow the stored configuration to be recovered without repeating the complete
 selection process.
 
-Saved analyses use two coordinated storage levels. The SQLite database
+Saved analyses use two coordinated local storage levels. The SQLite database
 \path{scene_memory.db} records the model, cases, source tab, configuration
-settings and paths associated with each entry, while the local \path{scene_store/}
+settings and paths associated with each entry, while the \path{scene_store/}
 directory contains the generated files. Each scene stores its metadata and
 configuration in \texttt{scene.json}; Plotly figures are saved in JSON and
 HTML formats, Matplotlib figures in PNG and SVG, and tables in CSV and XLSX.

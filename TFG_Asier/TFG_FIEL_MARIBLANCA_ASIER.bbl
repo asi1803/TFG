@@ -104,25 +104,20 @@ L.~Kauder, Spacecraft thermal control coatings references, Tech. Rep.
   Space Engineering---Space Environment, ECSS Secretariat, Noordwijk, The
   Netherlands, issued 15 June 2020 (2020).
 
+\bibitem{azur2025_3g30advanced}
+{AZUR SPACE Solar Power GmbH},
+  \href{https://www.azurspace.com/media/uploads/file_links/file/bdb_00010891-01-00_tj3g30-advanced_4x8.pdf}{{TJ
+  3G30-Advanced (4x8): 30\% Triple-Junction (TJ) III-V Bare Solar Cells \&
+  Assemblies}}, {AZUR SPACE Solar Power GmbH}, issue date: 11 April 2025
+  (2025).
+\newline\urlprefix\url{https://www.azurspace.com/media/uploads/file_links/file/bdb_00010891-01-00_tj3g30-advanced_4x8.pdf}
+
 \bibitem{porras2018battery}
 {\'A}.~Porras-Hermoso, S.~Pindado, J.~Cubas, Lithium-ion battery performance
   modeling based on the energy discharge level, Measurement Science and
   Technology 29~(11) (2018) 117002.
 \newblock \href {http://dx.doi.org/10.1088/1361-6501/aae231}
   {\path{doi:10.1088/1361-6501/aae231}}.
-
-\bibitem{ecss_hb_20_02a}
-{European Cooperation for Space Standardization}, {ECSS-E-HB-20-02A}: Space
-  Engineering---{Li-ion} Battery Testing Handbook, ECSS Secretariat, Noordwijk,
-  The Netherlands, issued 1 October 2015 (2015).
-
-\bibitem{mckissock2009liion}
-B.~McKissock, P.~Loyselle, E.~Vogel,
-  \href{https://ntrs.nasa.gov/citations/20090023862}{Guidelines on lithium-ion
-  battery use in space applications}, Tech. Rep. NASA/TM-2009-215751;
-  NESC-RP-08-75/06-069-I, National Aeronautics and Space Administration,
-  Hampton, VA, USA (2009).
-\newline\urlprefix\url{https://ntrs.nasa.gov/citations/20090023862}
 
 \bibitem{ti2022charger}
 {Texas Instruments},

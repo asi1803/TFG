@@ -1,0 +1,84 @@
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces External and internal views of the HELIOS thermal model. Taken from \cite {tfg_carol}.}}{6}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Architecture of the initial post-processing implementation. Taken from \cite {tfg_carol}.}}{7}{figure.caption.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Main radiative exchanges between an orbiting spacecraft and the external environment. Taken from \cite {th_handbook}.}}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces One-dimensional heat conduction through a plane wall. Taken from \cite {hmt_f&a}.}}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Blackbody spectral emissive power at different temperatures and displacement of the emission maximum. Taken from \cite {heattransfer}.}}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Wavelength dependence and geometrical definition of thermal radiation.}}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Temperature approximation and conductive coupling in a lumped-parameter model. Taken from \cite {th_handbook}.}}{18}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Internal configuration of the spacecraft thermal model viewed from opposite sides. The colours correspond to the geometry layer and do not represent temperatures.}}{24}{figure.caption.16}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Final external configuration of the spacecraft thermal model in \acrshort {esatan-tms}. The colours correspond to the geometry layer and do not represent temperatures.}}{24}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Example of nodal numbering for the OBC and adjacent radiator surfaces, shown from opposite sides. The figure illustrates the node ranges listed in Table~\ref {tab:subsystem-classification}.}}{26}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Thermal conductivity distribution over the final spacecraft model, viewed from opposite sides.}}{28}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Solar absorptivity distribution over the final spacecraft model, viewed from opposite sides.}}{29}{figure.caption.26}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Solar reflectivity distribution over the final spacecraft model, viewed from opposite sides.}}{30}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Infrared emissivity distribution over the final spacecraft model, viewed from opposite sides.}}{31}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Infrared reflectivity distribution over the final spacecraft model, viewed from opposite sides.}}{32}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Nominal orbital configuration and the 24 positions used for the radiative calculation. The green segment represents the portion outside eclipse, while the red segment indicates the eclipse interval.}}{34}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \textit {Solution Control} execution block used to obtain cyclic convergence and calculate the final transient orbital period in \acrshort {esatan-tms}.}}{35}{figure.caption.36}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Representative heat-flow visualisations generated for the HELIOS steady-state case with the original application. Extracted from \cite {tfg_carol}.}}{40}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Main data flow and software architecture of the current post-processing application.}}{42}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Multi-case loading interface with one shared hierarchy and multiple \texttt {.TMD} result files.}}{43}{figure.caption.42}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Final post-processing interface after loading three transient cases. The sidebar groups the shared inputs, while the main area provides access to the model-inspection, transient and electrical-analysis modules.}}{45}{figure.caption.43}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Output-time selector used by the instantaneous inspection modules when transient data are available.}}{46}{figure.caption.44}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Configuration of the case-difference representation.}}{47}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Sequence used to save, restore and manage a generated output.}}{49}{figure.caption.48}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Configuration area for selecting cases, model elements, represented attributes, display units and graphical settings.}}{52}{figure.caption.49}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Minimum, mean and maximum temperatures of \texttt {SOLAR\_PANEL\_1} for the nominal transient case.}}{53}{figure.caption.50}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Battery temperatures and internal load in the nominal case.}}{53}{figure.caption.51}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Configuration area for selecting cases, source and target groups, the interface calculation basis and the optional temperature-difference limit.}}{54}{figure.caption.52}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Hot and cold temperatures of the connected pair producing the largest interface difference at each output instant between \texttt {OBC\_BOX} and \texttt {RADIATOR}. The vertical marker identifies the global maximum in the nominal transient case.}}{55}{figure.caption.53}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Configuration area for selecting the cases, model elements, time windows, representation method and optional temperature-variation limits.}}{57}{figure.caption.55}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Maximum and minimum temperature variations of \texttt {BODY\_PANEL} over 10- and 30-minute windows in the nominal transient case.}}{58}{figure.caption.56}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Transient thermal-summary configuration.}}{59}{figure.caption.58}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Configuration area for selecting the cases, source and target elements, heat-flow components and display units.}}{61}{figure.caption.61}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Conductive, radiative and total heat flows between \texttt {BATTERY} and \texttt {BODY\_PLATE\_INF} in the nominal transient case. Negative values indicate heat leaving the battery.}}{62}{figure.caption.62}%
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Configuration area for selecting the cases, model element, thermal-power terms and units used in the energy calculation.}}{64}{figure.caption.64}%
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Albedo and direct-solar thermal powers and their time-integrated energy contributions for \texttt {SOLAR\_PANELS} in the nominal transient case.}}{65}{figure.caption.65}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Configuration of the solar-panel electrical conversion, load selection and graphical output.}}{69}{figure.caption.66}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Selection of the thermo-optical property set associated with the solar-cell nodes.}}{70}{figure.caption.67}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Solar electrical generation and selected load demand for the nominal transient case using a constant solar-cell efficiency of \(\eta =0.30\).}}{71}{figure.caption.68}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Solar electrical generation and selected load demand for the nominal transient case using the temperature-dependent solar-cell efficiency.}}{71}{figure.caption.69}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Battery-temperature source, charge derating and cell-pack configuration.}}{74}{figure.caption.70}%
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Battery efficiencies, power limits, internal resistances and simplified CC--CV charge-control parameters.}}{76}{figure.caption.71}%
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Battery state-of-charge evolution for the nominal transient case.}}{78}{figure.caption.72}%
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Battery terminal voltage and charge/discharge currents for the nominal transient case.}}{78}{figure.caption.73}%
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Battery temperature, charge-derating factor and charge/discharge efficiencies for the nominal transient case.}}{79}{figure.caption.74}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Direct-solar thermal load and mean temperature of \texttt {SOLAR\_PANEL\_1} in the nominal, hot and cold cases.}}{82}{figure.caption.76}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Internal heat load and mean temperature of \texttt {BATTERY} in the three transient cases.}}{83}{figure.caption.77}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Nominal-minus-hot and nominal-minus-cold differences in mean battery temperature.}}{84}{figure.caption.79}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Temperature-change envelopes of \texttt {BODY\_PANEL} over a $30\,\mathrm {min}$ window.}}{85}{figure.caption.81}%
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Critical connected-node temperatures between \texttt {OBC\_BOX} and \texttt {RADIATOR}.}}{86}{figure.caption.82}%
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Total heat flow between \texttt {BATTERY} and \texttt {BODY\_PLATE\_INF}. Negative values indicate heat leaving the battery.}}{86}{figure.caption.84}%
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Nominal-minus-hot and nominal-minus-cold differences in total battery-to-plate heat flow.}}{87}{figure.caption.85}%
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Direct-solar thermal power and its time-integrated energy contribution for \texttt {SOLAR\_PANELS} in the nominal, hot and cold cases.}}{88}{figure.caption.86}%
+\contentsline {figure}{\numberline {9.9}{\ignorespaces Albedo thermal power and its time-integrated energy contribution for \texttt {SOLAR\_PANELS} in the nominal, hot and cold cases.}}{88}{figure.caption.87}%
+\contentsline {figure}{\numberline {9.10}{\ignorespaces Nominal-minus-hot and nominal-minus-cold differences in direct-solar thermal power and its time-integrated energy contribution for \texttt {SOLAR\_PANELS}.}}{89}{figure.caption.88}%
+\contentsline {figure}{\numberline {9.11}{\ignorespaces Estimated solar electrical generation and selected load demand in the three cases.}}{90}{figure.caption.89}%
+\contentsline {figure}{\numberline {9.12}{\ignorespaces Nominal-minus-hot and nominal-minus-cold differences in estimated solar electrical generation.}}{90}{figure.caption.90}%
+\contentsline {figure}{\numberline {9.13}{\ignorespaces Battery state of charge obtained with the common battery configuration.}}{91}{figure.caption.92}%
+\contentsline {figure}{\numberline {9.14}{\ignorespaces Battery temperature, charge-derating factor and electrical efficiencies in the three cases.}}{92}{figure.caption.93}%
+\contentsline {figure}{\numberline {9.15}{\ignorespaces Battery terminal voltage and charge/discharge currents for the nominal, hot and cold transient cases.}}{93}{figure.caption.96}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Original Flow Explorer interface.}}{103}{figure.caption.101}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Developed Flow Explorer interface with transient and multi-case controls.}}{104}{figure.caption.102}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Evolution from active-model information to case-specific inspection.}}{105}{figure.caption.103}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Evolution of the group-attribute inspection area.}}{106}{figure.caption.104}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Evolution of the linear-conductor inspection area.}}{107}{figure.caption.105}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Evolution of the radiative-conductor inspection area.}}{108}{figure.caption.106}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Evolution of the nodal-inspection interface.}}{109}{figure.caption.107}%
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Evolution of the group-study interface.}}{110}{figure.caption.108}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Automatic removal of redundant descendant groups.}}{114}{figure.caption.111}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Representative output-time controls in inherited modules.}}{115}{figure.caption.113}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Matrix-quality summaries available in the conductor tabs.}}{116}{figure.caption.114}%
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Conductor-based filtering of candidate interface groups.}}{116}{figure.caption.115}%
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Validation message displayed when no case is selected.}}{117}{figure.caption.117}%
